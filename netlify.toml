@@ -6,3 +6,15 @@
 [build]
   command = ""
   publish = "."
+
+# BabyChat branded click tracker. The Instagram DM/comment automations
+# (wassembakes-app repo) deliver links as wassembakes.com/l?a=<account>&r=<rule>.
+# Forward /l to the bcClick Cloud Function, which counts the click and
+# 302-redirects to the automation rule's real destination. Netlify passes the
+# query string (a, r) through to the function by default. force=true so the
+# redirect fires regardless of any static file at /l.
+[[redirects]]
+  from = "/l"
+  to = "https://us-central1-wassembakes-app.cloudfunctions.net/bcClick"
+  status = 302
+  force = true
