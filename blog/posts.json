@@ -1,5 +1,15 @@
 [
   {
+    "slug": "chocolate-chip-lava-cookies",
+    "title": "Chocolate Chip Lava Cookies",
+    "shortTitle": "Chocolate Chip Lava Cookies",
+    "excerpt": "A molten ganache core sealed inside a thick chocolate chip cookie. No dairy, no gluten, just gooey deliciousness.",
+    "date": "2026-07-29",
+    "dateDisplay": "July 29, 2026",
+    "image": "chocolate-chip-lava-cookies-hero.jpg",
+    "tags": ["Recipes", "Gluten-Free", "Vegan"],
+    "recipeTags": ["Vegan", "Gluten-Free"]
+  },  {
     "slug": "no-refined-sugar-oatmeal-raisin-cookies",
     "title": "No Refined Sugar Oatmeal Raisin Cookies",
     "shortTitle": "Oatmeal Raisin Cookies",
