@@ -199,7 +199,7 @@ Both should be served via `srcset` at 480w/800w/1200w. Drop a 1600px master into
 
 ## Product CTA
 
-Most recipe posts link to a related Sensible Edibles product (the muffin posts all link to the matching bakery product). Use the `.post-footer .product-cta` block with an image. If no matching product exists, skip the CTA entirely — don't force-fit.
+Most recipe posts link to a related Sensible Bakery product (the muffin posts all link to the matching bakery product). Use the `.post-footer .product-cta` block with an image. If no matching product exists, skip the CTA entirely — don't force-fit.
 
 ## Worked examples
 

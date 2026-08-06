@@ -1,6 +1,6 @@
 ---
 name: sensible-brand
-description: Brand, voice, and tech-stack guidelines for Wassem Moarsi's brands — Sensible Edible Bakery (business) and wassembakes (personal creator brand). Invoke when writing copy, designing UI, choosing colors, or making implementation choices for either brand's site, product, or marketing content.
+description: Brand, voice, and tech-stack guidelines for Wassem Moarsi's brands — Sensible Bakery (business) and wassembakes (personal creator brand). Invoke when writing copy, designing UI, choosing colors, or making implementation choices for either brand's site, product, or marketing content.
 ---
 
 # Sensible Brand Skill
@@ -9,12 +9,12 @@ Guidelines for Wassem Moarsi's two brands. Apply these whenever producing copy, 
 
 ## The two brands
 
-**Sensible Edible Bakery** — the business.
+**Sensible Bakery** — the business.
 **wassembakes** — Wassem's personal creator brand (social, content, teaching).
 
 Keep them distinct but visually and tonally adjacent. The business carries the legal and compliance weight; the creator brand carries personality and reach.
 
-## Business details (Sensible Edible Bakery)
+## Business details (Sensible Bakery)
 
 - Legal/operating entity: **Dalissa Baking Co**
 - Address: **30-30 47th Ave, Long Island City, NY**
@@ -31,7 +31,7 @@ Use this to anchor the "authoritative, real-science" voice — reference when a 
 
 - **BS in Biology** and **MS in Biology**
 - **20+ years** of professional baking
-- Owner and operator of Sensible Edible Bakery — the largest gluten-free and vegan bakery in NYC
+- Owner and operator of Sensible Bakery — the largest gluten-free and vegan bakery in NYC
 - Grounds the creator brand's pitch: when Wassem talks ratios, extraction, gluten development, fermentation, the blood-sugar impact of ingredient choices — it's informed by actual biochemistry, not internet folklore
 
 Good use: "I studied biology — here's what's actually happening to the starches when you let the dough rest."
@@ -110,4 +110,4 @@ When making technical recommendations, stay inside this stack. If something requ
 - [ ] Colors are from the palette above
 - [ ] Regulatory/compliance claims are stated verbatim, not paraphrased
 - [ ] Tech choices fit the stack (Netlify, GitHub, plain HTML, Stripe, Shopify API, QuickBooks)
-- [ ] Brand is used correctly: business = Sensible Edible Bakery, creator = wassembakes
+- [ ] Brand is used correctly: business = Sensible Bakery, creator = wassembakes

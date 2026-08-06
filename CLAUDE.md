@@ -23,4 +23,4 @@ Source for **wassembakes.com** — Wassem Moarsi's personal creator-brand site.
 
 ## Related brand
 
-The business brand (Sensible Edible Bakery / Dalissa Baking Co) is a separate entity. See `.claude/skills/sensible-brand/SKILL.md` for brand, voice, and stack guidelines that apply to both.
+The business brand (Sensible Bakery / Dalissa Baking Co) is a separate entity. See `.claude/skills/sensible-brand/SKILL.md` for brand, voice, and stack guidelines that apply to both.
