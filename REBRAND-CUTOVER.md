@@ -12,17 +12,17 @@ rebranded.
 - Footer "You might also like → Sensible Bakery" text updated. The footer `href` was already
   `https://sensiblebakery.com` (a prior partial rebrand) — left as-is.
 
-## Deferred to domain cutover (left as-is in code)
+## Done — domain flip (Shopify primary switched to sensiblebakery.com)
 
-- **Shop / buy links** to `sensibleedibles.com` (~103 occurrences): the nav "Shop" link
-  (`/collections/all`) on every page + product CTAs (`/products/<handle>`) in the homepage carousel
-  (`index.html:1056–1072`), `about/index.html:209,228`, `links/index.html:204`, and the bottom CTA on
-  most blog posts. These hit the Shopify storefront — flip to `sensiblebakery.com` once Shopify's
-  primary domain is switched (the `/collections` and `/products/<handle>` paths stay the same).
+- **Shop / buy links** → `https://sensiblebakery.com` across every page, blog post, and the
+  `blog-post` / `recipe` skill URL templates. The Shopify `/collections` and `/products/<handle>`
+  paths are unchanged.
+
+## Still deferred (waiting on Google Workspace)
+
 - **Contact email** `info@sensibleedibles.com` — `index.html:1186` (`mailto:` + visible text).
-- **Skill URL templates** that emit `sensibleedibles.com` shop links:
-  `.claude/skills/blog-post/SKILL.md:75,101`, `.claude/skills/recipe/SKILL.md`. Flip these at cutover
-  so newly generated posts use the new domain (the footer template already emits `sensiblebakery.com`).
+  Flip to `info@sensiblebakery.com` once the address exists on the new domain (add `sensiblebakery.com`
+  to Google Workspace as a domain alias/secondary — no new subscription needed).
 
 ## SEO — already clean
 Canonical / `og:url` / `sitemap.xml` / `robots.txt` / JSON-LD are all on `wassembakes.com` — no

@@ -72,7 +72,7 @@ Copy exactly. Replace `{{placeholders}}`. Keep every class, attribute, and wrapp
       <div class="label">{{short label}}</div>
       <h3>{{one-line product headline}}</h3>
       <p>{{why it fits this post}}</p>
-      <a class="btn" href="https://sensibleedibles.com/{{products/handle OR collections/handle}}">Shop at Sensible &rarr;</a>
+      <a class="btn" href="https://sensiblebakery.com/{{products/handle OR collections/handle}}">Shop at Sensible &rarr;</a>
     </div>
   </div>
 </article>
@@ -98,7 +98,7 @@ Copy exactly. Replace `{{placeholders}}`. Keep every class, attribute, and wrapp
     <div class="sb-label">Featured</div>
     <h4>{{product name}}</h4>
     <p>{{short pitch, 1 sentence}}</p>
-    <a class="btn" href="https://sensibleedibles.com/products/{{handle}}">Shop now &rarr;</a>
+    <a class="btn" href="https://sensiblebakery.com/products/{{handle}}">Shop now &rarr;</a>
   </div>
   -->
 </aside>
@@ -144,7 +144,7 @@ Two optional slots, use any combo:
 - **`.post-footer .product-cta`** — end-of-post block (default for most posts)
 - **`.sb-block.sb-product`** (commented out in template) — sidebar block, uncomment when using
 
-Don't force a product that doesn't match. Link format: `https://sensibleedibles.com/products/{{handle}}` or `/collections/{{handle}}`.
+Don't force a product that doesn't match. Link format: `https://sensiblebakery.com/products/{{handle}}` or `/collections/{{handle}}`.
 
 ## Updating posts.json (REQUIRED)
 
