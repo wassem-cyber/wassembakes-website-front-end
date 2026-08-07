@@ -957,9 +957,14 @@
     return clone;
   }
 
-  // Flatten <picture> to a single absolute-URL <img> so it renders in email clients.
+  // Build a fully branded, inline-styled HTML email from the recipe card.
+  // Email clients drop the page stylesheet, so EVERY style must be inline and
+  // the layout email-safe (no flexbox — use inline-block). Wraps the recipe in
+  // the wassembakes brand shell (yellow header + wordmark, orange rule, footer).
   function recipeEmailHtml(card) {
     const clone = recipeCardClone(card);
+
+    // Flatten <picture> → single absolute-URL <img> so it renders in email.
     clone.querySelectorAll("picture").forEach((pic) => {
       const img = pic.querySelector("img");
       if (!img) { pic.remove(); return; }
@@ -967,12 +972,47 @@
       const replacement = document.createElement("img");
       replacement.src = abs;
       replacement.alt = img.getAttribute("alt") || "";
-      replacement.setAttribute("width", "320");
-      replacement.style.cssText = "max-width:320px;width:100%;height:auto;border-radius:6px;";
+      replacement.setAttribute("width", "544");
+      replacement.style.cssText = "display:block;max-width:100%;height:auto;border-radius:8px;margin:0 0 20px;";
       pic.replaceWith(replacement);
     });
     clone.querySelectorAll("img[srcset]").forEach((im) => im.removeAttribute("srcset"));
-    return clone.innerHTML;
+    clone.querySelectorAll("img").forEach((im) => {
+      if (!im.style.cssText) im.style.cssText = "display:block;max-width:100%;height:auto;border-radius:8px;margin:0 0 20px;";
+    });
+
+    // Inline-style the recipe elements (the .recipe-card CSS won't be present).
+    const setStyle = (sel, css) => clone.querySelectorAll(sel).forEach((el) => { el.style.cssText = css; });
+    setStyle(".recipe-card-title", "font-family:Georgia,'Times New Roman',serif;font-size:26px;font-weight:700;line-height:1.2;margin:0 0 14px;color:#2B2620;");
+    setStyle(".recipe-card-meta", "margin:0 0 20px;padding:0;list-style:none;");
+    setStyle(".recipe-meta-item", "display:inline-block;margin:0 24px 8px 0;vertical-align:top;");
+    setStyle(".recipe-meta-label", "margin:0;font-family:Arial,Helvetica,sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#9B9082;");
+    setStyle(".recipe-meta-value", "margin:2px 0 0;font-family:Georgia,serif;font-weight:700;font-size:16px;color:#2B2620;");
+    setStyle(".recipe-subhead", "font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#FF8F1C;margin:24px 0 8px;");
+    setStyle("h3", "font-family:Georgia,serif;font-size:18px;color:#2B2620;margin:22px 0 8px;");
+    setStyle("ul,ol", "margin:0 0 16px;padding:0 0 0 20px;font-family:Georgia,serif;font-size:15px;line-height:1.65;color:#2B2620;");
+    setStyle("li", "margin:0 0 6px;");
+    setStyle("p", "font-family:Georgia,serif;font-size:15px;line-height:1.65;color:#2B2620;margin:0 0 12px;");
+
+    const inner = clone.innerHTML;
+    const url = location.href;
+    return (
+      '<div style="margin:0;padding:24px 0;background:#F3ECDE;">' +
+        '<div style="max-width:600px;margin:0 auto;background:#ffffff;border-radius:10px;overflow:hidden;">' +
+          '<div style="background:#FFD451;padding:20px 28px;text-align:center;">' +
+            '<span style="font-family:Georgia,\'Times New Roman\',serif;font-style:italic;font-weight:700;font-size:22px;color:#2B2620;">' +
+              'wassem b<span style="color:#FF8F1C;">a</span>kes<span style="color:#FF8F1C;">.</span></span>' +
+          '</div>' +
+          '<div style="height:4px;background:#FF8F1C;font-size:0;line-height:0;">&nbsp;</div>' +
+          '<div style="padding:28px 28px 6px;">' + inner + '</div>' +
+          '<div style="border-top:1px solid #E6DDCF;margin:6px 28px 0;"></div>' +
+          '<div style="padding:16px 28px 26px;text-align:center;font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#6E6458;">' +
+            'Baked up by <a href="https://wassembakes.com" style="color:#C2681E;text-decoration:none;font-weight:700;">Wassem Bakes</a>' +
+            ' &middot; <a href="' + url + '" style="color:#6E6458;text-decoration:underline;">view the full post</a>' +
+          '</div>' +
+        '</div>' +
+      '</div>'
+    );
   }
 
   let recipeModalCard = null;
