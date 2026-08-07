@@ -9,11 +9,10 @@
   // form + an empty state; submitting shows a friendly "try later" message).
   const COMMENTS_URL = "https://us-central1-wassembakes-app.cloudfunctions.net/comments";
 
-  // "Email this recipe" mailer. Deploy .claude/recipe-mailer.gs as a Google
-  // Apps Script web app (Deploy → New deployment → Web app, "Anyone" access)
-  // and paste its /exec URL here. Until then, the email button shows a friendly
-  // "not set up yet" message instead of failing.
-  const RECIPE_MAIL_URL = "https://script.google.com/macros/s/AKfycbwA2H-9Uhsmd9tGBkIBpzDiAyft3qpmD_xfnyUIIuy7D6g8IMsrslVg_wWp8UkJN7B5/exec";
+  // "Email this recipe" mailer — sends the branded HTML from hello@wassembakes.com
+  // via the Studio (Zoho) backend. Replaced the old Google Apps Script, which
+  // could only send from info@.
+  const RECIPE_MAIL_URL = "https://us-central1-wassembakes-app.cloudfunctions.net/sendRecipeMail";
 
   const PRINT_ICON =
     '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V3h12v6"/><path d="M6 18H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><rect x="6" y="13" width="12" height="8" rx="1"/></svg>';
@@ -1072,18 +1071,23 @@
       }
       fetch(RECIPE_MAIL_URL, {
         method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body:
-          "email=" + encodeURIComponent(email) +
-          "&title=" + encodeURIComponent(recipeModalTitle) +
-          "&url=" + encodeURIComponent(location.href) +
-          "&html=" + encodeURIComponent(recipeEmailHtml(recipeModalCard)),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          to: email,
+          subject: recipeModalTitle + " — Recipe from Wassem Bakes",
+          html: recipeEmailHtml(recipeModalCard),
+          token: "rb_recipe_email_v1",
+        }),
       })
-        .then(() => {
-          msg.textContent = "Sent! Check your inbox.";
-          form.reset();
-          setTimeout(close, 1600);
+        .then((r) => r.json())
+        .then((d) => {
+          if (d && d.ok) {
+            msg.textContent = "Sent! Check your inbox.";
+            form.reset();
+            setTimeout(close, 1600);
+          } else {
+            msg.textContent = "Couldn’t send: " + ((d && d.error) || "please try again.");
+          }
         })
         .catch(() => {
           msg.textContent = "Something went wrong. Try again.";
