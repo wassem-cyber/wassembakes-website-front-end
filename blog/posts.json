@@ -1,5 +1,16 @@
 [
   {
+    "slug": "cheesy-rolls",
+    "title": "Cheesy Rolls",
+    "shortTitle": "Cheesy Rolls",
+    "excerpt": "Soft, pillowy gluten-free dough balls with a little well of melty vegan cheese pressed into the top and a scatter of garlic and herbs.",
+    "date": "2026-08-10",
+    "dateDisplay": "August 10, 2026",
+    "image": "cheesy-rolls-hero.jpg",
+    "tags": ["Recipes", "Gluten-Free", "Vegan"],
+    "recipeTags": ["Vegan", "Gluten-Free"]
+  },
+  {
     "slug": "chocolate-chip-lava-cookies",
     "title": "Chocolate Chip Lava Cookies",
     "shortTitle": "Chocolate Chip Lava Cookies",
