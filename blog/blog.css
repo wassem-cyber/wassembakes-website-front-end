@@ -1536,3 +1536,57 @@ footer.site-footer {
   .comment-form { padding: 1.35rem; }
   .comment-replies { padding-left: 0.9rem; }
 }
+
+/* Multi-part series index (e.g. Perfecting Your Gluten-Free Bake) */
+.series-nav {
+  border: 1px solid var(--ink);
+  border-radius: 4px;
+  padding: 1.75rem 2rem;
+  margin-bottom: 2rem;
+}
+.series-nav-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  opacity: 0.5;
+  margin-bottom: 1.25rem;
+}
+.series-nav ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.series-nav li { border-top: 1px solid rgba(26, 23, 20, 0.15); }
+.series-nav li:first-child { border-top: none; }
+.series-nav a,
+.series-nav .series-item {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: none;
+}
+.series-num {
+  flex: 0 0 1.25rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  opacity: 0.45;
+}
+.series-title {
+  font-family: "bettoni-variable", 'Fraunces', serif;
+  font-variation-settings: "opsz" 40, "wght" 110;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  transition: color 0.2s;
+}
+.series-nav a:hover .series-title { color: var(--orange); }
+.series-nav li[aria-current] .series-title { color: var(--orange); }
+.series-nav li[aria-current] .series-num { opacity: 0.9; }
+.series-upcoming .series-title { font-style: italic; opacity: 0.4; }
+
+@media (max-width: 700px) {
+  .series-nav { padding: 1.5rem 1.25rem; }
+  .series-title { font-size: 1rem; }
+}
