@@ -525,6 +525,10 @@ nav {
   .post-sections { padding: 0 1.25rem 4rem; }
   .posts-section { margin-bottom: 3rem; }
   .post-card { flex-basis: 240px; }
+  /* On mobile the carousel is swipeable and there's no page gutter, so the
+     nav arrows sit on top of the card images/dates. Hide them and let touch
+     scrolling handle navigation. */
+  .posts-arrow { display: none; }
 }
 .post-card-image {
   aspect-ratio: 3/2;
