@@ -857,7 +857,7 @@
     color: var(--ink);
   }
   .contact-wrap {
-    background: #8DB9CA;
+    background: var(--yellow);
     max-width: 1100px;
     width: 100%;
     padding: 4rem 3rem;
@@ -1091,7 +1091,7 @@
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
     </a>
   </div>
-  <div class="reels-grid stagger-item">
+  <div class="reels-grid stagger-item" id="reelsGrid">
     <a class="reel" href="https://www.instagram.com/p/DWmdP-sgt-L/" target="_blank" rel="noopener" aria-label="Watch reel 1 on Instagram">
       <picture><source type="image/avif" srcset="blog/images/kombucha-Cover-480w.avif 480w, blog/images/kombucha-Cover-800w.avif 800w, blog/images/kombucha-Cover-1200w.avif 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><source type="image/webp" srcset="blog/images/kombucha-Cover-480w.webp 480w, blog/images/kombucha-Cover-800w.webp 800w, blog/images/kombucha-Cover-1200w.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><img src="blog/images/kombucha-Cover-800w.jpg" alt="Making kombucha at home" loading="lazy" decoding="async" srcset="blog/images/kombucha-Cover-480w.jpg 480w, blog/images/kombucha-Cover-800w.jpg 800w, blog/images/kombucha-Cover-1200w.jpg 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"></picture>
       <span class="reel-play"></span>
@@ -1134,7 +1134,7 @@
       <div class="section-label stagger-item" style="opacity: 0.6;">Press & Partnerships</div>
       <h2 class="section-title stagger-item"><em>Work</em> with me.</h2>
       <div class="press-stats stagger-item">
-        <div class="stat"><div class="stat-num">205K</div><div class="stat-label">Instagram</div></div>
+        <div class="stat"><div class="stat-num" id="igFollowers">205K</div><div class="stat-label">Instagram</div></div>
         <div class="stat"><div class="stat-num">20+</div><div class="stat-label">Years Baking</div></div>
         <div class="stat"><div class="stat-num">#1</div><div class="stat-label">GF/V in NYC</div></div>
         <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Allergen-Focused</div></div>
@@ -1384,6 +1384,29 @@
       }
     })
     .catch(function () {});
+})();
+</script>
+<script>
+/* Live Instagram: real follower count + top-performing reels, from the Studio's
+   public feed endpoint. Falls back silently to the static values if it can't load. */
+(function () {
+  var FEED = "https://us-central1-wassembakes-app.cloudfunctions.net/publicFeed?limit=4";
+  var IG_PATH = "M12 2.163c3.204 0 3.584.012 4.849.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.849.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z";
+  function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+  fetch(FEED).then(function (r) { return r.json(); }).then(function (d) {
+    if (!d || !d.ok) return;
+    if (d.followersDisplay) { var f = document.getElementById("igFollowers"); if (f) f.textContent = d.followersDisplay; }
+    var grid = document.getElementById("reelsGrid");
+    if (grid && d.posts && d.posts.length) {
+      grid.innerHTML = d.posts.map(function (p, i) {
+        var alt = esc((p.caption || "Instagram reel").slice(0, 90));
+        return '<a class="reel" href="' + esc(p.permalink) + '" target="_blank" rel="noopener" aria-label="Watch reel ' + (i + 1) + ' on Instagram">' +
+          '<img src="' + esc(p.thumb) + '" alt="' + alt + '" loading="lazy" decoding="async" referrerpolicy="no-referrer">' +
+          '<span class="reel-play"></span>' +
+          '<svg class="reel-label" viewBox="0 0 24 24" aria-hidden="true"><path d="' + IG_PATH + '"/></svg></a>';
+      }).join("");
+    }
+  }).catch(function () {});
 })();
 </script>
 </body>
