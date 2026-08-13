@@ -613,7 +613,7 @@
   .shop-hero {
     position: relative;
     max-width: 1200px;
-    margin: 0 auto 2rem;
+    margin: 0 auto 1.25rem;
     aspect-ratio: 3/1;
     border-radius: 4px;
     overflow: hidden;
@@ -624,27 +624,26 @@
     object-fit: cover;
     display: block;
   }
+  .shop-hero-cta { text-align: center; margin: 0 auto 2rem; }
   .shop-hero-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 1rem 2rem;
-    background: var(--paper);
-    color: var(--ink);
+    display: inline-block;
+    padding: 1rem 2.25rem;
+    background: var(--orange);
+    color: var(--paper);
     font-size: 0.85rem;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     white-space: nowrap;
-    border-radius: 6px;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px -8px rgba(26, 23, 20, 0.4);
     transition: background 0.2s, color 0.2s, transform 0.2s ease, box-shadow 0.2s ease;
   }
   .shop-hero-btn:hover {
-    background: var(--orange);
+    background: var(--ink);
     color: var(--paper);
-    transform: translate(-50%, -50%) scale(1.03);
-    box-shadow: 0 8px 18px -10px rgba(26, 23, 20, 0.3);
+    transform: scale(1.03);
+    box-shadow: 0 10px 22px -10px rgba(26, 23, 20, 0.45);
   }
   @media (max-width: 700px) {
     .shop-hero-btn { padding: 0.75rem 1.25rem; font-size: 0.65rem; letter-spacing: 0.15em; }
@@ -858,7 +857,7 @@
     color: var(--ink);
   }
   .contact-wrap {
-    background: var(--orange);
+    background: #8DB9CA;
     max-width: 1100px;
     width: 100%;
     padding: 4rem 3rem;
@@ -868,7 +867,7 @@
     .contact-wrap { padding: 2.5rem 1.5rem; }
   }
   .contact h2 { color: var(--ink); }
-  .contact h2 em { color: var(--paper); }
+  .contact h2 em { color: var(--ink); }
   .contact-methods {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -1010,7 +1009,7 @@
 
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-label">Est. 2003 · New York</div>
+    <div class="hero-label">20+ Years · New York</div>
     <h1>Gluten-<br>free.<br>Vegan.<br><em>Obsessed.</em></h1>
     <div class="hero-cta-wrap">
       <a href="blog/index.html" class="hero-cta">Let's go<svg class="hero-cta-arrow" viewBox="0 0 72 10" aria-hidden="true"><path d="M0 5 L66 5 M60 1 L66 5 L60 9" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -1053,8 +1052,8 @@
   <h2 class="section-title stagger-item" style="margin-bottom: 1.5rem;">Sensible <em>Bakery</em></h2>
   <div class="shop-hero stagger-item">
     <picture><source type="image/avif" srcset="shop/chocolate%20chip-480w.avif 480w, shop/chocolate%20chip-800w.avif 800w, shop/chocolate%20chip-1200w.avif 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><source type="image/webp" srcset="shop/chocolate%20chip-480w.webp 480w, shop/chocolate%20chip-800w.webp 800w, shop/chocolate%20chip-1200w.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><img src="shop/chocolate%20chip-800w.jpg" alt="Chocolate chip cookies from Sensible Bakery" loading="lazy" decoding="async" srcset="shop/chocolate%20chip-480w.jpg 480w, shop/chocolate%20chip-800w.jpg 800w, shop/chocolate%20chip-1200w.jpg 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"></picture>
-    <a class="shop-hero-btn" href="https://sensiblebakery.com/collections/all" target="_blank" rel="noopener">Shop vegan &amp; gluten-free treats</a>
   </div>
+  <div class="shop-hero-cta stagger-item"><a class="shop-hero-btn" href="https://sensiblebakery.com/collections/all" target="_blank" rel="noopener">Shop vegan &amp; gluten-free treats</a></div>
   <p class="stagger-item" style="max-width: 900px; margin: 0 auto; font-size: 1.5rem; text-align: center; font-family: 'bettoni-variable', 'Fraunces', serif; font-variation-settings: 'opsz' 40, 'wght' 110;">Vegan and gluten-free baked goods made with wholesome, sustainable ingredients. Shipping nationwide.</p>
   <div class="shop-carousel stagger-item">
     <div class="shop-track">
@@ -1180,10 +1179,6 @@
       <div class="contact-card">
         <span>Sponsorships & Press</span>
         <a href="mailto:hello@wassembakes.com">hello@wassembakes.com</a>
-      </div>
-      <div class="contact-card">
-        <span>Bakery Orders</span>
-        <a href="mailto:info@sensiblebakery.com">info@sensiblebakery.com</a>
       </div>
       <div class="contact-card">
         <span>Instagram</span>
