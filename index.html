@@ -1383,34 +1383,52 @@
     .then(function (r) { return r.ok ? r.json() : []; })
     .then(function (posts) {
       var sorted = posts.slice().sort(function (a, b) { return b.date.localeCompare(a.date); });
-      var featured = sorted.find(function (p) { return (p.tags || []).indexOf('Recipes') !== -1; });
-      var remaining = featured ? sorted.filter(function (p) { return p.slug !== featured.slug; }) : sorted;
-      var recent = remaining.slice(0, 3);
+      var recipes = sorted.filter(function (p) { return (p.tags || []).indexOf('Recipes') !== -1; });
 
-      if (featureEl && featured) {
-        var fImg = featured.image ? '<img ' + imgVariants(featured.image, featured.title, '(max-width: 768px) 100vw, 600px') + ' loading="lazy" decoding="async">' : '';
-        featureEl.innerHTML = '<a class="blog-feature-card" href="blog/' + featured.slug + '.html">'
-          + '<div class="blog-feature-image">' + fImg + '</div>'
-          + '<div class="blog-feature-content">'
-          + '<h3 class="blog-feature-heading">Featured Recipe</h3>'
-          + '<div class="blog-feature-date">' + featured.dateDisplay + '</div>'
-          + '<h3 class="blog-feature-title">' + featured.title + '</h3>'
-          + '<p class="blog-feature-excerpt">' + featured.excerpt + '</p>'
-          + '</div></a>';
+      // Only feature a recipe once its photo actually exists (otherwise the card
+      // would show a broken image). Test-load the -800w variant.
+      function hasImage(p, cb) {
+        if (!p.image) { cb(false); return; }
+        var dot = p.image.lastIndexOf('.');
+        var url = 'blog/images/' + p.image.substring(0, dot) + '-800w' + p.image.substring(dot);
+        var im = new Image();
+        im.onload = function () { cb(true); };
+        im.onerror = function () { cb(false); };
+        im.src = url;
       }
 
-      if (previewEl) {
-        previewEl.innerHTML = recent.map(function (p) {
-          var img = p.image ? '<img ' + imgVariants(p.image, p.title, '(max-width: 600px) 100vw, 400px') + ' loading="lazy" decoding="async">' : '';
-          return '<a class="blog-preview-card" href="blog/' + p.slug + '.html">'
-            + '<div class="blog-preview-image">' + img + '</div>'
-            + '<div class="blog-preview-content">'
-            + '<div class="blog-preview-date">' + p.dateDisplay + '</div>'
-            + '<h3 class="blog-preview-title">' + p.title + '</h3>'
-            + '<p class="blog-preview-excerpt">' + p.excerpt + '</p>'
+      function renderAll(featured) {
+        var remaining = featured ? sorted.filter(function (p) { return p.slug !== featured.slug; }) : sorted;
+        var recent = remaining.slice(0, 3);
+        if (featureEl && featured) {
+          var fImg = featured.image ? '<img ' + imgVariants(featured.image, featured.title, '(max-width: 768px) 100vw, 600px') + ' loading="lazy" decoding="async" onerror="this.style.display=\'none\'">' : '';
+          featureEl.innerHTML = '<a class="blog-feature-card" href="blog/' + featured.slug + '.html">'
+            + '<div class="blog-feature-image">' + fImg + '</div>'
+            + '<div class="blog-feature-content">'
+            + '<h3 class="blog-feature-heading">Featured Recipe</h3>'
+            + '<div class="blog-feature-date">' + featured.dateDisplay + '</div>'
+            + '<h3 class="blog-feature-title">' + featured.title + '</h3>'
+            + '<p class="blog-feature-excerpt">' + featured.excerpt + '</p>'
             + '</div></a>';
-        }).join('');
+        }
+        if (previewEl) {
+          previewEl.innerHTML = recent.map(function (p) {
+            var img = p.image ? '<img ' + imgVariants(p.image, p.title, '(max-width: 600px) 100vw, 400px') + ' loading="lazy" decoding="async" onerror="this.style.display=\'none\'">' : '';
+            return '<a class="blog-preview-card" href="blog/' + p.slug + '.html">'
+              + '<div class="blog-preview-image">' + img + '</div>'
+              + '<div class="blog-preview-content">'
+              + '<div class="blog-preview-date">' + p.dateDisplay + '</div>'
+              + '<h3 class="blog-preview-title">' + p.title + '</h3>'
+              + '<p class="blog-preview-excerpt">' + p.excerpt + '</p>'
+              + '</div></a>';
+          }).join('');
+        }
       }
+
+      (function pick(i) {
+        if (i >= recipes.length) { renderAll(recipes[0] || sorted[0]); return; }
+        hasImage(recipes[i], function (ok) { ok ? renderAll(recipes[i]) : pick(i + 1); });
+      })(0);
     })
     .catch(function () {});
 })();
