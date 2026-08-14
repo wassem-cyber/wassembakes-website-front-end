@@ -1,439 +1,659 @@
 [
-  {
-    "slug": "sugar-in-gluten-free-baking",
-    "title": "Sugar: The Most Misunderstood Ingredient in Gluten-Free Baking",
-    "shortTitle": "Sugar in Gluten-Free Baking",
-    "excerpt": "Most people think sugar is there for sweetness. That's the smallest part of its job.",
-    "date": "2026-08-12",
-    "dateDisplay": "August 12, 2026",
-    "image": "sugar-hero.jpg",
-    "tags": ["Baking Tips", "Gluten-Free"]
-  },
-  {
-    "slug": "cheesy-rolls",
-    "title": "Cheesy Rolls",
-    "shortTitle": "Cheesy Rolls",
-    "excerpt": "Soft, pillowy gluten-free dough balls with a little well of melty vegan cheese pressed into the top and a scatter of garlic and herbs.",
-    "date": "2026-08-10",
-    "dateDisplay": "August 10, 2026",
-    "image": "cheesy-rolls-hero.jpg",
-    "tags": ["Recipes", "Gluten-Free", "Vegan"],
-    "recipeTags": ["Vegan", "Gluten-Free"]
-  },
-  {
-    "slug": "chocolate-chip-lava-cookies",
-    "title": "Chocolate Chip Lava Cookies",
-    "shortTitle": "Chocolate Chip Lava Cookies",
-    "excerpt": "A molten ganache core sealed inside a thick chocolate chip cookie. No dairy, no gluten, just gooey deliciousness.",
-    "date": "2026-07-29",
-    "dateDisplay": "July 29, 2026",
-    "image": "chocolate-chip-lava-cookies-hero.jpg",
-    "tags": ["Recipes", "Gluten-Free", "Vegan"],
-    "recipeTags": ["Vegan", "Gluten-Free"]
-  },  {
-    "slug": "no-refined-sugar-oatmeal-raisin-cookies",
-    "title": "No Refined Sugar Oatmeal Raisin Cookies",
-    "shortTitle": "Oatmeal Raisin Cookies",
-    "excerpt": "Chewy, soft-centered oatmeal raisin cookies made without wheat flour and without refined sugar. Maple does the sweetening, oats do the structure, and a homemade gluten-free blend handles the rest.",
-    "date": "2026-07-24",
-    "dateDisplay": "July 24, 2026",
-    "image": "oatmeal-raisin-cookies-dark.jpg",
-    "tags": ["Recipes", "Gluten-Free", "Vegan"],
-    "recipeTags": ["Vegan", "Gluten-Free", "Health & Wellness"]
-  },
-  {
-    "slug": "blueberry-cheesecake-buns",
-    "title": "Blueberry Cheesecake Buns",
-    "shortTitle": "Blueberry Cheesecake Buns",
-    "excerpt": "Soft, gluten-free vegan yeasted buns topped with a vegan cheesecake swirl and blueberry filling.",
-    "date": "2026-07-22",
-    "dateDisplay": "July 22, 2026",
-    "image": "blueberry-cheesecake-buns-tray.jpg",
-    "tags": ["Recipes", "Gluten-Free", "Vegan"],
-    "recipeTags": ["Vegan", "Gluten-Free"]
-  },
-  {
-    "slug": "add-baking-powder-last",
-    "title": "Stop Adding Baking Powder With Your Dry Ingredients",
-    "shortTitle": "Add Baking Powder Last",
-    "excerpt": "Gluten-free batters need long mixing — and if your baking powder is in from the start, the rise is gone before it bakes. Add it last. Here's the timing, the technique, and how to fix collapse after switching to double-acting.",
-    "date": "2026-07-20",
-    "dateDisplay": "July 20, 2026",
-    "image": "bp-mini-bundts.jpg",
-    "tags": ["Baking Tips", "Gluten-Free"]
-  },
-  {
-    "slug": "square-banana-maple-cake",
-    "title": "Banana Maple Snacking Cake",
-    "shortTitle": "Banana Maple Cake",
-    "excerpt": "A gluten-free, vegan base sweetened entirely with maple, layered with banana and finished with a crumb top.",
-    "date": "2026-07-14",
-    "dateDisplay": "July 14, 2026",
-    "image": "square-banana-maple-cake-flatlay.jpg",
-    "tags": ["Recipes", "Gluten-Free", "Vegan"],
-    "recipeTags": ["Vegan", "Gluten-Free"]
-  },
-  {
-    "slug": "3-ingredient-pie-crust-and-crumble",
-    "title": "The 3-Ingredient Pie Crust (and Crumble) That Actually Holds",
-    "shortTitle": "3-Ingredient Pie Crust",
-    "excerpt": "Most gluten-free vegan crusts fall apart the second you cut them. This one holds — three ingredients, each doing a job, plus a flax egg to bind it.",
-    "date": "2026-07-13",
-    "dateDisplay": "July 13, 2026",
-    "image": "pie-crust-hero.jpg",
-    "tags": ["Recipes", "Gluten-Free", "Vegan"],
-    "recipeTags": ["Vegan", "Gluten-Free"]
-  },
-  {
-    "slug": "blueberry-rosemary-muffins",
-    "title": "Blueberry Rosemary Muffins",
-    "shortTitle": "Blueberry Rosemary Muffins",
-    "excerpt": "A staff-favorite gluten-free, vegan muffin — sweet blueberries and maple with just enough fresh rosemary for a subtle, savory lift.",
-    "date": "2026-07-07",
-    "dateDisplay": "July 7, 2026",
-    "image": "blueberry-rosemary-hero.jpg",
-    "tags": ["Recipes", "Gluten-Free", "Vegan"],
-    "recipeTags": ["Vegan", "Gluten-Free"]
-  },
-  {
-    "slug": "bakery-style-muffins-with-the-creaming-method",
-    "title": "Bakery Style Muffins With the Creaming Method",
-    "shortTitle": "Creaming Method Muffins",
-    "excerpt": "Here's the professional creaming technique I use at the bakery, plus a gluten-free vegan vanilla muffin recipe.",
-    "date": "2026-07-02",
-    "dateDisplay": "July 2, 2026",
-    "image": "creaming-muffins-hero.jpg",
-    "tags": ["Recipes", "Baking Tips", "Gluten-Free", "Vegan"],
-    "recipeTags": ["Vegan", "Gluten-Free"]
-  },
-  {
-    "slug": "sourdough-and-yeasted-cinnamon-rolls",
-    "title": "Sourdough and Yeasted Cinnamon Rolls",
-    "shortTitle": "Cinnamon Rolls",
-    "excerpt": "Gooey, bakery-style cinnamon rolls with three variations.",
-    "date": "2026-07-01",
-    "dateDisplay": "July 1, 2026",
-    "image": "cinnamon-roll-header.jpg",
-    "tags": ["Recipes", "Gluten-Free", "Vegan"],
-    "recipeTags": ["Vegan", "Gluten-Free"]
-  },
-  {
-    "slug": "two-ways-to-use-flax-in-baking",
-    "title": "Two Ways to Use Flax in Your Baking",
-    "shortTitle": "Two Ways to Use Flax",
-    "excerpt": "Flax meal does two completely different jobs depending on how you add it. Mix it with water and it binds; add it dry and it behaves like a flour. Here's how to do both right, plus a trick for getting more out of a flax egg.",
-    "date": "2026-06-24",
-    "dateDisplay": "June 24, 2026",
-    "image": "flax-bowls.jpg",
-    "tags": ["Baking Tips", "Vegan", "Gluten-Free"]
-  },
-  {
-    "slug": "5-gluten-free-baking-tips-i-use-every-day",
-    "title": "5 Gluten-Free Baking Tips I Use Every Day in a Commercial Kitchen",
-    "shortTitle": "5 Gluten-Free Baking Tips",
-    "excerpt": "Gluten-free baking doesn't fail because of bad recipes. It fails because of misunderstood fundamentals. Here are the five that matter most, straight from my commercial kitchen.",
-    "date": "2026-06-23",
-    "dateDisplay": "June 23, 2026",
-    "image": "gf-tips-muffin-hero.jpg",
-    "tags": ["Baking Tips", "Gluten-Free"]
-  },
-  {
-    "slug": "baking-soda-vs-baking-powder",
-    "title": "Why Baking Soda and Baking Powder Are Not the Same (And Why You Need Both)",
-    "shortTitle": "Baking Soda vs Baking Powder",
-    "excerpt": "They look identical and both make things rise, so why do recipes call for both?",
-    "date": "2026-06-22",
-    "dateDisplay": "June 22, 2026",
-    "image": "bp-bs-cake.jpg",
-    "tags": ["Baking Tips"]
-  },
-  {
-    "slug": "flour-handling-for-better-texture",
-    "title": "Flour Handling for Better Texture",
-    "shortTitle": "Flour Handling for Texture",
-    "excerpt": "Most bakers obsess over ingredients and ratios and overlook how they handle their flour before it ever hits the mix. Sifting, toasting, weighing, and storage — the pre-mixing details that decide your crumb, lift, and mouthfeel.",
-    "date": "2026-06-12",
-    "dateDisplay": "June 12, 2026",
-    "image": "texture-hero.jpg",
-    "tags": ["Baking Tips", "Gluten-Free"]
-  },
-  {
-    "slug": "how-to-grease-your-pan-like-a-pro-baker",
-    "title": "How to Grease Your Pan Like a Pro Baker",
-    "shortTitle": "Grease Your Pan Like a Pro",
-    "excerpt": "There's no single best way to oil a baking pan. Spray, brush, oil-plus-flour, parchment, or silicone — a professional baker's guide to picking the right method for every situation.",
-    "date": "2026-06-10",
-    "dateDisplay": "June 10, 2026",
-    "image": "grease-hero.jpg",
-    "tags": ["Baking Tips"]
-  },
-  {
-    "slug": "vegan-sweetened-condensed-milk",
-    "title": "Vegan Sweetened Condensed Milk",
-    "shortTitle": "Vegan Condensed Milk",
-    "excerpt": "Sweetened condensed milk is a pantry staple that opens up a whole world of possibilities. Make your own at home with only a couple plant-based ingredients.",
-    "date": "2026-06-05",
-    "dateDisplay": "June 5, 2026",
-    "image": "vegan-condensed-milk-hero.jpg",
-    "tags": ["Recipes", "Vegan", "Gluten-Free"],
-    "recipeTags": ["Vegan", "Gluten-Free"]
-  },
-  {
-    "slug": "the-complete-guide-to-salt-in-baking",
-    "title": "The Complete Guide to Salt in Baking",
-    "shortTitle": "Salt in Baking",
-    "excerpt": "Salt does five jobs in baking, and none of them is making things taste salty. The science, the exact percentages by category, and why fine sea salt is the only one I use.",
-    "date": "2026-06-03",
-    "dateDisplay": "June 3, 2026",
-    "image": "salt-hero.jpg",
-    "tags": ["Baking Tips", "Gluten-Free"]
-  },
-  {
-    "slug": "sugar-free-protein-brownies",
-    "title": "Sugar-Free Protein Brownies",
-    "excerpt": "A straight-from-the-bakery brownie that's sugar-free, vegan, and gluten-free — and still unbelievably fudgy.",
-    "date": "2026-06-01",
-    "dateDisplay": "June 1, 2026",
-    "image": "protein-brownie-board.jpg",
-    "tags": ["Recipes", "Vegan", "Gluten-Free"]
-  },
-  {
-    "slug": "get-the-most-out-of-your-cocoa-powder",
-    "title": "Get the Most Out Of Your Cocoa Powder",
-    "shortTitle": "Get the Most Out of Cocoa",
-    "excerpt": "What's the difference between types of cocoa powder, and how do you bloom them correctly? Get the most out of your cocoa powder for every kind of bake!",
-    "date": "2026-04-22",
-    "dateDisplay": "April 22, 2026",
-    "image": "cocoa-hero.jpg",
-    "tags": ["Baking Tips"]
-  },
-  {
-    "slug": "baking-basics-every-beginner-needs-to-know",
-    "title": "Baking Basics Every Beginner Needs to Know",
-    "shortTitle": "Baking Basics for Beginners",
-    "excerpt": "Whether you're vegan, gluten-free, or none of the above, these tips are for you.",
-    "date": "2025-10-22",
-    "dateDisplay": "October 22, 2025",
-    "image": "baking-basics-dough.jpg",
-    "tags": ["Baking Tips"]
-  },
-  {
-    "slug": "five-mistakes-sabotaging-your-gluten-free-baking",
-    "title": "Five Mistakes Sabotaging Your Gluten-Free Baking",
-    "shortTitle": "Five GF Baking Mistakes",
-    "excerpt": "After 20 years in commercial baking, I've seen the same mistakes kill gluten-free bakes again and again — and it's almost never a lack of baking knowledge.",
-    "date": "2026-05-28",
-    "dateDisplay": "May 28, 2026",
-    "image": "gf-mistakes-cookie-crumb.jpg",
-    "tags": ["Baking Tips", "Gluten-Free"]
-  },
-  {
-    "slug": "diy-yogurt-substitute",
-    "title": "DIY Yogurt Substitute for Baking (When You're in a Pinch)",
-    "shortTitle": "DIY Yogurt Substitute",
-    "excerpt": "When a recipe calls for yogurt and you're baking it, you don't need yogurt. You need what yogurt does. Here's the four-ingredient bakery hack.",
-    "date": "2026-05-26",
-    "dateDisplay": "May 26, 2026",
-    "image": "diy-yogurt-substitute.jpg",
-    "tags": ["Recipes", "Baking Tips", "Vegan", "Gluten-Free"],
-    "recipeTags": ["Vegan", "Gluten-Free"]
-  },
-  {
-    "slug": "whippable-vegan-heavy-cream",
-    "title": "4 Ingredient Whippable Plant-Based Heavy Cream",
-    "shortTitle": "Vegan Heavy Cream",
-    "excerpt": "Most plant-based heavy cream recipes online are wrong. Here's the 4-ingredient formula that actually whips, holds in sauces, and doesn't break.",
-    "date": "2026-05-22",
-    "dateDisplay": "May 22, 2026",
-    "image": "vegan-cream-whisk.jpg",
-    "tags": ["Recipes", "Vegan", "Gluten-Free"],
-    "recipeTags": ["Vegan", "Gluten-Free"]
-  },
-  {
-    "slug": "the-best-gluten-free-sourdough-bread",
-    "title": "The Best Gluten-Free Sourdough Bread",
-    "shortTitle": "GF Sourdough Bread",
-    "excerpt": "Gluten-free bread isn't as difficult as you think — you just can't treat it like wheat bread. Tried and true recipe from a professional gluten-free bakery kitchen.",
-    "date": "2026-05-15",
-    "dateDisplay": "May 15, 2026",
-    "image": "gf-sourdough-hero.jpg",
-    "tags": ["Recipes", "Gluten-Free", "Vegan"],
-    "recipeTags": ["Vegan", "Gluten-Free"]
-  },
-  {
-    "slug": "baking-and-eating-more-sustainably",
-    "title": "Baking (and Eating) More Sustainably",
-    "excerpt": "Small changes to what you eat and where you buy it add up. Practical tips on cutting food waste, reducing packaging, and eating local and in season.",
-    "date": "2025-10-28",
-    "dateDisplay": "October 28, 2025",
-    "image": "garden-planting.jpg",
-    "tags": ["Baking Tips", "Health & Wellness"]
-  },
-  {
-    "slug": "pumpkin-pie-muffin",
-    "title": "Pumpkin Pie Muffin",
-    "excerpt": "Pumpkin pie meets banana-based muffin: flax-egg binding, oat-flour base, pumpkin pie spice filling, and a brown sugar crumb top.",
-    "date": "2024-11-01",
-    "dateDisplay": "November 1, 2024",
-    "image": "pumpkin-muffin-tray.jpg",
-    "tags": ["Recipes", "Vegan", "Gluten-Free"],
-    "recipeTags": ["Vegan", "Gluten-Free"]
-  },
-  {
-    "slug": "sprouting-seeds-and-why-it-matters",
-    "title": "Sprouting Seeds And Why It Matters",
-    "excerpt": "Raw seeds lock up their minerals. Sprouting unlocks them. Here's how to sprout pumpkin, sunflower, quinoa, and more at home, plus the exceptions worth knowing.",
-    "date": "2026-05-13",
-    "dateDisplay": "May 13, 2026",
-    "image": "sprouted-granola.jpg",
-    "tags": ["Baking Tips", "Health & Wellness"]
-  },
-  {
-    "slug": "naturally-color-treats",
-    "title": "Naturally Color Treats",
-    "excerpt": "Skip the artificial dyes. Beet, butterfly pea, spirulina, turmeric, and matcha — our favorite natural food colors and how to get the most out of them.",
-    "date": "2025-08-20",
-    "dateDisplay": "August 20, 2025",
-    "image": "color-hero.jpg",
-    "tags": ["Baking Tips", "Health & Wellness"]
-  },
-  {
-    "slug": "vegan-egg-wash-replacements",
-    "title": "Vegan Egg Wash Replacements",
-    "excerpt": "We tested every option. Every. Single. One.",
-    "date": "2026-03-09",
-    "dateDisplay": "March 9, 2026",
-    "image": "egg-wash-tray.jpg",
-    "tags": ["Baking Tips", "Vegan"]
-  },
-  {
-    "slug": "how-to-use-psyllium-husk",
-    "title": "How to Use Psyllium Husk",
-    "excerpt": "Psyllium husk is the secret ingredient behind I-can't-believe-it's-gluten-free baking.",
-    "date": "2026-04-08",
-    "dateDisplay": "April 8, 2026",
-    "image": "psyllium-rolls.jpg",
-    "tags": ["Baking Tips", "Gluten-Free"]
-  },
-  {
-    "slug": "make-coconut-yogurt-at-home",
-    "title": "Make Coconut Yogurt at Home",
-    "excerpt": "Coconut yogurt is one of those things that sounds complicated until you realize it's just two ingredients and a little patience.",
-    "date": "2026-04-29",
-    "dateDisplay": "April 29, 2026",
-    "image": "coconut-yogurt-hero.jpg",
-    "tags": ["Recipes", "Vegan", "Gluten-Free"],
-    "recipeTags": ["Vegan", "Gluten-Free"]
-  },
-  {
-    "slug": "what-is-nutritional-yeast",
-    "title": "What is Nutritional Yeast?",
-    "excerpt": "Cheesy, funky, and gaining popularity as interest grows in vegan cooking.",
-    "date": "2025-12-23",
-    "dateDisplay": "December 23, 2025",
-    "image": "nooch-bowl.jpg",
-    "tags": ["Baking Tips", "Health & Wellness", "Vegan"]
-  },
-  {
-    "slug": "lemon-zucchini-protein-muffins",
-    "title": "Lemon Zucchini Protein Muffins",
-    "excerpt": "These muffins pack in a whole lot of nutritional value with low sugar to boot.",
-    "date": "2025-12-03",
-    "dateDisplay": "December 3, 2025",
-    "image": "lemon-zucchini-flatlay.jpg",
-    "tags": ["Recipes", "Gluten-Free"]
-  },
-  {
-    "slug": "protein-packed-rice-krispie-treats",
-    "title": "Protein Packed Rice Krispie Treats",
-    "excerpt": "Take a bite of my healthy take on the classic rice krispy treat - date-sweetened, protein-packed, and built to fuel you.",
-    "date": "2025-11-11",
-    "dateDisplay": "November 11, 2025",
-    "image": "rkt-hero.jpg",
-    "tags": ["Recipes", "Vegan", "Gluten-Free"]
-  },
-  {
-    "slug": "essential-egg-replacements-for-vegan-baking",
-    "title": "Essential Egg Replacements for Vegan Baking",
-    "excerpt": "Eggs do three jobs in baking - binding, moisture, and leavening. The key to veganizing a recipe is knowing what you're replacing.",
-    "date": "2025-11-05",
-    "dateDisplay": "November 5, 2025",
-    "image": "eggs.jpg",
-    "tags": ["Baking Tips", "Vegan"]
-  },
-  {
-    "slug": "gut-healthy-postbiotics-with-fermented-beets",
-    "title": "Gut-Healthy Postbiotics With Fermented Beets",
-    "excerpt": "Learn what ferments can do for your gut, plus an easy beet recipe to get started.",
-    "date": "2025-10-08",
-    "dateDisplay": "October 8, 2025",
-    "image": "beets-pattern.jpg",
-    "tags": ["Recipes", "Health & Wellness"],
-    "recipeTags": ["Vegan", "Gluten-Free"]
-  },
-  {
-    "slug": "starter-guide-to-gluten-free-flours",
-    "title": "Starter Guide to Gluten-Free Flours",
-    "excerpt": "Gluten-free flours aren't one-to-one swaps for wheat. A starter guide to the flours we use most — what each does, when to reach for it, and a sample blend to get you started.",
-    "date": "2025-10-01",
-    "dateDisplay": "October 1, 2025",
-    "image": "grains.jpg",
-    "tags": ["Baking Tips", "Gluten-Free"]
-  },
-  {
-    "slug": "binders-for-better-gluten-free-baking",
-    "title": "Binders For Better Gluten-Free Baking",
-    "excerpt": "If you're baking without gluten, adding binders is essential. We're taking you through what they all do and when and how to use each.",
-    "date": "2025-09-24",
-    "dateDisplay": "September 24, 2025",
-    "image": "muffins.jpg",
-    "tags": ["Baking Tips", "Gluten-Free"]
-  },
-  {
-    "slug": "choosing-the-right-oils-for-healthier-baking",
-    "title": "Choosing the Right Oils for Healthier Baking",
-    "excerpt": "A baker's guide to oils — choosing not just for taste but for health, quality, and performance.",
-    "date": "2025-09-03",
-    "dateDisplay": "September 3, 2025",
-    "image": "oils-hero.jpg",
-    "tags": ["Baking Tips", "Health & Wellness"]
-  },
-  {
-    "slug": "scoby-secrets-making-kombucha-at-home",
-    "title": "Scoby Secrets: Making Kombucha at Home",
-    "excerpt": "How to brew tangy, fizzy kombucha at home — what a scoby is, what it does, and the two-stage fermentation that turns sweet tea into a probiotic drink.",
-    "date": "2025-07-23",
-    "dateDisplay": "July 23, 2025",
-    "image": "kombucha-hero.jpg",
-    "tags": ["Recipes", "Health & Wellness"],
-    "recipeTags": ["Vegan", "Gluten-Free"]
-  },
-  {
-    "slug": "stop-throwing-your-toppings-in",
-    "title": "Stop Throwing Your Toppings In. There's a Better Way.",
-    "excerpt": "If your blueberries pool at the bottom and your chocolate chips streak the batter, you're mixing them in wrong. Four fixes from a commercial bakery kitchen.",
-    "date": "2026-04-19",
-    "dateDisplay": "April 19, 2026",
-    "image": "toppings.webp",
-    "tags": ["Baking Tips"]
-  },
-  {
-    "slug": "the-perfect-cold-brew",
-    "title": "The Perfect Cold Brew",
-    "excerpt": "Cold brew has a reputation for being difficult. It isn't. The process is mostly waiting — but a few small decisions early on make the difference between smooth and bitter.",
-    "date": "2026-04-16",
-    "dateDisplay": "April 16, 2026",
-    "image": "pexels-nicola-barts-7937416.webp",
-    "tags": ["Recipes"],
-    "recipeTags": ["Vegan", "Gluten-Free"]
-  },
-  {
-    "slug": "vanilla-extract-vs-paste-vs-powder",
-    "title": "Vanilla Extract vs Paste vs Powder",
-    "excerpt": "Three forms of vanilla, three different jobs. Knowing what each one does — and using them on purpose — will make your baked goods better.",
-    "date": "2026-05-05",
-    "dateDisplay": "May 5, 2026",
-    "image": "vanilla-muffins.jpg",
-    "tags": ["Baking Tips"]
-  }
+ {
+  "slug": "chocolate-frosting",
+  "title": "The Chocolate Frosting We Use at the Bakery",
+  "shortTitle": "Chocolate Frosting",
+  "excerpt": "The vegan chocolate frosting we make at the bakery, scaled for your kitchen — stable at room temperature, no fridge needed.",
+  "date": "2026-08-13",
+  "dateDisplay": "August 13, 2026",
+  "image": "chocolate-frosting.jpg",
+  "tags": [
+   "Recipes",
+   "Vegan",
+   "Gluten-Free"
+  ],
+  "recipeTags": [
+   "Vegan",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "sugar-in-gluten-free-baking",
+  "title": "Sugar: The Most Misunderstood Ingredient in Gluten-Free Baking",
+  "shortTitle": "Sugar in Gluten-Free Baking",
+  "excerpt": "Most people think sugar is there for sweetness. That's the smallest part of its job.",
+  "date": "2026-08-12",
+  "dateDisplay": "August 12, 2026",
+  "image": "sugar-hero.jpg",
+  "tags": [
+   "Baking Tips",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "cheesy-rolls",
+  "title": "Cheesy Rolls",
+  "shortTitle": "Cheesy Rolls",
+  "excerpt": "Soft, pillowy gluten-free dough balls with a little well of melty vegan cheese pressed into the top and a scatter of garlic and herbs.",
+  "date": "2026-08-10",
+  "dateDisplay": "August 10, 2026",
+  "image": "cheesy-rolls-hero.jpg",
+  "tags": [
+   "Recipes",
+   "Gluten-Free",
+   "Vegan"
+  ],
+  "recipeTags": [
+   "Vegan",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "chocolate-chip-lava-cookies",
+  "title": "Chocolate Chip Lava Cookies",
+  "shortTitle": "Chocolate Chip Lava Cookies",
+  "excerpt": "A molten ganache core sealed inside a thick chocolate chip cookie. No dairy, no gluten, just gooey deliciousness.",
+  "date": "2026-07-29",
+  "dateDisplay": "July 29, 2026",
+  "image": "chocolate-chip-lava-cookies-hero.jpg",
+  "tags": [
+   "Recipes",
+   "Gluten-Free",
+   "Vegan"
+  ],
+  "recipeTags": [
+   "Vegan",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "no-refined-sugar-oatmeal-raisin-cookies",
+  "title": "No Refined Sugar Oatmeal Raisin Cookies",
+  "shortTitle": "Oatmeal Raisin Cookies",
+  "excerpt": "Chewy, soft-centered oatmeal raisin cookies made without wheat flour and without refined sugar. Maple does the sweetening, oats do the structure, and a homemade gluten-free blend handles the rest.",
+  "date": "2026-07-24",
+  "dateDisplay": "July 24, 2026",
+  "image": "oatmeal-raisin-cookies-dark.jpg",
+  "tags": [
+   "Recipes",
+   "Gluten-Free",
+   "Vegan"
+  ],
+  "recipeTags": [
+   "Vegan",
+   "Gluten-Free",
+   "Health & Wellness"
+  ]
+ },
+ {
+  "slug": "blueberry-cheesecake-buns",
+  "title": "Blueberry Cheesecake Buns",
+  "shortTitle": "Blueberry Cheesecake Buns",
+  "excerpt": "Soft, gluten-free vegan yeasted buns topped with a vegan cheesecake swirl and blueberry filling.",
+  "date": "2026-07-22",
+  "dateDisplay": "July 22, 2026",
+  "image": "blueberry-cheesecake-buns-tray.jpg",
+  "tags": [
+   "Recipes",
+   "Gluten-Free",
+   "Vegan"
+  ],
+  "recipeTags": [
+   "Vegan",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "add-baking-powder-last",
+  "title": "Stop Adding Baking Powder With Your Dry Ingredients",
+  "shortTitle": "Add Baking Powder Last",
+  "excerpt": "Gluten-free batters need long mixing — and if your baking powder is in from the start, the rise is gone before it bakes. Add it last. Here's the timing, the technique, and how to fix collapse after switching to double-acting.",
+  "date": "2026-07-20",
+  "dateDisplay": "July 20, 2026",
+  "image": "bp-mini-bundts.jpg",
+  "tags": [
+   "Baking Tips",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "square-banana-maple-cake",
+  "title": "Banana Maple Snacking Cake",
+  "shortTitle": "Banana Maple Cake",
+  "excerpt": "A gluten-free, vegan base sweetened entirely with maple, layered with banana and finished with a crumb top.",
+  "date": "2026-07-14",
+  "dateDisplay": "July 14, 2026",
+  "image": "square-banana-maple-cake-flatlay.jpg",
+  "tags": [
+   "Recipes",
+   "Gluten-Free",
+   "Vegan"
+  ],
+  "recipeTags": [
+   "Vegan",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "3-ingredient-pie-crust-and-crumble",
+  "title": "The 3-Ingredient Pie Crust (and Crumble) That Actually Holds",
+  "shortTitle": "3-Ingredient Pie Crust",
+  "excerpt": "Most gluten-free vegan crusts fall apart the second you cut them. This one holds — three ingredients, each doing a job, plus a flax egg to bind it.",
+  "date": "2026-07-13",
+  "dateDisplay": "July 13, 2026",
+  "image": "pie-crust-hero.jpg",
+  "tags": [
+   "Recipes",
+   "Gluten-Free",
+   "Vegan"
+  ],
+  "recipeTags": [
+   "Vegan",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "blueberry-rosemary-muffins",
+  "title": "Blueberry Rosemary Muffins",
+  "shortTitle": "Blueberry Rosemary Muffins",
+  "excerpt": "A staff-favorite gluten-free, vegan muffin — sweet blueberries and maple with just enough fresh rosemary for a subtle, savory lift.",
+  "date": "2026-07-07",
+  "dateDisplay": "July 7, 2026",
+  "image": "blueberry-rosemary-hero.jpg",
+  "tags": [
+   "Recipes",
+   "Gluten-Free",
+   "Vegan"
+  ],
+  "recipeTags": [
+   "Vegan",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "bakery-style-muffins-with-the-creaming-method",
+  "title": "Bakery Style Muffins With the Creaming Method",
+  "shortTitle": "Creaming Method Muffins",
+  "excerpt": "Here's the professional creaming technique I use at the bakery, plus a gluten-free vegan vanilla muffin recipe.",
+  "date": "2026-07-02",
+  "dateDisplay": "July 2, 2026",
+  "image": "creaming-muffins-hero.jpg",
+  "tags": [
+   "Recipes",
+   "Baking Tips",
+   "Gluten-Free",
+   "Vegan"
+  ],
+  "recipeTags": [
+   "Vegan",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "sourdough-and-yeasted-cinnamon-rolls",
+  "title": "Sourdough and Yeasted Cinnamon Rolls",
+  "shortTitle": "Cinnamon Rolls",
+  "excerpt": "Gooey, bakery-style cinnamon rolls with three variations.",
+  "date": "2026-07-01",
+  "dateDisplay": "July 1, 2026",
+  "image": "cinnamon-roll-header.jpg",
+  "tags": [
+   "Recipes",
+   "Gluten-Free",
+   "Vegan"
+  ],
+  "recipeTags": [
+   "Vegan",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "two-ways-to-use-flax-in-baking",
+  "title": "Two Ways to Use Flax in Your Baking",
+  "shortTitle": "Two Ways to Use Flax",
+  "excerpt": "Flax meal does two completely different jobs depending on how you add it. Mix it with water and it binds; add it dry and it behaves like a flour. Here's how to do both right, plus a trick for getting more out of a flax egg.",
+  "date": "2026-06-24",
+  "dateDisplay": "June 24, 2026",
+  "image": "flax-bowls.jpg",
+  "tags": [
+   "Baking Tips",
+   "Vegan",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "5-gluten-free-baking-tips-i-use-every-day",
+  "title": "5 Gluten-Free Baking Tips I Use Every Day in a Commercial Kitchen",
+  "shortTitle": "5 Gluten-Free Baking Tips",
+  "excerpt": "Gluten-free baking doesn't fail because of bad recipes. It fails because of misunderstood fundamentals. Here are the five that matter most, straight from my commercial kitchen.",
+  "date": "2026-06-23",
+  "dateDisplay": "June 23, 2026",
+  "image": "gf-tips-muffin-hero.jpg",
+  "tags": [
+   "Baking Tips",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "baking-soda-vs-baking-powder",
+  "title": "Why Baking Soda and Baking Powder Are Not the Same (And Why You Need Both)",
+  "shortTitle": "Baking Soda vs Baking Powder",
+  "excerpt": "They look identical and both make things rise, so why do recipes call for both?",
+  "date": "2026-06-22",
+  "dateDisplay": "June 22, 2026",
+  "image": "bp-bs-cake.jpg",
+  "tags": [
+   "Baking Tips"
+  ]
+ },
+ {
+  "slug": "flour-handling-for-better-texture",
+  "title": "Flour Handling for Better Texture",
+  "shortTitle": "Flour Handling for Texture",
+  "excerpt": "Most bakers obsess over ingredients and ratios and overlook how they handle their flour before it ever hits the mix. Sifting, toasting, weighing, and storage — the pre-mixing details that decide your crumb, lift, and mouthfeel.",
+  "date": "2026-06-12",
+  "dateDisplay": "June 12, 2026",
+  "image": "texture-hero.jpg",
+  "tags": [
+   "Baking Tips",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "how-to-grease-your-pan-like-a-pro-baker",
+  "title": "How to Grease Your Pan Like a Pro Baker",
+  "shortTitle": "Grease Your Pan Like a Pro",
+  "excerpt": "There's no single best way to oil a baking pan. Spray, brush, oil-plus-flour, parchment, or silicone — a professional baker's guide to picking the right method for every situation.",
+  "date": "2026-06-10",
+  "dateDisplay": "June 10, 2026",
+  "image": "grease-hero.jpg",
+  "tags": [
+   "Baking Tips"
+  ]
+ },
+ {
+  "slug": "vegan-sweetened-condensed-milk",
+  "title": "Vegan Sweetened Condensed Milk",
+  "shortTitle": "Vegan Condensed Milk",
+  "excerpt": "Sweetened condensed milk is a pantry staple that opens up a whole world of possibilities. Make your own at home with only a couple plant-based ingredients.",
+  "date": "2026-06-05",
+  "dateDisplay": "June 5, 2026",
+  "image": "vegan-condensed-milk-hero.jpg",
+  "tags": [
+   "Recipes",
+   "Vegan",
+   "Gluten-Free"
+  ],
+  "recipeTags": [
+   "Vegan",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "the-complete-guide-to-salt-in-baking",
+  "title": "The Complete Guide to Salt in Baking",
+  "shortTitle": "Salt in Baking",
+  "excerpt": "Salt does five jobs in baking, and none of them is making things taste salty. The science, the exact percentages by category, and why fine sea salt is the only one I use.",
+  "date": "2026-06-03",
+  "dateDisplay": "June 3, 2026",
+  "image": "salt-hero.jpg",
+  "tags": [
+   "Baking Tips",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "sugar-free-protein-brownies",
+  "title": "Sugar-Free Protein Brownies",
+  "excerpt": "A straight-from-the-bakery brownie that's sugar-free, vegan, and gluten-free — and still unbelievably fudgy.",
+  "date": "2026-06-01",
+  "dateDisplay": "June 1, 2026",
+  "image": "protein-brownie-board.jpg",
+  "tags": [
+   "Recipes",
+   "Vegan",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "get-the-most-out-of-your-cocoa-powder",
+  "title": "Get the Most Out Of Your Cocoa Powder",
+  "shortTitle": "Get the Most Out of Cocoa",
+  "excerpt": "What's the difference between types of cocoa powder, and how do you bloom them correctly? Get the most out of your cocoa powder for every kind of bake!",
+  "date": "2026-04-22",
+  "dateDisplay": "April 22, 2026",
+  "image": "cocoa-hero.jpg",
+  "tags": [
+   "Baking Tips"
+  ]
+ },
+ {
+  "slug": "baking-basics-every-beginner-needs-to-know",
+  "title": "Baking Basics Every Beginner Needs to Know",
+  "shortTitle": "Baking Basics for Beginners",
+  "excerpt": "Whether you're vegan, gluten-free, or none of the above, these tips are for you.",
+  "date": "2025-10-22",
+  "dateDisplay": "October 22, 2025",
+  "image": "baking-basics-dough.jpg",
+  "tags": [
+   "Baking Tips"
+  ]
+ },
+ {
+  "slug": "five-mistakes-sabotaging-your-gluten-free-baking",
+  "title": "Five Mistakes Sabotaging Your Gluten-Free Baking",
+  "shortTitle": "Five GF Baking Mistakes",
+  "excerpt": "After 20 years in commercial baking, I've seen the same mistakes kill gluten-free bakes again and again — and it's almost never a lack of baking knowledge.",
+  "date": "2026-05-28",
+  "dateDisplay": "May 28, 2026",
+  "image": "gf-mistakes-cookie-crumb.jpg",
+  "tags": [
+   "Baking Tips",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "diy-yogurt-substitute",
+  "title": "DIY Yogurt Substitute for Baking (When You're in a Pinch)",
+  "shortTitle": "DIY Yogurt Substitute",
+  "excerpt": "When a recipe calls for yogurt and you're baking it, you don't need yogurt. You need what yogurt does. Here's the four-ingredient bakery hack.",
+  "date": "2026-05-26",
+  "dateDisplay": "May 26, 2026",
+  "image": "diy-yogurt-substitute.jpg",
+  "tags": [
+   "Recipes",
+   "Baking Tips",
+   "Vegan",
+   "Gluten-Free"
+  ],
+  "recipeTags": [
+   "Vegan",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "whippable-vegan-heavy-cream",
+  "title": "4 Ingredient Whippable Plant-Based Heavy Cream",
+  "shortTitle": "Vegan Heavy Cream",
+  "excerpt": "Most plant-based heavy cream recipes online are wrong. Here's the 4-ingredient formula that actually whips, holds in sauces, and doesn't break.",
+  "date": "2026-05-22",
+  "dateDisplay": "May 22, 2026",
+  "image": "vegan-cream-whisk.jpg",
+  "tags": [
+   "Recipes",
+   "Vegan",
+   "Gluten-Free"
+  ],
+  "recipeTags": [
+   "Vegan",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "the-best-gluten-free-sourdough-bread",
+  "title": "The Best Gluten-Free Sourdough Bread",
+  "shortTitle": "GF Sourdough Bread",
+  "excerpt": "Gluten-free bread isn't as difficult as you think — you just can't treat it like wheat bread. Tried and true recipe from a professional gluten-free bakery kitchen.",
+  "date": "2026-05-15",
+  "dateDisplay": "May 15, 2026",
+  "image": "gf-sourdough-hero.jpg",
+  "tags": [
+   "Recipes",
+   "Gluten-Free",
+   "Vegan"
+  ],
+  "recipeTags": [
+   "Vegan",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "baking-and-eating-more-sustainably",
+  "title": "Baking (and Eating) More Sustainably",
+  "excerpt": "Small changes to what you eat and where you buy it add up. Practical tips on cutting food waste, reducing packaging, and eating local and in season.",
+  "date": "2025-10-28",
+  "dateDisplay": "October 28, 2025",
+  "image": "garden-planting.jpg",
+  "tags": [
+   "Baking Tips",
+   "Health & Wellness"
+  ]
+ },
+ {
+  "slug": "pumpkin-pie-muffin",
+  "title": "Pumpkin Pie Muffin",
+  "excerpt": "Pumpkin pie meets banana-based muffin: flax-egg binding, oat-flour base, pumpkin pie spice filling, and a brown sugar crumb top.",
+  "date": "2024-11-01",
+  "dateDisplay": "November 1, 2024",
+  "image": "pumpkin-muffin-tray.jpg",
+  "tags": [
+   "Recipes",
+   "Vegan",
+   "Gluten-Free"
+  ],
+  "recipeTags": [
+   "Vegan",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "sprouting-seeds-and-why-it-matters",
+  "title": "Sprouting Seeds And Why It Matters",
+  "excerpt": "Raw seeds lock up their minerals. Sprouting unlocks them. Here's how to sprout pumpkin, sunflower, quinoa, and more at home, plus the exceptions worth knowing.",
+  "date": "2026-05-13",
+  "dateDisplay": "May 13, 2026",
+  "image": "sprouted-granola.jpg",
+  "tags": [
+   "Baking Tips",
+   "Health & Wellness"
+  ]
+ },
+ {
+  "slug": "naturally-color-treats",
+  "title": "Naturally Color Treats",
+  "excerpt": "Skip the artificial dyes. Beet, butterfly pea, spirulina, turmeric, and matcha — our favorite natural food colors and how to get the most out of them.",
+  "date": "2025-08-20",
+  "dateDisplay": "August 20, 2025",
+  "image": "color-hero.jpg",
+  "tags": [
+   "Baking Tips",
+   "Health & Wellness"
+  ]
+ },
+ {
+  "slug": "vegan-egg-wash-replacements",
+  "title": "Vegan Egg Wash Replacements",
+  "excerpt": "We tested every option. Every. Single. One.",
+  "date": "2026-03-09",
+  "dateDisplay": "March 9, 2026",
+  "image": "egg-wash-tray.jpg",
+  "tags": [
+   "Baking Tips",
+   "Vegan"
+  ]
+ },
+ {
+  "slug": "how-to-use-psyllium-husk",
+  "title": "How to Use Psyllium Husk",
+  "excerpt": "Psyllium husk is the secret ingredient behind I-can't-believe-it's-gluten-free baking.",
+  "date": "2026-04-08",
+  "dateDisplay": "April 8, 2026",
+  "image": "psyllium-rolls.jpg",
+  "tags": [
+   "Baking Tips",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "make-coconut-yogurt-at-home",
+  "title": "Make Coconut Yogurt at Home",
+  "excerpt": "Coconut yogurt is one of those things that sounds complicated until you realize it's just two ingredients and a little patience.",
+  "date": "2026-04-29",
+  "dateDisplay": "April 29, 2026",
+  "image": "coconut-yogurt-hero.jpg",
+  "tags": [
+   "Recipes",
+   "Vegan",
+   "Gluten-Free"
+  ],
+  "recipeTags": [
+   "Vegan",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "what-is-nutritional-yeast",
+  "title": "What is Nutritional Yeast?",
+  "excerpt": "Cheesy, funky, and gaining popularity as interest grows in vegan cooking.",
+  "date": "2025-12-23",
+  "dateDisplay": "December 23, 2025",
+  "image": "nooch-bowl.jpg",
+  "tags": [
+   "Baking Tips",
+   "Health & Wellness",
+   "Vegan"
+  ]
+ },
+ {
+  "slug": "lemon-zucchini-protein-muffins",
+  "title": "Lemon Zucchini Protein Muffins",
+  "excerpt": "These muffins pack in a whole lot of nutritional value with low sugar to boot.",
+  "date": "2025-12-03",
+  "dateDisplay": "December 3, 2025",
+  "image": "lemon-zucchini-flatlay.jpg",
+  "tags": [
+   "Recipes",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "protein-packed-rice-krispie-treats",
+  "title": "Protein Packed Rice Krispie Treats",
+  "excerpt": "Take a bite of my healthy take on the classic rice krispy treat - date-sweetened, protein-packed, and built to fuel you.",
+  "date": "2025-11-11",
+  "dateDisplay": "November 11, 2025",
+  "image": "rkt-hero.jpg",
+  "tags": [
+   "Recipes",
+   "Vegan",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "essential-egg-replacements-for-vegan-baking",
+  "title": "Essential Egg Replacements for Vegan Baking",
+  "excerpt": "Eggs do three jobs in baking - binding, moisture, and leavening. The key to veganizing a recipe is knowing what you're replacing.",
+  "date": "2025-11-05",
+  "dateDisplay": "November 5, 2025",
+  "image": "eggs.jpg",
+  "tags": [
+   "Baking Tips",
+   "Vegan"
+  ]
+ },
+ {
+  "slug": "gut-healthy-postbiotics-with-fermented-beets",
+  "title": "Gut-Healthy Postbiotics With Fermented Beets",
+  "excerpt": "Learn what ferments can do for your gut, plus an easy beet recipe to get started.",
+  "date": "2025-10-08",
+  "dateDisplay": "October 8, 2025",
+  "image": "beets-pattern.jpg",
+  "tags": [
+   "Recipes",
+   "Health & Wellness"
+  ],
+  "recipeTags": [
+   "Vegan",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "starter-guide-to-gluten-free-flours",
+  "title": "Starter Guide to Gluten-Free Flours",
+  "excerpt": "Gluten-free flours aren't one-to-one swaps for wheat. A starter guide to the flours we use most — what each does, when to reach for it, and a sample blend to get you started.",
+  "date": "2025-10-01",
+  "dateDisplay": "October 1, 2025",
+  "image": "grains.jpg",
+  "tags": [
+   "Baking Tips",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "binders-for-better-gluten-free-baking",
+  "title": "Binders For Better Gluten-Free Baking",
+  "excerpt": "If you're baking without gluten, adding binders is essential. We're taking you through what they all do and when and how to use each.",
+  "date": "2025-09-24",
+  "dateDisplay": "September 24, 2025",
+  "image": "muffins.jpg",
+  "tags": [
+   "Baking Tips",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "choosing-the-right-oils-for-healthier-baking",
+  "title": "Choosing the Right Oils for Healthier Baking",
+  "excerpt": "A baker's guide to oils — choosing not just for taste but for health, quality, and performance.",
+  "date": "2025-09-03",
+  "dateDisplay": "September 3, 2025",
+  "image": "oils-hero.jpg",
+  "tags": [
+   "Baking Tips",
+   "Health & Wellness"
+  ]
+ },
+ {
+  "slug": "scoby-secrets-making-kombucha-at-home",
+  "title": "Scoby Secrets: Making Kombucha at Home",
+  "excerpt": "How to brew tangy, fizzy kombucha at home — what a scoby is, what it does, and the two-stage fermentation that turns sweet tea into a probiotic drink.",
+  "date": "2025-07-23",
+  "dateDisplay": "July 23, 2025",
+  "image": "kombucha-hero.jpg",
+  "tags": [
+   "Recipes",
+   "Health & Wellness"
+  ],
+  "recipeTags": [
+   "Vegan",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "stop-throwing-your-toppings-in",
+  "title": "Stop Throwing Your Toppings In. There's a Better Way.",
+  "excerpt": "If your blueberries pool at the bottom and your chocolate chips streak the batter, you're mixing them in wrong. Four fixes from a commercial bakery kitchen.",
+  "date": "2026-04-19",
+  "dateDisplay": "April 19, 2026",
+  "image": "toppings.webp",
+  "tags": [
+   "Baking Tips"
+  ]
+ },
+ {
+  "slug": "the-perfect-cold-brew",
+  "title": "The Perfect Cold Brew",
+  "excerpt": "Cold brew has a reputation for being difficult. It isn't. The process is mostly waiting — but a few small decisions early on make the difference between smooth and bitter.",
+  "date": "2026-04-16",
+  "dateDisplay": "April 16, 2026",
+  "image": "pexels-nicola-barts-7937416.webp",
+  "tags": [
+   "Recipes"
+  ],
+  "recipeTags": [
+   "Vegan",
+   "Gluten-Free"
+  ]
+ },
+ {
+  "slug": "vanilla-extract-vs-paste-vs-powder",
+  "title": "Vanilla Extract vs Paste vs Powder",
+  "excerpt": "Three forms of vanilla, three different jobs. Knowing what each one does — and using them on purpose — will make your baked goods better.",
+  "date": "2026-05-05",
+  "dateDisplay": "May 5, 2026",
+  "image": "vanilla-muffins.jpg",
+  "tags": [
+   "Baking Tips"
+  ]
+ }
 ]
