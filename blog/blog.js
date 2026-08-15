@@ -57,18 +57,21 @@
     if (!body || !h1) return; // only on post pages
     const title = h1.textContent.trim();
 
-    // Manual pin wins: <meta name="youtube-id" content="VIDEOID">
+    // Priority: a video pinned in the Studio (by slug) > a <meta name="youtube-id">
+    // in the page > automatic title match against the channel's recent uploads.
+    let feed = null;
+    try { feed = await (await fetch(VIDEO_FEED_URL)).json(); } catch (e) { /* offline is fine */ }
+    const artPublished = document.querySelector('meta[name="article:published_time"]')?.content || "";
+    const metaDesc = document.querySelector('meta[name="description"]')?.content || "";
+    const byId = (id) => (feed && Array.isArray(feed.videos) ? feed.videos.find((v) => v.id === id) : null) || null;
+    const mk = (id) => { const v = byId(id) || {}; return { id, title: v.title || title, published: v.published || artPublished, description: v.description || metaDesc }; };
+
     let video = null;
+    const ovrId = feed && feed.overrides && CURRENT_SLUG ? feed.overrides[CURRENT_SLUG] : "";
     const pin = document.querySelector('meta[name="youtube-id"]')?.content?.trim();
-    if (pin) {
-      video = { id: pin, title, published: document.querySelector('meta[name="article:published_time"]')?.content || "", description: document.querySelector('meta[name="description"]')?.content || "" };
-    } else {
-      try {
-        const res = await fetch(VIDEO_FEED_URL);
-        const d = await res.json();
-        if (d && d.ok && Array.isArray(d.videos)) video = ytBestMatch(title, d.videos);
-      } catch (e) { /* no video, no problem */ }
-    }
+    if (ovrId) video = mk(ovrId);
+    else if (pin) video = mk(pin);
+    else if (feed && feed.ok && Array.isArray(feed.videos)) video = ytBestMatch(title, feed.videos);
     if (!video || !video.id) return;
 
     const id = video.id;
