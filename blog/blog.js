@@ -24,6 +24,92 @@
   const CURRENT_SLUG =
     document.querySelector('meta[name="post-slug"]')?.content || "";
 
+  const VIDEO_FEED_URL =
+    "https://us-central1-wassembakes-app.cloudfunctions.net/videoFeed";
+
+  // --- YouTube auto-embed (lazy facade, no player JS until clicked) ---
+  const YT_STOP = new Set(["the","a","an","and","or","to","of","for","in","with","your","you","my","how","why","best","easy","recipe","recipes","vegan","gluten","free","glutenfree","make","making","use","this","that","is","it","at","on","get","from","guide"]);
+  function ytNorm(s) {
+    return String(s || "").toLowerCase().replace(/&[a-z]+;/g, " ").replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ").trim();
+  }
+  function ytTokens(s) {
+    return ytNorm(s).split(" ").filter((w) => w.length > 2 && !YT_STOP.has(w));
+  }
+  // Best title match between this post and the channel's recent videos.
+  function ytBestMatch(title, videos) {
+    const pt = ytTokens(title);
+    if (!pt.length) return null;
+    let best = null, bestRatio = 0;
+    (videos || []).forEach((v) => {
+      const vt = ytTokens(v.title);
+      if (!vt.length) return;
+      const setv = new Set(vt);
+      const shared = pt.filter((w) => setv.has(w)).length;
+      const ratio = shared / Math.min(pt.length, vt.length);
+      if (shared >= 2 && ratio > bestRatio) { bestRatio = ratio; best = v; }
+    });
+    return bestRatio >= 0.6 ? best : null;
+  }
+
+  async function embedYouTube() {
+    const body = document.querySelector(".post-body");
+    const h1 = document.querySelector(".post-header h1");
+    if (!body || !h1) return; // only on post pages
+    const title = h1.textContent.trim();
+
+    // Manual pin wins: <meta name="youtube-id" content="VIDEOID">
+    let video = null;
+    const pin = document.querySelector('meta[name="youtube-id"]')?.content?.trim();
+    if (pin) {
+      video = { id: pin, title, published: document.querySelector('meta[name="article:published_time"]')?.content || "", description: document.querySelector('meta[name="description"]')?.content || "" };
+    } else {
+      try {
+        const res = await fetch(VIDEO_FEED_URL);
+        const d = await res.json();
+        if (d && d.ok && Array.isArray(d.videos)) video = ytBestMatch(title, d.videos);
+      } catch (e) { /* no video, no problem */ }
+    }
+    if (!video || !video.id) return;
+
+    const id = video.id;
+    const thumb = "https://i.ytimg.com/vi/" + id + "/hqdefault.jpg";
+    const wrap = document.createElement("div");
+    wrap.className = "yt-embed";
+    wrap.innerHTML =
+      '<div class="yt-cap">Watch me make it</div>' +
+      '<button type="button" class="yt-facade" aria-label="Play video" style="background-image:url(\'' + thumb + '\')"><span class="yt-play" aria-hidden="true"></span></button>';
+    wrap.querySelector(".yt-facade").addEventListener("click", function () {
+      const f = document.createElement("iframe");
+      f.className = "yt-frame";
+      f.src = "https://www.youtube.com/embed/" + id + "?autoplay=1&rel=0";
+      f.title = "YouTube video player";
+      f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      f.setAttribute("allowfullscreen", "");
+      this.replaceWith(f);
+    });
+
+    const firstP = body.querySelector("p");
+    if (firstP && firstP.nextSibling) body.insertBefore(wrap, firstP.nextSibling);
+    else body.insertBefore(wrap, body.firstChild);
+
+    // VideoObject structured data -> video thumbnail in Google results
+    const desc = video.description || document.querySelector('meta[name="description"]')?.content || title;
+    const ld = {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      name: video.title || title,
+      description: desc,
+      thumbnailUrl: thumb,
+      contentUrl: "https://www.youtube.com/watch?v=" + id,
+      embedUrl: "https://www.youtube.com/embed/" + id
+    };
+    if (video.published) ld.uploadDate = video.published;
+    const sc = document.createElement("script");
+    sc.type = "application/ld+json";
+    sc.textContent = JSON.stringify(ld);
+    document.head.appendChild(sc);
+  }
+
   async function loadPosts() {
     try {
       const res = await fetch("posts.json", { cache: "no-cache" });
@@ -1183,6 +1269,7 @@
     wireNewsletterForm();
     wireRecipeSave();
     wireComments();
+    embedYouTube();
     alignSidebarToTitle();
   }
 
