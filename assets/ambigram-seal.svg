@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 560" role="img" aria-label="wassem bakes seal — reads the same rotated 180 degrees">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,900&amp;display=swap');
+    .ring{font-family:'Fraunces',Georgia,serif;font-weight:900;font-style:italic;font-size:38px;letter-spacing:.1em;fill:#1A1714}</style>
+  <path id="r1" fill="none" d="M 280,84 A 196,196 0 1 1 279.99,84" transform="rotate(-96 280 280)"/>
+  <path id="r2" fill="none" d="M 280,84 A 196,196 0 1 1 279.99,84" transform="rotate(84 280 280)"/>
+  </defs>
+  <circle cx="280" cy="280" r="238" fill="#FFD451"/>
+  <circle cx="280" cy="280" r="222" fill="none" stroke="#1A1714" stroke-width="4"/>
+  <text class="ring"><textPath href="#r1" startOffset="0">wassem bakes &#8226;</textPath></text>
+  <text class="ring"><textPath href="#r2" startOffset="0">wassem bakes &#8226;</textPath></text>
+  <g transform="translate(106.4,247.03145400593473) scale(0.5151)">
+    <path d="M 0,0 L 13,72 A 26,28 0 0 0 65,72 A 26,28 0 0 0 117,72 L 104,0 M 65,72 L 65,0" transform="translate(0,0)" fill="none" stroke="#1A1714" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 17,30 C 17,0 23,5 57,5 C 68.05,5 77,13.95 77,25 L 77,67 C 77,82.46 64.46,95 49,95 L 33,95 C 17.54,95 5,82.46 5,67 L 5,50 L 77,50" transform="translate(141,0)" fill="none" stroke="#FF8F1C" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 57,15 C 45,-3 13,-7 4,17 C -4,31 11,41 32,50 C 53,59 68,69 60,83 C 51,107 19,103 7,85" transform="translate(247,0)" fill="none" stroke="#1A1714" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 57,15 C 45,-3 13,-7 4,17 C -4,31 11,41 32,50 C 53,59 68,69 60,83 C 51,107 19,103 7,85" transform="translate(335,0) rotate(180 32 50)" fill="none" stroke="#1A1714" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 17,30 C 17,0 23,5 57,5 C 68.05,5 77,13.95 77,25 L 77,67 C 77,82.46 64.46,95 49,95 L 33,95 C 17.54,95 5,82.46 5,67 L 5,50 L 77,50" transform="translate(423,0) rotate(180 41 50)" fill="none" stroke="#FF8F1C" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 0,0 L 13,72 A 26,28 0 0 0 65,72 A 26,28 0 0 0 117,72 L 104,0 M 65,72 L 65,0" transform="translate(529,0) rotate(180 58.5 50)" fill="none" stroke="#1A1714" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
