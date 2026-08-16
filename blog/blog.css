@@ -615,9 +615,9 @@ article.post {
 .sb-about-photo {
   display: block;
   width: calc(100% + 3rem);
-  height: 220px;
+  height: 280px;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 12%;
   margin: -1.5rem -1.5rem 1.25rem;
 }
 .sb-about h4 {
