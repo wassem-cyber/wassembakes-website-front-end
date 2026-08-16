@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-30 -48 750 272" role="img" aria-label="wassem bakes, single ink">
+  <g>
+    <path d="M 0,0 L 22,100 L 36,100 L 58,2 L 80,100 L 94,100 L 116,0" transform="translate(0,0)" fill="none" stroke="#241D17" stroke-width="19" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+    <path d="M 18,28 C 18,11 30,4 48,4 L 62,4 C 77,4 84,13 84,27 L 84,72 C 84,87 74,96 58,96 L 30,96 C 14,96 4,86 4,70 L 4,50 L 84,50" transform="translate(142,0)" fill="none" stroke="#241D17" stroke-width="19" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+    <path d="M 70,21 C 64,9 50,3 38,3 C 22,3 8,11 8,26 C 8,41 24,47 40,51 C 56,55 70,61 70,75 C 70,90 55,97 39,97 C 25,97 12,90 6,78" transform="translate(256,0)" fill="none" stroke="#241D17" stroke-width="19" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+    <path d="M 70,21 C 64,9 50,3 38,3 C 22,3 8,11 8,26 C 8,41 24,47 40,51 C 56,55 70,61 70,75 C 70,90 55,97 39,97 C 25,97 12,90 6,78" transform="translate(358,0) rotate(180 38 50)" fill="none" stroke="#241D17" stroke-width="19" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+    <path d="M 18,28 C 18,11 30,4 48,4 L 62,4 C 77,4 84,13 84,27 L 84,72 C 84,87 74,96 58,96 L 30,96 C 14,96 4,86 4,70 L 4,50 L 84,50" transform="translate(460,0) rotate(180 44 50)" fill="none" stroke="#241D17" stroke-width="19" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+    <path d="M 0,0 L 22,100 L 36,100 L 58,2 L 80,100 L 94,100 L 116,0" transform="translate(574,0) rotate(180 58 50)" fill="none" stroke="#241D17" stroke-width="19" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+  </g>
+  <g transform="translate(210.6,152) scale(0.42)">
+      <path d="M 9,-32 L 9,100" transform="translate(0,0)" fill="none" stroke="#241D17" stroke-width="19" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+      <path d="M 9,4 L 52,4 C 70,4 82,14 82,29 L 82,71 C 82,86 70,96 52,96 L 9,96" transform="translate(0,0)" fill="none" stroke="#241D17" stroke-width="19" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+      <path d="M 18,28 C 18,11 30,4 48,4 L 62,4 C 77,4 84,13 84,27 L 84,72 C 84,87 74,96 58,96 L 30,96 C 14,96 4,86 4,70 L 4,50 L 84,50" transform="translate(142,0)" fill="none" stroke="#241D17" stroke-width="19" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+      <path d="M 9,-32 L 9,100" transform="translate(284,0)" fill="none" stroke="#241D17" stroke-width="19" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+      <path d="M 80,20 L 14,72" transform="translate(284,0)" fill="none" stroke="#241D17" stroke-width="19" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+      <path d="M 40,52 L 82,100" transform="translate(284,0)" fill="none" stroke="#241D17" stroke-width="19" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+      <path d="M 18,28 C 18,11 30,4 48,4 L 62,4 C 77,4 84,13 84,27 L 84,72 C 84,87 74,96 58,96 L 30,96 C 14,96 4,86 4,70 L 4,50 L 84,50" transform="translate(422,0) rotate(180 44 50)" fill="none" stroke="#241D17" stroke-width="19" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+      <path d="M 70,21 C 64,9 50,3 38,3 C 22,3 8,11 8,26 C 8,41 24,47 40,51 C 56,55 70,61 70,75 C 70,90 55,97 39,97 C 25,97 12,90 6,78" transform="translate(564,0)" fill="none" stroke="#241D17" stroke-width="19" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"/>
+  </g>
+</svg>

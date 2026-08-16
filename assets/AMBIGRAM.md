@@ -8,17 +8,21 @@ site references these files yet.
 
 ## Files
 
-| File                         | Use                                                      |
-|------------------------------|----------------------------------------------------------|
-| `ambigram-wordmark.svg`      | Ink type, orange `a`/`e`, transparent bg — primary master |
-| `ambigram-wordmark-dark.svg` | Cream type for dark grounds, orange accent unchanged      |
-| `ambigram-seal.svg`          | Circular seal on yellow — stamps, stickers, avatars       |
+| File                          | Use                                                       |
+|-------------------------------|-----------------------------------------------------------|
+| `ambigram-wordmark.svg`       | `wassem` alone — the rotating mark. Ink + multicolour a/e |
+| `ambigram-wordmark-dark.svg`  | Same, cream letters for dark grounds                      |
+| `ambigram-wordmark-mono.svg`  | Single ink — stamps, embossing, one-colour print          |
+| `ambigram-lockup.svg`         | `wassem bakes`, two lines                                 |
+| `ambigram-lockup-dark.svg`    | Lockup, cream letters for dark grounds                    |
+| `ambigram-lockup-mono.svg`    | Lockup, single ink                                        |
 
-These are the **Stamp** cut: one even weight, stroke 25 on a 100-unit x-height, round caps
-and joins. Because it is monoline, each master is just the centreline stroked — small,
-exact, and editable, rather than a flattened outline. Three other cuts exist (modulated,
-italic, condensed); all are generated from this same skeleton by changing weight, contrast
-and slant, so switching is a regeneration rather than a redraw.
+## The face
+
+A grotesque: straight sides, terminals cut square, stroke 19 on a 100-unit x-height.
+The `w` has **flat vertices** — its V bottoms are cut flat rather than pointed, which
+matters because the `m` is the `w` turned over: pointed vertices gave the `m` spikes and
+a middle leg that stopped short of the baseline.
 
 ## How it is built
 
@@ -27,24 +31,36 @@ survives only if `w`↔`m`, `s`↔`s` and `a`↔`e`. The first two pairs are alr
 other upside down; `a`→`e` is the only one that has to be drawn.
 
 Three masters are drawn — `w`, `a`, `s` — and the other three letters are emitted as
-exact 180° rotations of them. The symmetry is therefore guaranteed by construction, not
-eyeballed: if you edit a glyph, its partner follows automatically.
+exact 180° rotations of them. The symmetry is guaranteed by construction, not eyeballed:
+edit a glyph and its partner follows.
 
-The `a`/`e` glyph exploits the fact that an `a` (enclosed bowl low, open hood arching
-over) and an `e` (enclosed counter high, open stroke sweeping under) are the same object
-rotated. Two details carry it: a long straight right stem — without it the shape reads as
-a schwa `ə` — which becomes the flat left side of the `e`; and a terminal hooking
-down-left, which rotation sends up-right, exactly where an `e` ends. Aperture size is the
-one property that cannot be tuned twice and is set at the midpoint, which is why the mark
-is sized for logo use rather than text.
+The `a`/`e` glyph works because an `a` (enclosed bowl low, open hood arching over) and an
+`e` (enclosed counter high, open stroke sweeping under) are the same object rotated. A
+long straight right stem is what stops it reading as a schwa `ə`, and that stem becomes
+the flat left side of the `e`.
+
+## Colour
+
+One rule: **the bowl carries the word's own colour; the hood, stem and bar take the three
+brand accents.**
+
+- hood — orange `#FF8F1C`
+- stem — blue `#8DB9CA`
+- bar — yellow `#FFD451`
+- bowl + all other letters — ink `#241D17` (or cream `#E8DCC8` reversed)
+
+Only the `a` and `e` of `wassem` are coloured. **`bakes` stays single ink** — its vowels
+are not accented.
+
+Because the `a` and the `e` are one drawing used twice, the colouring is rotationally
+symmetric too: turn the mark over and every colour lands where that colour was.
 
 ## Constraints
 
-- Monoline **by choice, not necessity.** A 180 degree rotation preserves stroke angle, so
-  contrast and italic slant both work fine (only mirroring would break them). Monoline is
-  chosen because it survives small sizes and being pressed into dough.
-- `bakes` is not symmetrical (no partner for `b` or `k`). On the seal it goes in the ring
-  instead, set twice at opposite ends, so the seal turns onto itself as a whole.
-- Colour follows the palette: ink `#1A1714`, orange `#FF8F1C`, yellow `#FFD451`,
-  cream `#E8DCC8`. Both the `a` and the `e` are orange, which keeps the accent
-  rotationally symmetric too.
+- Monoline **by choice, not necessity.** A 180° rotation preserves stroke angle, so
+  contrast and italic slant both work fine (only mirroring would break them).
+- `bakes` is not symmetrical — no partner for `b` or `k` — so only `wassem` turns. In the
+  lockup `bakes` sits as a fixed second line, and its `b` and `k` are the only ascenders
+  in the design.
+- Use the mono file below roughly 120px wide; four colours across a 19-unit stroke go
+  muddy at small sizes.
