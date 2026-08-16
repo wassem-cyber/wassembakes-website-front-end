@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="14 14 184 176" role="img" aria-label="wassem bakes stand mixer mark">
+  <path d="M 52,52 C 52,36 66,26 84,26 L 156,26 C 176,26 188,40 188,58 L 188,164 C 188,172 182,178 174,178 L 36,178 C 28,178 24,174 24,167 C 24,159 29,154 37,154 L 152,154 L 152,86 C 152,80 148,76 142,76 L 84,76 C 66,76 52,68 52,52 Z" fill="#241D17"/>
+  <path d="M 70,76 L 70,88 C 70,92 74,95 78,95 L 86,95 C 90,95 94,92 94,88 L 94,76 Z" fill="#241D17"/>
+  <path d="M 32,96 L 132,96" fill="none" stroke="#FF8F1C" stroke-width="13" stroke-linecap="round"/>
+  <path d="M 40,100 L 40,112 C 40,138 60,150 82,150 C 104,150 124,138 124,112 L 124,100" fill="none" stroke="#FF8F1C" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 82,76 L 82,108" fill="none" stroke="#241D17" stroke-width="11" stroke-linecap="round"/>
+  <path d="M 82,108 C 70,120 70,136 82,146 C 94,136 94,120 82,108 Z" fill="#241D17"/>
+</svg>

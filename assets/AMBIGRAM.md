@@ -64,3 +64,35 @@ symmetric too: turn the mark over and every colour lands where that colour was.
   in the design.
 - Use the mono file below roughly 120px wide; four colours across a 19-unit stroke go
   muddy at small sizes.
+
+---
+
+# Stand mixer mark
+
+A separate pictorial mark, drawn at the same stroke weight as the wordmark so the two
+sit together. **Not an ambigram** — a mixer has an up, so this one does not turn.
+
+| File                          | Use                                              |
+|-------------------------------|--------------------------------------------------|
+| `mixer-mark.svg`              | Ink body, orange bowl — the primary              |
+| `mixer-mark-dark.svg`         | Cream body for dark grounds                      |
+| `mixer-mark-mono.svg`         | Single ink — stamps, engraving, one-colour print |
+| `mixer-tile-disc.svg`         | On the brand yellow disc — avatar, app icon      |
+| `mixer-tile-square.svg`       | Same on a rounded square, as app icons are masked|
+| `mixer-tile-disc-cream.svg`   | Yellow disc with the bowl knocked out in cream   |
+
+## How it is built
+
+One continuous body — motor head reaching forward, column at the back, foot spreading
+under both — with the bowl **nested inside** that silhouette rather than sitting beside
+it. That nesting is what makes it read as a KitchenAid rather than a generic appliance.
+
+Only two colours: ink `#241D17` for the machine, orange `#FF8F1C` for the bowl and its
+rim.
+
+## Notes
+
+- Orange on yellow is close in value, so on the yellow disc the bowl sits quieter than it
+  does on cream. `mixer-tile-disc-cream.svg` is the higher-contrast alternative.
+- A wire whisk was tried in place of the paddle; the wires close up below about 40px.
+- A handle on the bowl turns the mark into a teacup. Don't.
