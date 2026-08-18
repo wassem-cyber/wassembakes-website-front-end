@@ -48,6 +48,26 @@ Use as source material when writing About-page content, brand decks, or wholesal
 
 When pitching Sensible on the creator brand (wassembakes), these values justify the shop link — it's not just commerce, it's the same philosophy Wassem talks about in his content.
 
+## Sensible Bakery — content & campaign rules (HARD RULES)
+
+These are non-negotiable for any Sensible Bakery social post, ad, carousel, GIF, or campaign creative. wassembakes (the creator brand) may cross-post/repost Sensible creative as-is — but do **not** write "with wassembakes" or co-brand on the slide; Sensible creative stands alone.
+
+- **Never sell the product. Sell the lifestyle and the environment.** No "buy now," "grab a box," "order today," "shop," price, or product-pitch language on Sensible creative. Lead with values, feeling, and the way of eating/living — the product is the quiet proof, not the pitch. A soft `sensiblebakery.com` at the end is fine; a call-to-buy is not.
+- **Voice = "the sensible way"** (use this framing verbatim as source): *gluten-free, because it's kind to your body. vegan, because it's kind to animals and the planet. organic ingredients, because every one matters. fiber and protein, to soften the sugar spike. made locally in NYC, because community matters. treats you can feel good about.*
+- **Aesthetic:** natural, organic, nature-feeling; clean and refined; healthy lifestyle; a smart, conscious choice. Real ingredients shown honestly.
+- **Customer is:** intentional, thoughtful, grounded, clean, natural, balanced, conscious, wholesome. Environmentally conscious, health-minded, prioritizes quality, wants to indulge in a way they can feel good about.
+- **Text on creative goes directly on the image** (with a subtle gradient scrim for legibility) — no solid color band behind the copy.
+
+### Sensible type system (distinct from the wassembakes wordmark)
+
+| Role | Font | Notes |
+|------|------|-------|
+| Heading / title | **Amaranth** (700) | Web-safe primary (Google Fonts). **Loubag** is the licensed print/Canva alternate — not web-available. |
+| Body | **Poppins** (400–600) | Kickers, body, captions. |
+| Accent | **Kalam** | Handwritten touch — taglines, small script accents. Use sparingly. |
+
+Titles in Amaranth, one word in the accent color (yellow `#FFD451` on photos, orange `#FF8F1C` on light). This is the Sensible heading system; the Fraunces italic wordmark below is the **wassembakes** brand mark, not Sensible's.
+
 ## Brand colors
 
 | Name          | Pantone     | Hex       | Use                              |
