@@ -359,6 +359,11 @@
    "Recipes",
    "Vegan",
    "Gluten-Free"
+  ],
+  "recipeTags": [
+   "Vegan",
+   "Gluten-Free",
+   "Health & Wellness"
   ]
  },
  {
@@ -570,6 +575,10 @@
   "tags": [
    "Recipes",
    "Gluten-Free"
+  ],
+  "recipeTags": [
+   "Gluten-Free",
+   "Health & Wellness"
   ]
  },
  {
@@ -583,6 +592,11 @@
    "Recipes",
    "Vegan",
    "Gluten-Free"
+  ],
+  "recipeTags": [
+   "Vegan",
+   "Gluten-Free",
+   "Health & Wellness"
   ]
  },
  {

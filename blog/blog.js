@@ -244,6 +244,37 @@
     return `<div class="posts-group"><h2 class="posts-group-title">${label}</h2>${inner}</div>`;
   }
 
+  const PAGE_SIZE = 12;
+
+  function renderPagination(currentPage, totalPages) {
+    if (totalPages <= 1) return "";
+    let html = '<div class="posts-pagination">';
+    const prevDisabled = currentPage === 1 ? " disabled" : "";
+    html += `<button class="posts-page-btn posts-page-nav" type="button" data-page="${currentPage - 1}" aria-label="Previous page"${prevDisabled}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>`;
+    for (let i = 1; i <= totalPages; i++) {
+      const active = i === currentPage ? " is-active" : "";
+      html += `<button class="posts-page-num${active}" type="button" data-page="${i}">${i}</button>`;
+    }
+    const nextDisabled = currentPage === totalPages ? " disabled" : "";
+    html += `<button class="posts-page-btn posts-page-nav" type="button" data-page="${currentPage + 1}" aria-label="Next page"${nextDisabled}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>`;
+    html += "</div>";
+    return html;
+  }
+
+  // Wires the buttons rendered by renderPagination(). onGo receives the target
+  // page; scrollEl is scrolled back to the top of the list after the re-render.
+  function wirePagination(container, onGo, scrollEl) {
+    container.querySelectorAll("[data-page]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        onGo(parseInt(btn.dataset.page, 10));
+        (scrollEl || container).scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+    });
+  }
+
   function pickRandom(arr, n) {
     const shuffled = arr.slice().sort(() => Math.random() - 0.5);
     return shuffled.slice(0, n);
@@ -414,36 +445,18 @@
     el.innerHTML = heroSection + tagSections + '<div data-all-posts></div>';
 
     const allEl = el.querySelector("[data-all-posts]");
-    const PAGE_SIZE = 12;
     const totalPages = Math.max(1, Math.ceil(posts.length / PAGE_SIZE));
     let currentPage = 1;
-
-    function renderPagination() {
-      if (totalPages <= 1) return "";
-      let html = '<div class="posts-pagination">';
-      const prevDisabled = currentPage === 1 ? " disabled" : "";
-      html += `<button class="posts-page-btn posts-page-nav" type="button" data-page="${currentPage - 1}" aria-label="Previous page"${prevDisabled}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>`;
-      for (let i = 1; i <= totalPages; i++) {
-        const active = i === currentPage ? " is-active" : "";
-        html += `<button class="posts-page-num${active}" type="button" data-page="${i}">${i}</button>`;
-      }
-      const nextDisabled = currentPage === totalPages ? " disabled" : "";
-      html += `<button class="posts-page-btn posts-page-nav" type="button" data-page="${currentPage + 1}" aria-label="Next page"${nextDisabled}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>`;
-      html += "</div>";
-      return html;
-    }
 
     function renderAll() {
       const start = (currentPage - 1) * PAGE_SIZE;
       const slice = posts.slice(start, start + PAGE_SIZE);
       allEl.innerHTML =
-        renderSection("All Posts", slice, { grid: true }) + renderPagination();
-      allEl.querySelectorAll("[data-page]").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          currentPage = parseInt(btn.dataset.page, 10);
-          renderAll();
-          allEl.scrollIntoView({ behavior: "smooth", block: "start" });
-        });
+        renderSection("All Posts", slice, { grid: true }) +
+        renderPagination(currentPage, totalPages);
+      wirePagination(allEl, (page) => {
+        currentPage = page;
+        renderAll();
       });
     }
 
@@ -456,6 +469,7 @@
     const recipes = posts.filter((p) => (p.tags || []).includes("Recipes"));
     let activeFilter = "all";
     let searchQuery = "";
+    let currentPage = 1;
 
     const params = new URLSearchParams(window.location.search);
     const requestedFilter = params.get("filter");
@@ -497,10 +511,24 @@
         el.innerHTML = `<ul class="posts"><li class="posts-empty">${msg}</li></ul>`;
         return;
       }
+      const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+      if (currentPage > totalPages) currentPage = totalPages;
+      const start = (currentPage - 1) * PAGE_SIZE;
+      const slice = filtered.slice(start, start + PAGE_SIZE);
       el.innerHTML = `
         <section class="posts-section is-grid">
-          <ul class="posts">${filtered.map((p) => renderCard(p, { showTags: true })).join("")}</ul>
-        </section>`;
+          <ul class="posts">${slice.map((p) => renderCard(p, { showTags: true })).join("")}</ul>
+        </section>${renderPagination(currentPage, totalPages)}`;
+      wirePagination(el, (page) => {
+        currentPage = page;
+        render();
+      });
+    }
+
+    // Filtering or searching changes the result set, so start back at page 1.
+    function renderFromFirstPage() {
+      currentPage = 1;
+      render();
     }
 
     document.querySelectorAll("[data-recipe-filters] .recipe-filter").forEach((btn) => {
@@ -509,7 +537,7 @@
         document
           .querySelectorAll("[data-recipe-filters] .recipe-filter")
           .forEach((b) => b.classList.toggle("is-active", b === btn));
-        render();
+        renderFromFirstPage();
       });
     });
 
@@ -520,7 +548,7 @@
       input.addEventListener("input", () => {
         searchQuery = input.value.trim();
         if (clearBtn) clearBtn.hidden = !searchQuery;
-        render();
+        renderFromFirstPage();
       });
       if (form) form.addEventListener("submit", (e) => e.preventDefault());
       if (clearBtn) {
@@ -528,7 +556,7 @@
           input.value = "";
           searchQuery = "";
           clearBtn.hidden = true;
-          render();
+          renderFromFirstPage();
           input.focus();
         });
       }
