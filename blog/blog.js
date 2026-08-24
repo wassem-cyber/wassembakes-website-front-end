@@ -280,10 +280,28 @@
     return shuffled.slice(0, n);
   }
 
+  // Which ISO-ish week of the year we're in — used to rotate the Featured picks
+  // once a week (stable within a week, advances every week).
+  function weekIndex() {
+    const d = new Date();
+    const start = new Date(d.getFullYear(), 0, 1);
+    return Math.floor((d - start) / (7 * 24 * 60 * 60 * 1000));
+  }
+  // Pick n consecutive posts (wrapping) from a week-based offset, so the
+  // Featured set holds steady for a week, then shifts to the next posts —
+  // cycling through the whole catalog over time.
+  function pickWeekly(arr, n) {
+    if (arr.length <= n) return arr.slice();
+    const startAt = weekIndex() % arr.length;
+    const out = [];
+    for (let i = 0; i < n; i++) out.push(arr[(startAt + i) % arr.length]);
+    return out;
+  }
+
   function renderHeroSection(posts) {
     if (!posts.length) return "";
     const newest = posts[0];
-    const featured = pickRandom(posts.slice(1), 2);
+    const featured = pickWeekly(posts.slice(1), 2);
     const newColumn = `
       <section class="posts-hero-col is-new">
         <h2 class="posts-section-title">New</h2>
