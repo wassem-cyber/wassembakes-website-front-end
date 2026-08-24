@@ -1422,9 +1422,21 @@
         }
       }
 
+      // Which week of the year — rotates the featured recipe once a week.
+      function weekIndex() {
+        var d = new Date(), s = new Date(d.getFullYear(), 0, 1);
+        return Math.floor((d - s) / (7 * 24 * 60 * 60 * 1000));
+      }
+      // Collect every recipe that has a real image, then pick one by week so the
+      // Featured Recipe cycles through them instead of sticking on the newest.
+      var withImg = [];
       (function pick(i) {
-        if (i >= recipes.length) { renderAll(recipes[0] || sorted[0]); return; }
-        hasImage(recipes[i], function (ok) { ok ? renderAll(recipes[i]) : pick(i + 1); });
+        if (i >= recipes.length) {
+          var chosen = withImg.length ? withImg[weekIndex() % withImg.length] : (recipes[0] || sorted[0]);
+          renderAll(chosen);
+          return;
+        }
+        hasImage(recipes[i], function (ok) { if (ok) withImg.push(recipes[i]); pick(i + 1); });
       })(0);
     })
     .catch(function () {});
