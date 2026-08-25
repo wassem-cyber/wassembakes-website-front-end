@@ -70,12 +70,40 @@ Titles in Amaranth, one word in the accent color (yellow `#FFD451` on photos, or
 
 ## Brand colors
 
+**The two brands have different palettes.** Pick by brand before you pick a hex — they are close
+enough to look interchangeable and are not.
+
+### wassembakes (creator brand)
+
 | Name          | Pantone     | Hex       | Use                              |
 |---------------|-------------|-----------|----------------------------------|
 | Orange        | Pantone 1495 C | `#FF8F1C` | Primary accent, CTAs, energy     |
 | Blue          | Pantone 550 C  | `#8DB9CA` | Secondary, calm sections, trust  |
 | Yellow        | Pantone 122 C  | `#FFD451` | Highlights, warmth, callouts     |
 | Cream         | —           | `#E8DCC8` | Backgrounds, warmth, neutral base |
+
+### Sensible Bakery (business)
+
+From the brand kit. Not one of these matches its wassembakes counterpart exactly.
+
+| Name    | Hex       | Use                                        |
+|---------|-----------|--------------------------------------------|
+| Sage    | `#83AFB6` | Rules, panels, the cool note in the palette |
+| Orange  | `#E89B2A` | Display accent — a heading's accent word    |
+| Slate   | `#4A5A65` | Body copy, secondary type                   |
+| Cream   | `#EDE1D2` | Section fills, warm neutral ground          |
+| Yellow  | `#FECB48` | Highlights, underlines                      |
+| Ivory   | `#FFFFF0` | Page ground                                 |
+| Black   | `#000000` | Headings, the logo artwork                  |
+
+Two contrast notes, learned the hard way: **sage and `#E89B2A` cannot carry small text.** Both land
+near 2.3:1 on a cream or ivory ground. They work as fills, rules, and panels — near-black on a
+sage panel is about 8:1 — and as display-size accents. Body copy and small caps take slate or
+black.
+
+Sensible's own web properties have drifted from this palette: the wholesale site leans on
+`#3D8DB5`, `#3D2410`, and — on a Sensible surface — the wassembakes orange `#FF8F1C`. Treat the
+brand kit above as the authority, not the site.
 
 Don't introduce new brand colors without asking. Neutrals (black, white, grays) are fine for type and UI chrome.
 
