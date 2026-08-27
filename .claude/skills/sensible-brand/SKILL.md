@@ -66,7 +66,7 @@ These are non-negotiable for any Sensible Bakery social post, ad, carousel, GIF,
 | Body | **Poppins** (400–600) | Kickers, body, captions. |
 | Accent | **Kalam** | Handwritten touch — taglines, small script accents. Use sparingly. |
 
-Titles in Amaranth, one word in the accent color (yellow `#FFD451` on photos, orange `#FF8F1C` on light). This is the Sensible heading system; the Fraunces italic wordmark below is the **wassembakes** brand mark, not Sensible's.
+Titles in Amaranth, one word in the accent color (yellow `#FFD451` on photos, orange `#FF8F1C` on light). This is the Sensible heading system; the Anton wordmark and percent mark below are the **wassembakes** brand mark, not Sensible's.
 
 ## Brand colors
 
@@ -77,7 +77,7 @@ enough to look interchangeable and are not.
 
 | Name          | Pantone     | Hex       | Use                              |
 |---------------|-------------|-----------|----------------------------------|
-| Orange        | Pantone 1495 C | `#FF8F1C` | Primary accent, CTAs, energy     |
+| Orange        | Pantone 1495 C | `#FF6B00` | Primary accent, CTAs, energy     |
 | Blue          | Pantone 550 C  | `#8DB9CA` | Secondary, calm sections, trust  |
 | Yellow        | Pantone 122 C  | `#FFD451` | Highlights, warmth, callouts     |
 | Cream         | —           | `#E8DCC8` | Backgrounds, warmth, neutral base |
@@ -102,31 +102,43 @@ sage panel is about 8:1 — and as display-size accents. Body copy and small cap
 black.
 
 Sensible's own web properties have drifted from this palette: the wholesale site leans on
-`#3D8DB5`, `#3D2410`, and — on a Sensible surface — the wassembakes orange `#FF8F1C`. Treat the
+`#3D8DB5`, `#3D2410`, and — on a Sensible surface — the wassembakes orange (now `#FF6B00`). Treat the
 brand kit above as the authority, not the site.
 
 Don't introduce new brand colors without asking. Neutrals (black, white, grays) are fine for type and UI chrome.
 
 ## Logo / wordmark (wassembakes)
 
-The wassembakes wordmark is set in **Fraunces 900 italic** with the `a` in "bakes" and the trailing period in **brand orange (#FF8F1C)**. Type and accents on a yellow (`#FFD451`) field is the canonical brand-mark presentation.
+The wassembakes wordmark is set in **Anton** (all caps) followed by the **percent mark** — a
+rolling pin on the diagonal between two scored loaves. Ink type with the mark in brand orange
+(`#FF6B00`) is the canonical presentation; on a yellow (`#FFD451`) field for avatars and covers.
 
 Master files live in `assets/`:
 
-| File                       | Use                                                                 |
-|----------------------------|---------------------------------------------------------------------|
-| `logo.svg`                 | Stacked wordmark, transparent bg — primary master                   |
-| `logo-horizontal.svg`      | Single-line "wassem bakes." — headers, email signatures, wide spaces |
-| `logo-square.svg`          | 1:1 with yellow background — IG avatar, app icons, social profiles  |
-| `logo-dark.svg`            | Cream/paper type for dark backgrounds — orange accent stays orange  |
-| `logo-mark.svg`            | "w." mark only — favicons, tiny placements (≤32px), watermarks      |
+| File                       | Use                                                                  |
+|----------------------------|----------------------------------------------------------------------|
+| `logo.svg`                 | Stacked lockup, transparent bg — primary master                      |
+| `logo-horizontal.svg`      | Single-line "WASSEM BAKES%" — headers, email signatures, wide spaces  |
+| `logo-square.svg`          | 1:1 with yellow background — IG avatar, app icons, social profiles    |
+| `logo-dark.svg`            | Cream type for dark backgrounds — orange mark stays orange            |
+| `logo-horizontal-dark.svg` | Single-line, cream type, for dark backgrounds                         |
+| `logo-mark.svg`            | One scored loaf — favicons, app icons, tiny placements, watermarks     |
+| `mark.svg`                 | The full percent mark alone — pin + both loaves, no type              |
+| `logo-onecolour-ink.svg`   | Single colour — print, embroidery, stamps, foil                       |
+| `favicon.svg`              | Favicon, on ink                                                       |
 
 Rules:
 
-- **Don't recolor** the type without the orange accent — the colored `a` and period are the recognition cues.
-- **Don't compress vertically** or add a stroke. Use the SVG masters; don't recreate in raster unless exporting from these.
-- For an OG / Twitter image, export `logo-square.svg` to a 1200×630 PNG with the wordmark left-aligned over yellow. (Raster export not committed yet — use a converter or design tool when needed.)
-- In-page text logos (the nav element) use the same accent pattern in HTML: `wassem b<span class="logo-accent">a</span>kes<span class="logo-accent">.</span>` with `.logo-accent { color: var(--orange); }`.
+- **Two cuts, by size.** The full mark (pin + two scored loaves) above ~30px. Below that the
+  detail fills in — use `logo-mark.svg` / `favicon.svg`, which is one loaf with the same three
+  cuts. Same silhouette, no interior detail to lose.
+- **Never put a single cut inside a circle.** One diagonal through a ring reads as a prohibition
+  sign; a `+` reads as medical; an `×` reads as cancel. The three parallel cuts avoid all three.
+- **Don't recolour** the type without the orange mark — the orange percent is the recognition cue.
+- **Don't stretch, rotate, or add a stroke.** Use the SVG masters; all type is outlined to paths,
+  so no font is needed to render them.
+- In-page logos use `<img src="/assets/logo-horizontal.svg">` inside the `.logo` anchor, sized in
+  `em` so it tracks the nav's font-size.
 
 ## Voice
 

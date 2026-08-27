@@ -1,5 +1,5 @@
 :root {
-  --orange: #FF8F1C;
+  --orange: #FF6B00;
   --blue: #8DB9CA;
   --yellow: #FFD451;
   --cream: #F5EFE4;
@@ -32,7 +32,6 @@ nav {
   letter-spacing: -0.02em;
   font-style: italic;
 }
-.logo-accent { color: var(--orange); }
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -1643,7 +1642,7 @@ footer.site-footer {
   transition: background 0.2s, transform 0.2s;
 }
 .yt-facade:hover .yt-play {
-  background: var(--orange, #FF8F1C);
+  background: var(--orange, #FF6B00);
   transform: translate(-50%, -50%) scale(1.06);
 }
 .yt-play::before {
