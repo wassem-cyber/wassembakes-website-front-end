@@ -1288,9 +1288,11 @@
       body: 'email=' + encodeURIComponent(email) + '&source=wassembakes.com'
     }).then(function () {
       msg.textContent = "Thanks — you're in.";
+      msg.style.color = "#2e7d32";
       form.reset();
     }).catch(function () {
       msg.textContent = "Something went wrong. Try again.";
+      msg.style.color = "#c0392b";
     });
   });
 })();
@@ -1370,10 +1372,12 @@
       body: 'email=' + encodeURIComponent(email) + '&source=wassembakes.com-popup'
     }).then(function () {
       msg.textContent = "Thanks — you're in!";
+      msg.style.color = "#2e7d32";
       form.reset();
       setTimeout(closePopup, 1500);
     }).catch(function () {
       msg.textContent = "Something went wrong. Try again.";
+      msg.style.color = "#c0392b";
     });
   });
 
@@ -1467,17 +1471,10 @@
   function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
   fetch(FEED).then(function (r) { return r.json(); }).then(function (d) {
     if (!d || !d.ok) return;
+    // Only the live follower count is pulled in. The reel tiles keep their
+    // curated local covers (below in the HTML) which always load — Instagram's
+    // own thumbnail URLs expire and were rendering as broken/blank tiles.
     if (d.followersDisplay) { var f = document.getElementById("igFollowers"); if (f) f.textContent = d.followersDisplay; }
-    var grid = document.getElementById("reelsGrid");
-    if (grid && d.posts && d.posts.length) {
-      grid.innerHTML = d.posts.map(function (p, i) {
-        var alt = esc((p.caption || "Instagram reel").slice(0, 90));
-        return '<a class="reel" href="' + esc(p.permalink) + '" target="_blank" rel="noopener" aria-label="Watch reel ' + (i + 1) + ' on Instagram">' +
-          '<img src="' + esc(p.thumb) + '" alt="' + alt + '" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove();var r=this.closest(\'.reel\');if(r)r.classList.add(\'reel-noimg\')">' +
-          '<span class="reel-play"></span>' +
-          '<svg class="reel-label" viewBox="0 0 24 24" aria-hidden="true"><path d="' + IG_PATH + '"/></svg></a>';
-      }).join("");
-    }
   }).catch(function () {});
 })();
 </script>
