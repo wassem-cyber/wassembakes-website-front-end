@@ -1,5 +1,16 @@
 [
  {
+  "slug": "apple-spice-pie",
+  "title": "Vegan Gluten-Free Apple Spice Pie",
+  "shortTitle": "Apple Spice Pie",
+  "excerpt": "The apple spice pie we make at the bakery, scaled for one 9-inch pie at home — a gluten-free crust that holds a real lattice, and a filling that sets clean instead of turning to soup.",
+  "date": "2026-08-28",
+  "dateDisplay": "August 28, 2026",
+  "image": "apple-spice-pie-hero.jpg",
+  "tags": ["Recipes", "Vegan", "Gluten-Free"],
+  "recipeTags": ["Vegan", "Gluten-Free"]
+ },
+ {
   "slug": "five-things-worth-the-money",
   "title": "5 Things in My Bakery That Are Worth the Money",
   "shortTitle": "5 Things Worth the Money",
