@@ -125,7 +125,7 @@ Master files live in `assets/`:
 | `logo-mark.svg`            | One scored loaf — favicons, app icons, tiny placements, watermarks     |
 | `mark.svg`                 | The full percent mark alone — pin + both loaves, no type              |
 | `logo-onecolour-ink.svg`   | Single colour — print, embroidery, stamps, foil                       |
-| `favicon.svg`              | Favicon, on ink — the full percent mark                               |
+| `favicon.svg`              | Favicon — the full percent mark, transparent background               |
 
 Rules:
 
@@ -133,6 +133,9 @@ Rules:
   wide as "WASSEM", so both lines run flush left and right. Don't set the two lines at the same
   size — that leaves a ragged right edge. The mark hangs from line two's baseline and must never
   climb past line one's baseline.
+- **The favicon is transparent; app icons are not.** A browser tab paints its own
+  background, so a tile there just reads as a box. Home-screen and PWA icons need an
+  opaque tile — iOS composites a transparent `apple-touch-icon` onto black.
 - **Two cuts, by size.** The full mark (pin + two scored loaves) above ~30px. Below that the
   detail fills in — use `logo-mark.svg`, which is one loaf with the same three cuts. Same
   silhouette, no interior detail to lose.
