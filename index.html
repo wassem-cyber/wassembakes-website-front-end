@@ -1473,7 +1473,7 @@
       grid.innerHTML = d.posts.map(function (p, i) {
         var alt = esc((p.caption || "Instagram reel").slice(0, 90));
         return '<a class="reel" href="' + esc(p.permalink) + '" target="_blank" rel="noopener" aria-label="Watch reel ' + (i + 1) + ' on Instagram">' +
-          '<img src="' + esc(p.thumb) + '" alt="' + alt + '" loading="lazy" decoding="async" referrerpolicy="no-referrer">' +
+          '<img src="' + esc(p.thumb) + '" alt="' + alt + '" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove();var r=this.closest(\'.reel\');if(r)r.classList.add(\'reel-noimg\')">' +
           '<span class="reel-play"></span>' +
           '<svg class="reel-label" viewBox="0 0 24 24" aria-hidden="true"><path d="' + IG_PATH + '"/></svg></a>';
       }).join("");
