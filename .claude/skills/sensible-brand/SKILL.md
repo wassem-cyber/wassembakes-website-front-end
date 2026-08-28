@@ -125,13 +125,17 @@ Master files live in `assets/`:
 | `logo-mark.svg`            | One scored loaf — favicons, app icons, tiny placements, watermarks     |
 | `mark.svg`                 | The full percent mark alone — pin + both loaves, no type              |
 | `logo-onecolour-ink.svg`   | Single colour — print, embroidery, stamps, foil                       |
-| `favicon.svg`              | Favicon, on ink                                                       |
+| `favicon.svg`              | Favicon, on ink — the full percent mark                               |
 
 Rules:
 
+- **The stacked lockup is a rectangle.** "BAKES %" is set to whatever size makes it exactly as
+  wide as "WASSEM", so both lines run flush left and right. Don't set the two lines at the same
+  size — that leaves a ragged right edge. The mark hangs from line two's baseline and must never
+  climb past line one's baseline.
 - **Two cuts, by size.** The full mark (pin + two scored loaves) above ~30px. Below that the
-  detail fills in — use `logo-mark.svg` / `favicon.svg`, which is one loaf with the same three
-  cuts. Same silhouette, no interior detail to lose.
+  detail fills in — use `logo-mark.svg`, which is one loaf with the same three cuts. Same
+  silhouette, no interior detail to lose.
 - **Never put a single cut inside a circle.** One diagonal through a ring reads as a prohibition
   sign; a `+` reads as medical; an `×` reads as cancel. The three parallel cuts avoid all three.
 - **Don't recolour** the type without the orange mark — the orange percent is the recognition cue.
