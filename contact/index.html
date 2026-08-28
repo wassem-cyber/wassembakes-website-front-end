@@ -38,7 +38,7 @@
 <link rel="preload" as="style" href="https://use.typekit.net/vqu6uma.css" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://use.typekit.net/vqu6uma.css"></noscript>
 <style>
   :root {
-    --orange: #FF6B00;
+    --orange: #FF8F1C;
     --blue: #8DB9CA;
     --yellow: #FFD451;
     --cream: #F5EFE4;
@@ -197,11 +197,25 @@
     .contact-hero { padding-top: 7rem; }
   }
 </style>
+<style>
+/* Mobile nav: five links do not fit one phone-width row. Keep each link intact
+   and let the row wrap, rather than squeezing "Build a Recipe" onto three lines
+   or pushing "Connect" off the screen. */
+@media (max-width: 700px){
+  nav{gap:.5rem;}
+  nav .logo{flex:0 0 auto;}
+  nav .nav-links{
+    flex:1 1 auto;min-width:0;justify-content:flex-end;
+    flex-wrap:wrap;row-gap:.3rem;column-gap:.7rem;
+  }
+  nav .nav-links a{white-space:nowrap;}
+}
+</style>
 </head>
 <body>
 
 <nav>
-  <div class="logo"><a href="../index.html" aria-label="wassem bakes home"><img src="/assets/logo-horizontal.svg" alt="" style="height:clamp(26px,4.2vw,46px);width:auto;display:block"></a></div>
+  <div class="logo"><a href="../index.html" aria-label="wassem bakes home"><picture><source media="(max-width:700px)" srcset="/assets/logo-mark.svg"><img src="/assets/logo-horizontal.svg" alt="" style="height:clamp(30px,4.2vw,46px);width:auto;display:block"></picture></a></div>
   <div class="nav-links">
     <a href="../blog/index.html">Blog</a>
     <a href="https://sensiblebakery.com/collections/all" target="_blank" rel="noopener">Shop</a>

@@ -77,7 +77,7 @@ enough to look interchangeable and are not.
 
 | Name          | Pantone     | Hex       | Use                              |
 |---------------|-------------|-----------|----------------------------------|
-| Orange        | Pantone 1495 C | `#FF6B00` | Primary accent, CTAs, energy     |
+| Orange        | Pantone 1495 C | `#FF8F1C` | Primary accent, CTAs, energy     |
 | Blue          | Pantone 550 C  | `#8DB9CA` | Secondary, calm sections, trust  |
 | Yellow        | Pantone 122 C  | `#FFD451` | Highlights, warmth, callouts     |
 | Cream         | —           | `#E8DCC8` | Backgrounds, warmth, neutral base |
@@ -102,7 +102,7 @@ sage panel is about 8:1 — and as display-size accents. Body copy and small cap
 black.
 
 Sensible's own web properties have drifted from this palette: the wholesale site leans on
-`#3D8DB5`, `#3D2410`, and — on a Sensible surface — the wassembakes orange (now `#FF6B00`). Treat the
+`#3D8DB5`, `#3D2410`, and — on a Sensible surface — the wassembakes orange `#FF8F1C`. Treat the
 brand kit above as the authority, not the site.
 
 Don't introduce new brand colors without asking. Neutrals (black, white, grays) are fine for type and UI chrome.
@@ -111,7 +111,7 @@ Don't introduce new brand colors without asking. Neutrals (black, white, grays) 
 
 The wassembakes wordmark is set in **Anton** (all caps) followed by the **percent mark** — a
 rolling pin on the diagonal between two scored loaves. Ink type with the mark in brand orange
-(`#FF6B00`) is the canonical presentation; on a yellow (`#FFD451`) field for avatars and covers.
+(`#FF8F1C`) is the canonical presentation; on a yellow (`#FFD451`) field for avatars and covers.
 
 Master files live in `assets/`:
 

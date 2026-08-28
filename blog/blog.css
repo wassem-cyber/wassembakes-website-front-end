@@ -1,5 +1,5 @@
 :root {
-  --orange: #FF6B00;
+  --orange: #FF8F1C;
   --blue: #8DB9CA;
   --yellow: #FFD451;
   --cream: #F5EFE4;
@@ -1642,7 +1642,7 @@ footer.site-footer {
   transition: background 0.2s, transform 0.2s;
 }
 .yt-facade:hover .yt-play {
-  background: var(--orange, #FF6B00);
+  background: var(--orange, #FF8F1C);
   transform: translate(-50%, -50%) scale(1.06);
 }
 .yt-play::before {
