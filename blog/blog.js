@@ -1135,9 +1135,8 @@
     return (
       '<div style="margin:0;padding:24px 0;background:#F3ECDE;">' +
         '<div style="max-width:600px;margin:0 auto;background:#ffffff;border-radius:10px;overflow:hidden;">' +
-          '<div style="background:#FFD451;padding:20px 28px;text-align:center;">' +
-            '<span style="font-family:Georgia,\'Times New Roman\',serif;font-style:italic;font-weight:700;font-size:22px;color:#2B2620;">' +
-              'wassem b<span style="color:#FF8F1C;">a</span>kes<span style="color:#FF8F1C;">.</span></span>' +
+          '<div style="background:#FFD451;padding:18px 28px;text-align:center;">' +
+            '<img src="https://wassembakes.com/assets/wordmark-email.png" alt="Wassem Bakes" width="190" style="display:inline-block;height:auto;border:0;max-width:100%;">' +
           '</div>' +
           '<div style="height:4px;background:#FF8F1C;font-size:0;line-height:0;">&nbsp;</div>' +
           '<div style="padding:28px 28px 6px;">' + inner + '</div>' +
