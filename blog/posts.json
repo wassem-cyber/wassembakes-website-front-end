@@ -1,5 +1,15 @@
 [
  {
+  "slug": "frozen-chocolate-crunch-bars",
+  "title": "Frozen Chocolate Crunch Bars",
+  "shortTitle": "Frozen Chocolate Crunch Bars",
+  "excerpt": "Four things, no baking, no refined sugar — ripe banana, almond butter, cocoa, and puffed brown rice, pressed into a pan and frozen into a crunchy chocolate bar.",
+  "date": "2026-08-31",
+  "dateDisplay": "August 31, 2026",
+  "tags": ["Recipes", "Vegan", "Gluten-Free"],
+  "recipeTags": ["Vegan", "Gluten-Free"]
+ },
+ {
   "slug": "gluten-free-sourdough-starter",
   "title": "How to make a gluten-free sourdough starter in 4 days",
   "shortTitle": "GF Sourdough Starter",
