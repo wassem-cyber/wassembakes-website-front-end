@@ -59,7 +59,7 @@ Bank of styles to vary across (mix them, don't repeat a pattern):
 - "On its way — check DMs"
 - …generate ~20 total, no two alike.
 
-⚠️ **Current cap:** the Studio editor holds **5** public-reply variations today (fields "Public reply" + 4 under "Add variations"). Enter the 5 best; the rest wait until the cap is raised (see *Known limits*).
+The Studio editor takes all of these in one **"Public replies — one per line"** box, up to **20**. Paste the whole bank.
 
 ### c) The DM ask — 10 variations, no link, with a button
 The **first DM must not contain the link** (Instagram flags one-way link blasts). It asks a question and offers a button they tap. Write **~10** warm variations that rotate.
@@ -73,7 +73,7 @@ Ask examples (vary them):
 
 **Button text (what they tap):** short, first-person, e.g. `Yes, send it over!` (≤20 chars). Tapping it sends that text back — the two-way reply is what keeps the account safe — and the same automation then delivers the link.
 
-⚠️ **Current cap:** the editor holds **3** DM variations today ("DM message" + 2 under "Add variations"). Enter the 3 best.
+The Studio editor takes these in one **"DM message — one per line"** box, up to **10**. Paste them all.
 
 ### d) The link
 Fill **"When they tap, send this link"** in the *same* automation: label (e.g. `Get the recipe`) + the blog URL from step 1. Optional message sent with it (e.g. `Here you go 🧡`). Never make a second automation for the link — it lives here.
@@ -90,17 +90,14 @@ Good closers (pick/rotate):
 
 Default recommendation: **"Thanks for the support 🧡 If you make it, tag me @wassembakes — Wassem"** (warm + drives a tag, no hard sell).
 
-⚠️ **Current cap:** a separate closer DM after the link is **not built yet** — today the flow ends at the link (+ its optional message). See *Known limits*.
+Enter it in the editor's **"Closer DM (optional)"** box. It's sent a moment after the link. Leave blank to skip.
 
 ## Voice
 All copy — public replies, DMs, captions, closer — follows `sensible-brand`: warm, plainspoken, no hype, no flattery, Wassem's real voice from his reels. Vary wording heavily in the reply/DM banks; identical repetition is what gets flagged.
-
-## Known limits (raise when asked)
-The full playbook wants **~20 public replies, ~10 DM variations, and a closer DM**. The engine today supports **5 public / 3 DM / no closer**. Raising these is a backend + editor change (more variation slots in `bc.js` saveRule/parseRules + the editor, and a closer-DM field + a second send on tap). Flag this to Wassem and offer to build it when he wants the full counts.
 
 ## Checklist to run every drop
 1. Blog post / recipe published (cups + grams).
 2. Photos: hero + flatlay variants, `image` in posts.json.
 3. Captions: IG / TikTok / YouTube / Snapchat.
-4. BabyChat automation: keyword spellings · public replies (5 now) · DM ask + button (3 now) · link · closer (when built).
+4. BabyChat automation: keyword spellings · up to 20 public replies · up to 10 DM variations + button · link · closer.
 5. Give Wassem the exact copy to paste into Studio for anything the tools can't set directly.
