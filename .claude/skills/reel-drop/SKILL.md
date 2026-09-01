@@ -81,14 +81,16 @@ Fill **"When they tap, send this link"** in the *same* automation: label (e.g. `
 ### e) The closer DM (optional last touch)
 After the link, a short warm closer keeps the relationship going without being pushy. Best practice: **gratitude + one low-pressure CTA**, and keep the CTA on-platform (Instagram likes engagement).
 
+Keep it content-agnostic — a drop might be a recipe OR just a tip, so avoid "if you make it/bake it." Use "try it / give it a go / try it out."
+
 Good closers (pick/rotate):
-- "Thanks so much for the support 🧡 — Wassem"
-- "If you make it, tag me @wassembakes — I repost every one!"
-- "Made with love. Tag me when you bake it 🧡"
+- "Thanks so much for the support 🧡 Tag me @wassembakes when you try it — I repost every one!"
+- "Thanks for the support 🧡 If you give it a go, tag @wassembakes — I repost every one!"
+- "Really appreciate you 🧡 Tag me @wassembakes when you try it out!"
 - "Want one of these every week? Join the newsletter 👉 wassembakes.com"
 - Soft cross-sell only when it fits: a related recipe, the recipe builder, or the bakery.
 
-Default recommendation: **"Thanks for the support 🧡 If you make it, tag me @wassembakes — Wassem"** (warm + drives a tag, no hard sell).
+Default recommendation: **"Thanks so much for the support 🧡 Tag me @wassembakes when you try it — I repost every one!"** (warm, drives a tag, works for a recipe or a tip, no hard sell).
 
 Enter it in the editor's **"Closer DM (optional)"** box. It's sent a moment after the link. Leave blank to skip.
 
