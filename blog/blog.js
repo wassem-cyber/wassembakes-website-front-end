@@ -1114,6 +1114,12 @@
     });
     clone.querySelectorAll("img[srcset]").forEach((im) => im.removeAttribute("srcset"));
     clone.querySelectorAll("img").forEach((im) => {
+      // Email needs an absolute src. A plain <img> (not wrapped in <picture>) keeps
+      // its relative "images/…" path, which every mail client shows as broken — so
+      // resolve it against the post URL here.
+      const s = im.getAttribute("src");
+      if (s && !/^https?:\/\//i.test(s)) im.src = new URL(s, location.href).href;
+      im.removeAttribute("onerror");   // inline JS never runs in email; only leaves an alt-text stub
       if (!im.style.cssText) im.style.cssText = "display:block;max-width:100%;height:auto;border-radius:8px;margin:0 0 20px;";
     });
 
