@@ -129,6 +129,12 @@ Master files live in `assets/`:
 
 Rules:
 
+- **⚠️ The old italic serif wordmark is RETIRED — never render it.** There is a legacy
+  logo: a lowercase italic serif "wassem bakes" (and a matching italic serif "w" favicon,
+  still baked into some old skill templates). It is dead. Do **not** hand-type it, and do
+  **not** reach for the italic-"w" favicon. Every logo placement — on the site, in mockups,
+  cards, print pieces, artifacts — uses one of the SVG masters below (`logo-horizontal.svg`
+  is the default), inlined or embedded as a data URI where a relative asset path won't load.
 - **The stacked lockup is a rectangle.** "BAKES %" is set to whatever size makes it exactly as
   wide as "WASSEM", so both lines run flush left and right. Don't set the two lines at the same
   size — that leaves a ragged right edge. The mark hangs from line two's baseline and must never
