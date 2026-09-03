@@ -1024,14 +1024,40 @@
 
 <nav>
   <a href="/" class="logo" aria-label="wassem bakes home"><img src="/assets/logo-horizontal.svg" alt="" style="height:clamp(30px,4.2vw,46px);width:auto;display:block"></a>
-  <div class="nav-links">
-    <a href="blog/index.html">Blog</a>
-    <a href="https://sensiblebakery.com/collections/all" target="_blank" rel="noopener">Shop</a>
-    <a href="https://kitchen.wassembakes.com" target="_blank" rel="noopener">Build a Recipe</a>
-    <a href="about/index.html">About</a>
-    <a href="#press">Connect</a>
+  <div class="nav-right">
+    <form class="home-search nav-search" role="search" autocomplete="off" onsubmit="return homeSearchGo(event)">
+      <svg class="home-search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input type="search" id="homeSearchInput" class="home-search-input" placeholder="Search recipes, tips…" aria-label="Search the blog" oninput="homeSearch(this.value)" onfocus="homeSearch(this.value)">
+      <div class="home-search-results" id="homeSearchResults" hidden></div>
+    </form>
+    <div class="nav-links">
+      <a href="blog/index.html">Blog</a>
+      <a href="https://sensiblebakery.com/collections/all" target="_blank" rel="noopener">Shop</a>
+      <a href="https://kitchen.wassembakes.com" target="_blank" rel="noopener">Build a Recipe</a>
+      <a href="about/index.html">About</a>
+      <a href="#press">Connect</a>
+    </div>
   </div>
 </nav>
+<style>
+  .nav-right{display:flex;align-items:center;gap:1.5rem;min-width:0;}
+  .nav-search{position:relative;flex:0 0 auto;}
+  .nav-search .home-search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:16px;height:16px;stroke:var(--ink);stroke-width:2;fill:none;opacity:.5;pointer-events:none;}
+  .nav-search .home-search-input{width:210px;box-sizing:border-box;padding:.55rem .9rem .55rem 2.3rem;border:1px solid rgba(26,23,20,.22);border-radius:999px;background:var(--paper);font:inherit;font-size:.82rem;color:var(--ink);transition:border-color .15s,box-shadow .15s,width .18s;}
+  .nav-search .home-search-input:focus{outline:none;border-color:var(--orange);box-shadow:0 0 0 3px rgba(255,143,28,.15);width:240px;}
+  .home-search-results{position:absolute;right:0;top:calc(100% + 8px);min-width:280px;background:var(--paper);border:1px solid rgba(26,23,20,.12);border-radius:14px;box-shadow:0 14px 34px -14px rgba(26,23,20,.35);overflow:hidden;z-index:120;text-align:left;}
+  .home-search-results a{display:block;padding:12px 18px;color:var(--ink);border-bottom:1px solid rgba(26,23,20,.06);font-size:.9rem;transition:background .15s;}
+  .home-search-results a:last-child{border-bottom:none;}
+  .home-search-results a:hover{background:var(--cream);}
+  .home-search-results .hsr-empty{padding:13px 18px;color:var(--ink);opacity:.6;font-size:.85rem;}
+  @media (max-width:700px){
+    .nav-right{flex:1 1 auto;flex-wrap:wrap;justify-content:flex-end;gap:.5rem;}
+    .nav-search{order:3;flex:1 1 100%;}
+    .nav-search .home-search-input{width:100%;}
+    .nav-search .home-search-input:focus{width:100%;}
+    .home-search-results{left:0;right:0;min-width:0;}
+  }
+</style>
 
 <section class="hero">
   <div class="hero-content">
@@ -1049,22 +1075,6 @@
 <section class="blog-link reveal">
   <div class="section-label stagger-item">Recipes & Guides</div>
   <h2 class="section-title stagger-item" style="margin-bottom: 1.5rem;">Field notes <em>from the kitchen</em></h2>
-  <style>
-    .home-search{position:relative;max-width:540px;margin:0 auto 2rem;}
-    .home-search-icon{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:20px;height:20px;stroke:var(--ink);stroke-width:2;fill:none;opacity:.45;pointer-events:none;}
-    .home-search-input{width:100%;box-sizing:border-box;padding:1rem 1.1rem 1rem 3.1rem;border:1px solid rgba(26,23,20,.18);border-radius:999px;background:var(--paper);font:inherit;font-size:1rem;color:var(--ink);}
-    .home-search-input:focus{outline:none;border-color:var(--orange);box-shadow:0 0 0 3px rgba(255,143,28,.15);}
-    .home-search-results{position:absolute;left:0;right:0;top:calc(100% + 8px);background:var(--paper);border:1px solid rgba(26,23,20,.12);border-radius:14px;box-shadow:0 14px 34px -14px rgba(26,23,20,.35);overflow:hidden;z-index:30;text-align:left;}
-    .home-search-results a{display:block;padding:12px 18px;color:var(--ink);border-bottom:1px solid rgba(26,23,20,.06);font-size:.95rem;transition:background .15s;}
-    .home-search-results a:last-child{border-bottom:none;}
-    .home-search-results a:hover{background:var(--cream);}
-    .home-search-results .hsr-empty{padding:13px 18px;color:var(--ink);opacity:.6;font-size:.9rem;}
-  </style>
-  <form class="home-search stagger-item" role="search" autocomplete="off" onsubmit="return homeSearchGo(event)">
-    <svg class="home-search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-    <input type="search" id="homeSearchInput" class="home-search-input" placeholder="Search recipes, tips, ingredients…" aria-label="Search the blog" oninput="homeSearch(this.value)" onfocus="homeSearch(this.value)">
-    <div class="home-search-results" id="homeSearchResults" hidden></div>
-  </form>
   <div class="blog-link-cta stagger-item">
     <a href="blog/index.html" class="blog-link-btn">Go to blog &rarr;</a>
   </div>
