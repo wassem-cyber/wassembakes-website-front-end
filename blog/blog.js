@@ -368,6 +368,7 @@
 
     function showSearch(query) {
       const q = query.toLowerCase();
+      const terms = q.split(/\s+/).filter(Boolean);
       const matches = posts.filter((p) => {
         const haystack = [
           p.title,
@@ -377,7 +378,7 @@
         ]
           .join(" ")
           .toLowerCase();
-        return haystack.includes(q);
+        return terms.every((t) => haystack.includes(t));
       });
       const n = matches.length;
       const summary = `<div class="posts-search-summary">${n} result${

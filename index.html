@@ -1499,9 +1499,10 @@
     var box = document.getElementById('homeSearchResults'); if (!box) return;
     q = (q || '').trim().toLowerCase();
     if (!q) { box.hidden = true; box.innerHTML = ''; return; }
+    var terms = q.split(/\s+/).filter(Boolean);
     var res = POSTS.filter(function (p) {
       var hay = ((p.title||'') + ' ' + (p.excerpt||'') + ' ' + ((p.tags||[]).join(' '))).toLowerCase();
-      return hay.indexOf(q) !== -1;
+      return terms.every(function (t) { return hay.indexOf(t) !== -1; });
     }).slice(0, 6);
     box.innerHTML = res.length
       ? res.map(function (p) { return '<a href="blog/' + esc(p.slug) + '.html">' + esc(p.title) + '</a>'; }).join('')
