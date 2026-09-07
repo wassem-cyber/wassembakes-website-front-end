@@ -1317,8 +1317,55 @@
     });
   }
 
+  // A search box in the top nav on every blog page, so a reader can jump to any
+  // post from anywhere on the site — not just the blog index. Matches the
+  // homepage nav search: all query words, any order; Enter goes to the top hit.
+  function renderNavSearch(posts) {
+    const nav = document.querySelector("nav");
+    if (!nav || nav.querySelector(".nav-search")) return;
+    const links = nav.querySelector(".nav-links");
+    const right = document.createElement("div");
+    right.className = "nav-right";
+    const form = document.createElement("form");
+    form.className = "nav-search";
+    form.setAttribute("role", "search");
+    form.setAttribute("autocomplete", "off");
+    form.innerHTML =
+      '<svg class="nav-search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' +
+      '<input type="search" class="nav-search-input" placeholder="Search recipes, tips…" aria-label="Search the blog">' +
+      '<div class="nav-search-results" hidden></div>';
+    nav.appendChild(right);
+    if (links) right.appendChild(links);
+    right.appendChild(form);
+    const input = form.querySelector(".nav-search-input");
+    const box = form.querySelector(".nav-search-results");
+    function run(q) {
+      q = (q || "").trim().toLowerCase();
+      if (!q) { box.hidden = true; box.innerHTML = ""; return; }
+      const terms = q.split(/\s+/).filter(Boolean);
+      const res = posts.filter((p) => {
+        const hay = [p.title, p.excerpt, ...(p.tags || []), ...(p.recipeTags || [])].join(" ").toLowerCase();
+        return terms.every((t) => hay.includes(t));
+      }).slice(0, 6);
+      box.innerHTML = res.length
+        ? res.map((p) => '<a href="' + encodeURIComponent(p.slug) + '.html">' + escapeHtml(p.title) + "</a>").join("")
+        : '<div class="nav-search-empty">No posts match “' + escapeHtml(q) + '”.</div>';
+      box.hidden = false;
+    }
+    input.addEventListener("input", () => run(input.value));
+    input.addEventListener("focus", () => { if (input.value.trim()) run(input.value); });
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const first = box.querySelector("a");
+      if (first) location.href = first.getAttribute("href");
+      else if (input.value.trim()) location.href = "index.html";
+    });
+    document.addEventListener("click", (e) => { if (!form.contains(e.target)) box.hidden = true; });
+  }
+
   async function init() {
     const posts = await loadPosts();
+    renderNavSearch(posts);
     renderIndexList(posts);
     renderRecipesList(posts);
     renderSidebarLatest(posts);
