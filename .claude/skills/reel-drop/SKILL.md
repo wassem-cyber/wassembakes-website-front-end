@@ -148,3 +148,16 @@ Use this to advise Wassem on *what to make and how to frame it*, before the drop
 4. **Sourdough starter** — already sold on the site.
 5. Brown sugar / powdered sugar / self-rising flour — real but 15-second facts; expect the 20–60K tier, and pad past 1 min or they don't earn on TikTok.
 6. Vanilla extract — weak on-camera payoff (6–12 month wait); skip unless showing an aged jar.
+
+## Hashtags — data-backed rules (from the account's own posts, Sep 2026)
+
+Tags correlate with topic as much as cause reach, but the high-use tags below are a reliable read. **Never reuse one tag block across platforms** — the same tag wins on one and drags on another. Keep sets tight (a proven predecessor hit 1M IG / 937K TikTok with just three tags).
+
+- **Always safe, win on all three platforms:** `#bakingtips` · `#kitchentips`. These are the anchors — start every set with them.
+- **TikTok (use 4):** anchors + from `#bakinghacks` · `#glutenfreetips` · `#bakingadvice` · `#bakerybts`.
+- **Instagram (use 5):** anchors + from `#bakinghacks` · `#businesstips` · `#professionalbaker` · `#glutenfreebaking` · `#veganbaking` · `#glutenfreebread`.
+- **YouTube (use exactly 3 — the first three show above the title):** anchors + from `#bakerybts` · `#bakeryskit` · `#professionalbaker`. **Never `#glutenfreebaking` or `#veganbaking` on YouTube** — both sit below the channel median (the opposite of Instagram).
+- **Snapchat Spotlight (use 2):** hashtags barely rank here — the first caption line and first second of video do the work. Two tags, e.g. `#baking #smallbusiness`.
+- **Never, anywhere (below median every time):** `#bakerylife` · `#bakeryowner` · `#businessowner` · `#baker` · `#funny` · `#wellnesstips` · `#healthtips` · `#veganglutenfree`.
+
+Caption copy rules: hook line restating the title; 2–4 lines of the strongest specifics from the transcript; one credibility line (20 years, gluten-free vegan bakery in Long Island City); one engagement line. No emoji unless it earns its place. Don't end by asking people to keep asking questions, and never put the spoken outro ("thank you very much") in the caption.
