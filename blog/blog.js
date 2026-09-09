@@ -181,9 +181,9 @@
     const sizes =
       (cardOptions && cardOptions.sizes) || "(max-width: 600px) 100vw, 400px";
     return `
-      <li class="post-card">
+      <li class="post-card${p.image ? "" : " no-image"}">
         <a href="${p.slug}">
-          <div class="post-card-image">${p.image ? `<img ${imgVariants(p.image, p.title, sizes)} loading="lazy" decoding="async">` : ""}</div>
+          ${p.image ? `<div class="post-card-image"><img ${imgVariants(p.image, p.title, sizes)} loading="lazy" decoding="async"></div>` : ""}
           <div class="post-card-content">
             <div class="post-card-date">${p.dateDisplay}</div>
             <h2>${p.title}</h2>
