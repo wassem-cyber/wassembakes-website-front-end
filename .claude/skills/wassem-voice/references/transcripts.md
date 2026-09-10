@@ -16,3 +16,13 @@ Wassem answering questions out loud, dictated, unedited. Disfluencies and self-c
 
 > Oh my gosh. I'm so thrilled. So happy to hear that what I do is helping. Thank you for your support. I hope your kid enjoys your baked goods. I'm... it, you know, it really does put a huge smile on me and my whole team's face when we hear things like this. Thank you very much.
 
+### Wassem's note on Q3
+
+> The emoji is good. I just can't send it because I'm on a microphone. It doesn't always have to be a paragraph back, but I'm just trying to get you to understand how touched I feel.
+
+Emoji are welcome — their absence in these transcripts is a dictation artifact, not a preference. And warmth length is variable; the intensity is the constant, not the word count.
+
+## Q4 — "can you send me the exact bread recipe you use at the bakery"
+
+> Yes. Of course. I have it posted on wassembakes dot com on our blogs. It's called... you could search for it. It's called the bread recipe. Give it a shot, and please let me know how it comes out or comment on the blog and share your thoughts. I'd love to chime in. And if you have any problems across the way, don't be shy to reach out.
+
