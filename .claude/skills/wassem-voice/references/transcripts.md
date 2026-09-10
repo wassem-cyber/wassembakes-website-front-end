@@ -36,3 +36,10 @@ So the "never invite more questions" rule is **email-only**. On DMs, public comm
 
 > Oh my god. Unfortunately, not. Our baked goods are restricted to the United States for, like, sales tax reasons or customs. Also going to Canada, it tends to take more than a day, and our products are made without preservatives or chemicals. So, honestly, they don't really have long shelf life, that a good thing i think.
 
+### Wassem on how he types
+
+> Dms are in lower case, like this sentence here. Get it?
+
+DMs are lowercase throughout. Everything above is dictated, so its capitalization is the transcriber's, not his.
+
+Note also "Get it?" — the same mid-thought checkpoint tag as "Right?" in Q1. It survives into typing, so it is his, not a speech artifact.
