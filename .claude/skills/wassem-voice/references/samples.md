@@ -1,6 +1,8 @@
-# Verbatim samples
+# Blog samples — his published writing
 
-Everything here is Wassem's own published writing from wassembakes.com. When a draft doesn't feel right, read these and match the rhythm — they are the ground truth, not the paraphrases in SKILL.md.
+Wassem's own published prose from wassembakes.com. Use this for **blog posts, recipes, captions and newsletters**.
+
+⚠️ **Not for DMs or comments.** This is edited writing, and it differs from how he actually talks in three ways that matter: it leads with the answer instead of a ranked differential, it's dense with numbers he never uses out loud, and it closes cleanly instead of trailing into a question. For anything conversational, `transcripts.md` is the ground truth and this file is not.
 
 ---
 
