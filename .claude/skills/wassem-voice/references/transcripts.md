@@ -26,3 +26,13 @@ Emoji are welcome — their absence in these transcripts is a dictation artifact
 
 > Yes. Of course. I have it posted on wassembakes dot com on our blogs. It's called... you could search for it. It's called the bread recipe. Give it a shot, and please let me know how it comes out or comment on the blog and share your thoughts. I'd love to chime in. And if you have any problems across the way, don't be shy to reach out.
 
+### Wassem's note on Q4 — where inviting follow-up applies
+
+> Well, I don't mind encouraging more questions. Just that that hard rule is for... specifically for emails, because I think that would just create a long email chain, but I don't mind them if they're interacting with the website or they're leaving public comments. Then that's good.
+
+So the "never invite more questions" rule is **email-only**. On DMs, public comments and the blog, inviting more is wanted — engagement is the point.
+
+## Q5 — "do you ship to canada"
+
+> Oh my god. Unfortunately, not. Our baked goods are restricted to the United States for, like, sales tax reasons or customs. Also going to Canada, it tends to take more than a day, and our products are made without preservatives or chemicals. So, honestly, they don't really have long shelf life, that a good thing i think.
+
