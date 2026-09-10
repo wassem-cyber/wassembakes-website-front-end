@@ -8,3 +8,7 @@ Wassem answering questions out loud, dictated, unedited. Disfluencies and self-c
 
 > Well, it could be several things. It could be overhydration, over proofing, but my first assumption would probably be your leaveners, like baking pot... baking powder and baking soda. You'd rather use too much or too little, or you're not using the right one or using double acting baking powder. Right? because baking powder reacts when it get double acting, baking powder reacts twice, once when it gets wet, and then, again, when it heats up And then probably the most important thing is do you have the proper gelatinization network? So are you using the right binders? Are you using the right starches to trap in all those air bubbles?
 
+## Q2 — "can i use tahini instead of peanut butter"
+
+> Yeah. Of course you can. Um, but Tahenia has a different structure. So, for example, Taheni is a little bit more liquid, and it's not as firm as peanut butter. But, yeah, of course, if you have an allergy, uh, also, Taheni's got a really strong flavor profile. I guess it just... it depends for what.
+
