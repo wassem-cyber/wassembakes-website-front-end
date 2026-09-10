@@ -12,3 +12,7 @@ Wassem answering questions out loud, dictated, unedited. Disfluencies and self-c
 
 > Yeah. Of course you can. Um, but Tahenia has a different structure. So, for example, Taheni is a little bit more liquid, and it's not as firm as peanut butter. But, yeah, of course, if you have an allergy, uh, also, Taheni's got a really strong flavor profile. I guess it just... it depends for what.
 
+## Q3 — "you changed how i bake for my celiac kid, thank you 🥹"
+
+> Oh my gosh. I'm so thrilled. So happy to hear that what I do is helping. Thank you for your support. I hope your kid enjoys your baked goods. I'm... it, you know, it really does put a huge smile on me and my whole team's face when we hear things like this. Thank you very much.
+
