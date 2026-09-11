@@ -1,12 +1,33 @@
 [
  {
+  "slug": "make-your-own-oat-milk",
+  "title": "How to Make Oat Milk at Home (Without the Slime)",
+  "shortTitle": "Homemade Oat Milk",
+  "excerpt": "Two ingredients, one minute, pennies a batch. The trick to oat milk that isn't slimy: cold water, a short blend, and a gentle strain — no gums or fillers.",
+  "date": "2026-09-11",
+  "dateDisplay": "September 11, 2026",
+  "tags": [
+   "Recipes",
+   "Vegan",
+   "Gluten-Free"
+  ],
+  "recipeTags": [
+   "Vegan",
+   "Gluten-Free"
+  ]
+ },
+ {
   "slug": "best-gluten-free-baking-tips",
   "title": "My best gluten-free baking tips",
   "shortTitle": "My Best Baking Tips",
   "excerpt": "The tips I actually reach for on every bake — weigh your flour, hydrate the batter, bind it right. Twenty years of gluten-free and vegan baking, in one place.",
   "date": "2026-09-10",
   "dateDisplay": "September 10, 2026",
-  "tags": ["Baking Tips", "Gluten-Free", "Vegan"]
+  "tags": [
+   "Baking Tips",
+   "Gluten-Free",
+   "Vegan"
+  ]
  },
  {
   "slug": "planetary-vs-spiral-mixers",
@@ -15,7 +36,10 @@
   "excerpt": "A spiral mixer is a bread specialist; a planetary does everything. In a gluten-free kitchen the spiral is a hard pass — here's why, and what to buy when you're starting out.",
   "date": "2026-09-07",
   "dateDisplay": "September 7, 2026",
-  "tags": ["Baking Tips", "Gluten-Free"]
+  "tags": [
+   "Baking Tips",
+   "Gluten-Free"
+  ]
  },
  {
   "slug": "dont-skimp-on-the-nut-butter",
@@ -24,7 +48,11 @@
   "date": "2026-09-04",
   "dateDisplay": "September 4, 2026",
   "image": "dont-skimp-on-the-nut-butter-hero.jpg",
-  "tags": ["Baking Tips", "Gluten-Free", "Vegan"]
+  "tags": [
+   "Baking Tips",
+   "Gluten-Free",
+   "Vegan"
+  ]
  },
  {
   "slug": "frozen-chocolate-crunch-bars",
@@ -34,8 +62,15 @@
   "date": "2026-08-31",
   "dateDisplay": "August 31, 2026",
   "image": "frozen-chocolate-crunch-bars-hero.jpg",
-  "tags": ["Recipes", "Vegan", "Gluten-Free"],
-  "recipeTags": ["Vegan", "Gluten-Free"]
+  "tags": [
+   "Recipes",
+   "Vegan",
+   "Gluten-Free"
+  ],
+  "recipeTags": [
+   "Vegan",
+   "Gluten-Free"
+  ]
  },
  {
   "slug": "gluten-free-sourdough-starter",
@@ -45,7 +80,10 @@
   "date": "2026-08-30",
   "dateDisplay": "August 30, 2026",
   "image": "gluten-free-sourdough-starter.jpg",
-  "tags": ["Tips", "Gluten-Free"]
+  "tags": [
+   "Tips",
+   "Gluten-Free"
+  ]
  },
  {
   "slug": "everything-i-know-about-baking",
@@ -55,7 +93,9 @@
   "date": "2026-08-29",
   "dateDisplay": "August 29, 2026",
   "image": "everything-i-know-about-baking.jpg",
-  "tags": ["Tips"]
+  "tags": [
+   "Tips"
+  ]
  },
  {
   "slug": "apple-spice-pie",
@@ -65,8 +105,15 @@
   "date": "2026-08-28",
   "dateDisplay": "August 28, 2026",
   "image": "apple-spice-pie-hero.jpg",
-  "tags": ["Recipes", "Vegan", "Gluten-Free"],
-  "recipeTags": ["Vegan", "Gluten-Free"]
+  "tags": [
+   "Recipes",
+   "Vegan",
+   "Gluten-Free"
+  ],
+  "recipeTags": [
+   "Vegan",
+   "Gluten-Free"
+  ]
  },
  {
   "slug": "five-things-worth-the-money",
@@ -76,7 +123,9 @@
   "date": "2026-08-24",
   "dateDisplay": "August 24, 2026",
   "image": "five-things-worth-the-money.jpg",
-  "tags": ["Baking Tips"]
+  "tags": [
+   "Baking Tips"
+  ]
  },
  {
   "slug": "leaveners-in-gluten-free-baking",
@@ -99,7 +148,9 @@
   "date": "2026-08-19",
   "dateDisplay": "August 19, 2026",
   "image": "bag-in-a-bag-piping-trick.jpg",
-  "tags": ["Baking Tips"]
+  "tags": [
+   "Baking Tips"
+  ]
  },
  {
   "slug": "grind-down-your-baking-soda",
@@ -109,7 +160,9 @@
   "date": "2026-08-17",
   "dateDisplay": "August 17, 2026",
   "image": "baking-soda-sifted.jpg",
-  "tags": ["Baking Tips"]
+  "tags": [
+   "Baking Tips"
+  ]
  },
  {
   "slug": "fat-in-gluten-free-baking",
