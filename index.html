@@ -1449,9 +1449,9 @@
         }
         if (previewEl) {
           previewEl.innerHTML = recent.map(function (p) {
-            var img = p.image ? '<img ' + imgVariants(p.image, p.title, '(max-width: 600px) 100vw, 400px') + ' loading="lazy" decoding="async" onerror="this.style.display=\'none\'">' : '';
+            var img = p.image ? '<div class="blog-preview-image"><img ' + imgVariants(p.image, p.title, '(max-width: 600px) 100vw, 400px') + ' loading="lazy" decoding="async" onerror="this.closest(\'.blog-preview-image\').remove()"></div>' : '';
             return '<a class="blog-preview-card" href="blog/' + p.slug + '.html">'
-              + '<div class="blog-preview-image">' + img + '</div>'
+              + img
               + '<div class="blog-preview-content">'
               + '<div class="blog-preview-date">' + p.dateDisplay + '</div>'
               + '<h3 class="blog-preview-title">' + p.title + '</h3>'
