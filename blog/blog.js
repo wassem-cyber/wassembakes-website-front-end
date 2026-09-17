@@ -392,7 +392,7 @@
       }
       el.innerHTML =
         summary +
-        `<section class="posts-section is-grid"><ul class="posts">${matches
+        `<section class="posts-section is-grid is-results"><ul class="posts">${matches
           .map((p) => renderCard(p))
           .join("")}</ul></section>`;
     }
