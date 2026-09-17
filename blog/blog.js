@@ -1335,8 +1335,8 @@
       '<input type="search" class="nav-search-input" placeholder="Search recipes, tips…" aria-label="Search the blog">' +
       '<div class="nav-search-results" hidden></div>';
     nav.appendChild(right);
-    if (links) right.appendChild(links);
     right.appendChild(form);
+    if (links) right.appendChild(links);
     const input = form.querySelector(".nav-search-input");
     const box = form.querySelector(".nav-search-results");
     function run(q) {
