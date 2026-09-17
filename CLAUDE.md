@@ -7,6 +7,7 @@ Source for **wassembakes.com** — Wassem Moarsi's personal creator-brand site.
 - Hosted on **Netlify**, **auto-deploys from `main`** (GitHub repo `wassem-cyber/wassembakes-website-front-end`).
 - `netlify.toml` configures Netlify to **publish the repo root with no build step** — don't remove it or the deploy fails with "publish directory does not exist."
 - ⚠️ **Two publish paths exist.** A separate "Studio" app can publish posts straight to Netlify without touching git. Last deploy wins, so a naive `git push` can overwrite Studio-only content — `_deploy.ps1`'s safety check guards against this (see Workflow).
+- 🚨 **CLAUDE / remote sessions — READ THIS BEFORE DEPLOYING.** In the cloud/remote environment there is no `_pull.ps1`/`_deploy.ps1`, so merging a PR to `main` triggers a Netlify git deploy that **runs no safety check** and can silently wipe anything the Studio published straight to Netlify (posts, images, theme/logo) — this has broken the live site before. **Do NOT auto-merge website changes to `main`.** Before any website deploy: (1) confirm with Wassem that the Studio hasn't published anything since the last git sync, or (2) have him re-publish from Studio right after. If the site looks broken after a deploy (logo/layout off, sidebar images missing), the first recovery is **re-publish from Studio** (last deploy wins). Never repeat a blind merge-to-main deploy.
 - No staging branch; test locally before pushing.
 
 ## Workflow
