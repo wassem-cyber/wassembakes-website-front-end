@@ -418,7 +418,17 @@
       }
     }
 
-    showCurated();
+    // Deep link from the nav/home search: /blog/?q=term shows the results list
+    // to pick from, instead of jumping straight to one post.
+    const initialQ = new URLSearchParams(location.search).get("q");
+    if (input && initialQ && initialQ.trim()) {
+      input.value = initialQ.trim();
+      const cb = document.querySelector("[data-search-clear]");
+      if (cb) cb.hidden = false;
+      showSearch(initialQ.trim());
+    } else {
+      showCurated();
+    }
   }
 
   function renderCurated(el, posts) {
@@ -1356,9 +1366,8 @@
     input.addEventListener("focus", () => { if (input.value.trim()) run(input.value); });
     form.addEventListener("submit", (e) => {
       e.preventDefault();
-      const first = box.querySelector("a");
-      if (first) location.href = first.getAttribute("href");
-      else if (input.value.trim()) location.href = "index.html";
+      const q = input.value.trim();
+      if (q) location.href = "/blog/?q=" + encodeURIComponent(q);
     });
     document.addEventListener("click", (e) => { if (!form.contains(e.target)) box.hidden = true; });
   }
