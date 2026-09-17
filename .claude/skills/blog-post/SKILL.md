@@ -26,7 +26,9 @@ Copy exactly. Replace `{{placeholders}}`. Keep every class, attribute, and wrapp
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{title}} — Wassem Bakes</title>
 <meta name="description" content="{{excerpt}}">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' font-family='Georgia,serif' font-style='italic' font-weight='900' fill='%23FF8F1C'%3Ew%3C/text%3E%3C/svg%3E">
+<link rel="canonical" href="https://wassembakes.com/blog/{{slug}}">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta property="og:type" content="article">
 <meta property="og:title" content="{{title}}">
 <meta property="og:description" content="{{excerpt}}">
@@ -39,17 +41,19 @@ Copy exactly. Replace `{{placeholders}}`. Keep every class, attribute, and wrapp
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,300;1,9..144,400&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/vqu6uma.css">
 <link rel="stylesheet" href="blog.css">
 </head>
 <body>
 
 <nav>
-  <a href="/" class="logo">wassem bakes</a>
+  <a href="../index.html" class="logo" aria-label="wassem bakes home"><img src="/assets/logo-horizontal.svg" alt="" style="height:clamp(30px,4.2vw,46px);width:auto;display:block"></a>
   <div class="nav-links">
-    <a href="/#reels">Work</a>
-    <a href="/blog/">Blog</a>
-    <a href="/#press">Press</a>
-    <a href="/#contact">Contact</a>
+    <a href="index.html">Blog</a>
+    <a href="https://sensiblebakery.com/collections/all" target="_blank" rel="noopener">Shop</a>
+    <a href="https://kitchen.wassembakes.com" target="_blank" rel="noopener">Build a Recipe</a>
+    <a href="../about/index.html">About</a>
+    <a href="../index.html#press">Connect</a>
   </div>
 </nav>
 
