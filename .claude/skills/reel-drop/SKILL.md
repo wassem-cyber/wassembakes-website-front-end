@@ -21,11 +21,45 @@ A reel drop has **four deliverables**. Do them in this order.
 - Add the `image` field to `blog/posts.json` so the blog index card shows a thumbnail.
 - Pull originals from the Drive folder Wassem shares; skip any cover/thumbnail that has text baked in (those are for social, not the site).
 
-## 3. Social captions
+## 3. Social captions & titles
 
-- One per platform: Instagram, TikTok, YouTube (title + description), Snapchat.
-- Wassem's voice, from `sensible-brand`. No food-blogger preamble.
-- Include the blog URL and 3–5 relevant hashtags (e.g. #glutenfreebaking #veganbaking #eggfreebaking).
+One per platform: Instagram, TikTok, YouTube (title + description), Facebook, Snapchat. Wassem's voice, from `sensible-brand`. No food-blogger preamble.
+
+### Before you write "Comment WORD" — confirm the link is live
+- The blog post must **exist**, AND a BabyChat flow for that WORD must exist in Studio (wassembakes-app.web.app → BabyChat → Automations). If **either** is missing, **flag it — don't ship the caption.** A trigger word with no live flow sends people nowhere.
+- **One trigger word per post**, short and hard to misspell (CAKES, STEAM, MIXER). The caption shows that one clean word; the automation's keyword field still lists its misspellings (step 4a) for matching.
+
+### Per platform
+
+**TikTok** (no automation on TikTok)
+- CTA line: `Comment CAKES and I'll send it over — or grab it at the link in my bio.`
+- **First line = the search phrase people actually type** ("how to store cake", "proof dough without a proofing box") — and put that same phrase in the on-screen text.
+- 3–5 hashtags, **niche first** (#glutenfreebaking #veganbaking) then broad (#bakingtips). (See the hashtag data section below for the tested per-platform sets; the YouTube exclusions there still hold.)
+- Suggest **one pinned comment** to go with it.
+
+**Instagram**
+- **First line = hook + trigger word**; the answer goes in line 2–3.
+- Add a **Stories plan**: reshare within 24h with a poll or question sticker tied to the video.
+- **Flag** posts that suit a **Trial Reel** (non-follower test).
+
+**YouTube (Shorts)**
+- **Title = keyword first, hook second, under 60 characters** ("How to Store Cake So It Doesn't Go Stale").
+- Description: **first line is the full blog link** (clickable on YouTube), then 2–3 lines with the searched phrases.
+- **Name the related long video or blog post** to attach as the Short's related link.
+
+**Facebook**
+- Same as Instagram, but **include the full blog link in the caption** — Facebook doesn't punish links in captions the way IG does.
+
+**Snapchat**
+- One short line + the trigger word or "link in bio".
+
+### Every post
+- **Name the brands used** in the video — in the blog post, and in the caption when it's relevant.
+- End with **one opinion question** that fits the video ("Which hand's your messy one?") — **never** "let me know if you have questions".
+- **"Thank you very much" belongs in the voiceover, not in the caption.**
+
+### Why the button, not a direct link (comment automations)
+Instagram does **not** allow a link in the first/only DM from a comment-keyword automation — it suppresses delivery. The button tap is the opt-in that opens the 24-hour window and makes the link send allowed. Keep the two-step flow (step 4). (A link in the first message is only fine when someone **DMs** the keyword, not comments it.)
 
 ## 4. BabyChat automation (the comment → DM flow)
 
