@@ -31,8 +31,8 @@ One per platform: Instagram, TikTok, YouTube (title + description), Facebook, Sn
 
 ### Per platform
 
-**TikTok** (no automation on TikTok)
-- CTA line: `Comment CAKES and I'll send it over — or grab it at the link in my bio.`
+**TikTok** (no automation on TikTok — the daily `/social-comments` Cowork run *is* the automation there, replying to each trigger word by hand)
+- CTA line: `Comment CAKES and I'll send it over — or grab it at the link in my bio.` Always include the bio-link fallback: TikTok DMs often can't be sent, so the bio link is how many people actually get it.
 - **First line = the search phrase people actually type** ("how to store cake", "proof dough without a proofing box") — and put that same phrase in the on-screen text.
 - 3–5 hashtags, **niche first** (#glutenfreebaking #veganbaking) then broad (#bakingtips). (See the hashtag data section below for the tested per-platform sets; the YouTube exclusions there still hold.)
 - Suggest **one pinned comment** to go with it.
@@ -42,7 +42,7 @@ One per platform: Instagram, TikTok, YouTube (title + description), Facebook, Sn
 - Add a **Stories plan**: reshare within 24h with a poll or question sticker tied to the video.
 - **Flag** posts that suit a **Trial Reel** (non-follower test).
 
-**YouTube (Shorts)**
+**YouTube (Shorts)** (no automation either — the daily `/social-comments` Cowork run answers the trigger word and pins a comment with the link)
 - **Title = keyword first, hook second, under 60 characters** ("How to Store Cake So It Doesn't Go Stale").
 - Description: **first line is the full blog link** (clickable on YouTube), then 2–3 lines with the searched phrases.
 - **Name the related long video or blog post** to attach as the Short's related link.
