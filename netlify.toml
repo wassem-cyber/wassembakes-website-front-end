@@ -18,3 +18,11 @@
   to = "https://us-central1-wassembakes-app.cloudfunctions.net/bcClick"
   status = 302
   force = true
+
+# Safety net: the flour-blend post's title is "Our Gluten-Free Flour Blend"
+# but its slug drops "our", so a URL guessed from the title 404s. Redirect the
+# guessed path to the real post.
+[[redirects]]
+  from = "/blog/our-gluten-free-flour-blend"
+  to = "/blog/gluten-free-flour-blend"
+  status = 301
