@@ -26,3 +26,5 @@
   from = "/blog/our-gluten-free-flour-blend"
   to = "/blog/gluten-free-flour-blend"
   status = 301
+
+# Redeploy nudge 2026-10-01T18:39Z — force a fresh full git deploy of the repo root (images in blog/images were 404ing on a stale production deploy).
