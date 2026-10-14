@@ -9,7 +9,7 @@
     "tags": [
       "Baking Tips"
     ],
-    "image": "leaveners-acid-800w.jpg"
+    "image": "leaveners-acid.jpg"
   },
   {
     "slug": "baking-pantry-storage-guide",
@@ -18,7 +18,7 @@
     "excerpt": "Clumpy baking soda is quietly ruining your bakes. How to test it, fix it, and store it — plus baking powder and every pantry staple that needs an airtight container.",
     "date": "2026-10-03",
     "dateDisplay": "October 3, 2026",
-    "image": "baking-soda-800w.jpg",
+    "image": "baking-soda.jpg",
     "tags": [
       "Baking Tips"
     ]
@@ -32,7 +32,8 @@
     "dateDisplay": "September 24, 2026",
     "tags": [
       "Baking Tips"
-    ]
+    ],
+    "image": "bp-loaf-crumb.jpg"
   },
   {
     "slug": "how-to-store-cakes",
@@ -43,7 +44,8 @@
     "dateDisplay": "September 24, 2026",
     "tags": [
       "Baking Tips"
-    ]
+    ],
+    "image": "full-cake.jpg"
   },
   {
     "slug": "oatmeal-brookies",
@@ -59,7 +61,8 @@
     "recipeTags": [
       "Gluten-Free",
       "Vegan"
-    ]
+    ],
+    "image": "brookies.jpg"
   },
   {
     "slug": "gluten-free-crumb-topping",
@@ -76,7 +79,8 @@
     "recipeTags": [
       "Vegan",
       "Gluten-Free"
-    ]
+    ],
+    "image": "blueberry-crumb.jpg"
   },
   {
     "slug": "gluten-free-flour-blend",
@@ -88,7 +92,8 @@
     "tags": [
       "Baking Tips",
       "Gluten-Free"
-    ]
+    ],
+    "image": "texture-sifting.jpg"
   },
   {
     "slug": "make-your-own-oat-milk",
@@ -105,7 +110,8 @@
     "recipeTags": [
       "Vegan",
       "Gluten-Free"
-    ]
+    ],
+    "image": "make-your-own-oat-milk.jpg"
   },
   {
     "slug": "best-gluten-free-baking-tips",
@@ -131,7 +137,8 @@
     "tags": [
       "Baking Tips",
       "Gluten-Free"
-    ]
+    ],
+    "image": "creaming-butter-sugar.jpg"
   },
   {
     "slug": "dont-skimp-on-the-nut-butter",

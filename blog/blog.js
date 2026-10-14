@@ -155,7 +155,8 @@
 
   function imgVariants(image, title, sizes) {
     const dot = image.lastIndexOf(".");
-    const base = image.substring(0, dot);
+    // Tolerate an image given as an already-sized variant ("x-800w.jpg").
+    const base = image.substring(0, dot).replace(/-(480|800|1200)w$/, "");
     const ext = image.substring(dot);
     const srcset = [480, 800, 1200]
       .map((w) => `images/${base}-${w}w${ext} ${w}w`)
@@ -629,7 +630,7 @@
           .map(
             (p) => `
         <li>
-          <a href="${p.slug}">
+          <a href="${p.slug}"${p.image ? "" : ' class="sb-latest-noimg"'}>
             ${p.image ? `<img class="sb-latest-img" ${imgVariants(p.image, p.title, "(max-width: 600px) 50vw, 200px")} loading="lazy">` : ""}
             <div class="sb-latest-text">
               <span class="sb-latest-date">${p.dateDisplay}</span>
