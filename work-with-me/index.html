@@ -284,6 +284,14 @@
   nav .nav-links a{white-space:nowrap;}
 }
 </style>
+<style>
+/* phone-nav-stacked */
+@media (max-width: 700px){
+  nav{flex-direction:column;align-items:center;justify-content:center;row-gap:.55rem;padding:.75rem 1rem;}
+  nav .logo{display:flex;justify-content:center;}
+  nav .nav-links{flex:0 1 auto;width:100%;justify-content:center;flex-wrap:wrap;column-gap:.95rem;row-gap:.35rem;font-size:.64rem;letter-spacing:.12em;}
+}
+</style>
 </head>
 <body>
 
@@ -294,7 +302,7 @@
     <a href="https://sensiblebakery.com/collections/all" target="_blank" rel="noopener">Shop</a>
     <a href="https://kitchen.wassembakes.com" target="_blank" rel="noopener">Build a Recipe</a>
     <a href="../about/index.html">About</a>
-    <a href="../contact/index.html">Contact</a>
+    <a href="index.html" aria-current="page">Work With Me</a>
   </div>
 </nav>
 
