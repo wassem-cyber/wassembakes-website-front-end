@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- wb-theme-loader -->
+<script>
+(function(){try{
+  fetch("https://us-central1-wassembakes-app.cloudfunctions.net/theme").then(function(r){return r.json();}).then(function(d){
+    if(!d||!d.ok||!d.theme||!d.theme.colors)return;
+    var c=d.theme.colors, s=document.documentElement.style;
+    for(var k in c){ if(c[k]) s.setProperty("--"+k, c[k]); }
+  }).catch(function(){});
+}catch(e){}})();
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H2M0LMEW4Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-H2M0LMEW4Z");
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work With Me — Wassem Bakes</title>
+<meta name="description" content="Partner with Wassem Moarsi, professional gluten-free and vegan baker and owner of Sensible Bakery: sponsored recipes, social content, recipe development, consulting and press.">
+<link rel="canonical" href="https://wassembakes.com/work-with-me/">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Work With Me — Wassem Bakes">
+<meta property="og:description" content="Partner with Wassem Moarsi, professional gluten-free and vegan baker and owner of Sensible Bakery: sponsored recipes, social content, recipe development, consulting and press.">
+<meta property="og:url" content="https://wassembakes.com/work-with-me/">
+<meta property="og:image" content="https://wassembakes.com/assets/og-default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://wassembakes.com/assets/og-default.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&family=Inter+Tight:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&family=Inter+Tight:wght@400;500;600&display=swap"></noscript>
+<link rel="preload" as="style" href="https://use.typekit.net/vqu6uma.css" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://use.typekit.net/vqu6uma.css"></noscript>
+<style>
+  :root {
+    --orange: #FF8F1C;
+    --blue: #8DB9CA;
+    --yellow: #FFD451;
+    --cream: #F5EFE4;
+    --ink: #1A1714;
+    --paper: #FAFAF7;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter Tight', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    padding: 1.5rem 2rem;
+    display: flex; justify-content: space-between; align-items: center;
+    z-index: 100;
+    background: var(--yellow);
+    color: var(--ink);
+  }
+  .logo {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+    font-style: italic;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+  .nav-links a { opacity: 0.85; transition: opacity 0.2s; }
+  .nav-links a:hover { opacity: 1; }
+
+  section { padding: 6rem 2rem; position: relative; }
+  .section-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    opacity: 0.6;
+    margin-bottom: 1rem;
+  }
+  .page-title {
+    font-family: "dejanire-headline", 'Fraunces', serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+  }
+  .page-title em { font-style: italic; font-weight: 300; color: var(--orange); }
+
+  .contact-hero {
+    padding-top: 10rem;
+    padding-bottom: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .contact-lead {
+    font-family: "bettoni-variable", 'Fraunces', serif;
+    font-variation-settings: "opsz" 40, "wght" 110;
+    font-size: clamp(1.2rem, 2vw, 1.45rem);
+    line-height: 1.5;
+    max-width: 60ch;
+    opacity: 0.85;
+  }
+
+  .contact-body { padding-top: 1rem; padding-bottom: 6rem; }
+  .contact-inner { max-width: 900px; margin: 0 auto; }
+  .contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  .contact-card {
+    background: var(--cream);
+    padding: 1.5rem 1.5rem;
+    border-radius: 6px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .contact-card:hover { transform: translateY(-2px); box-shadow: 0 8px 18px -10px rgba(26, 23, 20, 0.2); }
+  .contact-card span {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    opacity: 0.5;
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+  .contact-card a, .contact-card p {
+    font-family: "bettoni-variable", 'Fraunces', serif;
+    font-variation-settings: "opsz" 40, "wght" 110;
+    font-size: 1.05rem;
+    word-break: break-word;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .contact-card a:hover { border-color: var(--ink); }
+  .contact-note {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 60ch;
+    margin-top: 2.5rem;
+    opacity: 0.9;
+  }
+  .contact-note a { color: var(--orange); border-bottom: 1px solid currentColor; }
+
+  .back-link-wrap { max-width: 900px; margin: 3rem auto 0; }
+  .back-link {
+    display: inline-block;
+    padding: 1rem 1.75rem;
+    background: var(--ink);
+    color: var(--paper);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    border-radius: 6px;
+    transition: background 0.2s, transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .back-link:hover { background: var(--orange); transform: scale(1.03); box-shadow: 0 8px 18px -10px rgba(26, 23, 20, 0.3); }
+
+  footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 3rem 2rem 2rem;
+    font-size: 0.85rem;
+  }
+  .footer-wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+  }
+  .footer-wrap a { opacity: 0.6; transition: opacity 0.2s; }
+  .footer-wrap a:hover { opacity: 1; }
+
+  @media (max-width: 700px) {
+    nav { padding: 0.75rem 1rem; }
+    .logo { font-size: 1rem; }
+    .nav-links { gap: 0.75rem; font-size: 0.6rem; letter-spacing: 0.1em; }
+    section { padding: 4rem 1.25rem; }
+    .contact-hero { padding-top: 7rem; }
+  }
+
+  .wwm-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-bottom: 4rem; }
+  @media (max-width: 800px) { .wwm-stats { grid-template-columns: repeat(2, 1fr); } }
+  .wwm-stat { border-top: 2px solid var(--ink); padding-top: 1rem; }
+  .wwm-num { font-family: "dejanire-headline", 'Fraunces', serif; font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1; color: var(--orange); }
+  .wwm-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.12em; opacity: 0.7; margin-top: 0.5rem; }
+  .wwm-h2 { font-family: "bettoni-variable", 'Fraunces', serif; font-variation-settings: "opsz" 40, "wght" 110; font-size: clamp(1.8rem, 4vw, 2.4rem); margin: 0 0 1.5rem; }
+  .wwm-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin-bottom: 4rem; }
+  .wwm-card { background: var(--cream); border-radius: 6px; padding: 1.5rem; }
+  .wwm-card h3 { font-family: "dejanire-headline", 'Fraunces', serif; font-size: 1.25rem; margin-bottom: 0.5rem; }
+  .wwm-card p { font-size: 0.98rem; line-height: 1.6; opacity: 0.85; }
+</style>
+<style>
+/* Mobile nav: five links do not fit one phone-width row. Keep each link intact
+   and let the row wrap, rather than squeezing "Build a Recipe" onto three lines
+   or pushing "Connect" off the screen. */
+@media (max-width: 700px){
+  nav{gap:.5rem;}
+  nav .logo{flex:0 1 auto;min-width:0;}
+  nav .logo img{max-width:100%;height:auto;max-height:34px;}
+  nav .nav-links{
+    flex:1 1 auto;min-width:0;justify-content:flex-end;
+    flex-wrap:wrap;row-gap:.3rem;column-gap:.7rem;
+  }
+  nav .nav-links a{white-space:nowrap;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo"><a href="../index.html" aria-label="wassem bakes home"><img src="/assets/logo-horizontal.svg" alt="" style="height:clamp(30px,4.2vw,46px);width:auto;display:block"></a></div>
+  <div class="nav-links">
+    <a href="../blog/index.html">Blog</a>
+    <a href="https://sensiblebakery.com/collections/all" target="_blank" rel="noopener">Shop</a>
+    <a href="https://kitchen.wassembakes.com" target="_blank" rel="noopener">Build a Recipe</a>
+    <a href="../about/index.html">About</a>
+    <a href="../contact/index.html">Contact</a>
+  </div>
+</nav>
+
+<section class="contact-hero">
+  <div class="section-label">Press &amp; Partnerships</div>
+  <h1 class="page-title">Work <em>with me.</em></h1>
+  <p class="contact-lead">I've spent over 20 years running Sensible Bakery, the largest gluten-free and vegan bakery in New York City. On Wassem Bakes I share what actually works in a real commercial kitchen, for people baking around allergies, dietary restrictions and wellness. If your brand fits that, I'd love to work together.</p>
+</section>
+
+<section class="contact-body">
+  <div class="contact-inner">
+    <div class="wwm-stats">
+      <div class="wwm-stat"><div class="wwm-num">205K</div><div class="wwm-label">Instagram followers</div></div>
+      <div class="wwm-stat"><div class="wwm-num">30K+</div><div class="wwm-label">Monthly blog page views</div></div>
+      <div class="wwm-stat"><div class="wwm-num">76%</div><div class="wwm-label">Readers in the US, Canada, UK &amp; Australia</div></div>
+      <div class="wwm-stat"><div class="wwm-num">20+</div><div class="wwm-label">Years baking professionally</div></div>
+    </div>
+
+    <h2 class="wwm-h2">Ways to collaborate</h2>
+    <div class="wwm-grid">
+      <div class="wwm-card">
+        <h3>Sponsored recipe on the blog</h3>
+        <p>An original, tested gluten-free and vegan recipe built around your product, with step-by-step photos and a permanent home on wassembakes.com.</p>
+      </div>
+      <div class="wwm-card">
+        <h3>Instagram, TikTok &amp; YouTube</h3>
+        <p>Reels, short-form video and carousels that show your product in a real bakery kitchen, made for an audience that actually bakes.</p>
+      </div>
+      <div class="wwm-card">
+        <h3>Recipe development</h3>
+        <p>Exclusive recipes for your website, packaging, cookbook or campaign, developed and tested to work every time without gluten, eggs or dairy.</p>
+      </div>
+      <div class="wwm-card">
+        <h3>Formulation &amp; consulting</h3>
+        <p>Commercial-scale help for food brands, caf&eacute;s and bakeries going gluten-free or vegan: formulas, shelf life, texture and scaling up.</p>
+      </div>
+      <div class="wwm-card">
+        <h3>Press &amp; expert commentary</h3>
+        <p>Interviews, quotes and features on gluten-free and vegan baking, food allergies and running a dedicated allergen-focused bakery.</p>
+      </div>
+      <div class="wwm-card">
+        <h3>Events &amp; speaking</h3>
+        <p>Demos, classes, panels and live baking for events, trade shows and brand activations.</p>
+      </div>
+    </div>
+
+    <h2 class="wwm-h2">Let's talk</h2>
+    <p class="contact-note" style="margin-top:0">Tell me about your brand and what you have in mind. A media kit with full audience details and rates is available on request.</p>
+    <div class="contact-methods" style="margin-top:1.5rem">
+      <div class="contact-card">
+        <span>Email &middot; Partnerships &amp; Press</span>
+        <a href="mailto:hello@wassembakes.com?subject=Partnership%20inquiry">hello@wassembakes.com</a>
+      </div>
+      <div class="contact-card">
+        <span>Instagram</span>
+        <a href="https://www.instagram.com/wassembakes/" target="_blank" rel="noopener">@wassembakes</a>
+      </div>
+      <div class="contact-card">
+        <span>Contact form</span>
+        <a href="../index.html#contact">Send a message &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="back-link-wrap">
+    <a href="mailto:hello@wassembakes.com?subject=Media%20kit%20request" class="back-link">Request the media kit</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-wrap">
+    <div>© 2026 Wassem Moarsi · All rights reserved</div>
+    <div><a href="../about/index.html">About</a> · <a href="../contact/index.html">Contact</a> · <a href="../privacy/index.html">Privacy</a> · <a href="https://sensiblebakery.com">Sensible Bakery →</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

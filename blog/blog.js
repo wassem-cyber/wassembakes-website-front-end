@@ -1367,6 +1367,37 @@
     });
   }
 
+  // Pinterest "Save" button on every post's hero photo (recipe or not), so any
+  // post can be pinned straight from the top of the page.
+  function wireHeroPin() {
+    if (!CURRENT_SLUG) return;
+    const img = document.querySelector("article.post img.post-hero");
+    if (!img) return;
+    const holder = img.closest("picture") || img;
+    if (holder.parentElement.classList.contains("post-hero-wrap")) return;
+    const wrap = document.createElement("div");
+    wrap.className = "post-hero-wrap";
+    holder.parentNode.insertBefore(wrap, holder);
+    wrap.appendChild(holder);
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "hero-pin-btn";
+    btn.setAttribute("aria-label", "Save to Pinterest");
+    btn.innerHTML = PINTEREST_ICON + "<span>Save</span>";
+    btn.addEventListener("click", function () {
+      // The <img> src is always the JPEG (currentSrc may be AVIF/WebP, which Pinterest rejects).
+      const src = (img.getAttribute("src") || "").replace(/-(480|800)w\./, "-1200w.");
+      const title = (document.querySelector(".post-header h1") || {}).textContent || document.title;
+      const pinUrl =
+        "https://www.pinterest.com/pin/create/button/?url=" +
+        encodeURIComponent(location.href.split("#")[0]) +
+        "&media=" + encodeURIComponent(new URL(src, location.href).href) +
+        "&description=" + encodeURIComponent(title.trim());
+      window.open(pinUrl, "_blank", "noopener,noreferrer,width=750,height=600");
+    });
+    wrap.appendChild(btn);
+  }
+
   // A search box in the top nav on every blog page, so a reader can jump to any
   // post from anywhere on the site — not just the blog index. Matches the
   // homepage nav search: all query words, any order; Enter goes to the top hit.
@@ -1422,6 +1453,7 @@
     renderKeepReading(posts);
     wireNewsletterForm();
     wireRecipeSave();
+    wireHeroPin();
     wireComments();
     embedYouTube();
     alignSidebarToTitle();

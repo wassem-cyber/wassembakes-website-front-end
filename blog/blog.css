@@ -1759,3 +1759,25 @@ footer.site-footer {
 }
 .quick-answer ul { margin: 0.4rem 0 0 1.1rem; }
 .quick-answer li { margin-bottom: 0.25rem; }
+/* --- Pinterest Save button on the post hero photo ------------------------- */
+.post-hero-wrap { position: relative; }
+.hero-pin-btn {
+  position: absolute;
+  bottom: 4rem;
+  right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 0.95rem;
+  background: #E60023;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font: 600 0.85rem 'Inter Tight', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+  transition: transform 0.15s ease, background 0.15s ease;
+  z-index: 2;
+}
+.hero-pin-btn svg { width: 16px; height: 16px; }
+.hero-pin-btn:hover { background: #ad081b; transform: scale(1.04); }
