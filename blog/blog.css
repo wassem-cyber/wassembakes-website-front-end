@@ -1781,3 +1781,12 @@ footer.site-footer {
 }
 .hero-pin-btn svg { width: 16px; height: 16px; }
 .hero-pin-btn:hover { background: #ad081b; transform: scale(1.04); }
+/* --- Clear the fixed nav, whatever its height (set by blog.js as --nav-h) -- */
+.blog-header { padding-top: max(10rem, calc(var(--nav-h, 0px) + 2.5rem)); }
+.post-layout { padding-top: max(8rem, calc(var(--nav-h, 0px) + 2rem)); }
+@media (max-width: 700px) {
+  .blog-header { padding-top: max(7rem, calc(var(--nav-h, 0px) + 1.75rem)); }
+  .post-layout { padding-top: max(6rem, calc(var(--nav-h, 0px) + 1.25rem)); }
+  .recipe-filters { gap: 0.5rem; padding: 0 1.25rem; }
+  .recipe-filter { font-size: 0.7rem; padding: 0.55rem 1rem; letter-spacing: 0.1em; }
+}

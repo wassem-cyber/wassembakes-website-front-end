@@ -1443,7 +1443,21 @@
     document.addEventListener("click", (e) => { if (!form.contains(e.target)) box.hidden = true; });
   }
 
+  // The fixed nav wraps to 2-3 rows on phones (links + search box), so its
+  // height varies. Publish it as --nav-h so page tops can clear it instead of
+  // hiding under it.
+  function syncNavHeight() {
+    const nav = document.querySelector("nav");
+    if (!nav) return;
+    const set = () =>
+      document.documentElement.style.setProperty("--nav-h", nav.offsetHeight + "px");
+    set();
+    window.addEventListener("resize", set);
+    if (window.ResizeObserver) new ResizeObserver(set).observe(nav);
+  }
+
   async function init() {
+    syncNavHeight();
     const posts = await loadPosts();
     renderNavSearch(posts);
     renderIndexList(posts);
