@@ -683,19 +683,6 @@
     else article.appendChild(section);
   }
 
-  // "Jump to recipe" — recipe posts open with the story; this lets a reader
-  // who came for the recipe get to the card in one tap.
-  function wireJumpToRecipe() {
-    const card = document.querySelector(".recipe-card");
-    const header = document.querySelector(".post-header");
-    if (!card || !header || header.querySelector(".jump-to-recipe")) return;
-    if (!card.id) card.id = "recipe";
-    const a = document.createElement("a");
-    a.className = "jump-to-recipe";
-    a.href = "#" + card.id;
-    a.textContent = "Jump to recipe ↓";
-    header.appendChild(a);
-  }
 
   function wireNewsletterForm() {
     const form = document.querySelector("[data-newsletter-form]");
@@ -1433,7 +1420,6 @@
     renderSidebarLatest(posts);
     renderPostTags(posts);
     renderKeepReading(posts);
-    wireJumpToRecipe();
     wireNewsletterForm();
     wireRecipeSave();
     wireComments();

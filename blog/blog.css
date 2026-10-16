@@ -1742,23 +1742,6 @@ footer.site-footer {
   .keep-reading-img { flex: 0 0 110px; }
 }
 
-/* --- Jump to recipe -------------------------------------------------------- */
-.jump-to-recipe {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  background: var(--ink);
-  color: var(--paper);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  border-radius: 6px;
-  border-bottom: none;
-  transition: background 0.2s;
-}
-.jump-to-recipe:hover { background: var(--orange); }
-.recipe-card { scroll-margin-top: 110px; }
-
 /* --- Quick answer box (top of a post) -------------------------------------- */
 .quick-answer {
   background: var(--cream);
