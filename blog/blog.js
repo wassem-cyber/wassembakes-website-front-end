@@ -645,6 +645,58 @@
     block.innerHTML = (label ? label.outerHTML : "") + featuredHtml + restHtml;
   }
 
+  // "Keep reading" — three related posts at the end of every post, so a
+  // reader who finishes one has somewhere to go next. Related = most shared
+  // tags; ties and gaps are filled with the newest posts.
+  function renderKeepReading(posts) {
+    if (!CURRENT_SLUG) return;
+    const article = document.querySelector("article.post");
+    if (!article || article.querySelector(".keep-reading")) return;
+    const current = posts.find((p) => p.slug === CURRENT_SLUG);
+    const mine = current ? recipeTagSet(current) : new Set();
+    const picks = posts
+      .filter((p) => p.slug !== CURRENT_SLUG)
+      .map((p, i) => ({ p, i, score: [...recipeTagSet(p)].filter((t) => mine.has(t)).length }))
+      .sort((a, b) => b.score - a.score || a.i - b.i)
+      .slice(0, 3)
+      .map((x) => x.p);
+    if (!picks.length) return;
+    const section = document.createElement("section");
+    section.className = "keep-reading";
+    section.innerHTML =
+      '<h2 class="keep-reading-title">Keep reading</h2>' +
+      '<ul class="keep-reading-list">' +
+      picks
+        .map(
+          (p) => `
+        <li>
+          <a href="${p.slug}">
+            ${p.image ? `<div class="keep-reading-img"><img ${imgVariants(p.image, escapeHtml(p.title), "(max-width: 600px) 100vw, 260px")} loading="lazy" decoding="async"></div>` : ""}
+            <span class="keep-reading-name">${p.title}</span>
+          </a>
+        </li>`
+        )
+        .join("") +
+      "</ul>";
+    const footer = article.querySelector(".post-footer");
+    if (footer) footer.after(section);
+    else article.appendChild(section);
+  }
+
+  // "Jump to recipe" — recipe posts open with the story; this lets a reader
+  // who came for the recipe get to the card in one tap.
+  function wireJumpToRecipe() {
+    const card = document.querySelector(".recipe-card");
+    const header = document.querySelector(".post-header");
+    if (!card || !header || header.querySelector(".jump-to-recipe")) return;
+    if (!card.id) card.id = "recipe";
+    const a = document.createElement("a");
+    a.className = "jump-to-recipe";
+    a.href = "#" + card.id;
+    a.textContent = "Jump to recipe ↓";
+    header.appendChild(a);
+  }
+
   function wireNewsletterForm() {
     const form = document.querySelector("[data-newsletter-form]");
     if (!form) return;
@@ -1380,6 +1432,8 @@
     renderRecipesList(posts);
     renderSidebarLatest(posts);
     renderPostTags(posts);
+    renderKeepReading(posts);
+    wireJumpToRecipe();
     wireNewsletterForm();
     wireRecipeSave();
     wireComments();

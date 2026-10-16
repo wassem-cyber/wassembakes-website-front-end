@@ -1700,3 +1700,79 @@ footer.site-footer {
   border-radius: 10px;
   display: block;
 }
+
+/* --- Keep reading (related posts at the end of a post) --------------------- */
+.keep-reading {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--ink);
+}
+.keep-reading-title {
+  font-family: "bettoni-variable", 'Fraunces', serif;
+  font-variation-settings: "opsz" 40, "wght" 110;
+  font-size: 1.6rem;
+  margin-bottom: 1.25rem;
+}
+.keep-reading-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.keep-reading-list a { display: flex; flex-direction: column; gap: 0.6rem; border-bottom: none; }
+.keep-reading-img {
+  aspect-ratio: 3/2;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--cream);
+}
+.keep-reading-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+.keep-reading-list a:hover .keep-reading-img img { transform: scale(1.04); }
+.keep-reading-name {
+  font-family: "dejanire-headline", 'Fraunces', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.25;
+  transition: color 0.2s;
+}
+.keep-reading-list a:hover .keep-reading-name { color: var(--orange); }
+@media (max-width: 700px) {
+  .keep-reading-list { grid-template-columns: 1fr; }
+  .keep-reading-list a { flex-direction: row; align-items: center; gap: 0.9rem; }
+  .keep-reading-img { flex: 0 0 110px; }
+}
+
+/* --- Jump to recipe -------------------------------------------------------- */
+.jump-to-recipe {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border-radius: 6px;
+  border-bottom: none;
+  transition: background 0.2s;
+}
+.jump-to-recipe:hover { background: var(--orange); }
+.recipe-card { scroll-margin-top: 110px; }
+
+/* --- Quick answer box (top of a post) -------------------------------------- */
+.quick-answer {
+  background: var(--cream);
+  border-left: 4px solid var(--orange);
+  border-radius: 4px;
+  padding: 1.25rem 1.5rem;
+  margin: 0 0 2rem;
+}
+.quick-answer .qa-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  opacity: 0.7;
+  margin-bottom: 0.4rem;
+}
+.quick-answer ul { margin: 0.4rem 0 0 1.1rem; }
+.quick-answer li { margin-bottom: 0.25rem; }
