@@ -1223,24 +1223,62 @@
 </section>
 
 <section class="press reveal" id="press">
-  <div class="press-grid">
-    <div>
-      <div class="section-label stagger-item" style="opacity: 0.6;">Press & Partnerships</div>
+  <div class="hw-top">
+    <div class="hw-text">
+      <div class="section-label stagger-item" style="opacity: 0.6;">Press &amp; Partnerships</div>
       <h2 class="section-title stagger-item"><em>Work</em> with me.</h2>
-      <div class="press-stats stagger-item">
-        <div class="stat"><div class="stat-num" id="igFollowers">205K</div><div class="stat-label">Instagram</div></div>
-        <div class="stat"><div class="stat-num">20+</div><div class="stat-label">Years Baking</div></div>
-        <div class="stat"><div class="stat-num">#1</div><div class="stat-label">GF/V in NYC</div></div>
-        <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Allergen-Focused</div></div>
+      <p class="hw-lead stagger-item">Over 20 years running Sensible Bakery, the largest gluten-free and vegan bakery in New York City. I partner with brands on recipes, content, consulting and press.</p>
+      <div class="hw-btns stagger-item">
+        <a href="work-with-me/" class="hw-btn hw-btn-yellow">Work with me</a>
+        <a href="mailto:hello@wassembakes.com" class="hw-btn hw-btn-line">hello@wassembakes.com</a>
       </div>
     </div>
-    <div class="press-body stagger-item">
-      <p>Wassem Moarsi is a professional gluten-free and vegan baker based in Long Island City, New York. He's the owner and operator of Sensible Bakery — the largest gluten-free and vegan bakery in NYC — and has spent over two decades refining commercial-grade allergen-free baking.</p>
-      <p>Available for brand partnerships, editorial features, speaking engagements, recipe development, and consulting. Detailed rate and audience information available on request.</p>
-      <a href="work-with-me/" class="btn">Work With Me</a>
+    <div class="hw-reach stagger-item">
+      <div class="hw-total"><div class="hw-total-num" id="hwTotal">447K+</div><div class="hw-total-label">followers across social</div></div>
+      <div class="hw-platforms">
+        <a class="hw-p" href="https://www.instagram.com/wassembakes/" target="_blank" rel="noopener"><span class="hw-p-num" id="igFollowers">271K</span><span class="hw-p-name">Instagram</span></a>
+        <a class="hw-p" href="https://www.facebook.com/profile.php?id=61582198834713" target="_blank" rel="noopener"><span class="hw-p-num">82K</span><span class="hw-p-name">Facebook</span></a>
+        <a class="hw-p" href="https://www.tiktok.com/@wassembakes" target="_blank" rel="noopener"><span class="hw-p-num">64.7K</span><span class="hw-p-name">TikTok</span></a>
+        <a class="hw-p" href="https://www.youtube.com/@wassembakes" target="_blank" rel="noopener"><span class="hw-p-num">29.6K</span><span class="hw-p-name">YouTube</span></a>
+      </div>
     </div>
   </div>
+  <div class="hw-cards stagger-item">
+    <a class="hw-card" href="work-with-me/"><div class="hw-card-img"><img src="blog/images/cinnamon-roll-header-800w.jpg" alt="" loading="lazy" decoding="async"><span class="hw-tag hw-t1">01</span></div><h3>Sponsored recipes</h3></a>
+    <a class="hw-card" href="work-with-me/"><div class="hw-card-img"><img src="blog/images/creaming-muffins-hero-800w.jpg" alt="" loading="lazy" decoding="async"><span class="hw-tag hw-t2">02</span></div><h3>Instagram, TikTok &amp; YouTube</h3></a>
+    <a class="hw-card" href="work-with-me/"><div class="hw-card-img"><img src="blog/images/gf-sourdough-hero-800w.jpg" alt="" loading="lazy" decoding="async"><span class="hw-tag hw-t3">03</span></div><h3>Recipe development</h3></a>
+    <a class="hw-card" href="work-with-me/"><div class="hw-card-img"><img src="blog/images/blueberry-cheesecake-buns-tray-800w.jpg" alt="" loading="lazy" decoding="async"><span class="hw-tag hw-t1">04</span></div><h3>Formulation &amp; consulting</h3></a>
+  </div>
 </section>
+<style>
+  .hw-top { display: grid; grid-template-columns: 1.1fr 1fr; gap: 4rem; align-items: center; }
+  .hw-text .section-title { margin-bottom: 1.5rem; }
+  .hw-lead { font-family: "bettoni-variable", 'Fraunces', serif; font-variation-settings: "opsz" 40, "wght" 110; font-size: clamp(1.15rem, 1.8vw, 1.4rem); line-height: 1.5; opacity: .9; max-width: 46ch; }
+  .hw-btns { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
+  .hw-btn { display: inline-block; padding: 1rem 1.6rem; border-radius: 6px; font-size: .78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .15em; transition: transform .2s ease, background .2s, color .2s; }
+  .hw-btn:hover { transform: translateY(-2px); }
+  .hw-btn-yellow { background: var(--yellow); color: var(--ink); }
+  .hw-btn-yellow:hover { background: var(--orange); color: var(--paper); }
+  .hw-btn-line { border: 1.5px solid rgba(250,250,247,.6); color: var(--paper); text-transform: none; letter-spacing: .02em; font-size: .9rem; }
+  .hw-btn-line:hover { background: var(--paper); color: var(--ink); }
+  .hw-total-num { font-family: "dejanire-headline", 'Fraunces', serif; font-size: clamp(4rem, 9vw, 6.5rem); font-weight: 700; line-height: .9; color: var(--yellow); }
+  .hw-total-label { font-size: .8rem; text-transform: uppercase; letter-spacing: .25em; opacity: .75; margin: .6rem 0 1.5rem; }
+  .hw-platforms { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(250,250,247,.15); border-radius: 8px; overflow: hidden; }
+  .hw-p { background: var(--ink); padding: 1.2rem 1.2rem; display: flex; flex-direction: column; gap: .3rem; transition: background .2s; }
+  .hw-p:hover { background: #2a2520; }
+  .hw-p-num { font-family: "dejanire-headline", 'Fraunces', serif; font-size: 2rem; font-weight: 700; color: var(--orange); line-height: 1; }
+  .hw-p-name { font-size: .72rem; text-transform: uppercase; letter-spacing: .15em; opacity: .7; }
+  .hw-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 4rem; }
+  .hw-card { display: block; background: #241f1b; border-radius: 10px; overflow: hidden; transition: transform .25s ease; }
+  .hw-card:hover { transform: translateY(-5px); }
+  .hw-card-img { position: relative; aspect-ratio: 4/3; overflow: hidden; }
+  .hw-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
+  .hw-card:hover .hw-card-img img { transform: scale(1.05); }
+  .hw-tag { position: absolute; top: .8rem; left: .8rem; font-family: "dejanire-headline", 'Fraunces', serif; font-weight: 700; font-size: 1rem; padding: .25rem .6rem; border-radius: 4px; }
+  .hw-t1 { background: var(--orange); color: var(--paper); } .hw-t2 { background: var(--yellow); color: var(--ink); } .hw-t3 { background: var(--blue); color: var(--ink); }
+  .hw-card h3 { font-family: "dejanire-headline", 'Fraunces', serif; font-size: 1.2rem; line-height: 1.15; padding: 1rem 1.1rem 1.2rem; }
+  @media (max-width: 900px) { .hw-top { grid-template-columns: 1fr; gap: 2.5rem; } .hw-cards { grid-template-columns: 1fr 1fr; } }
+</style>
 
 <section class="contact reveal" id="contact">
   <div class="contact-wrap">
@@ -1527,6 +1565,7 @@
     // curated local covers (below in the HTML) which always load — Instagram's
     // own thumbnail URLs expire and were rendering as broken/blank tiles.
     if (d.followersDisplay) { var f = document.getElementById("igFollowers"); if (f) f.textContent = d.followersDisplay; }
+    if (d.followers) { var t = document.getElementById("hwTotal"); if (t) t.textContent = Math.floor((d.followers + 82000 + 64700 + 29600) / 1000) + "K+"; }
   }).catch(function () {});
 })();
 </script>
