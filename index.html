@@ -1041,7 +1041,7 @@
     <div class="nav-links">
       <a href="blog/index.html">Blog</a>
       <a href="https://sensiblebakery.com/collections/all" target="_blank" rel="noopener">Shop</a>
-      <a href="https://kitchen.wassembakes.com" target="_blank" rel="noopener">Build a Recipe</a>
+      <a href="/recipe-builder/">Build a Recipe</a>
       <a href="about/index.html">About</a>
       <a href="/work-with-me/">Work With Me</a>
     </div>
@@ -1092,13 +1092,35 @@
 </section>
 
 <section class="blog-link reveal" id="recipe-builder">
-  <div class="section-label stagger-item">Recipe Builder</div>
-  <h2 class="section-title stagger-item" style="margin-bottom: 1.5rem;">Build a <em>recipe</em></h2>
-  <p class="stagger-item" style="max-width: 640px; margin: 0 auto 1.75rem; opacity: 0.85;">My free tool for scaling, costing, and getting the nutrition on any gluten-free bake &mdash; the same Kitchen I use at the bakery. Punch in your ingredients and it does the math.</p>
-  <div class="blog-link-cta stagger-item">
-    <a href="https://kitchen.wassembakes.com" target="_blank" rel="noopener" class="blog-link-btn">Open the Kitchen &rarr;</a>
+  <div class="rb-home">
+    <div class="rb-home-text">
+      <div class="section-label stagger-item">Recipe Builder</div>
+      <h2 class="section-title stagger-item" style="margin-bottom: 1.5rem;">Build a <em>recipe</em></h2>
+      <p class="stagger-item rb-home-p">The same tool I use at my bakery. Put in your ingredients and it checks your ratios, works out the cost, and writes the nutrition label for you. Free to start, now on Google Play.</p>
+      <div class="rb-home-btns stagger-item">
+        <a href="/recipe-builder/" class="blog-link-btn">See how it works &rarr;</a>
+        <a href="https://play.google.com/store/apps/details?id=com.wassembakes.recipebuilder" target="_blank" rel="noopener" class="blog-link-btn rb-home-line">Get it on Google Play</a>
+      </div>
+    </div>
+    <a href="/recipe-builder/" class="rb-home-img stagger-item" aria-label="The Recipe Builder">
+      <picture><source type="image/webp" srcset="recipe-builder/know-it-works-600w.webp 600w, recipe-builder/know-it-works-1080w.webp 1080w" sizes="(max-width: 800px) 100vw, 480px"><img src="recipe-builder/know-it-works-1080w.jpg" srcset="recipe-builder/know-it-works-600w.jpg 600w, recipe-builder/know-it-works-1080w.jpg 1080w" sizes="(max-width: 800px) 100vw, 480px" width="1080" height="1350" alt="The Recipe Builder on three phones: a recipe, the ratios screen and compare recipes" loading="lazy" decoding="async"></picture>
+    </a>
   </div>
 </section>
+<style>
+  /* Wide screens: line every section's heading up with its centered 1200px content
+     (headings used to hug the left edge while the content sat in the middle). */
+  section:not(.hero) { padding-left: max(2rem, calc((100% - 1200px) / 2)); padding-right: max(2rem, calc((100% - 1200px) / 2)); }
+  @media (max-width: 700px) { section:not(.hero) { padding-left: 1.25rem; padding-right: 1.25rem; } }
+  .rb-home { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center; }
+  .rb-home-p { max-width: 520px; font-size: 1.1rem; line-height: 1.6; opacity: 0.85; margin-bottom: 1.75rem; }
+  .rb-home-btns { display: flex; flex-wrap: wrap; gap: .75rem; }
+  .blog-link-btn.rb-home-line { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+  .blog-link-btn.rb-home-line:hover { background: var(--ink); color: var(--paper); }
+  .rb-home-img { display: block; max-width: 480px; justify-self: end; width: 100%; }
+  .rb-home-img img { width: 100%; height: auto; display: block; border-radius: 10px; box-shadow: 0 24px 50px -28px rgba(26,23,20,.45); }
+  @media (max-width: 800px) { .rb-home { grid-template-columns: 1fr; gap: 2.5rem; } .rb-home-img { justify-self: start; } }
+</style>
 
 <section class="about reveal">
   <div class="about-grid">

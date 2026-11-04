@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- wb-theme-loader -->
+<script>
+(function(){try{
+  fetch("https://us-central1-wassembakes-app.cloudfunctions.net/theme").then(function(r){return r.json();}).then(function(d){
+    if(!d||!d.ok||!d.theme||!d.theme.colors)return;
+    var c=d.theme.colors, s=document.documentElement.style;
+    for(var k in c){ if(c[k]) s.setProperty("--"+k, c[k]); }
+  }).catch(function(){});
+}catch(e){}})();
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H2M0LMEW4Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-H2M0LMEW4Z");
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Recipe Builder — Wassem Bakes</title>
+<meta name="description" content="The Recipe Builder from Wassem Bakes: build gluten-free and vegan recipes, check your ratios, compare recipes, get the cost per serving and a nutrition label. On Google Play now, iPhone coming soon.">
+<link rel="canonical" href="https://wassembakes.com/recipe-builder/">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Recipe Builder — Wassem Bakes">
+<meta property="og:description" content="The Recipe Builder from Wassem Bakes: build gluten-free and vegan recipes, check your ratios, compare recipes, get the cost per serving and a nutrition label. On Google Play now, iPhone coming soon.">
+<meta property="og:url" content="https://wassembakes.com/recipe-builder/">
+<meta property="og:image" content="https://wassembakes.com/recipe-builder/know-it-works-1080w.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://wassembakes.com/recipe-builder/know-it-works-1080w.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&family=Inter+Tight:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&family=Inter+Tight:wght@400;500;600&display=swap"></noscript>
+<link rel="preload" as="style" href="https://use.typekit.net/vqu6uma.css" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://use.typekit.net/vqu6uma.css"></noscript>
+<style>
+  :root {
+    --orange: #FF8F1C;
+    --blue: #8DB9CA;
+    --yellow: #FFD451;
+    --cream: #F5EFE4;
+    --ink: #1A1714;
+    --paper: #FAFAF7;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter Tight', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    padding: 1.5rem 2rem;
+    display: flex; justify-content: space-between; align-items: center;
+    z-index: 100;
+    background: var(--yellow);
+    color: var(--ink);
+  }
+  .logo {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+    font-style: italic;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+  .nav-links a { opacity: 0.85; transition: opacity 0.2s; }
+  .nav-links a:hover { opacity: 1; }
+
+  footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 3rem 2rem 2rem;
+    font-size: 0.85rem;
+  }
+  .footer-wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+  }
+  .footer-wrap a { opacity: 0.6; transition: opacity 0.2s; }
+  .footer-wrap a:hover { opacity: 1; }
+
+  @media (max-width: 700px) {
+    nav { padding: 0.75rem 1rem; }
+    .logo { font-size: 1rem; }
+    .nav-links { gap: 0.75rem; font-size: 0.6rem; letter-spacing: 0.1em; }
+    section { padding: 4rem 1.25rem; }
+  }
+
+  section { padding: 6rem 2rem; position: relative; }
+  .section-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.3em; opacity: 0.6; margin-bottom: 1rem; }
+  .rb-wrap { max-width: 1200px; margin: 0 auto; }
+  .rb-h1 { font-family: "dejanire-headline", 'Fraunces', serif; font-size: clamp(3rem, 7vw, 5.6rem); font-weight: 700; line-height: 0.95; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
+  .rb-h2 { font-family: "dejanire-headline", 'Fraunces', serif; font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 700; line-height: 1; letter-spacing: -0.02em; margin-bottom: 1.25rem; }
+  .rb-h1 em, .rb-h2 em { font-style: italic; font-weight: 300; color: var(--orange); }
+  .rb-lead { font-family: "bettoni-variable", 'Fraunces', serif; font-variation-settings: "opsz" 40, "wght" 110; font-size: clamp(1.15rem, 1.8vw, 1.4rem); line-height: 1.5; max-width: 46ch; opacity: 0.9; }
+  .rb-p { font-size: 1.05rem; line-height: 1.65; max-width: 52ch; opacity: 0.88; }
+  .rb-btns { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2rem; }
+  .rb-btn { display: inline-flex; align-items: center; gap: .6rem; padding: 1rem 1.6rem; border-radius: 6px; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; transition: transform .2s ease, background .2s, color .2s; }
+  .rb-btn:hover { transform: translateY(-2px); }
+  .rb-btn svg { width: 18px; height: 18px; fill: currentColor; }
+  .rb-btn-dark { background: var(--ink); color: var(--paper); }
+  .rb-btn-dark:hover { background: var(--orange); }
+  .rb-btn-line { border: 1.5px solid var(--ink); }
+  .rb-btn-line:hover { background: var(--ink); color: var(--paper); }
+  .rb-note { font-size: 0.9rem; opacity: 0.7; margin-top: 1rem; }
+  .rb-slide { width: 100%; height: auto; display: block; border-radius: 10px; box-shadow: 0 24px 50px -28px rgba(26,23,20,.45); }
+
+  .rb-hero { padding-top: 9rem; padding-bottom: 4rem; }
+  .rb-hero .rb-wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 4rem; align-items: center; }
+
+  .rb-feature { background: var(--cream); }
+  .rb-row { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .rb-row + .rb-row { margin-top: 6rem; }
+  .rb-row.flip .rb-row-img { order: 2; }
+  .rb-row-img { max-width: 520px; width: 100%; justify-self: center; }
+
+  .rb-plans { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
+  .rb-plan { border-radius: 10px; padding: 2.2rem 2rem; }
+  .rb-plan.free { background: var(--cream); }
+  .rb-plan.prem { background: var(--ink); color: var(--paper); }
+  .rb-plan h3 { font-family: "dejanire-headline", 'Fraunces', serif; font-size: 2.2rem; font-weight: 700; line-height: 1; }
+  .rb-price { font-size: 0.95rem; font-weight: 600; margin: .5rem 0 1.5rem; opacity: .75; }
+  .rb-plan.prem .rb-price { color: var(--orange); opacity: 1; }
+  .rb-plan ul { list-style: none; display: flex; flex-direction: column; gap: .75rem; }
+  .rb-plan li { padding-left: 1.6rem; position: relative; line-height: 1.4; }
+  .rb-plan li::before { content: ""; position: absolute; left: 0; top: .45em; width: .55rem; height: .55rem; background: var(--orange); transform: rotate(45deg); }
+  .rb-plan.free li::before { background: var(--ink); }
+  .rb-plan li.plus { padding-left: 0; font-style: italic; opacity: .7; }
+  .rb-plan li.plus::before { display: none; }
+
+  .rb-get { background: var(--yellow); }
+  .rb-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+  .rb-step { background: var(--paper); border-radius: 10px; padding: 1.8rem 1.6rem; }
+  .rb-step h3 { font-family: "dejanire-headline", 'Fraunces', serif; font-size: 1.5rem; line-height: 1.1; margin-bottom: .6rem; }
+  .rb-step p { line-height: 1.6; opacity: .88; }
+  .rb-step .rb-btns { margin-top: 1.25rem; }
+  .rb-tag { display: inline-block; font-size: .65rem; font-weight: 600; text-transform: uppercase; letter-spacing: .2em; padding: .35rem .7rem; border-radius: 999px; background: var(--ink); color: var(--paper); margin-bottom: 1rem; }
+  .rb-tag.soon { background: transparent; border: 1.5px solid var(--ink); color: var(--ink); }
+
+  @media (max-width: 900px) {
+    .rb-hero .rb-wrap, .rb-row, .rb-plans, .rb-steps { grid-template-columns: 1fr; gap: 2.5rem; }
+    .rb-row.flip .rb-row-img { order: 0; }
+    .rb-hero { padding-top: 8rem; }
+    .rb-row + .rb-row { margin-top: 4rem; }
+  }
+  @media (max-width: 700px) {
+    .rb-hero { padding-top: 8.5rem; }
+  }
+</style>
+<style>
+/* phone-nav-stacked */
+@media (max-width: 700px){
+  nav{flex-direction:column;align-items:center;justify-content:center;row-gap:.55rem;padding:.75rem 1rem;}
+  nav .logo{display:flex;justify-content:center;}
+  nav .logo img{max-width:100%;height:auto;max-height:34px;}
+  nav .nav-links{flex:0 1 auto;width:100%;justify-content:center;flex-wrap:wrap;column-gap:.95rem;row-gap:.35rem;font-size:.64rem;letter-spacing:.12em;}
+  nav .nav-links a{white-space:nowrap;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo"><a href="/" aria-label="wassem bakes home"><img src="/assets/logo-horizontal.svg" alt="" style="height:clamp(30px,4.2vw,46px);width:auto;display:block"></a></div>
+  <div class="nav-links">
+    <a href="/blog/index.html">Blog</a>
+    <a href="https://sensiblebakery.com/collections/all" target="_blank" rel="noopener">Shop</a>
+    <a href="/recipe-builder/" aria-current="page">Build a Recipe</a>
+    <a href="/about/index.html">About</a>
+    <a href="/work-with-me/">Work With Me</a>
+  </div>
+</nav>
+
+<section class="rb-hero">
+  <div class="rb-wrap">
+    <div>
+      <div class="section-label">The Recipe Builder</div>
+      <h1 class="rb-h1">Know it works <em>before it bakes.</em></h1>
+      <p class="rb-lead">The same tool I use at my bakery. Put in your ingredients and it checks your ratios, works out the cost, and writes the nutrition label for you.</p>
+      <div class="rb-btns">
+        <a class="rb-btn rb-btn-dark" href="https://play.google.com/store/apps/details?id=com.wassembakes.recipebuilder" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 1.8 13.4 12l-9.8 10.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1Zm11 11.4 2.6 2.6-11.4 6.5 8.8-9.1Zm3.9-3.9 2.9 1.7c.8.5.8 1.6 0 2.1l-2.9 1.7-2.8-2.8 2.8-2.7ZM5.8 1.7l11.4 6.5-2.6 2.6-8.8-9.1Z"/></svg>Get it on Google Play</a>
+        <a class="rb-btn rb-btn-line" href="https://kitchen.wassembakes.com" target="_blank" rel="noopener">Use it in your browser</a>
+      </div>
+      <p class="rb-note">iPhone app coming soon.</p>
+    </div>
+    <picture>
+      <source type="image/webp" srcset="know-it-works-600w.webp 600w, know-it-works-1080w.webp 1080w" sizes="(max-width: 900px) 100vw, 560px">
+      <img class="rb-slide" src="know-it-works-1080w.jpg" srcset="know-it-works-600w.jpg 600w, know-it-works-1080w.jpg 1080w" sizes="(max-width: 900px) 100vw, 560px" width="1080" height="1350" alt="The Recipe Builder on three phones: a recipe, the ratios screen and compare recipes" fetchpriority="high">
+    </picture>
+  </div>
+</section>
+
+<section class="rb-feature">
+  <div class="rb-wrap">
+    <div class="rb-row">
+      <picture class="rb-row-img">
+        <source type="image/webp" srcset="cake-spreadsheet-600w.webp 600w, cake-spreadsheet-1080w.webp 1080w" sizes="(max-width: 900px) 100vw, 520px">
+        <img class="rb-slide" src="cake-spreadsheet-1080w.jpg" srcset="cake-spreadsheet-600w.jpg 600w, cake-spreadsheet-1080w.jpg 1080w" sizes="(max-width: 900px) 100vw, 520px" width="1080" height="1350" alt="Banana maple snacking cake next to its recipe in the Recipe Builder" loading="lazy" decoding="async">
+      </picture>
+      <div>
+        <div class="section-label">Your recipes</div>
+        <h2 class="rb-h2">Every recipe, <em>all in one place.</em></h2>
+        <p class="rb-p">Bake temp, bake time, ingredients by weight, your notes and a photo. Scale any batch up or down in one tap, then switch to bake mode with timers when it's time to bake.</p>
+      </div>
+    </div>
+    <div class="rb-row flip">
+      <picture class="rb-row-img">
+        <source type="image/webp" srcset="compare-recipes-600w.webp 600w, compare-recipes-1080w.webp 1080w" sizes="(max-width: 900px) 100vw, 520px">
+        <img class="rb-slide" src="compare-recipes-1080w.jpg" srcset="compare-recipes-600w.jpg 600w, compare-recipes-1080w.jpg 1080w" sizes="(max-width: 900px) 100vw, 520px" width="1080" height="1350" alt="Comparing two muffin recipes side by side in the Recipe Builder" loading="lazy" decoding="async">
+      </picture>
+      <div>
+        <div class="section-label">New: compare recipes</div>
+        <h2 class="rb-h2">Two recipes, <em>side by side.</em></h2>
+        <p class="rb-p">Pick any two recipes and see every difference, ingredient by ingredient, in grams per 100 g of flour so different batch sizes still line up. It also tells you what the changes do to the bake.</p>
+      </div>
+    </div>
+    <div class="rb-row">
+      <picture class="rb-row-img">
+        <source type="image/webp" srcset="before-after-600w.webp 600w, before-after-1080w.webp 1080w" sizes="(max-width: 900px) 100vw, 520px">
+        <img class="rb-slide" src="before-after-1080w.jpg" srcset="before-after-600w.jpg 600w, before-after-1080w.jpg 1080w" sizes="(max-width: 900px) 100vw, 520px" width="1080" height="1350" alt="Before: guessing. With the Recipe Builder: ratios, cost, nutrition and compare" loading="lazy" decoding="async">
+      </picture>
+      <div>
+        <div class="section-label">Ratios, cost, nutrition</div>
+        <h2 class="rb-h2">Stop guessing. <em>Start building.</em></h2>
+        <p class="rb-p">Your liquids, fats, sugar, leaveners and binders are checked against what works while you type. You get the exact cost per serving with a suggested retail price, and a nutrition facts label ready to print.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rb-pricing" id="pricing">
+  <div class="rb-wrap">
+    <div class="section-label">Free and Premium</div>
+    <h2 class="rb-h2">Start free. <em>Go Premium</em> when you're ready.</h2>
+    <div class="rb-plans">
+      <div class="rb-plan free">
+        <h3>Free</h3>
+        <div class="rb-price">$0, no card needed</div>
+        <ul>
+          <li>Save 10 of your own recipes</li>
+          <li>5 of my recipes to start</li>
+          <li>Baker's ratios as you type</li>
+          <li>Nutrition facts on screen</li>
+          <li>Scale any batch</li>
+          <li>Bake mode and timers</li>
+          <li>Troubleshooting tips</li>
+        </ul>
+      </div>
+      <div class="rb-plan prem">
+        <h3>Premium</h3>
+        <div class="rb-price">$3.99 a month, cancel anytime</div>
+        <ul>
+          <li class="plus">Everything in Free, plus:</li>
+          <li>Unlimited recipes</li>
+          <li>All of my recipes</li>
+          <li>Cost per serving and a suggested retail price</li>
+          <li>Compare recipes</li>
+          <li>Nutrition label PDF</li>
+          <li>Batch log and version history</li>
+          <li>Share your kitchen with your staff</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rb-get" id="download">
+  <div class="rb-wrap">
+    <div class="section-label">How to get it</div>
+    <h2 class="rb-h2">Download <em>the app.</em></h2>
+    <div class="rb-steps">
+      <div class="rb-step">
+        <span class="rb-tag">Available now</span>
+        <h3>Android</h3>
+        <p>Open Google Play on your phone, search "Wassem Bakes Recipe Builder" and tap Install. Then create a free account and start building.</p>
+        <div class="rb-btns"><a class="rb-btn rb-btn-dark" href="https://play.google.com/store/apps/details?id=com.wassembakes.recipebuilder" target="_blank" rel="noopener">Google Play</a></div>
+      </div>
+      <div class="rb-step">
+        <span class="rb-tag soon">Coming soon</span>
+        <h3>iPhone</h3>
+        <p>The iPhone app is waiting on Apple's review. Until it's out, open the web version in Safari, tap Share, then "Add to Home Screen" and it works just like an app.</p>
+      </div>
+      <div class="rb-step">
+        <span class="rb-tag">Available now</span>
+        <h3>Computer</h3>
+        <p>Use it in any browser on your laptop or desktop. Same account, same recipes, on every device.</p>
+        <div class="rb-btns"><a class="rb-btn rb-btn-line" href="https://kitchen.wassembakes.com" target="_blank" rel="noopener">Open in browser</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-wrap">
+    <div>© 2026 Wassem Moarsi · All rights reserved</div>
+    <div><a href="/about/index.html">About</a> · <a href="/contact/index.html">Contact</a> · <a href="/work-with-me/">Work with me</a> · <a href="/privacy/index.html">Privacy</a> · <a href="https://sensiblebakery.com">Shop my bakery →</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
