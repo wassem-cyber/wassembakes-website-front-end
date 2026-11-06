@@ -299,10 +299,15 @@
     return out;
   }
 
+  const FEATURED_PINS = ["apple-spice-pie", "par-bake-vs-blind-bake"];
+
   function renderHeroSection(posts) {
     if (!posts.length) return "";
     const newest = posts[0];
-    const featured = pickWeekly(posts.slice(1), 2);
+    // Hand-picked fall favorites; falls back to the weekly rotation if empty.
+    const pinned = FEATURED_PINS.map((slug) => posts.find((p) => p.slug === slug))
+      .filter((p) => p && p !== newest);
+    const featured = pinned.length ? pinned.slice(0, 2) : pickWeekly(posts.slice(1), 2);
     const newColumn = `
       <section class="posts-hero-col is-new">
         <h2 class="posts-section-title">New</h2>
