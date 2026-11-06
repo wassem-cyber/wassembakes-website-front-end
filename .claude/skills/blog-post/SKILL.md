@@ -51,7 +51,7 @@ Copy exactly. Replace `{{placeholders}}`. Keep every class, attribute, and wrapp
   <div class="nav-links">
     <a href="index.html">Blog</a>
     <a href="https://sensiblebakery.com/collections/all" target="_blank" rel="noopener">Shop</a>
-    <a href="https://kitchen.wassembakes.com" target="_blank" rel="noopener">Build a Recipe</a>
+    <a href="https://kitchen.wassembakes.com" target="_blank" rel="noopener">My App</a>
     <a href="../about/index.html">About</a>
     <a href="../index.html#press">Connect</a>
   </div>
