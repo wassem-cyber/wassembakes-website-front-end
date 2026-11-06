@@ -1087,7 +1087,7 @@
     <a href="blog/index.html" class="blog-link-btn">Go to blog &rarr;</a>
   </div>
   <div class="blog-feature stagger-item" data-blog-feature></div>
-  <h3 class="blog-subheading stagger-item">Tips &amp; More</h3>
+  <h3 class="blog-subheading stagger-item">Fall Favorites</h3>
   <div class="blog-previews stagger-item" data-blog-previews></div>
 </section>
 
@@ -1479,7 +1479,8 @@
   if (!featureEl && !previewEl) return;
   function imgVariants(image, title, sizes) {
     var dot = image.lastIndexOf('.');
-    var base = image.substring(0, dot);
+    // Tolerate an image given as an already-sized variant ("x-1200w.jpg").
+    var base = image.substring(0, dot).replace(/-(480|800|1200)w$/, '');
     var ext = image.substring(dot);
     var srcset = [480, 800, 1200].map(function (w) {
       return 'blog/images/' + base + '-' + w + 'w' + ext + ' ' + w + 'w';
@@ -1497,7 +1498,7 @@
       function hasImage(p, cb) {
         if (!p.image) { cb(false); return; }
         var dot = p.image.lastIndexOf('.');
-        var url = 'blog/images/' + p.image.substring(0, dot) + '-800w' + p.image.substring(dot);
+        var url = 'blog/images/' + p.image.substring(0, dot).replace(/-(480|800|1200)w$/, '') + '-800w' + p.image.substring(dot);
         var im = new Image();
         im.onload = function () { cb(true); };
         im.onerror = function () { cb(false); };
@@ -1506,13 +1507,15 @@
 
       function renderAll(featured) {
         var remaining = featured ? sorted.filter(function (p) { return p.slug !== featured.slug; }) : sorted;
-        var recent = remaining.slice(0, 3);
+        // Hand-picked fall favorites first, then newest posts fill any gaps.
+        var picks = PINNED_PREVIEWS.map(bySlug).filter(function (p) { return p && p !== featured; });
+        var recent = picks.concat(remaining.filter(function (p) { return picks.indexOf(p) === -1; })).slice(0, 3);
         if (featureEl && featured) {
           var fImg = featured.image ? '<img ' + imgVariants(featured.image, featured.title, '(max-width: 768px) 100vw, 600px') + ' loading="lazy" decoding="async" onerror="this.style.display=\'none\'">' : '';
           featureEl.innerHTML = '<a class="blog-feature-card" href="blog/' + featured.slug + '.html">'
             + '<div class="blog-feature-image">' + fImg + '</div>'
             + '<div class="blog-feature-content">'
-            + '<h3 class="blog-feature-heading">Featured Recipe</h3>'
+            + '<h3 class="blog-feature-heading">Featured</h3>'
             + '<div class="blog-feature-date">' + featured.dateDisplay + '</div>'
             + '<h3 class="blog-feature-title">' + featured.title + '</h3>'
             + '<p class="blog-feature-excerpt">' + featured.excerpt + '</p>'
@@ -1531,6 +1534,12 @@
           }).join('');
         }
       }
+
+      // Hand-picked features. Clear PINNED_FEATURE to go back to the weekly rotation.
+      var PINNED_FEATURE = 'pie-crust-tricks';
+      var PINNED_PREVIEWS = ['apple-spice-pie', 'par-bake-vs-blind-bake', 'gluten-free-crumb-topping'];
+      function bySlug(slug) { return sorted.filter(function (p) { return p.slug === slug; })[0]; }
+      if (PINNED_FEATURE && bySlug(PINNED_FEATURE)) { renderAll(bySlug(PINNED_FEATURE)); return; }
 
       // Which week of the year — rotates the featured recipe once a week.
       function weekIndex() {
