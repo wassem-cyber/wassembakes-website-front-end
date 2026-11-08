@@ -24,6 +24,50 @@
   const CURRENT_SLUG =
     document.querySelector('meta[name="post-slug"]')?.content || "";
 
+  // --- The Recipe Builder app ---
+  const APP_PAGE = "/recipe-builder/";
+  const APP_STORE_URL = "https://apps.apple.com/app/id6817920070";
+  const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.wassembakes.recipebuilder";
+  // Blog recipes that are in the app's recipe library (recipe-builder-app
+  // public/blog-recipes-data.js). Add a slug here when a new recipe is imported.
+  const APP_RECIPES = new Set([
+    "oatmeal-brookies",
+    "make-your-own-oat-milk",
+    "frozen-chocolate-crunch-bars",
+    "apple-spice-pie",
+    "cheesy-rolls",
+    "chocolate-chip-lava-cookies",
+    "no-refined-sugar-oatmeal-raisin-cookies",
+    "blueberry-cheesecake-buns",
+    "square-banana-maple-cake",
+    "3-ingredient-pie-crust-and-crumble",
+    "blueberry-rosemary-muffins",
+    "bakery-style-muffins-with-the-creaming-method",
+    "vegan-sweetened-condensed-milk",
+    "sugar-free-protein-brownies",
+    "diy-yogurt-substitute",
+    "whippable-vegan-heavy-cream",
+    "pumpkin-pie-muffin",
+    "lemon-zucchini-protein-muffins",
+    "protein-packed-rice-krispie-treats",
+    "gut-healthy-postbiotics-with-fermented-beets",
+    "scoby-secrets-making-kombucha-at-home",
+    "the-perfect-cold-brew"
+  ]);
+  const PHONE_ICON =
+    '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>';
+  function postSlug() {
+    if (CURRENT_SLUG) return CURRENT_SLUG;
+    const m = location.pathname.match(/([^/]+?)(?:\.html)?\/?$/);
+    return m ? m[1] : "";
+  }
+  // "Open in app": the app runs kitchen.wassembakes.com, which opens the recipe
+  // (?recipe=<slug>) once you're signed in. Without the app, that page offers
+  // the App Store and Google Play buttons.
+  function appRecipeUrl(slug) {
+    return "https://kitchen.wassembakes.com/?recipe=" + encodeURIComponent(slug);
+  }
+
   const VIDEO_FEED_URL =
     "https://us-central1-wassembakes-app.cloudfunctions.net/videoFeed";
 
@@ -1325,6 +1369,10 @@
           EMAIL_ICON + "</button>" +
         '<button type="button" class="recipe-save-btn is-pinterest" data-recipe-pin aria-label="Save recipe to Pinterest">' +
           PINTEREST_ICON + "</button>" +
+        (APP_RECIPES.has(postSlug())
+          ? '<a class="recipe-save-btn is-app" href="' + appRecipeUrl(postSlug()) + '" target="_blank" rel="noopener">' +
+              PHONE_ICON + "<span>Open in app</span></a>"
+          : "") +
       "</div>";
 
     // Place directly below the recipe card image (falls back to meta, then top).
@@ -1370,6 +1418,34 @@
         "&description=" + encodeURIComponent(title);
       window.open(pinUrl, "_blank", "noopener,noreferrer,width=750,height=600");
     });
+  }
+
+  // One-line app ad inside every post, after the third paragraph (like an
+  // in-content ad slot). Never inside the recipe card.
+  function insertAppAd() {
+    const body = document.querySelector("article.post .post-body");
+    if (!body || body.querySelector(".app-ad")) return;
+    const ad = document.createElement("aside");
+    ad.className = "app-ad";
+    ad.setAttribute("aria-label", "My app");
+    ad.innerHTML =
+      '<span class="app-ad-tag">My app</span>' +
+      '<span class="app-ad-text">Check out my new app, the same one we use in our kitchen to save and build recipes.</span>' +
+      '<span class="app-ad-links">' +
+        '<a href="' + APP_STORE_URL + '" target="_blank" rel="noopener">iPhone</a>' +
+        '<a href="' + PLAY_STORE_URL + '" target="_blank" rel="noopener">Android</a>' +
+        '<a href="' + APP_PAGE + '">See it &rarr;</a>' +
+      "</span>";
+    const paras = Array.from(body.children).filter((el) => el.tagName === "P");
+    const after = paras[2] || paras[paras.length - 1];
+    const card = body.querySelector(".recipe-card");
+    if (after && !(card && card.compareDocumentPosition(after) & Node.DOCUMENT_POSITION_FOLLOWING)) {
+      after.insertAdjacentElement("afterend", ad);
+    } else if (card) {
+      card.insertAdjacentElement("beforebegin", ad);
+    } else {
+      body.insertBefore(ad, body.firstChild);
+    }
   }
 
   // Pinterest "Save" button on every post's hero photo (recipe or not), so any
@@ -1472,6 +1548,7 @@
     renderKeepReading(posts);
     wireNewsletterForm();
     wireRecipeSave();
+    insertAppAd();
     wireHeroPin();
     wireComments();
     embedYouTube();
