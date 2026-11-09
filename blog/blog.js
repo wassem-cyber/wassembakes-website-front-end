@@ -1345,6 +1345,12 @@
     });
   }
 
+  // Blog recipes the recipe builder app can open (?recipe=<slug>). Must match
+  // the slugs in recipe-builder-app public/blog-recipes-data.js.
+  const APP_RECIPES = [
+    "canned-apple-pie-trick", "oatmeal-brookies", "make-your-own-oat-milk", "frozen-chocolate-crunch-bars", "apple-spice-pie", "cheesy-rolls", "chocolate-chip-lava-cookies", "no-refined-sugar-oatmeal-raisin-cookies", "blueberry-cheesecake-buns", "square-banana-maple-cake", "3-ingredient-pie-crust-and-crumble", "blueberry-rosemary-muffins", "bakery-style-muffins-with-the-creaming-method", "vegan-sweetened-condensed-milk", "sugar-free-protein-brownies", "diy-yogurt-substitute", "whippable-vegan-heavy-cream", "pumpkin-pie-muffin", "lemon-zucchini-protein-muffins", "protein-packed-rice-krispie-treats", "gut-healthy-postbiotics-with-fermented-beets", "scoby-secrets-making-kombucha-at-home", "the-perfect-cold-brew"
+  ];
+
   function wireRecipeSave() {
     const card = document.querySelector(".recipe-card");
     if (!card) return;
@@ -1364,19 +1370,27 @@
       "</div>";
 
     // "Open in my app" joins the Save row (replaces the separate app box).
+    // Posts without their own app box get it too when the recipe is in the app
+    // (APP_RECIPES); the link opens that recipe directly.
     const appBox = card.querySelector(".app-open");
-    const appLink = appBox && appBox.querySelector("a[href]");
-    if (appLink) {
+    const boxLink = appBox && appBox.querySelector("a[href]");
+    const pageSlug = (location.pathname.split("/").pop() || "").replace(/\.html$/, "");
+    const appHref = boxLink
+      ? boxLink.href
+      : APP_RECIPES.indexOf(pageSlug) !== -1
+        ? "https://kitchen.wassembakes.com/?recipe=" + encodeURIComponent(pageSlug)
+        : "";
+    if (appHref) {
       const a = document.createElement("a");
       a.className = "recipe-app-btn";
-      a.href = appLink.href;
+      a.href = appHref;
       a.target = "_blank";
       a.rel = "noopener";
       a.innerHTML =
         '<span class="recipe-app-btn-main">Open in my app</span>' +
         '<span class="recipe-app-btn-sub">Professional recipe builder</span>';
       save.querySelector(".recipe-save-actions").appendChild(a);
-      appBox.remove();
+      if (appBox) appBox.remove();
     }
 
     // Place directly below the recipe card image (falls back to meta, then top).
