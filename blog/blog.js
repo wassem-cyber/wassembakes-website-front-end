@@ -1373,8 +1373,9 @@
       a.target = "_blank";
       a.rel = "noopener";
       a.innerHTML =
-        '<span class="recipe-app-btn-main">Open in my app</span>' +
-        '<span class="recipe-app-btn-sub">Professional recipe builder</span>';
+        '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>' +
+        '<span>Open in my app</span>';
+      a.setAttribute("aria-label", "Open this recipe in my recipe builder app");
       save.querySelector(".recipe-save-actions").appendChild(a);
       appBox.remove();
     }
