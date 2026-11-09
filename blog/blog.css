@@ -1035,25 +1035,44 @@ article.post {
 }
 .recipe-card-meta {
   display: flex;
-  gap: 3rem;
+  gap: 1.5rem 2.5rem;
   margin-bottom: 2rem;
   flex-wrap: wrap;
 }
+.recipe-meta-item.has-icon {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.7rem;
+  align-items: center;
+}
+.recipe-meta-icon {
+  grid-row: span 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  border: 1px solid rgba(26, 23, 20, 0.18);
+  background: var(--paper);
+  color: var(--orange);
+}
+.recipe-meta-icon svg { width: 1.35rem; height: 1.35rem; display: block; }
 .recipe-meta-label {
   font-family: 'Inter Tight', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 500;
+  font-size: 0.72rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.25em;
-  color: var(--orange);
-  margin: 0 0 0.35rem;
+  letter-spacing: 0.18em;
+  color: #6B5E52;
+  margin: 0 0 0.3rem;
 }
 .recipe-card .recipe-meta-value {
   font-family: "bettoni-variable", 'Fraunces', serif;
-  font-variation-settings: "opsz" 40, "wght" 110;
-  font-size: 1.5rem;
-  line-height: 1;
-  color: var(--orange);
+  font-variation-settings: "opsz" 40, "wght" 160;
+  font-size: 1.45rem;
+  line-height: 1.1;
+  color: var(--ink);
   margin: 0;
 }
 .post-body img.recipe-card-hero {
@@ -1114,7 +1133,38 @@ article.post {
   font-size: 1.7rem;
   color: var(--ink);
 }
-.recipe-save-actions { display: flex; gap: 0.6rem; }
+.recipe-save-actions { display: flex; flex-wrap: wrap; align-items: stretch; gap: 0.6rem; }
+.post-body a.recipe-app-btn, .recipe-app-btn {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.4rem 1rem;
+  background: var(--ink);
+  color: var(--paper);
+  border: 1px solid var(--ink);
+  border-radius: 6px;
+  text-decoration: none;
+  line-height: 1.15;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+.post-body a.recipe-app-btn:hover, .recipe-app-btn:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: var(--paper);
+  transform: translateY(-1px);
+}
+.recipe-app-btn-main {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.recipe-app-btn-sub {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
 .recipe-save-btn {
   display: inline-flex;
   align-items: center;
