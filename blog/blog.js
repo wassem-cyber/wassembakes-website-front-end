@@ -1363,10 +1363,12 @@
           PINTEREST_ICON + "</button>" +
       "</div>";
 
-    // "Open in my app" joins the Save row (replaces the separate app box).
+    // "Open in the builder" sits on its own row under the Save icons.
     const appBox = card.querySelector(".app-open");
     const appLink = appBox && appBox.querySelector("a[href]");
     if (appLink) {
+      const cta = document.createElement("div");
+      cta.className = "recipe-app-cta";
       const a = document.createElement("a");
       a.className = "recipe-app-btn";
       a.href = appLink.href;
@@ -1374,9 +1376,13 @@
       a.rel = "noopener";
       a.innerHTML =
         '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>' +
-        '<span>Open in my app</span>';
-      a.setAttribute("aria-label", "Open this recipe in my recipe builder app");
-      save.querySelector(".recipe-save-actions").appendChild(a);
+        "<span>Open this recipe in the builder</span>";
+      const note = document.createElement("span");
+      note.className = "recipe-app-note";
+      note.textContent = "Edit, scale, and save.";
+      cta.appendChild(a);
+      cta.appendChild(note);
+      save.appendChild(cta);
       appBox.remove();
     }
 
