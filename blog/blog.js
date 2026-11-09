@@ -1145,7 +1145,7 @@
 
   function recipeCardClone(card) {
     const clone = card.cloneNode(true);
-    clone.querySelectorAll("[data-recipe-save]").forEach((n) => n.remove());
+    clone.querySelectorAll("[data-recipe-save], .recipe-meta-icon").forEach((n) => n.remove());
     return clone;
   }
 
@@ -1309,6 +1309,42 @@
     setTimeout(() => form.querySelector('input[type="email"]').focus(), 50);
   }
 
+  // --- Recipe card stats: line icons (same stroke style as the recipe builder app)
+  const META_ICONS = {
+    yield:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M9 4.5c0 1.2 1 1.5 1 2.7"/><path d="M14 4.5c0 1.2 1 1.5 1 2.7"/></svg>',
+    time:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2"/><path d="M9 2h6"/><path d="M12 2v3"/></svg>',
+    temp:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V4.5a2 2 0 0 0-4 0v10.26a4 4 0 1 0 4 0z"/><path d="M12 11v6"/><path d="M17.5 5h2.5"/><path d="M17.5 9h2.5"/></svg>',
+    cold:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M4 7l16 10"/><path d="M20 7L4 17"/><path d="M9.5 3.5L12 6l2.5-2.5"/><path d="M9.5 20.5L12 18l2.5 2.5"/></svg>',
+  };
+
+  function metaIconKey(label) {
+    const l = label.toLowerCase();
+    if (/temp/.test(l)) return "temp";
+    if (/yield|makes|serves/.test(l)) return "yield";
+    if (/chill|freeze/.test(l)) return "cold";
+    if (/time|bake|prep|proof|prove|ferment|rest|wait|cook|dry/.test(l)) return "time";
+    return null;
+  }
+
+  function wireRecipeMetaIcons() {
+    document.querySelectorAll(".recipe-card .recipe-meta-item").forEach((item) => {
+      if (item.querySelector(".recipe-meta-icon")) return;
+      const label = item.querySelector(".recipe-meta-label");
+      const key = label && metaIconKey(label.textContent);
+      if (!key) return;
+      const ic = document.createElement("span");
+      ic.className = "recipe-meta-icon";
+      ic.setAttribute("aria-hidden", "true");
+      ic.innerHTML = META_ICONS[key];
+      item.insertBefore(ic, item.firstChild);
+      item.classList.add("has-icon");
+    });
+  }
+
   function wireRecipeSave() {
     const card = document.querySelector(".recipe-card");
     if (!card) return;
@@ -1326,6 +1362,22 @@
         '<button type="button" class="recipe-save-btn is-pinterest" data-recipe-pin aria-label="Save recipe to Pinterest">' +
           PINTEREST_ICON + "</button>" +
       "</div>";
+
+    // "Open in my app" joins the Save row (replaces the separate app box).
+    const appBox = card.querySelector(".app-open");
+    const appLink = appBox && appBox.querySelector("a[href]");
+    if (appLink) {
+      const a = document.createElement("a");
+      a.className = "recipe-app-btn";
+      a.href = appLink.href;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.innerHTML =
+        '<span class="recipe-app-btn-main">Open in my app</span>' +
+        '<span class="recipe-app-btn-sub">Professional recipe builder</span>';
+      save.querySelector(".recipe-save-actions").appendChild(a);
+      appBox.remove();
+    }
 
     // Place directly below the recipe card image (falls back to meta, then top).
     const hero = card.querySelector(".recipe-card-hero");
@@ -1471,6 +1523,7 @@
     renderPostTags(posts);
     renderKeepReading(posts);
     wireNewsletterForm();
+    wireRecipeMetaIcons();
     wireRecipeSave();
     wireHeroPin();
     wireComments();
