@@ -1082,9 +1082,12 @@
 
 <section class="blog-link reveal" id="recipe-builder">
   <div class="rb-home">
+    <a href="/recipe-builder/" class="rb-home-img stagger-item" aria-label="The Recipe Builder">
+      <picture><source type="image/webp" srcset="recipe-builder/know-it-works-600w.webp 600w, recipe-builder/know-it-works-1080w.webp 1080w" sizes="(max-width: 800px) 100vw, 480px"><img src="recipe-builder/know-it-works-1080w.jpg" srcset="recipe-builder/know-it-works-600w.jpg 600w, recipe-builder/know-it-works-1080w.jpg 1080w" sizes="(max-width: 800px) 100vw, 480px" width="1080" height="1350" alt="The Recipe Builder on three phones: a recipe, the ratios screen and compare recipes" loading="lazy" decoding="async"></picture>
+    </a>
     <div class="rb-home-text">
       <div class="section-label stagger-item">My App</div>
-      <h2 class="section-title stagger-item" style="margin-bottom: 1.5rem;">Bake it <em>right.</em></h2>
+      <h2 class="section-title stagger-item" style="margin-bottom: 1.5rem;">Bake like a <em>pro.</em></h2>
       <p class="stagger-item rb-home-p">The same app we use in our kitchen to save and build recipes. Open any recipe from my blog, check your ratios, get the cost and a nutrition label. Free to start.</p>
       <div class="rb-home-btns stagger-item">
         <a class="store-badge" href="https://apps.apple.com/app/id6817920070" target="_blank" rel="noopener" aria-label="Download on the App Store"><svg viewBox="0 0 24 24" aria-hidden="true" fill="#fff"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.76 2.27-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.66zM14.1 5.84c.63-.77 1.06-1.83.94-2.89-.91.04-2.01.61-2.66 1.37-.58.67-1.1 1.76-.96 2.8 1.01.08 2.05-.52 2.68-1.28z"/></svg><span><small>Download on the</small><b>App Store</b></span></a>
@@ -1094,9 +1097,6 @@
         <a href="/recipe-builder/" class="blog-link-btn rb-home-line">See how it works &rarr;</a>
       </div>
     </div>
-    <a href="/recipe-builder/" class="rb-home-img stagger-item" aria-label="The Recipe Builder">
-      <picture><source type="image/webp" srcset="recipe-builder/know-it-works-600w.webp 600w, recipe-builder/know-it-works-1080w.webp 1080w" sizes="(max-width: 800px) 100vw, 480px"><img src="recipe-builder/know-it-works-1080w.jpg" srcset="recipe-builder/know-it-works-600w.jpg 600w, recipe-builder/know-it-works-1080w.jpg 1080w" sizes="(max-width: 800px) 100vw, 480px" width="1080" height="1350" alt="The Recipe Builder on three phones: a recipe, the ratios screen and compare recipes" loading="lazy" decoding="async"></picture>
-    </a>
   </div>
 </section>
 
@@ -1116,7 +1116,7 @@
      (headings used to hug the left edge while the content sat in the middle). */
   section:not(.hero) { padding-left: max(2rem, calc((100% - 1200px) / 2)); padding-right: max(2rem, calc((100% - 1200px) / 2)); }
   @media (max-width: 700px) { section:not(.hero) { padding-left: 1.25rem; padding-right: 1.25rem; } }
-  .rb-home { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center; }
+  .rb-home { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center; }
   .rb-home-p { max-width: 520px; font-size: 1.1rem; line-height: 1.6; opacity: 0.85; margin-bottom: 1.75rem; }
   .rb-home-btns { display: flex; flex-wrap: wrap; gap: .75rem; }
   .store-badge { display: inline-flex; align-items: center; gap: .55rem; padding: .55rem 1.1rem .55rem .9rem; background: #000; color: #fff; border: 1px solid #a6a6a6; border-radius: 9px; text-decoration: none; line-height: 1.05; transition: transform .2s ease; }
@@ -1127,7 +1127,7 @@
   .store-badge b { font-size: 1.15rem; font-weight: 600; letter-spacing: -.01em; text-transform: none; }
   .blog-link-btn.rb-home-line { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
   .blog-link-btn.rb-home-line:hover { background: var(--ink); color: var(--paper); }
-  .rb-home-img { display: block; max-width: 480px; justify-self: end; width: 100%; }
+  .rb-home-img { display: block; max-width: 480px; justify-self: start; width: 100%; }
   .rb-home-img img { width: 100%; height: auto; display: block; border-radius: 10px; box-shadow: 0 24px 50px -28px rgba(26,23,20,.45); }
   @media (max-width: 800px) { .rb-home { grid-template-columns: 1fr; gap: 2.5rem; } .rb-home-img { justify-self: start; } }
 </style>
