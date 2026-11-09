@@ -1536,8 +1536,8 @@
       }
 
       // Hand-picked features. Clear PINNED_FEATURE to go back to the weekly rotation.
-      var PINNED_FEATURE = 'pie-crust-tricks';
-      var PINNED_PREVIEWS = ['apple-spice-pie', 'par-bake-vs-blind-bake', 'gluten-free-crumb-topping'];
+      var PINNED_FEATURE = 'canned-apple-pie-trick';
+      var PINNED_PREVIEWS = ['pie-crust-tricks', 'par-bake-vs-blind-bake', 'gluten-free-crumb-topping'];
       function bySlug(slug) { return sorted.filter(function (p) { return p.slug === slug; })[0]; }
       if (PINNED_FEATURE && bySlug(PINNED_FEATURE)) { renderAll(bySlug(PINNED_FEATURE)); return; }
 

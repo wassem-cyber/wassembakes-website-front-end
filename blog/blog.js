@@ -299,7 +299,7 @@
     return out;
   }
 
-  const FEATURED_PINS = ["apple-spice-pie", "par-bake-vs-blind-bake"];
+  const FEATURED_PINS = ["pie-crust-tricks", "par-bake-vs-blind-bake"];
 
   function renderHeroSection(posts) {
     if (!posts.length) return "";
