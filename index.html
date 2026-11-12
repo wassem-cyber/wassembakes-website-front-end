@@ -31,377 +31,268 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Wassem Bakes — Gluten-Free & Vegan Baking">
-<meta property="og:description" content="Twenty-plus years of professional allergen-free baking. Real ratios, real science, no fluff.">
+<meta property="og:description" content="Twenty-plus years of professional allergen-free baking. Real ratios, no fluff.">
 <meta property="og:image" content="https://wassembakes.com/hero-1200w.jpg">
 <meta property="og:url" content="https://wassembakes.com">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Wassem Bakes — Gluten-Free & Vegan Baking">
-<meta name="twitter:description" content="Twenty-plus years of professional allergen-free baking. Real ratios, real science, no fluff.">
+<meta name="twitter:description" content="Twenty-plus years of professional allergen-free baking. Real ratios, no fluff.">
 <meta name="twitter:image" content="https://wassembakes.com/hero-1200w.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&family=Inter+Tight:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&family=Inter+Tight:wght@400;500;600&display=swap"></noscript>
 <link rel="preload" as="style" href="https://use.typekit.net/vqu6uma.css" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://use.typekit.net/vqu6uma.css"></noscript>
 <style>
-  :root {
-    --orange: #FF8F1C;
-    --blue: #8DB9CA;
-    --yellow: #FFD451;
-    --cream: #F5EFE4;
-    --ink: #1A1714;
-    --paper: #FAFAF7;
-  }
+  :root { --orange:#FF8F1C; --blue:#8DB9CA; --yellow:#FFD451; --cream:#F5EFE4; --ink:#1A1714; --paper:#FAFAF7; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-  body {
-    font-family: 'Inter Tight', sans-serif;
-    background: var(--paper);
-    color: var(--ink);
-    line-height: 1.5;
-    overflow-x: hidden;
-  }
+  body { font-family: 'Inter Tight', sans-serif; background: var(--paper); color: var(--ink); line-height: 1.5; overflow-x: hidden; }
   a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+  .wb-h { font-family: 'dejanire-headline', 'Fraunces', serif; font-weight: 600; line-height: .95; letter-spacing: -.03em; }
+  .wb-h em, .wb-em { font-style: italic; color: var(--orange); }
+  .wb-label { font-size: 11px; text-transform: uppercase; letter-spacing: .3em; opacity: .6; margin-bottom: 12px; }
+  .wb-btn { display: inline-block; padding: 14px 26px; border-radius: 6px; font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: .15em; text-align: center; transition: background .2s, color .2s, border-color .2s; }
+  .wb-btn-ink { background: var(--ink); color: var(--paper); }
+  .wb-btn-ink:hover { background: var(--orange); color: var(--ink); }
+  .wb-btn-paper { background: var(--paper); color: var(--ink); }
+  .wb-btn-paper:hover { background: var(--orange); }
+  .wb-btn-line { border: 1px solid var(--ink); }
+  .wb-btn-line:hover { background: var(--ink); color: var(--paper); }
+  .wb-wrap { max-width: 1200px; margin: 0 auto; }
+  .wb-scroll { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .wb-scroll::-webkit-scrollbar { display: none; }
+  .wb-scroll > a { scroll-snap-align: start; }
 
   /* Nav */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0;
-    padding: 1.5rem 2rem;
-    display: flex; justify-content: space-between; align-items: center;
-    z-index: 100;
-    background: var(--yellow);
-    color: var(--ink);
-  }
-  .logo {
-    font-family: 'Fraunces', serif;
-    font-weight: 900;
-    font-size: 1.25rem;
-    letter-spacing: -0.02em;
-    font-style: italic;
-  }
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-    font-size: 0.85rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-  }
-  .nav-links a { opacity: 0.85; transition: opacity 0.2s; }
-  .nav-links a:hover { opacity: 1; }
+  .wb-nav { position: sticky; top: 0; z-index: 100; background: var(--yellow); }
+  .wb-nav-bar { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; }
+  .wb-nav-logo img { height: 26px; width: auto; }
+  .wb-burger { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: none; border: 0; color: var(--ink); cursor: pointer; }
+  .wb-burger .wb-x { display: none; }
+  .wb-nav.open .wb-burger .wb-x { display: block; }
+  .wb-nav.open .wb-burger .wb-lines { display: none; }
+  .wb-menu { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--yellow); padding: 8px 20px 28px; flex-direction: column; box-shadow: 0 16px 28px rgba(26,23,20,.18); }
+  .wb-nav.open .wb-menu { display: flex; }
+  .wb-menu > a, .wb-dd-btn { padding: 14px 0; border-bottom: 1px solid rgba(26,23,20,.15); font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: .15em; }
+  .wb-dd-btn { display: block; border: 0; background: none; font: inherit; font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: .15em; color: var(--ink); text-align: left; padding: 14px 0 6px; cursor: default; }
+  .wb-dd-btn svg { display: none; }
+  .wb-dd-menu { display: flex; flex-direction: column; }
+  .wb-dd-menu a { padding: 10px 0 10px 16px; font-size: 15px; }
+  .wb-menu a:hover { color: var(--orange); }
 
   /* Hero */
-  .hero {
-    min-height: 100vh;
-    padding: 8rem 2rem 4rem;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    background: var(--paper);
-  }
-  .hero-photo {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-  }
-  .hero-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 15%;
-    display: block;
-  }
-  .hero::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to right, rgba(26, 23, 20, 0.88), rgba(26, 23, 20, 0.3) 55%, transparent 85%);
-    z-index: 1;
-    pointer-events: none;
-  }
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 900px;
-  }
-  /* Desktop: dock the photo to the right at a smaller scale so it isn't so in-your-face.
-     Mobile keeps the full-bleed shot below. */
-  @media (min-width: 901px) {
-    .hero { background: #1A1714; }
-    .hero-photo { left: auto; right: 0; width: 62%; }
-    .hero-photo img { object-position: 50% 20%; }
-    .hero::after {
-      background: linear-gradient(to right,
-        #1A1714 34%, rgba(26,23,20,0.82) 46%, rgba(26,23,20,0.25) 66%, transparent 82%);
-    }
-  }
-  .hero-photo-placeholder {
-    width: 100%; height: 100%;
-    display: flex; align-items: center; justify-content: center;
-    flex-direction: column;
-    gap: 0.5rem;
-    background: linear-gradient(135deg, var(--cream), #ddd1b8);
-    color: var(--ink);
-    opacity: 0.5;
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    padding: 2rem;
-    text-align: center;
-  }
-  .hero-photo-placeholder span {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    font-style: normal;
-    opacity: 0.7;
-  }
-  @media (max-width: 900px) {
-    .hero::after {
-      background: linear-gradient(to right, rgba(26, 23, 20, 0.9), rgba(26, 23, 20, 0.7));
-    }
-  }
-  .hero-label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-    color: var(--orange);
-    margin-bottom: 1rem;
-    animation: fadeUp 0.8s 0.2s both;
-  }
-  .hero h1 {
-    font-family: "dejanire-headline", 'Fraunces', serif;
-    font-size: clamp(3.5rem, 11vw, 10rem);
-    font-weight: 900;
-    line-height: 0.88;
-    letter-spacing: -0.02em;
-    margin-bottom: 2rem;
-    color: var(--paper);
-    animation: fadeUp 0.8s 0.4s both;
-  }
-  .hero h1 em {
-    font-style: italic;
-    font-weight: 300;
-    color: var(--orange);
-  }
-  .hero-cta-wrap {
-    max-width: 900px;
-    padding-top: 2rem;
-    border-top: 1px solid var(--paper);
-    animation: fadeUp 0.8s 0.6s both;
-  }
-  .hero-cta {
-    display: inline-block;
-    padding: 1rem 1.5rem 1rem 2.5rem;
-    background: var(--paper);
-    color: var(--ink);
-    font-size: 0.85rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    border-radius: 6px;
-    transition: background 0.2s, color 0.2s, transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .hero-cta-arrow {
-    display: inline-block;
-    width: 9rem;
-    height: 0.7em;
-    margin-left: 0.85rem;
-    vertical-align: -0.05em;
-    stroke: currentColor;
-    stroke-width: 1.2;
-    fill: none;
-    transition: transform 0.25s;
-  }
-  .hero-cta:hover { background: var(--orange); color: var(--paper); transform: scale(1.03); box-shadow: 0 8px 18px -10px rgba(26, 23, 20, 0.2); }
-  .hero-cta:hover .hero-cta-arrow { transform: translateX(6px); }
+  .wb-hero { position: relative; height: 620px; background: var(--ink); overflow: hidden; }
+  .wb-hero-photo, .wb-hero-photo picture, .wb-hero-photo img { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .wb-hero-photo img { object-fit: cover; object-position: 60% 15%; }
+  .wb-hero-shade { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(26,23,20,.1) 20%, rgba(26,23,20,.85) 62%, #1A1714 100%); }
+  .wb-hero-text { position: absolute; left: 0; right: 0; bottom: 0; padding: 0 20px 32px; display: flex; flex-direction: column; }
+  .wb-hero-label { font-size: 12px; text-transform: uppercase; letter-spacing: .3em; color: var(--orange); margin-bottom: 12px; }
+  .wb-hero h1 { font-family: 'dejanire-headline', 'Fraunces', serif; font-size: 58px; font-weight: 900; line-height: .88; letter-spacing: -.02em; color: var(--paper); margin-bottom: 24px; }
+  .wb-hero h1 em { font-style: italic; font-weight: 300; color: var(--orange); }
+  .wb-hero-btns { padding-top: 20px; border-top: 1px solid var(--paper); display: flex; gap: 10px; }
+  .wb-hero-btns a { flex: 1 1 0; padding: 15px 10px; font-size: 13px; letter-spacing: .2em; }
+  .wb-hero-btns .wb-ghost { border: 1px solid var(--paper); color: var(--paper); padding: 14px 10px; }
+  .wb-hero-btns .wb-ghost:hover { background: var(--paper); color: var(--ink); }
 
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+  /* Tiles */
+  .wb-tiles { padding: 28px 0 8px; }
+  .wb-tiles .wb-scroll { padding: 0 20px 4px; }
+  .wb-tile { flex: 0 0 150px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; }
+  .wb-tile img { width: 150px; height: 150px; object-fit: cover; border-radius: 4px; }
 
-  /* Scroll reveal (matches hero fadeUp) */
-  .reveal .stagger-item {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-  .reveal.in-view .stagger-item {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  /* Posts */
+  .wb-posts { padding: 40px 20px 16px; }
+  .wb-posts .wb-h { font-size: 42px; margin-bottom: 28px; }
+  .wb-posts-head { display: flex; flex-direction: column; }
+  .wb-posts-grid { display: flex; flex-direction: column; gap: 32px; }
+  .wb-post { display: flex; flex-direction: column; gap: 12px; }
+  .wb-post-img { width: 100%; aspect-ratio: 3 / 2; border-radius: 4px; overflow: hidden; background: var(--cream); }
+  .wb-post-img img { width: 100%; height: 100%; object-fit: cover; }
+  .wb-post-date { font-size: 11px; text-transform: uppercase; letter-spacing: .2em; opacity: .6; }
+  .wb-post-title { font-family: 'dejanire-headline', 'Fraunces', serif; font-size: 25px; font-weight: 600; line-height: 1.1; letter-spacing: -.02em; }
+  .wb-post:hover .wb-post-title { color: var(--orange); }
+  .wb-posts .wb-blog-btn { align-self: flex-start; margin-top: 28px; }
+  .wb-blog-btn-top { display: none; }
 
-  /* Section base */
-  section { padding: 6rem 2rem; position: relative; }
-  .section-label {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-    opacity: 0.6;
-    margin-bottom: 1rem;
-  }
-  .section-title {
-    font-family: "dejanire-headline", 'Fraunces', serif;
-    font-size: clamp(2.5rem, 6vw, 5rem);
-    font-weight: 600;
-    line-height: 0.95;
-    letter-spacing: -0.03em;
-    margin-bottom: 3rem;
-  }
-  .section-title em { font-style: italic; color: var(--orange); }
+  /* App */
+  .wb-app { background: var(--cream); padding: 48px 20px; scroll-margin-top: 72px; }
+  .wb-app-inner { display: flex; flex-direction: column; }
+  .wb-app .wb-h { font-size: 42px; margin-bottom: 14px; }
+  .wb-app p { font-size: 16px; margin-bottom: 24px; }
+  .wb-app-img { order: 0; margin-bottom: 24px; }
+  .wb-app-img img { width: 100%; border-radius: 4px; }
+  .wb-app-text { display: contents; }
+  .wb-app-get { order: 1; display: flex; flex-direction: column; gap: 16px; }
+  .wb-badges { display: flex; flex-wrap: wrap; gap: 10px; }
+  .wb-badge { display: inline-flex; align-items: center; gap: 10px; height: 52px; padding: 0 16px 0 12px; background: #000; border: 1px solid #A6A6A6; border-radius: 9px; color: #fff; }
+  .wb-badge span { display: flex; flex-direction: column; line-height: 1.1; }
+  .wb-badge small { font-size: 10px; letter-spacing: .04em; }
+  .wb-badge b { font-size: 19px; font-weight: 600; letter-spacing: -.01em; }
+  .wb-badge:hover { border-color: var(--orange); }
+  .wb-browser { align-self: flex-start; padding: 6px 0; font-size: 15px; font-weight: 500; text-decoration: underline; text-underline-offset: 4px; }
+  .wb-browser:hover { color: var(--orange); }
 
-  /* Reels */
-  .reels { background: var(--paper); color: var(--ink); }
-  .reels-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
-    max-width: 1400px;
-    margin: 2rem auto 0;
-    padding: 2rem;
-    background: var(--ink);
-    border-radius: 4px;
-  }
-  .reel {
-    aspect-ratio: 9/16;
-    background: linear-gradient(135deg, #2a2622, #1A1714);
-    border-radius: 4px;
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.4s ease;
-    display: block;
-  }
-  .reel:hover { transform: translateY(-8px); }
-  .reel:hover .reel-play { background: var(--orange); transform: translate(-50%, -50%) scale(1.08); }
-  .reel img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .reel::after {
-    content: '';
-    position: absolute;
-    left: 0; right: 0; bottom: 0;
-    height: 35%;
-    background: linear-gradient(to top, rgba(0,0,0,0.55), transparent);
-    z-index: 1;
-    pointer-events: none;
-  }
-  .reel-play {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 48px; height: 48px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.15);
-    backdrop-filter: blur(8px);
-    display: flex; align-items: center; justify-content: center;
-    transition: background 0.25s ease, transform 0.25s ease;
-    z-index: 2;
-  }
-  .reel-play::before {
-    content: '';
-    width: 0; height: 0;
-    border-left: 11px solid white;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    margin-left: 3px;
-  }
-  .reel-label {
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    width: 1.25rem;
-    height: 1.25rem;
-    color: var(--paper);
-    fill: currentColor;
-    opacity: 0.8;
-    z-index: 2;
-  }
-  .social-row {
-    display: flex;
-    gap: 0.85rem;
-    margin-bottom: 2rem;
-  }
-  .social-row a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.75rem;
-    height: 2.75rem;
-    border-radius: 50%;
-    background: var(--ink);
-    color: var(--paper);
-    transition: background 0.2s ease, transform 0.2s ease;
-  }
-  .social-row a:hover {
-    background: var(--orange);
-    transform: scale(1.08);
-  }
-  .social-row svg {
-    width: 1.25rem;
-    height: 1.25rem;
-    fill: currentColor;
-    display: block;
-  }
+  /* About */
+  .wb-about { padding: 48px 20px; }
+  .wb-about-inner { display: flex; flex-direction: column; }
+  .wb-about-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px; margin-bottom: 28px; }
+  .wb-about-text { display: flex; flex-direction: column; }
+  .wb-about .wb-h { font-size: 42px; margin-bottom: 14px; }
+  .wb-about p { font-size: 16px; margin-bottom: 24px; max-width: 30rem; }
+  .wb-about .wb-btn { align-self: flex-start; }
 
-  /* Email */
-  .email-section {
-    background: var(--paper);
-    padding: 4rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-  }
-  .email-wrap {
-    background: var(--cream);
-    max-width: 1100px;
-    width: 100%;
-    padding: 4rem 3rem;
-    border-radius: 4px;
-    margin-bottom: 2rem;
-  }
-  @media (max-width: 700px) {
-    .email-wrap { padding: 2.5rem 1.5rem; }
-  }
-  .email-form {
-    display: flex;
-    gap: 1rem;
-    max-width: 500px;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-  }
-  .email-form input {
-    flex: 1;
-    min-width: 200px;
-    padding: 1.1rem 1.25rem;
-    border: 1px solid var(--ink);
-    background: transparent;
-    font-family: inherit;
-    font-size: 1rem;
-    border-radius: 0;
-  }
-  .email-form input:focus { outline: 2px solid var(--orange); outline-offset: -2px; }
-  .email-form button {
-    padding: 1.1rem 2rem;
-    background: var(--ink);
-    color: var(--paper);
-    border: none;
-    font-family: inherit;
-    font-size: 0.8rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .email-form button:hover { background: var(--orange); transform: scale(1.03); box-shadow: 0 8px 18px -10px rgba(26, 23, 20, 0.2); }
+  /* Shop */
+  .wb-shop { background: var(--ink); color: var(--paper); padding: 48px 0; display: flex; flex-direction: column; }
+  .wb-shop-head { padding: 0 20px; }
+  .wb-shop .wb-label { opacity: .7; }
+  .wb-shop .wb-h { font-size: 42px; margin-bottom: 24px; }
+  .wb-shop .wb-scroll { padding: 0 20px 4px; }
+  .wb-product { flex: 0 0 150px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; }
+  .wb-product img { width: 150px; height: 150px; object-fit: cover; border-radius: 4px; }
+  .wb-product .wb-price { font-size: 13px; opacity: .7; }
+  .wb-product:hover span:first-of-type { color: var(--orange); }
+  .wb-shop-btn { align-self: flex-start; margin: 28px 20px 0; }
+  .wb-shop-btn-top { display: none; }
 
+  /* Videos */
+  .wb-videos { padding: 48px 20px 16px; }
+  .wb-videos .wb-h { font-size: 42px; margin-bottom: 24px; }
+  .wb-reels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .wb-reels img { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 4px; }
+  .wb-reels a { display: block; transition: opacity .2s; }
+  .wb-reels a:hover { opacity: .85; }
+  .wb-social-text { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 20px; font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: .18em; }
+  .wb-social-text a { padding: 8px 0; }
+  .wb-social-text a:hover { color: var(--orange); }
+  .wb-videos-head { display: flex; flex-direction: column; }
+
+  /* Newsletter */
+  .wb-news { padding: 32px 20px 40px; }
+  .wb-news-box { background: var(--cream); border-radius: 4px; padding: 36px 22px; }
+  .wb-news .wb-h { font-size: 36px; margin-bottom: 20px; }
+  .wb-news form { display: flex; flex-direction: column; gap: 10px; }
+  .wb-news input { height: 52px; padding: 0 16px; border: 1px solid var(--ink); background: transparent; font: inherit; font-size: 16px; color: var(--ink); border-radius: 0; }
+  .wb-news input:focus { outline: 2px solid var(--orange); outline-offset: -2px; }
+  .wb-news input::placeholder { color: #6B6258; }
+  .wb-news button { height: 52px; padding: 0 32px; border: 0; border-radius: 6px; background: var(--ink); color: var(--paper); font: inherit; font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: .2em; cursor: pointer; }
+  .wb-news button:hover { background: var(--orange); color: var(--ink); }
+  .wb-news-msg { margin-top: 12px; font-family: 'Fraunces', serif; font-style: italic; font-size: .95rem; min-height: 1em; }
+  .wb-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  /* Footer */
+  .wb-foot { background: var(--ink); color: #E8E1D6; padding: 44px 20px 32px; }
+  .wb-foot-inner { display: flex; flex-direction: column; gap: 32px; }
+  .wb-foot-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 20px; }
+  .wb-foot-brand { display: flex; flex-direction: column; gap: 10px; grid-column: 1 / -1; }
+  .wb-foot-brand b { font-family: 'dejanire-headline', 'Fraunces', serif; font-size: 26px; font-weight: 600; color: var(--paper); }
+  .wb-foot-brand span { font-size: 14px; line-height: 1.55; }
+  .wb-foot-col { display: flex; flex-direction: column; gap: 6px; font-size: 15px; }
+  .wb-foot-col > span { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--orange); font-weight: 500; margin-bottom: 4px; }
+  .wb-foot-col a { padding: 4px 0; }
+  .wb-foot-col a:hover { color: var(--paper); text-decoration: underline; }
+  .wb-icons { display: flex; flex-wrap: wrap; gap: 4px; margin-left: -11px; }
+  .wb-icons a { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; padding: 0; }
+  .wb-icons a:hover { opacity: .8; text-decoration: none; }
+  .wb-foot-bottom { border-top: 1px solid rgba(232,225,214,.2); padding-top: 20px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; color: #B8AE9F; }
+  .wb-foot-bottom a:hover { color: var(--paper); }
+
+  /* Desktop */
+  @media (min-width: 900px) {
+    .wb-nav-bar { padding: 22px 32px; }
+    .wb-nav-logo img { height: 36px; }
+    .wb-burger { display: none; }
+    .wb-menu { display: flex; position: static; flex-direction: row; align-items: center; gap: 32px; padding: 0; background: none; box-shadow: none; }
+    .wb-menu > a, .wb-dd-btn { border: 0; padding: 10px 0; font-size: 13.5px; }
+    .wb-dd { position: relative; }
+    .wb-dd-btn { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+    .wb-dd-btn svg { display: block; }
+    .wb-dd-menu { display: none; position: absolute; right: 0; top: 100%; padding-top: 12px; z-index: 20; }
+    .wb-dd:hover .wb-dd-menu, .wb-dd:focus-within .wb-dd-menu { display: block; }
+    .wb-dd-list { background: var(--yellow); border: 1px solid rgba(26,23,20,.2); padding: 8px 0; width: 230px; display: flex; flex-direction: column; }
+    .wb-dd-menu a { padding: 12px 20px; }
+
+    .wb-hero { height: auto; min-height: 640px; display: flex; align-items: center; }
+    .wb-hero-photo { left: auto; width: 62%; }
+    .wb-hero-photo img { object-position: 50% 20%; }
+    .wb-hero-shade { background: linear-gradient(to right, #1A1714 34%, rgba(26,23,20,.82) 46%, rgba(26,23,20,.25) 66%, transparent 82%); }
+    .wb-hero-text { position: relative; padding: 72px 32px; max-width: 760px; }
+    .wb-hero-label { margin-bottom: 16px; }
+    .wb-hero h1 { font-size: clamp(56px, 8vw, 128px); margin-bottom: 32px; }
+    .wb-hero h1 .wb-br { display: block; }
+    .wb-hero-btns { padding-top: 32px; gap: 14px; }
+    .wb-hero-btns a { flex: 0 0 auto; padding: 16px 32px; font-size: 13.5px; }
+    .wb-hero-btns .wb-ghost { padding: 15px 32px; }
+
+    .wb-tiles { padding: 56px 32px 24px; }
+    .wb-tiles .wb-scroll { max-width: 1200px; margin: 0 auto; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; overflow: visible; }
+    .wb-tile { gap: 14px; font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: .2em; }
+    .wb-tile img { width: 100%; height: auto; aspect-ratio: 4 / 3; }
+
+    .wb-posts { padding: 64px 32px 24px; }
+    .wb-posts-head { flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 40px; }
+    .wb-posts .wb-h, .wb-app .wb-h, .wb-about .wb-h, .wb-shop .wb-h, .wb-videos .wb-h { font-size: clamp(40px, 6vw, 80px); margin-bottom: 0; }
+    .wb-posts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .wb-post { gap: 14px; }
+    .wb-post-title { font-size: 28px; }
+    .wb-posts .wb-blog-btn { display: none; }
+    .wb-blog-btn-top { display: inline-block; padding: 14px 28px; }
+
+    .wb-app { padding: 80px 32px; }
+    .wb-app-inner { max-width: 1200px; margin: 0 auto; flex-direction: row; align-items: center; gap: 56px; }
+    .wb-app-text { display: flex; flex-direction: column; flex: 1 1 380px; min-width: 0; }
+    .wb-app .wb-label { margin-bottom: 16px; }
+    .wb-app .wb-h { margin-bottom: 18px; }
+    .wb-app p { font-size: 18px; margin-bottom: 28px; }
+    .wb-app-img { order: 2; flex: 1 1 420px; min-width: 0; margin: 0; }
+    .wb-app-img img { max-width: 520px; margin-left: auto; }
+
+    .wb-about { padding: 88px 32px; }
+    .wb-about-inner { max-width: 1200px; margin: 0 auto; flex-direction: row; align-items: center; gap: 56px; }
+    .wb-about-photo { flex: 1 1 380px; min-width: 0; }
+    .wb-about-photo img { max-height: 620px; margin: 0; }
+    .wb-about-text { flex: 1 1 420px; min-width: 0; }
+    .wb-about .wb-label { margin-bottom: 16px; }
+    .wb-about .wb-h { margin-bottom: 18px; }
+    .wb-about p { font-size: 18px; margin-bottom: 28px; }
+    .wb-about .wb-btn { padding: 15px 30px; }
+
+    .wb-shop { padding: 80px 32px; }
+    .wb-shop-wrap { max-width: 1200px; margin: 0 auto; width: 100%; }
+    .wb-shop-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 40px; }
+    .wb-shop-head { padding: 0; }
+    .wb-shop .wb-label { margin-bottom: 16px; }
+    .wb-shop .wb-scroll { padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; overflow: visible; }
+    .wb-product { gap: 10px; font-size: 15px; }
+    .wb-product img { width: 100%; height: auto; aspect-ratio: 1 / 1; }
+    .wb-product .wb-price { font-size: 14px; }
+    .wb-shop-btn { display: none; }
+    .wb-shop-btn-top { display: inline-block; padding: 14px 28px; }
+
+    .wb-videos { padding: 88px 32px 24px; }
+    .wb-videos .wb-label { margin-bottom: 16px; }
+    .wb-videos-head { flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 40px; }
+    .wb-videos-head .wb-social-text { margin: 0; gap: 24px; font-size: 13px; }
+    .wb-reels { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .wb-social-bottom { display: none; }
+
+    .wb-news { padding: 64px 32px; }
+    .wb-news-box { max-width: 1100px; margin: 0 auto; padding: 64px 48px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 32px; }
+    .wb-news .wb-h { font-size: clamp(36px, 4.5vw, 60px); margin: 0; }
+    .wb-news-form { flex: 0 1 500px; min-width: 0; }
+    .wb-news form { flex-direction: row; flex-wrap: wrap; gap: 14px; }
+    .wb-news input { flex: 1 1 220px; min-width: 0; height: 56px; padding: 0 20px; }
+    .wb-news button { height: 56px; }
+
+    .wb-foot { padding: 64px 32px 32px; }
+    .wb-foot-inner { max-width: 1200px; margin: 0 auto; gap: 40px; }
+    .wb-foot-cols { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 32px; }
+    .wb-foot-brand { grid-column: auto; }
+  }
+  @media (min-width: 900px) and (max-width: 1100px) {
+    .wb-shop .wb-scroll { grid-template-columns: repeat(3, 1fr); }
+    .wb-foot-cols { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
   /* Newsletter popup */
   .popup-overlay {
     position: fixed; inset: 0; z-index: 1000;
@@ -467,858 +358,183 @@
     .popup-text { padding: 2rem 1.5rem; }
     .popup-text h2 { font-size: 1.6rem; }
   }
-
-  /* Blog link */
-  .blog-link, .shop-link { background: var(--paper); }
-  .blog-subheading {
-    font-family: "dejanire-headline", 'Fraunces', serif;
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
-    font-weight: 600;
-    line-height: 1;
-    letter-spacing: -0.02em;
-    color: var(--orange);
-    max-width: 1200px;
-    margin: 0 auto 1.25rem;
-  }
-  .blog-feature-heading {
-    font-family: "dejanire-headline", 'Fraunces', serif;
-    font-size: clamp(1.25rem, 2vw, 1.65rem);
-    font-weight: 600;
-    line-height: 1;
-    letter-spacing: -0.02em;
-    color: var(--orange);
-    margin-bottom: 1rem;
-  }
-  .blog-feature {
-    max-width: 1200px;
-    margin: 0 auto 3rem;
-  }
-  .blog-feature-card {
-    display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap: 2.5rem;
-    color: var(--ink);
-    align-items: center;
-    transition: transform 0.3s ease;
-  }
-  .blog-feature-card:hover { transform: translateY(-4px); }
-  .blog-feature-image {
-    aspect-ratio: 4/3;
-    overflow: hidden;
-    border-radius: 4px;
-    background: var(--cream);
-  }
-  .blog-feature-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
-  }
-  .blog-feature-card:hover .blog-feature-image img { transform: scale(1.03); }
-  .blog-feature-label {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-    color: var(--orange);
-    margin-bottom: 1rem;
-  }
-  .blog-feature-date {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    opacity: 0.6;
-    margin-bottom: 0.75rem;
-  }
-  .blog-feature-title {
-    font-family: "dejanire-headline", 'Fraunces', serif;
-    font-size: clamp(2rem, 3.5vw, 2.85rem);
-    font-weight: 700;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    margin-bottom: 1rem;
-  }
-  .blog-feature-excerpt {
-    font-size: 1.05rem;
-    line-height: 1.55;
-    opacity: 0.85;
-  }
-  @media (max-width: 800px) {
-    .blog-feature-card { grid-template-columns: 1fr; gap: 1.5rem; }
-  }
-  .blog-link-cta {
-    max-width: 1200px;
-    margin: 0 auto 2rem;
-    display: flex;
-    justify-content: flex-start;
-  }
-  .blog-link-btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.85rem 1.75rem;
-    border-radius: 6px;
-    background: var(--ink);
-    color: var(--paper);
-    font-size: 0.8rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    transition: background 0.2s ease, transform 0.2s ease;
-  }
-  .blog-link-btn:hover {
-    background: var(--orange);
-    transform: scale(1.03);
-  }
-  .blog-previews {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .blog-preview-card {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    color: var(--ink);
-    transition: transform 0.3s ease;
-  }
-  .blog-preview-card:hover { transform: translateY(-4px); }
-  .blog-preview-image {
-    aspect-ratio: 3/2;
-    overflow: hidden;
-    border-radius: 4px;
-    background: var(--cream);
-  }
-  .blog-preview-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
-  }
-  .blog-preview-card:hover .blog-preview-image img { transform: scale(1.04); }
-  .blog-preview-date {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    opacity: 0.6;
-  }
-  .blog-preview-title {
-    font-family: "dejanire-headline", 'Fraunces', serif;
-    font-size: clamp(1.4rem, 2.2vw, 1.85rem);
-    font-weight: 600;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-  }
-  .blog-preview-excerpt {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    opacity: 0.8;
-  }
-  @media (max-width: 800px) {
-    .blog-previews { grid-template-columns: 1fr; gap: 2.5rem; }
-  }
-
-  /* Shop hero */
-  .shop-hero {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto 1.25rem;
-    aspect-ratio: 3/1;
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  .shop-hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .shop-hero-cta { text-align: center; margin: 0 auto 2rem; }
-  .shop-hero-btn {
-    display: inline-block;
-    padding: 1rem 2.25rem;
-    background: var(--orange);
-    color: var(--paper);
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    white-space: nowrap;
-    border-radius: 8px;
-    box-shadow: 0 6px 16px -8px rgba(26, 23, 20, 0.4);
-    transition: background 0.2s, color 0.2s, transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .shop-hero-btn:hover {
-    background: var(--ink);
-    color: var(--paper);
-    transform: scale(1.03);
-    box-shadow: 0 10px 22px -10px rgba(26, 23, 20, 0.45);
-  }
-  @media (max-width: 700px) {
-    .shop-hero-btn { padding: 0.75rem 1.25rem; font-size: 0.65rem; letter-spacing: 0.15em; }
-  }
-
-  /* Shop carousel */
-  .shop-carousel {
-    overflow: hidden;
-    margin-top: 2rem;
-    position: relative;
-    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-  }
-  .shop-track {
-    display: flex;
-    width: max-content;
-    animation: shop-scroll 45s linear infinite;
-  }
-  .shop-carousel:hover .shop-track { animation-play-state: paused; }
-  .shop-item {
-    flex: 0 0 280px;
-    aspect-ratio: 3/4;
-    margin-right: 1.5rem;
-    border-radius: 4px;
-    overflow: hidden;
-    display: block;
-    position: relative;
-    transition: transform 0.3s ease;
-  }
-  .shop-item:hover { transform: translateY(-6px); }
-  .shop-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .shop-item::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0);
-    transition: background 0.3s ease;
-    pointer-events: none;
-    z-index: 1;
-  }
-  .shop-item:hover::after { background: rgba(0,0,0,0.5); }
-  .shop-caption {
-    position: absolute;
-    left: 1.1rem;
-    right: 1.1rem;
-    bottom: 1.1rem;
-    color: var(--paper);
-    opacity: 0;
-    transform: translateY(8px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 2;
-    pointer-events: none;
-  }
-  .shop-item:hover .shop-caption { opacity: 1; transform: translateY(0); }
-  .shop-caption-name {
-    display: block;
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 500;
-    font-size: 1.15rem;
-    line-height: 1.2;
-    margin-bottom: 0.4rem;
-  }
-  .shop-caption-price {
-    display: block;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    opacity: 0.85;
-  }
-  @keyframes shop-scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-  }
-  @media (max-width: 700px) {
-    .shop-item { flex-basis: 220px; margin-right: 1rem; }
-  }
-  .big-link {
-    display: block;
-    padding: 3rem 0;
-    border-top: 1px solid var(--ink);
-    border-bottom: 1px solid var(--ink);
-    font-family: "bettoni-variable", 'Fraunces', serif;
-    font-variation-settings: "opsz" 40, "wght" 110;
-    font-size: clamp(2rem, 5vw, 4rem);
-    transition: padding-left 0.4s ease, color 0.3s;
-    position: relative;
-  }
-  .big-link:hover { padding-left: 3rem; color: var(--orange); }
-  .big-link::after {
-    content: '→';
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-style: normal;
-    transition: transform 0.3s;
-  }
-  .big-link:hover::after { transform: translateY(-50%) translateX(10px); }
-
-  /* About */
-  .about { background: var(--paper); }
-  .about-grid {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: stretch;
-  }
-  .about-text {
-    background: var(--cream);
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 4px;
-  }
-  .about-text h2 {
-    font-family: "dejanire-headline", 'Fraunces', serif;
-    font-size: clamp(2.25rem, 5vw, 3.75rem);
-    font-weight: 600;
-    line-height: 1;
-    letter-spacing: -0.02em;
-    margin-bottom: 1.5rem;
-  }
-  .about-text h2 em { font-style: italic; color: var(--orange); }
-  .about-text p {
-    font-family: 'Inter Tight', sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.5;
-    max-width: 52ch;
-  }
-  .about-photo {
-    border-radius: 4px;
-    overflow: hidden;
-    aspect-ratio: 3/4;
-    background: var(--cream);
-  }
-  .about-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 20%;
-    display: block;
-  }
-  @media (max-width: 900px) {
-    .about-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-    .about-photo { aspect-ratio: 1/1; }
-    .about-text { padding: 2rem; }
-  }
-
-  /* Press */
-  .press { background: var(--ink); color: var(--paper); }
-  .press-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: start;
-  }
-  .press-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
-  .stat {
-    padding: 1.5rem 0;
-    border-top: 1px solid rgba(255,255,255,0.2);
-  }
-  .stat-num {
-    font-family: "bettoni-variable", 'Fraunces', serif;
-    font-variation-settings: "opsz" 40, "wght" 110;
-    font-size: 3rem;
-    color: var(--yellow);
-    line-height: 1;
-    margin-bottom: 0.5rem;
-  }
-  .stat-label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    opacity: 0.6;
-  }
-  .press-body { padding-top: clamp(4.5rem, 2rem + 5.7vw, 7rem); }
-  .press-body p { margin-bottom: 1.5rem; font-size: 1.05rem; opacity: 0.85; }
-  .press-body a.btn {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 1rem 2rem;
-    background: var(--yellow);
-    color: var(--ink);
-    font-size: 0.8rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    border-radius: 6px;
-    transition: background 0.2s, color 0.2s, transform 0.2s ease;
-  }
-  .press-body a.btn:hover { background: var(--orange); color: var(--paper); transform: scale(1.03); }
-
-  /* Contact */
-  .contact {
-    background: var(--paper);
-    padding: 4rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--ink);
-  }
-  .contact-wrap {
-    background: var(--yellow);
-    max-width: 1100px;
-    width: 100%;
-    padding: 4rem 3rem;
-    border-radius: 4px;
-  }
-  @media (max-width: 700px) {
-    .contact-wrap { padding: 2.5rem 1.5rem; }
-  }
-  .contact h2 { color: var(--ink); }
-  .contact h2 em { color: var(--ink); }
-  .contact-methods {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2.5rem;
-    margin: 3rem auto 0;
-    max-width: 960px;
-  }
-  .contact-card {
-    background: var(--paper);
-    padding: 1.25rem 1.5rem;
-    border-radius: 4px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  .contact-card:hover { transform: scale(1.03); box-shadow: 0 8px 18px -10px rgba(26, 23, 20, 0.2); }
-  .contact-card span {
-    font-size: 0.6rem;
-    text-transform: uppercase;
-    letter-spacing: 0.25em;
-    opacity: 0.5;
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-  .contact-card a {
-    font-family: "bettoni-variable", 'Fraunces', serif;
-    font-variation-settings: "opsz" 40, "wght" 110;
-    font-size: 1rem;
-    word-break: break-word;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s;
-  }
-  .contact-card a:hover { border-color: var(--ink); }
-
-  /* Contact form */
-  .contact-form {
-    max-width: 640px;
-    margin: 2.5rem auto 0;
-    text-align: left;
-  }
-  .cf-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.25rem;
-  }
-  @media (max-width: 560px) { .cf-row { grid-template-columns: 1fr; } }
-  .cf-field { margin-bottom: 1.25rem; }
-  .cf-field label {
-    display: block;
-    font-size: 0.6rem;
-    text-transform: uppercase;
-    letter-spacing: 0.25em;
-    color: var(--ink);
-    opacity: 0.6;
-    margin-bottom: 0.5rem;
-  }
-  .cf-field label em { text-transform: none; letter-spacing: 0; opacity: 0.8; font-style: normal; }
-  .cf-field input,
-  .cf-field textarea {
-    width: 100%;
-    background: var(--paper);
-    border: 1px solid transparent;
-    border-radius: 4px;
-    padding: 0.85rem 1rem;
-    font-family: inherit;
-    font-size: 1rem;
-    color: var(--ink);
-    transition: border-color 0.2s, box-shadow 0.2s;
-  }
-  .cf-field textarea { resize: vertical; line-height: 1.5; min-height: 120px; }
-  .cf-field input::placeholder,
-  .cf-field textarea::placeholder { color: var(--ink); opacity: 0.35; }
-  .cf-field input:focus,
-  .cf-field textarea:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 3px rgba(26, 23, 20, 0.12); }
-  .cf-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
-  .cf-submit {
-    background: var(--ink);
-    color: var(--paper);
-    border: none;
-    border-radius: 4px;
-    padding: 0.9rem 2rem;
-    font-family: inherit;
-    font-size: 0.95rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s;
-  }
-  .cf-submit:hover { transform: scale(1.03); box-shadow: 0 8px 18px -10px rgba(26, 23, 20, 0.35); }
-  .cf-submit:disabled { opacity: 0.55; cursor: default; transform: none; box-shadow: none; }
-  .contact-form-msg {
-    margin-top: 1rem;
-    font-size: 0.95rem;
-    color: var(--ink);
-    min-height: 1.2em;
-  }
-  .contact-form-msg.error { color: #7a1f14; }
-
-  /* Footer */
-  footer {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 3rem 2rem 2rem;
-    font-size: 0.85rem;
-  }
-  .footer-wrap {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-  .footer-wrap a { opacity: 0.6; transition: opacity 0.2s; }
-  .footer-wrap a:hover { opacity: 1; }
-
-  @media (max-width: 700px) {
-    nav { padding: 0.75rem 1rem; }
-    .logo { font-size: 1rem; }
-    .nav-links { gap: 0.75rem; font-size: 0.6rem; letter-spacing: 0.1em; }
-    section { padding: 4rem 1.25rem; }
-    .hero { padding: 6rem 1.25rem 3rem; }
-    .press-grid { grid-template-columns: 1fr; }
-    .press-stats { grid-template-columns: 1fr 1fr; }
-    .press-body { padding-top: 0; }
-  }
+   .email-form {
+     display: flex;
+     gap: 1rem;
+     max-width: 500px;
+     margin-top: 2rem;
+     flex-wrap: wrap;
+   }
+   .email-form input {
+     flex: 1;
+     min-width: 200px;
+     padding: 1.1rem 1.25rem;
+     border: 1px solid var(--ink);
+     background: transparent;
+     font-family: inherit;
+     font-size: 1rem;
+     border-radius: 0;
+   }
+   .email-form input:focus { outline: 2px solid var(--orange); outline-offset: -2px; }
+   .email-form button {
+     padding: 1.1rem 2rem;
+     background: var(--ink);
+     color: var(--paper);
+     border: none;
+     font-family: inherit;
+     font-size: 0.8rem;
+     font-weight: 500;
+     text-transform: uppercase;
+     letter-spacing: 0.2em;
+     border-radius: 6px;
+     cursor: pointer;
+     transition: background 0.2s, transform 0.2s ease, box-shadow 0.2s ease;
+   }
+   .email-form button:hover { background: var(--orange); transform: scale(1.03); box-shadow: 0 8px 18px -10px rgba(26, 23, 20, 0.2); }
 </style>
-<style>
-/* Mobile nav: five links do not fit one phone-width row. Keep each link intact
-   and let the row wrap, rather than squeezing "Build a Recipe" onto three lines
-   or pushing "Connect" off the screen. */
-@media (max-width: 700px){
-  nav{flex-direction:column;align-items:center;gap:.55rem;}
-  nav .logo{flex:0 1 auto;min-width:0;}
-  nav .logo img{max-width:100%;height:auto;max-height:34px;}
-  nav .nav-links{
-    justify-content:center;flex-wrap:wrap;row-gap:.3rem;column-gap:.9rem;
-  }
-  nav .nav-links a{white-space:nowrap;}
-}
-</style>
-<style>
-/* phone-nav-stacked */
-@media (max-width: 700px){
-  nav{flex-direction:column;align-items:center;justify-content:center;row-gap:.55rem;padding:.75rem 1rem;}
-  nav .logo{display:flex;justify-content:center;}
-  nav .nav-links{flex:0 1 auto;width:100%;justify-content:center;flex-wrap:wrap;column-gap:.95rem;row-gap:.35rem;font-size:.64rem;letter-spacing:.12em;}
-}
-</style>
+
 </head>
 <body>
 
-<nav>
-  <a href="/" class="logo" aria-label="wassem bakes home"><img src="/assets/logo-horizontal.svg" alt="" style="height:clamp(30px,4.2vw,46px);width:auto;display:block"></a>
-  <div class="nav-right">
-    <form class="home-search nav-search" role="search" autocomplete="off" onsubmit="return homeSearchGo(event)">
-      <svg class="home-search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-      <input type="search" id="homeSearchInput" class="home-search-input" placeholder="Search recipes, tips…" aria-label="Search the blog" oninput="homeSearch(this.value)" onfocus="homeSearch(this.value)">
-      <div class="home-search-results" id="homeSearchResults" hidden></div>
-    </form>
-    <div class="nav-links">
-      <a href="blog/index.html">Blog</a>
-      <a href="https://sensiblebakery.com/collections/all" target="_blank" rel="noopener">Shop</a>
+<header class="wb-nav" id="wbNav">
+  <div class="wb-nav-bar">
+    <a href="/" class="wb-nav-logo" aria-label="Wassem Bakes home"><img src="/assets/logo-horizontal.svg" alt="Wassem Bakes"></a>
+    <button type="button" class="wb-burger" id="wbBurger" aria-label="Menu" aria-expanded="false" aria-controls="wbMenu"><svg class="wb-lines" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><svg class="wb-x" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+    <nav class="wb-menu" id="wbMenu" aria-label="Main">
+      <a href="/blog/">Recipes</a>
       <a href="/recipe-builder/">My App</a>
-      <a href="about/index.html">About</a>
-      <a href="/work-with-me/">Work With Me</a>
-    </div>
-  </div>
-</nav>
-<style>
-  .nav-right{display:flex;align-items:center;gap:1.5rem;min-width:0;}
-  .nav-search{position:relative;flex:0 0 auto;}
-  .nav-search .home-search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:16px;height:16px;stroke:var(--ink);stroke-width:2;fill:none;opacity:.5;pointer-events:none;}
-  .nav-search .home-search-input{width:210px;box-sizing:border-box;padding:.55rem .9rem .55rem 2.3rem;border:1px solid rgba(26,23,20,.22);border-radius:999px;background:var(--paper);font:inherit;font-size:.82rem;color:var(--ink);transition:border-color .15s,box-shadow .15s,width .18s;}
-  .nav-search .home-search-input:focus{outline:none;border-color:var(--orange);box-shadow:0 0 0 3px rgba(255,143,28,.15);width:240px;}
-  .home-search-results{position:absolute;right:0;top:calc(100% + 8px);min-width:280px;background:var(--paper);border:1px solid rgba(26,23,20,.12);border-radius:14px;box-shadow:0 14px 34px -14px rgba(26,23,20,.35);overflow:hidden;z-index:120;text-align:left;}
-  .home-search-results a{display:block;padding:12px 18px;color:var(--ink);border-bottom:1px solid rgba(26,23,20,.06);font-size:.9rem;transition:background .15s;}
-  .home-search-results a:last-child{border-bottom:none;}
-  .home-search-results a:hover{background:var(--cream);}
-  .home-search-results .hsr-empty{padding:13px 18px;color:var(--ink);opacity:.6;font-size:.85rem;}
-  @media (max-width:700px){
-    .nav-right{width:100%;flex-direction:column;align-items:center;gap:.55rem;}
-    .nav-search{order:3;width:100%;flex:1 1 100%;}
-    .nav-search .home-search-input{width:100%;}
-    .nav-search .home-search-input:focus{width:100%;}
-    .home-search-results{left:0;right:0;min-width:0;}
-  }
-</style>
-
-<section class="hero">
-  <div class="hero-content">
-    <div class="hero-label">20+ Years · New York</div>
-    <h1>Gluten-<br>free.<br>Vegan.<br><em>Obsessed.</em></h1>
-    <div class="hero-cta-wrap">
-      <a href="blog/index.html" class="hero-cta">Let's go<svg class="hero-cta-arrow" viewBox="0 0 72 10" aria-hidden="true"><path d="M0 5 L66 5 M60 1 L66 5 L60 9" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    </div>
-  </div>
-  <div class="hero-photo">
-    <picture><source type="image/avif" srcset="hero-480w.avif 480w, hero-800w.avif 800w, hero-1200w.avif 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><source type="image/webp" srcset="hero-480w.webp 480w, hero-800w.webp 800w, hero-1200w.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><img src="hero-800w.jpg" alt="Wassem Moarsi in his gluten-free and vegan bakery" fetchpriority="high" loading="eager" decoding="async" srcset="hero-480w.jpg 480w, hero-800w.jpg 800w, hero-1200w.jpg 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"></picture>
-  </div>
-</section>
-
-<section class="blog-link reveal">
-  <div class="section-label stagger-item">Recipes & Guides</div>
-  <h2 class="section-title stagger-item" style="margin-bottom: 1.5rem;">Field notes <em>from the kitchen</em></h2>
-  <div class="blog-link-cta stagger-item">
-    <a href="blog/index.html" class="blog-link-btn">Go to blog &rarr;</a>
-  </div>
-  <div class="blog-feature stagger-item" data-blog-feature></div>
-  <h3 class="blog-subheading stagger-item">Fall Favorites</h3>
-  <div class="blog-previews stagger-item" data-blog-previews></div>
-</section>
-
-<section class="blog-link reveal" id="recipe-builder">
-  <div class="rb-home">
-    <div class="rb-home-text">
-      <div class="section-label stagger-item">Recipe Builder</div>
-      <h2 class="section-title stagger-item" style="margin-bottom: 1.5rem;">Build a <em>recipe</em></h2>
-      <p class="stagger-item rb-home-p">The same tool I use at my bakery. Put in your ingredients and it checks your ratios, works out the cost, and writes the nutrition label for you. Free to start, now on Google Play.</p>
-      <div class="rb-home-btns stagger-item">
-        <a href="/recipe-builder/" class="blog-link-btn">See how it works &rarr;</a>
-        <a href="https://play.google.com/store/apps/details?id=com.wassembakes.recipebuilder" target="_blank" rel="noopener" class="blog-link-btn rb-home-line">Get it on Google Play</a>
+      <a href="https://sensiblebakery.com/collections/all" target="_blank" rel="noopener">Shop</a>
+      <div class="wb-dd">
+        <button type="button" class="wb-dd-btn" aria-haspopup="true">About<svg aria-hidden="true" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></button>
+        <div class="wb-dd-menu"><div class="wb-dd-list">
+          <a href="/about/">About me</a>
+          <a href="https://sensiblebakery.com" target="_blank" rel="noopener">Sensible Bakery</a>
+          <a href="/work-with-me/">Work with me</a>
+        </div></div>
       </div>
-    </div>
-    <a href="/recipe-builder/" class="rb-home-img stagger-item" aria-label="The Recipe Builder">
-      <picture><source type="image/webp" srcset="recipe-builder/know-it-works-600w.webp 600w, recipe-builder/know-it-works-1080w.webp 1080w" sizes="(max-width: 800px) 100vw, 480px"><img src="recipe-builder/know-it-works-1080w.jpg" srcset="recipe-builder/know-it-works-600w.jpg 600w, recipe-builder/know-it-works-1080w.jpg 1080w" sizes="(max-width: 800px) 100vw, 480px" width="1080" height="1350" alt="The Recipe Builder on three phones: a recipe, the ratios screen and compare recipes" loading="lazy" decoding="async"></picture>
-    </a>
+    </nav>
   </div>
-</section>
-<style>
-  /* Wide screens: line every section's heading up with its centered 1200px content
-     (headings used to hug the left edge while the content sat in the middle). */
-  section:not(.hero) { padding-left: max(2rem, calc((100% - 1200px) / 2)); padding-right: max(2rem, calc((100% - 1200px) / 2)); }
-  @media (max-width: 700px) { section:not(.hero) { padding-left: 1.25rem; padding-right: 1.25rem; } }
-  .rb-home { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center; }
-  .rb-home-p { max-width: 520px; font-size: 1.1rem; line-height: 1.6; opacity: 0.85; margin-bottom: 1.75rem; }
-  .rb-home-btns { display: flex; flex-wrap: wrap; gap: .75rem; }
-  .blog-link-btn.rb-home-line { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
-  .blog-link-btn.rb-home-line:hover { background: var(--ink); color: var(--paper); }
-  .rb-home-img { display: block; max-width: 480px; justify-self: end; width: 100%; }
-  .rb-home-img img { width: 100%; height: auto; display: block; border-radius: 10px; box-shadow: 0 24px 50px -28px rgba(26,23,20,.45); }
-  @media (max-width: 800px) { .rb-home { grid-template-columns: 1fr; gap: 2.5rem; } .rb-home-img { justify-self: start; } }
-</style>
+</header>
 
-<section class="about reveal">
-  <div class="about-grid">
-    <div class="about-text">
-      <div class="section-label stagger-item">About</div>
-      <h2 class="stagger-item">Meet <em>Wassem</em></h2>
-      <p class="stagger-item">I'm sharing 20 years of experience running the largest vegan and gluten-free bakery in New York City. Tips and advice straight from my real bakery kitchen, where wellness, dietary restrictions, and sustainability are always a priority.</p>
-      <div class="stagger-item" style="margin-top: 1.5rem;">
-        <a href="about/index.html" class="blog-link-btn">Read more &rarr;</a>
-      </div>
-    </div>
-    <div class="about-photo stagger-item">
-      <picture><source type="image/avif" srcset="about-480w.avif 480w, about-800w.avif 800w, about-1200w.avif 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><source type="image/webp" srcset="about-480w.webp 480w, about-800w.webp 800w, about-1200w.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><img src="about-800w.jpg" alt="Wassem Moarsi in the bakery" loading="lazy" decoding="async" srcset="about-480w.jpg 480w, about-800w.jpg 800w, about-1200w.jpg 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"></picture>
+<main>
+<section class="wb-hero" id="top">
+  <div class="wb-hero-photo"><picture><source type="image/avif" srcset="hero-480w.avif 480w, hero-800w.avif 800w, hero-1200w.avif 1200w" sizes="(max-width: 900px) 100vw, 62vw"><source type="image/webp" srcset="hero-480w.webp 480w, hero-800w.webp 800w, hero-1200w.webp 1200w" sizes="(max-width: 900px) 100vw, 62vw"><img src="hero-800w.jpg" srcset="hero-480w.jpg 480w, hero-800w.jpg 800w, hero-1200w.jpg 1200w" sizes="(max-width: 900px) 100vw, 62vw" alt="Wassem Moarsi in his gluten-free and vegan bakery" fetchpriority="high" loading="eager" decoding="async"></picture></div>
+  <div class="wb-hero-shade" aria-hidden="true"></div>
+  <div class="wb-hero-text">
+    <div class="wb-hero-label">20+ Years · New York</div>
+    <h1>Gluten-free. <span class="wb-br"></span>Vegan. <span class="wb-br"></span><em>Obsessed.</em></h1>
+    <div class="wb-hero-btns">
+      <a href="/blog/" class="wb-btn wb-btn-paper">Recipes</a>
+      <a href="#app" class="wb-btn wb-ghost">Get the app</a>
     </div>
   </div>
 </section>
 
-<section class="shop-link reveal" id="shop">
-  <div class="section-label stagger-item">Shop</div>
-  <h2 class="section-title stagger-item" style="margin-bottom: 1.5rem;">My <em>bakery</em></h2>
-  <div class="shop-hero stagger-item">
-    <picture><source type="image/avif" srcset="shop/chocolate%20chip-480w.avif 480w, shop/chocolate%20chip-800w.avif 800w, shop/chocolate%20chip-1200w.avif 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><source type="image/webp" srcset="shop/chocolate%20chip-480w.webp 480w, shop/chocolate%20chip-800w.webp 800w, shop/chocolate%20chip-1200w.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><img src="shop/chocolate%20chip-800w.jpg" alt="Chocolate chip cookies from Sensible Bakery" loading="lazy" decoding="async" srcset="shop/chocolate%20chip-480w.jpg 480w, shop/chocolate%20chip-800w.jpg 800w, shop/chocolate%20chip-1200w.jpg 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"></picture>
+<section class="wb-tiles" aria-label="Explore">
+  <div class="wb-scroll">
+    <a class="wb-tile" href="/blog/"><picture><source type="image/webp" srcset="blog/images/cinnamon-roll-header-480w.webp 480w, blog/images/cinnamon-roll-header-800w.webp 800w, blog/images/cinnamon-roll-header-1200w.webp 1200w" sizes="(min-width: 900px) 400px, 150px"><img src="blog/images/cinnamon-roll-header-800w.jpg" srcset="blog/images/cinnamon-roll-header-480w.jpg 480w, blog/images/cinnamon-roll-header-800w.jpg 800w, blog/images/cinnamon-roll-header-1200w.jpg 1200w" sizes="(min-width: 900px) 400px, 150px" alt="Cinnamon rolls" loading="lazy" decoding="async"></picture><span>Recipes</span></a>
+    <a class="wb-tile" href="/recipe-builder/"><picture><source type="image/webp" srcset="recipe-builder/app-phones-600w.webp 600w, recipe-builder/app-phones-1080w.webp 1080w" sizes="(min-width: 900px) 400px, 150px"><img src="recipe-builder/app-phones-600w.jpg" srcset="recipe-builder/app-phones-600w.jpg 600w, recipe-builder/app-phones-1080w.jpg 1080w" sizes="(min-width: 900px) 400px, 150px" alt="The Recipe Builder app" style="object-position: 50% 30%;" loading="lazy" decoding="async"></picture><span>My App</span></a>
+    <a class="wb-tile" href="https://sensiblebakery.com" target="_blank" rel="noopener"><picture><source type="image/avif" srcset="shop/cookies%20n%20cream-480w.avif 480w, shop/cookies%20n%20cream-800w.avif 800w, shop/cookies%20n%20cream-1200w.avif 1200w" sizes="(min-width: 900px) 400px, 150px"><source type="image/webp" srcset="shop/cookies%20n%20cream-480w.webp 480w, shop/cookies%20n%20cream-800w.webp 800w, shop/cookies%20n%20cream-1200w.webp 1200w" sizes="(min-width: 900px) 400px, 150px"><img src="shop/cookies%20n%20cream-800w.jpg" srcset="shop/cookies%20n%20cream-480w.jpg 480w, shop/cookies%20n%20cream-800w.jpg 800w, shop/cookies%20n%20cream-1200w.jpg 1200w" sizes="(min-width: 900px) 400px, 150px" alt="Cake from Sensible Bakery" loading="lazy" decoding="async"></picture><span>My Bakery</span></a>
   </div>
-  <div class="shop-hero-cta stagger-item"><a class="shop-hero-btn" href="https://sensiblebakery.com/collections/all" target="_blank" rel="noopener">Shop my bakery</a></div>
-  <p class="stagger-item" style="max-width: 900px; margin: 0 auto; font-size: 1.5rem; text-align: center; font-family: 'bettoni-variable', 'Fraunces', serif; font-variation-settings: 'opsz' 40, 'wght' 110;">Vegan and gluten-free baked goods made with wholesome, sustainable ingredients. Shipping nationwide.</p>
-  <div class="shop-carousel stagger-item">
-    <div class="shop-track">
-      <a class="shop-item" href="https://sensiblebakery.com/products/cookies-and-cream-cake" target="_blank" rel="noopener"><picture><source type="image/avif" srcset="shop/cookies%20n%20cream-480w.avif 480w, shop/cookies%20n%20cream-800w.avif 800w, shop/cookies%20n%20cream-1200w.avif 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><source type="image/webp" srcset="shop/cookies%20n%20cream-480w.webp 480w, shop/cookies%20n%20cream-800w.webp 800w, shop/cookies%20n%20cream-1200w.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><img src="shop/cookies%20n%20cream-800w.jpg" alt="Cookies and Cream Cake" loading="lazy" decoding="async" srcset="shop/cookies%20n%20cream-480w.jpg 480w, shop/cookies%20n%20cream-800w.jpg 800w, shop/cookies%20n%20cream-1200w.jpg 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"></picture><div class="shop-caption"><span class="shop-caption-name">Cookies and Cream Cake</span><span class="shop-caption-price">$89.00</span></div></a>
-      <a class="shop-item" href="https://sensiblebakery.com/products/blueberry-rosemary-scone" target="_blank" rel="noopener"><picture><source type="image/avif" srcset="shop/blueberry%20lemon-480w.avif 480w, shop/blueberry%20lemon-800w.avif 800w, shop/blueberry%20lemon-1200w.avif 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><source type="image/webp" srcset="shop/blueberry%20lemon-480w.webp 480w, shop/blueberry%20lemon-800w.webp 800w, shop/blueberry%20lemon-1200w.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><img src="shop/blueberry%20lemon-800w.jpg" alt="Blueberry Lemon Scone" loading="lazy" decoding="async" srcset="shop/blueberry%20lemon-480w.jpg 480w, shop/blueberry%20lemon-800w.jpg 800w, shop/blueberry%20lemon-1200w.jpg 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"></picture><div class="shop-caption"><span class="shop-caption-name">Blueberry Lemon Scone</span><span class="shop-caption-price">$4.99</span></div></a>
-      <a class="shop-item" href="https://sensiblebakery.com/products/lemon-matcha-loaf" target="_blank" rel="noopener"><picture><source type="image/avif" srcset="shop/matcha-480w.avif 480w, shop/matcha-800w.avif 800w, shop/matcha-1200w.avif 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><source type="image/webp" srcset="shop/matcha-480w.webp 480w, shop/matcha-800w.webp 800w, shop/matcha-1200w.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><img src="shop/matcha-800w.jpg" alt="Lemon Matcha Loaf" loading="lazy" decoding="async" srcset="shop/matcha-480w.jpg 480w, shop/matcha-800w.jpg 800w, shop/matcha-1200w.jpg 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"></picture><div class="shop-caption"><span class="shop-caption-name">Lemon Matcha Loaf</span><span class="shop-caption-price">$49.00</span></div></a>
-      <a class="shop-item" href="https://sensiblebakery.com/products/chocolate-chunk-brownie" target="_blank" rel="noopener"><picture><source type="image/avif" srcset="shop/brownie-480w.avif 480w, shop/brownie-800w.avif 800w, shop/brownie-1200w.avif 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><source type="image/webp" srcset="shop/brownie-480w.webp 480w, shop/brownie-800w.webp 800w, shop/brownie-1200w.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><img src="shop/brownie-800w.jpg" alt="Chocolate Chunk Brownie" loading="lazy" decoding="async" srcset="shop/brownie-480w.jpg 480w, shop/brownie-800w.jpg 800w, shop/brownie-1200w.jpg 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"></picture><div class="shop-caption"><span class="shop-caption-name">Chocolate Chunk Brownie</span><span class="shop-caption-price">$5.35</span></div></a>
-      <a class="shop-item" href="https://sensiblebakery.com/products/sourdough-cinnamon-rolls" target="_blank" rel="noopener"><picture><source type="image/avif" srcset="shop/cinnamon%20roll-480w.avif 480w, shop/cinnamon%20roll-800w.avif 800w, shop/cinnamon%20roll-1200w.avif 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><source type="image/webp" srcset="shop/cinnamon%20roll-480w.webp 480w, shop/cinnamon%20roll-800w.webp 800w, shop/cinnamon%20roll-1200w.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><img src="shop/cinnamon%20roll-800w.jpg" alt="Sourdough Cinnamon Rolls" loading="lazy" decoding="async" srcset="shop/cinnamon%20roll-480w.jpg 480w, shop/cinnamon%20roll-800w.jpg 800w, shop/cinnamon%20roll-1200w.jpg 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"></picture><div class="shop-caption"><span class="shop-caption-name">Sourdough Cinnamon Rolls</span><span class="shop-caption-price">$60.00</span></div></a>
-      <a class="shop-item" href="https://sensiblebakery.com/products/chocolate-chia" target="_blank" rel="noopener"><picture><source type="image/avif" srcset="shop/chocolate%20chia-480w.avif 480w, shop/chocolate%20chia-800w.avif 800w, shop/chocolate%20chia-1200w.avif 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><source type="image/webp" srcset="shop/chocolate%20chia-480w.webp 480w, shop/chocolate%20chia-800w.webp 800w, shop/chocolate%20chia-1200w.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><img src="shop/chocolate%20chia-800w.jpg" alt="Chocolate Chia Cookie" loading="lazy" decoding="async" srcset="shop/chocolate%20chia-480w.jpg 480w, shop/chocolate%20chia-800w.jpg 800w, shop/chocolate%20chia-1200w.jpg 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"></picture><div class="shop-caption"><span class="shop-caption-name">Chocolate Chia Cookie</span><span class="shop-caption-price">$5.25</span></div></a>
-      <a class="shop-item" href="https://sensiblebakery.com/products/cookies-and-cream-cake" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><picture><source type="image/avif" srcset="shop/cookies%20n%20cream-480w.avif 480w, shop/cookies%20n%20cream-800w.avif 800w, shop/cookies%20n%20cream-1200w.avif 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><source type="image/webp" srcset="shop/cookies%20n%20cream-480w.webp 480w, shop/cookies%20n%20cream-800w.webp 800w, shop/cookies%20n%20cream-1200w.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><img src="shop/cookies%20n%20cream-800w.jpg" alt="Cookies and Cream Cake" loading="lazy" decoding="async" srcset="shop/cookies%20n%20cream-480w.jpg 480w, shop/cookies%20n%20cream-800w.jpg 800w, shop/cookies%20n%20cream-1200w.jpg 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"></picture><div class="shop-caption" aria-hidden="true"><span class="shop-caption-name">Cookies and Cream Cake</span><span class="shop-caption-price">$89.00</span></div></a>
-      <a class="shop-item" href="https://sensiblebakery.com/products/blueberry-rosemary-scone" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><picture><source type="image/avif" srcset="shop/blueberry%20lemon-480w.avif 480w, shop/blueberry%20lemon-800w.avif 800w, shop/blueberry%20lemon-1200w.avif 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><source type="image/webp" srcset="shop/blueberry%20lemon-480w.webp 480w, shop/blueberry%20lemon-800w.webp 800w, shop/blueberry%20lemon-1200w.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><img src="shop/blueberry%20lemon-800w.jpg" alt="Blueberry Lemon Scone" loading="lazy" decoding="async" srcset="shop/blueberry%20lemon-480w.jpg 480w, shop/blueberry%20lemon-800w.jpg 800w, shop/blueberry%20lemon-1200w.jpg 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"></picture><div class="shop-caption" aria-hidden="true"><span class="shop-caption-name">Blueberry Lemon Scone</span><span class="shop-caption-price">$4.99</span></div></a>
-      <a class="shop-item" href="https://sensiblebakery.com/products/lemon-matcha-loaf" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><picture><source type="image/avif" srcset="shop/matcha-480w.avif 480w, shop/matcha-800w.avif 800w, shop/matcha-1200w.avif 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><source type="image/webp" srcset="shop/matcha-480w.webp 480w, shop/matcha-800w.webp 800w, shop/matcha-1200w.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><img src="shop/matcha-800w.jpg" alt="Lemon Matcha Loaf" loading="lazy" decoding="async" srcset="shop/matcha-480w.jpg 480w, shop/matcha-800w.jpg 800w, shop/matcha-1200w.jpg 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"></picture><div class="shop-caption" aria-hidden="true"><span class="shop-caption-name">Lemon Matcha Loaf</span><span class="shop-caption-price">$49.00</span></div></a>
-      <a class="shop-item" href="https://sensiblebakery.com/products/chocolate-chunk-brownie" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><picture><source type="image/avif" srcset="shop/brownie-480w.avif 480w, shop/brownie-800w.avif 800w, shop/brownie-1200w.avif 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><source type="image/webp" srcset="shop/brownie-480w.webp 480w, shop/brownie-800w.webp 800w, shop/brownie-1200w.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><img src="shop/brownie-800w.jpg" alt="Chocolate Chunk Brownie" loading="lazy" decoding="async" srcset="shop/brownie-480w.jpg 480w, shop/brownie-800w.jpg 800w, shop/brownie-1200w.jpg 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"></picture><div class="shop-caption" aria-hidden="true"><span class="shop-caption-name">Chocolate Chunk Brownie</span><span class="shop-caption-price">$5.35</span></div></a>
-      <a class="shop-item" href="https://sensiblebakery.com/products/sourdough-cinnamon-rolls" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><picture><source type="image/avif" srcset="shop/cinnamon%20roll-480w.avif 480w, shop/cinnamon%20roll-800w.avif 800w, shop/cinnamon%20roll-1200w.avif 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><source type="image/webp" srcset="shop/cinnamon%20roll-480w.webp 480w, shop/cinnamon%20roll-800w.webp 800w, shop/cinnamon%20roll-1200w.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><img src="shop/cinnamon%20roll-800w.jpg" alt="Sourdough Cinnamon Rolls" loading="lazy" decoding="async" srcset="shop/cinnamon%20roll-480w.jpg 480w, shop/cinnamon%20roll-800w.jpg 800w, shop/cinnamon%20roll-1200w.jpg 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"></picture><div class="shop-caption" aria-hidden="true"><span class="shop-caption-name">Sourdough Cinnamon Rolls</span><span class="shop-caption-price">$60.00</span></div></a>
-      <a class="shop-item" href="https://sensiblebakery.com/products/chocolate-chia" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><picture><source type="image/avif" srcset="shop/chocolate%20chia-480w.avif 480w, shop/chocolate%20chia-800w.avif 800w, shop/chocolate%20chia-1200w.avif 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><source type="image/webp" srcset="shop/chocolate%20chia-480w.webp 480w, shop/chocolate%20chia-800w.webp 800w, shop/chocolate%20chia-1200w.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><img src="shop/chocolate%20chia-800w.jpg" alt="Chocolate Chia Cookie" loading="lazy" decoding="async" srcset="shop/chocolate%20chia-480w.jpg 480w, shop/chocolate%20chia-800w.jpg 800w, shop/chocolate%20chia-1200w.jpg 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"></picture><div class="shop-caption" aria-hidden="true"><span class="shop-caption-name">Chocolate Chia Cookie</span><span class="shop-caption-price">$5.25</span></div></a>
+</section>
+
+<section class="wb-posts" id="recipes">
+  <div class="wb-wrap">
+    <div class="wb-label">Recipes &amp; Guides</div>
+    <div class="wb-posts-head">
+      <h2 class="wb-h">Field notes <em>from the kitchen</em></h2>
+      <a href="/blog/" class="wb-btn wb-btn-ink wb-blog-btn-top">Go to blog</a>
     </div>
-  </div>
-</section>
-
-<section class="reels reveal" id="reels">
-  <div class="section-label stagger-item">Videos</div>
-  <h2 class="section-title stagger-item">The <em>techniques</em> that matter.</h2>
-  <p class="stagger-item" style="max-width: 520px; font-size: 1.1rem; margin-bottom: 1.5rem;">Find recipes, tips, and bakery bts content on my social media.</p>
-  <div class="social-row stagger-item">
-    <a href="https://www.instagram.com/wassembakes/" target="_blank" rel="noopener" aria-label="Instagram">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.849.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.849.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-    </a>
-    <a href="https://www.tiktok.com/@wassembakes" target="_blank" rel="noopener" aria-label="TikTok">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005.8 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1.84-.1z"/></svg>
-    </a>
-    <a href="https://www.youtube.com/@wassembakes" target="_blank" rel="noopener" aria-label="YouTube">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-    </a>
-    <a href="https://www.facebook.com/profile.php?id=61582198834713" target="_blank" rel="noopener" aria-label="Facebook">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-    </a>
-    <a href="https://www.pinterest.com/wassembakes/" target="_blank" rel="noopener" aria-label="Pinterest">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345c-.091.378-.293 1.194-.333 1.361-.052.22-.174.266-.402.16-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
-    </a>
-  </div>
-  <div class="reels-grid stagger-item" id="reelsGrid">
-    <a class="reel" href="https://www.instagram.com/p/DWmdP-sgt-L/" target="_blank" rel="noopener" aria-label="Watch reel 1 on Instagram">
-      <picture><source type="image/avif" srcset="blog/images/kombucha-Cover-480w.avif 480w, blog/images/kombucha-Cover-800w.avif 800w, blog/images/kombucha-Cover-1200w.avif 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><source type="image/webp" srcset="blog/images/kombucha-Cover-480w.webp 480w, blog/images/kombucha-Cover-800w.webp 800w, blog/images/kombucha-Cover-1200w.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><img src="blog/images/kombucha-Cover-800w.jpg" alt="Making kombucha at home" loading="lazy" decoding="async" srcset="blog/images/kombucha-Cover-480w.jpg 480w, blog/images/kombucha-Cover-800w.jpg 800w, blog/images/kombucha-Cover-1200w.jpg 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"></picture>
-      <span class="reel-play"></span>
-      <svg class="reel-label" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.849.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.849.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-    </a>
-    <a class="reel" href="https://www.instagram.com/p/DWUWFCJglJe/" target="_blank" rel="noopener" aria-label="Watch reel 2 on Instagram">
-      <picture><source type="image/avif" srcset="blog/images/vinegar-Cover-480w.avif 480w, blog/images/vinegar-Cover-800w.avif 800w, blog/images/vinegar-Cover-1200w.avif 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><source type="image/webp" srcset="blog/images/vinegar-Cover-480w.webp 480w, blog/images/vinegar-Cover-800w.webp 800w, blog/images/vinegar-Cover-1200w.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><img src="blog/images/vinegar-Cover-800w.jpg" alt="Baking with vinegar" loading="lazy" decoding="async" srcset="blog/images/vinegar-Cover-480w.jpg 480w, blog/images/vinegar-Cover-800w.jpg 800w, blog/images/vinegar-Cover-1200w.jpg 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"></picture>
-      <span class="reel-play"></span>
-      <svg class="reel-label" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.849.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.849.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-    </a>
-    <a class="reel" href="https://www.instagram.com/p/DVrKPkZAuGp/" target="_blank" rel="noopener" aria-label="Watch reel 3 on Instagram">
-      <picture><source type="image/avif" srcset="blog/images/eggwash%20replacements-Cover-480w.avif 480w, blog/images/eggwash%20replacements-Cover-800w.avif 800w, blog/images/eggwash%20replacements-Cover-1200w.avif 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><source type="image/webp" srcset="blog/images/eggwash%20replacements-Cover-480w.webp 480w, blog/images/eggwash%20replacements-Cover-800w.webp 800w, blog/images/eggwash%20replacements-Cover-1200w.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><img src="blog/images/eggwash%20replacements-Cover-800w.jpg" alt="Vegan egg wash replacements" loading="lazy" decoding="async" srcset="blog/images/eggwash%20replacements-Cover-480w.jpg 480w, blog/images/eggwash%20replacements-Cover-800w.jpg 800w, blog/images/eggwash%20replacements-Cover-1200w.jpg 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"></picture>
-      <span class="reel-play"></span>
-      <svg class="reel-label" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.849.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.849.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-    </a>
-    <a class="reel" href="https://www.instagram.com/p/DVJz2vnj9uN/" target="_blank" rel="noopener" aria-label="Watch reel 4 on Instagram">
-      <picture><source type="image/avif" srcset="blog/images/choc%20chip%20cookie-Cover-480w.avif 480w, blog/images/choc%20chip%20cookie-Cover-800w.avif 800w, blog/images/choc%20chip%20cookie-Cover-1200w.avif 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><source type="image/webp" srcset="blog/images/choc%20chip%20cookie-Cover-480w.webp 480w, blog/images/choc%20chip%20cookie-Cover-800w.webp 800w, blog/images/choc%20chip%20cookie-Cover-1200w.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"><img src="blog/images/choc%20chip%20cookie-Cover-800w.jpg" alt="Gluten-free chocolate chip cookies" loading="lazy" decoding="async" srcset="blog/images/choc%20chip%20cookie-Cover-480w.jpg 480w, blog/images/choc%20chip%20cookie-Cover-800w.jpg 800w, blog/images/choc%20chip%20cookie-Cover-1200w.jpg 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 800px, 1200px"></picture>
-      <span class="reel-play"></span>
-      <svg class="reel-label" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.849.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.849.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-    </a>
-  </div>
-</section>
-
-<section class="email-section reveal">
-  <div class="email-wrap">
-    <div class="section-label stagger-item">Newsletter</div>
-    <h2 class="section-title stagger-item">Never miss <em>a post.</em></h2>
-    <p class="stagger-item" style="max-width: 520px; font-size: 1.1rem;">Go behind the scenes with free tips, recipes and more straight to your email.</p>
-    <form class="email-form stagger-item" id="newsletterForm">
-      <input type="email" placeholder="your@email.com" required>
-      <button type="submit">Subscribe</button>
-    </form>
-    <div id="newsletterMsg" style="margin-top: 1rem; font-family: 'Fraunces', serif; font-style: italic; font-size: 0.95rem; opacity: 0.8; min-height: 1em;"></div>
-  </div>
-</section>
-
-<section class="press reveal" id="press">
-  <div class="hw-top">
-    <div class="hw-text">
-      <div class="section-label stagger-item" style="opacity: 0.6;">Press &amp; Partnerships</div>
-      <h2 class="section-title stagger-item"><em>Work</em> with me.</h2>
-      <p class="hw-lead stagger-item">Over 20 years running Sensible Bakery, the largest gluten-free and vegan bakery in New York City. I partner with brands on recipes, content, consulting and press.</p>
-      <div class="hw-btns stagger-item">
-        <a href="work-with-me/" class="hw-btn hw-btn-yellow">Work with me</a>
-        <a href="mailto:michael@westontalent.com" class="hw-btn hw-btn-line">Email my manager</a>
-      </div>
+    <div class="wb-posts-grid" id="wbPosts">
+      <a class="wb-post" href="blog/canned-apple-pie-trick.html"><div class="wb-post-img"><img src="blog/images/cap-hero-800w.jpg" srcset="blog/images/cap-hero-480w.jpg 480w, blog/images/cap-hero-800w.jpg 800w, blog/images/cap-hero-1200w.jpg 1200w" sizes="(min-width: 900px) 380px, 100vw" alt="The canned apple trick for a pie that's never soggy" loading="lazy" decoding="async"></div><span class="wb-post-date">November 9, 2026</span><span class="wb-post-title">The Canned Apple Trick for a Pie That's Never Soggy</span></a>
+      <a class="wb-post" href="blog/pie-crust-tricks.html"><div class="wb-post-img"><img src="blog/images/ct-hero-800w.jpg" srcset="blog/images/ct-hero-480w.jpg 480w, blog/images/ct-hero-800w.jpg 800w, blog/images/ct-hero-1200w.jpg 1200w" sizes="(min-width: 900px) 380px, 100vw" alt="7 pie crust tricks for the season" loading="lazy" decoding="async"></div><span class="wb-post-date">October 29, 2026</span><span class="wb-post-title">7 Pie Crust Tricks for the Season (No Beans Needed)</span></a>
+      <a class="wb-post" href="blog/gluten-free-crumb-topping.html"><div class="wb-post-img"><img src="blog/images/blueberry-crumb-800w.jpg" srcset="blog/images/blueberry-crumb-480w.jpg 480w, blog/images/blueberry-crumb-800w.jpg 800w, blog/images/blueberry-crumb-1200w.jpg 1200w" sizes="(min-width: 900px) 380px, 100vw" alt="Gluten-free crumb topping" loading="lazy" decoding="async"></div><span class="wb-post-date">September 12, 2026</span><span class="wb-post-title">Gluten-Free Crumb Topping</span></a>
     </div>
-    <div class="hw-reach stagger-item">
-      <div class="hw-total"><div class="hw-total-num" id="hwTotal">447K+</div><div class="hw-total-label">followers across social</div></div>
-      <div class="hw-platforms">
-        <a class="hw-p" href="https://www.instagram.com/wassembakes/" target="_blank" rel="noopener"><span class="hw-p-num" id="igFollowers">271K</span><span class="hw-p-name">Instagram</span></a>
-        <a class="hw-p" href="https://www.facebook.com/profile.php?id=61582198834713" target="_blank" rel="noopener"><span class="hw-p-num">82K</span><span class="hw-p-name">Facebook</span></a>
-        <a class="hw-p" href="https://www.tiktok.com/@wassembakes" target="_blank" rel="noopener"><span class="hw-p-num">64.7K</span><span class="hw-p-name">TikTok</span></a>
-        <a class="hw-p" href="https://www.youtube.com/@wassembakes" target="_blank" rel="noopener"><span class="hw-p-num">29.6K</span><span class="hw-p-name">YouTube</span></a>
-      </div>
-    </div>
-  </div>
-  <div class="hw-cards stagger-item">
-    <a class="hw-card" href="work-with-me/"><div class="hw-card-img"><img src="blog/images/cinnamon-roll-header-800w.jpg" alt="" loading="lazy" decoding="async"><span class="hw-tag hw-t1">01</span></div><h3>Sponsored recipes</h3></a>
-    <a class="hw-card" href="work-with-me/"><div class="hw-card-img"><img src="blog/images/creaming-muffins-hero-800w.jpg" alt="" loading="lazy" decoding="async"><span class="hw-tag hw-t2">02</span></div><h3>Instagram, TikTok &amp; YouTube</h3></a>
-    <a class="hw-card" href="work-with-me/"><div class="hw-card-img"><img src="blog/images/gf-sourdough-hero-800w.jpg" alt="" loading="lazy" decoding="async"><span class="hw-tag hw-t3">03</span></div><h3>Recipe development</h3></a>
-    <a class="hw-card" href="work-with-me/"><div class="hw-card-img"><img src="blog/images/blueberry-cheesecake-buns-tray-800w.jpg" alt="" loading="lazy" decoding="async"><span class="hw-tag hw-t1">04</span></div><h3>Formulation &amp; consulting</h3></a>
+    <a href="/blog/" class="wb-btn wb-btn-ink wb-blog-btn">Go to blog</a>
   </div>
 </section>
-<style>
-  .hw-top { display: grid; grid-template-columns: 1.1fr 1fr; gap: 4rem; align-items: center; }
-  .hw-text .section-title { margin-bottom: 1.5rem; }
-  .hw-lead { font-family: "bettoni-variable", 'Fraunces', serif; font-variation-settings: "opsz" 40, "wght" 110; font-size: clamp(1.15rem, 1.8vw, 1.4rem); line-height: 1.5; opacity: .9; max-width: 46ch; }
-  .hw-btns { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
-  .hw-btn { display: inline-block; padding: 1rem 1.6rem; border-radius: 6px; font-size: .78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .15em; transition: transform .2s ease, background .2s, color .2s; }
-  .hw-btn:hover { transform: translateY(-2px); }
-  .hw-btn-yellow { background: var(--yellow); color: var(--ink); }
-  .hw-btn-yellow:hover { background: var(--orange); color: var(--paper); }
-  .hw-btn-line { border: 1.5px solid rgba(250,250,247,.6); color: var(--paper); text-transform: none; letter-spacing: .02em; font-size: .9rem; }
-  .hw-btn-line:hover { background: var(--paper); color: var(--ink); }
-  .hw-total-num { font-family: "dejanire-headline", 'Fraunces', serif; font-size: clamp(4rem, 9vw, 6.5rem); font-weight: 700; line-height: .9; color: var(--yellow); }
-  .hw-total-label { font-size: .8rem; text-transform: uppercase; letter-spacing: .25em; opacity: .75; margin: .6rem 0 1.5rem; }
-  .hw-platforms { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(250,250,247,.15); border-radius: 8px; overflow: hidden; }
-  .hw-p { background: var(--ink); padding: 1.2rem 1.2rem; display: flex; flex-direction: column; gap: .3rem; transition: background .2s; }
-  .hw-p:hover { background: #2a2520; }
-  .hw-p-num { font-family: "dejanire-headline", 'Fraunces', serif; font-size: 2rem; font-weight: 700; color: var(--orange); line-height: 1; }
-  .hw-p-name { font-size: .72rem; text-transform: uppercase; letter-spacing: .15em; opacity: .7; }
-  .hw-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 4rem; }
-  .hw-card { display: block; background: #241f1b; border-radius: 10px; overflow: hidden; transition: transform .25s ease; }
-  .hw-card:hover { transform: translateY(-5px); }
-  .hw-card-img { position: relative; aspect-ratio: 4/3; overflow: hidden; }
-  .hw-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
-  .hw-card:hover .hw-card-img img { transform: scale(1.05); }
-  .hw-tag { position: absolute; top: .8rem; left: .8rem; font-family: "dejanire-headline", 'Fraunces', serif; font-weight: 700; font-size: 1rem; padding: .25rem .6rem; border-radius: 4px; }
-  .hw-t1 { background: var(--orange); color: var(--paper); } .hw-t2 { background: var(--yellow); color: var(--ink); } .hw-t3 { background: var(--blue); color: var(--ink); }
-  .hw-card h3 { font-family: "dejanire-headline", 'Fraunces', serif; font-size: 1.2rem; line-height: 1.15; padding: 1rem 1.1rem 1.2rem; }
-  @media (max-width: 900px) { .hw-top { grid-template-columns: 1fr; gap: 2.5rem; } .hw-cards { grid-template-columns: 1fr 1fr; } }
-</style>
 
-<section class="contact reveal" id="contact">
-  <div class="contact-wrap">
-    <div class="section-label stagger-item">Contact</div>
-    <h2 class="section-title stagger-item">Let's <em>connect.</em></h2>
-    <form class="contact-form stagger-item" id="contactForm" novalidate>
-      <div class="cf-row">
-        <div class="cf-field">
-          <label for="cfName">Name</label>
-          <input id="cfName" name="name" type="text" required autocomplete="name" placeholder="Your name">
+<section class="wb-app" id="app">
+  <div class="wb-app-inner">
+    <div class="wb-app-text">
+      <div class="wb-label">Recipe Builder</div>
+      <h2 class="wb-h">Build a <em>recipe</em></h2>
+      <p>My commercial bakery tool.</p>
+      <div class="wb-app-get">
+        <div class="wb-badges">
+          <a class="wb-badge" href="/recipe-builder/" aria-label="Download on the App Store"><svg aria-hidden="true" width="20" height="24" viewBox="0 0 20 24"><path d="M16.4 12.7c0-2.9 2.4-4.3 2.5-4.4-1.4-2-3.5-2.3-4.2-2.3-1.8-.2-3.5 1-4.4 1-.9 0-2.3-1-3.8-1C4.6 6 2.8 7.2 1.8 9c-2.1 3.6-.5 8.9 1.5 11.8 1 1.4 2.2 3 3.7 3 1.5-.1 2-1 3.8-1s2.3 1 3.8.9c1.6 0 2.6-1.4 3.5-2.9 1.1-1.6 1.6-3.2 1.6-3.3 0 0-3.3-1.3-3.3-4.8zM13.5 4.2c.8-1 1.3-2.3 1.2-3.7-1.2.1-2.6.8-3.4 1.8-.7.8-1.4 2.2-1.2 3.5 1.3.1 2.6-.7 3.4-1.6z" fill="#FFFFFF"></path></svg><span><small>Download on the</small><b>App Store</b></span></a>
+          <a class="wb-badge" href="https://play.google.com/store/apps/details?id=com.wassembakes.recipebuilder" target="_blank" rel="noopener" aria-label="Get it on Google Play"><svg aria-hidden="true" width="22" height="24" viewBox="0 0 24 26"><path d="M2 1.5l12.2 11.5L2 24.5c-.6-.3-1-1-1-1.8V3.3c0-.8.4-1.5 1-1.8z" fill="#00D7FE"></path><path d="M18.3 9.1L14.2 13 2 1.5c.3-.2.8-.2 1.2 0z" fill="#32BB6A"></path><path d="M18.3 16.9L3.2 25.5c-.4.2-.9.2-1.2 0L14.2 13z" fill="#F43249"></path><path d="M18.3 9.1l4 2.3c1 .6 1 2 0 2.6l-4 2.9L14.2 13z" fill="#FFC100"></path></svg><span><small>GET IT ON</small><b>Google Play</b></span></a>
         </div>
-        <div class="cf-field">
-          <label for="cfEmail">Email</label>
-          <input id="cfEmail" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
-        </div>
+        <a class="wb-browser" href="https://kitchen.wassembakes.com" target="_blank" rel="noopener">Or use it in your browser →</a>
       </div>
-      <div class="cf-field">
-        <label for="cfSubject">Subject <em>(optional)</em></label>
-        <input id="cfSubject" name="subject" type="text" placeholder="Partnership, press, collab…">
-      </div>
-      <div class="cf-field">
-        <label for="cfMessage">Message</label>
-        <textarea id="cfMessage" name="message" rows="5" required placeholder="Tell me a bit about what you have in mind."></textarea>
-      </div>
-      <input type="text" name="_gotcha" class="cf-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <button type="submit" class="cf-submit" id="cfSubmit">Send message</button>
-      <div class="contact-form-msg" id="contactMsg" role="status" aria-live="polite"></div>
-    </form>
-    <div class="contact-methods stagger-item">
-      <div class="contact-card">
-        <span>Sponsorships & Press</span>
-        <a href="mailto:hello@wassembakes.com">hello@wassembakes.com</a>
-      </div>
-      <div class="contact-card">
-        <span>Instagram</span>
-        <a href="https://instagram.com/wassembakes">@wassembakes</a>
-      </div>
+    </div>
+    <a class="wb-app-img" href="/recipe-builder/" aria-label="The Recipe Builder"><picture><source type="image/webp" srcset="recipe-builder/app-phones-600w.webp 600w, recipe-builder/app-phones-1080w.webp 1080w" sizes="(min-width: 900px) 520px, 100vw"><img src="recipe-builder/app-phones-1080w.jpg" srcset="recipe-builder/app-phones-600w.jpg 600w, recipe-builder/app-phones-1080w.jpg 1080w" sizes="(min-width: 900px) 520px, 100vw" width="1080" height="930" alt="The Recipe Builder on three phones: a recipe, the ratios screen and compare recipes" loading="lazy" decoding="async"></picture></a>
+  </div>
+</section>
+
+<section class="wb-about" id="about">
+  <div class="wb-about-inner">
+    <div class="wb-about-photo"><picture><source type="image/avif" srcset="about-480w.avif 480w, about-800w.avif 800w, about-1200w.avif 1200w" sizes="(max-width: 900px) 100vw, 580px"><source type="image/webp" srcset="about-480w.webp 480w, about-800w.webp 800w, about-1200w.webp 1200w" sizes="(max-width: 900px) 100vw, 580px"><img src="about-800w.jpg" srcset="about-480w.jpg 480w, about-800w.jpg 800w, about-1200w.jpg 1200w" sizes="(max-width: 900px) 100vw, 580px" alt="Wassem Moarsi in the bakery" loading="lazy" decoding="async"></picture></div>
+    <div class="wb-about-text">
+      <div class="wb-label">About</div>
+      <h2 class="wb-h">Meet <em>Wassem</em></h2>
+      <p>BS and MS in Biology / Chemistry. 20 years running a vegan and gluten-free bakery in New York City.</p>
+      <a href="/about/" class="wb-btn wb-btn-line">Read more</a>
     </div>
   </div>
 </section>
+
+<section class="wb-shop" id="shop">
+  <div class="wb-shop-wrap">
+    <div class="wb-shop-top">
+      <div class="wb-shop-head">
+        <div class="wb-label">Shop</div>
+        <h2 class="wb-h">My <em>bakery</em></h2>
+      </div>
+      <a href="https://sensiblebakery.com/collections/all" target="_blank" rel="noopener" class="wb-btn wb-btn-paper wb-shop-btn-top">Shop my bakery</a>
+    </div>
+    <div class="wb-scroll">
+      <a class="wb-product" href="https://sensiblebakery.com/products/sourdough-cinnamon-rolls" target="_blank" rel="noopener"><picture><source type="image/avif" srcset="shop/cinnamon%20roll-480w.avif 480w, shop/cinnamon%20roll-800w.avif 800w, shop/cinnamon%20roll-1200w.avif 1200w" sizes="(min-width: 900px) 240px, 150px"><source type="image/webp" srcset="shop/cinnamon%20roll-480w.webp 480w, shop/cinnamon%20roll-800w.webp 800w, shop/cinnamon%20roll-1200w.webp 1200w" sizes="(min-width: 900px) 240px, 150px"><img src="shop/cinnamon%20roll-800w.jpg" srcset="shop/cinnamon%20roll-480w.jpg 480w, shop/cinnamon%20roll-800w.jpg 800w, shop/cinnamon%20roll-1200w.jpg 1200w" sizes="(min-width: 900px) 240px, 150px" alt="Sourdough Cinnamon Rolls" loading="lazy" decoding="async"></picture><span>Sourdough Cinnamon Rolls</span><span class="wb-price">$60.00</span></a>
+      <a class="wb-product" href="https://sensiblebakery.com/products/cookies-and-cream-cake" target="_blank" rel="noopener"><picture><source type="image/avif" srcset="shop/cookies%20n%20cream-480w.avif 480w, shop/cookies%20n%20cream-800w.avif 800w, shop/cookies%20n%20cream-1200w.avif 1200w" sizes="(min-width: 900px) 240px, 150px"><source type="image/webp" srcset="shop/cookies%20n%20cream-480w.webp 480w, shop/cookies%20n%20cream-800w.webp 800w, shop/cookies%20n%20cream-1200w.webp 1200w" sizes="(min-width: 900px) 240px, 150px"><img src="shop/cookies%20n%20cream-800w.jpg" srcset="shop/cookies%20n%20cream-480w.jpg 480w, shop/cookies%20n%20cream-800w.jpg 800w, shop/cookies%20n%20cream-1200w.jpg 1200w" sizes="(min-width: 900px) 240px, 150px" alt="Cookies and Cream Cake" loading="lazy" decoding="async"></picture><span>Cookies and Cream Cake</span><span class="wb-price">$89.00</span></a>
+      <a class="wb-product" href="https://sensiblebakery.com/products/chocolate-chunk-brownie" target="_blank" rel="noopener"><picture><source type="image/avif" srcset="shop/brownie-480w.avif 480w, shop/brownie-800w.avif 800w, shop/brownie-1200w.avif 1200w" sizes="(min-width: 900px) 240px, 150px"><source type="image/webp" srcset="shop/brownie-480w.webp 480w, shop/brownie-800w.webp 800w, shop/brownie-1200w.webp 1200w" sizes="(min-width: 900px) 240px, 150px"><img src="shop/brownie-800w.jpg" srcset="shop/brownie-480w.jpg 480w, shop/brownie-800w.jpg 800w, shop/brownie-1200w.jpg 1200w" sizes="(min-width: 900px) 240px, 150px" alt="Chocolate Chunk Brownie" loading="lazy" decoding="async"></picture><span>Chocolate Chunk Brownie</span><span class="wb-price">$5.35</span></a>
+      <a class="wb-product" href="https://sensiblebakery.com/products/lemon-matcha-loaf" target="_blank" rel="noopener"><picture><source type="image/avif" srcset="shop/matcha-480w.avif 480w, shop/matcha-800w.avif 800w, shop/matcha-1200w.avif 1200w" sizes="(min-width: 900px) 240px, 150px"><source type="image/webp" srcset="shop/matcha-480w.webp 480w, shop/matcha-800w.webp 800w, shop/matcha-1200w.webp 1200w" sizes="(min-width: 900px) 240px, 150px"><img src="shop/matcha-800w.jpg" srcset="shop/matcha-480w.jpg 480w, shop/matcha-800w.jpg 800w, shop/matcha-1200w.jpg 1200w" sizes="(min-width: 900px) 240px, 150px" alt="Lemon Matcha Loaf" loading="lazy" decoding="async"></picture><span>Lemon Matcha Loaf</span><span class="wb-price">$49.00</span></a>
+      <a class="wb-product" href="https://sensiblebakery.com/products/chocolate-chia" target="_blank" rel="noopener"><picture><source type="image/avif" srcset="shop/chocolate%20chia-480w.avif 480w, shop/chocolate%20chia-800w.avif 800w, shop/chocolate%20chia-1200w.avif 1200w" sizes="(min-width: 900px) 240px, 150px"><source type="image/webp" srcset="shop/chocolate%20chia-480w.webp 480w, shop/chocolate%20chia-800w.webp 800w, shop/chocolate%20chia-1200w.webp 1200w" sizes="(min-width: 900px) 240px, 150px"><img src="shop/chocolate%20chia-800w.jpg" srcset="shop/chocolate%20chia-480w.jpg 480w, shop/chocolate%20chia-800w.jpg 800w, shop/chocolate%20chia-1200w.jpg 1200w" sizes="(min-width: 900px) 240px, 150px" alt="Chocolate Chia Cookie" loading="lazy" decoding="async"></picture><span>Chocolate Chia Cookie</span><span class="wb-price">$5.25</span></a>
+    </div>
+  </div>
+  <a href="https://sensiblebakery.com/collections/all" target="_blank" rel="noopener" class="wb-btn wb-btn-paper wb-shop-btn">Shop my bakery</a>
+</section>
+
+<section class="wb-videos" id="videos">
+  <div class="wb-wrap">
+    <div class="wb-label">Videos</div>
+    <div class="wb-videos-head">
+      <h2 class="wb-h">The <em>techniques</em> that matter.</h2>
+      <div class="wb-social-text wb-social-top"><a href="https://www.instagram.com/wassembakes/" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@wassembakes" target="_blank" rel="noopener">TikTok</a><a href="https://www.youtube.com/@wassembakes" target="_blank" rel="noopener">YouTube</a></div>
+    </div>
+    <div class="wb-reels">
+    <a href="https://www.instagram.com/p/DWmdP-sgt-L/" target="_blank" rel="noopener" aria-label="Watch on Instagram: making kombucha at home"><picture><source type="image/avif" srcset="blog/images/kombucha-Cover-480w.avif 480w, blog/images/kombucha-Cover-800w.avif 800w, blog/images/kombucha-Cover-1200w.avif 1200w" sizes="(min-width: 900px) 290px, 50vw"><source type="image/webp" srcset="blog/images/kombucha-Cover-480w.webp 480w, blog/images/kombucha-Cover-800w.webp 800w, blog/images/kombucha-Cover-1200w.webp 1200w" sizes="(min-width: 900px) 290px, 50vw"><img src="blog/images/kombucha-Cover-800w.jpg" srcset="blog/images/kombucha-Cover-480w.jpg 480w, blog/images/kombucha-Cover-800w.jpg 800w, blog/images/kombucha-Cover-1200w.jpg 1200w" sizes="(min-width: 900px) 290px, 50vw" alt="Making kombucha at home" loading="lazy" decoding="async"></picture></a>
+    <a href="https://www.instagram.com/p/DWUWFCJglJe/" target="_blank" rel="noopener" aria-label="Watch on Instagram: baking with vinegar"><picture><source type="image/avif" srcset="blog/images/vinegar-Cover-480w.avif 480w, blog/images/vinegar-Cover-800w.avif 800w, blog/images/vinegar-Cover-1200w.avif 1200w" sizes="(min-width: 900px) 290px, 50vw"><source type="image/webp" srcset="blog/images/vinegar-Cover-480w.webp 480w, blog/images/vinegar-Cover-800w.webp 800w, blog/images/vinegar-Cover-1200w.webp 1200w" sizes="(min-width: 900px) 290px, 50vw"><img src="blog/images/vinegar-Cover-800w.jpg" srcset="blog/images/vinegar-Cover-480w.jpg 480w, blog/images/vinegar-Cover-800w.jpg 800w, blog/images/vinegar-Cover-1200w.jpg 1200w" sizes="(min-width: 900px) 290px, 50vw" alt="Baking with vinegar" loading="lazy" decoding="async"></picture></a>
+    <a href="https://www.instagram.com/p/DVrKPkZAuGp/" target="_blank" rel="noopener" aria-label="Watch on Instagram: vegan egg wash replacements"><picture><source type="image/avif" srcset="blog/images/eggwash%20replacements-Cover-480w.avif 480w, blog/images/eggwash%20replacements-Cover-800w.avif 800w, blog/images/eggwash%20replacements-Cover-1200w.avif 1200w" sizes="(min-width: 900px) 290px, 50vw"><source type="image/webp" srcset="blog/images/eggwash%20replacements-Cover-480w.webp 480w, blog/images/eggwash%20replacements-Cover-800w.webp 800w, blog/images/eggwash%20replacements-Cover-1200w.webp 1200w" sizes="(min-width: 900px) 290px, 50vw"><img src="blog/images/eggwash%20replacements-Cover-800w.jpg" srcset="blog/images/eggwash%20replacements-Cover-480w.jpg 480w, blog/images/eggwash%20replacements-Cover-800w.jpg 800w, blog/images/eggwash%20replacements-Cover-1200w.jpg 1200w" sizes="(min-width: 900px) 290px, 50vw" alt="Vegan egg wash replacements" loading="lazy" decoding="async"></picture></a>
+    <a href="https://www.instagram.com/p/DVJz2vnj9uN/" target="_blank" rel="noopener" aria-label="Watch on Instagram: gluten-free chocolate chip cookies"><picture><source type="image/avif" srcset="blog/images/choc%20chip%20cookie-Cover-480w.avif 480w, blog/images/choc%20chip%20cookie-Cover-800w.avif 800w, blog/images/choc%20chip%20cookie-Cover-1200w.avif 1200w" sizes="(min-width: 900px) 290px, 50vw"><source type="image/webp" srcset="blog/images/choc%20chip%20cookie-Cover-480w.webp 480w, blog/images/choc%20chip%20cookie-Cover-800w.webp 800w, blog/images/choc%20chip%20cookie-Cover-1200w.webp 1200w" sizes="(min-width: 900px) 290px, 50vw"><img src="blog/images/choc%20chip%20cookie-Cover-800w.jpg" srcset="blog/images/choc%20chip%20cookie-Cover-480w.jpg 480w, blog/images/choc%20chip%20cookie-Cover-800w.jpg 800w, blog/images/choc%20chip%20cookie-Cover-1200w.jpg 1200w" sizes="(min-width: 900px) 290px, 50vw" alt="Gluten-free chocolate chip cookies" loading="lazy" decoding="async"></picture></a>
+    </div>
+    <div class="wb-social-text wb-social-bottom"><a href="https://www.instagram.com/wassembakes/" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@wassembakes" target="_blank" rel="noopener">TikTok</a><a href="https://www.youtube.com/@wassembakes" target="_blank" rel="noopener">YouTube</a></div>
+  </div>
+</section>
+
+<section class="wb-news" aria-label="Newsletter">
+  <div class="wb-news-box">
+    <h2 class="wb-h">Never miss <em>a post.</em></h2>
+    <div class="wb-news-form">
+      <form id="newsletterForm">
+        <label for="wbEmail" class="wb-sr">Email address</label>
+        <input id="wbEmail" type="email" placeholder="your@email.com" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div id="newsletterMsg" class="wb-news-msg"></div>
+    </div>
+  </div>
+</section>
+</main>
 
 <div class="popup-overlay" id="popupOverlay" hidden>
   <div class="popup" role="dialog" aria-modal="true" aria-labelledby="popupHeading">
@@ -1338,29 +554,29 @@
   </div>
 </div>
 
-<footer>
-  <div class="footer-wrap">
-    <div>© 2026 Wassem Moarsi · All rights reserved · Baked with love in NYC</div>
-    <div><a href="about/index.html">About</a> · <a href="contact/index.html">Contact</a> · <a href="/work-with-me/">Work with me</a> · <a href="privacy/index.html">Privacy</a> · <a href="https://sensiblebakery.com">Shop my bakery →</a></div>
+<footer class="wb-foot">
+  <div class="wb-foot-inner">
+    <div class="wb-foot-cols">
+      <div class="wb-foot-brand"><b>Wassem Bakes</b><span>Gluten-free, vegan baking from New York City.</span></div>
+      <div class="wb-foot-col"><span>Learn</span><a href="/blog/">Recipes &amp; blog</a><a href="/recipe-builder/">Recipe Builder app</a><a href="#videos">Videos</a></div>
+      <div class="wb-foot-col"><span>About</span><a href="/about/">About Wassem</a><a href="https://sensiblebakery.com" target="_blank" rel="noopener">Sensible Bakery</a><a href="https://sensiblebakery.com/collections/all" target="_blank" rel="noopener">Shop my bakery</a></div>
+      <div class="wb-foot-col"><span>Work with me</span><a href="/work-with-me/">Brands &amp; press</a><a href="/contact/">Contact</a></div>
+      <div class="wb-foot-col"><span>Follow</span><div class="wb-icons"><a href="https://www.instagram.com/wassembakes/" target="_blank" rel="noopener" aria-label="Instagram" style="color: #E1306C;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"></circle></svg></a><a href="https://www.tiktok.com/@wassembakes" target="_blank" rel="noopener" aria-label="TikTok" style="color: #25F4EE;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"></path><path d="M14 3c.4 2.6 2.2 4.4 5 4.6"></path></svg></a><a href="https://www.youtube.com/@wassembakes" target="_blank" rel="noopener" aria-label="YouTube" style="color: #FF0000;"><svg aria-hidden="true" width="24" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="M10 9l5 3-5 3z" fill="currentColor"></path></svg></a><a href="https://www.facebook.com/profile.php?id=61582198834713" target="_blank" rel="noopener" aria-label="Facebook" style="color: #1877F2;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V10H6.5v3.5H9V21h3.5v-7.5H15l.5-3.5h-3V7a1 1 0 0 1 1-1H15z"></path></svg></a><a href="https://www.pinterest.com/wassembakes/" target="_blank" rel="noopener" aria-label="Pinterest" style="color: #E60023;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M11 8.5h2.2a2.6 2.6 0 0 1 0 5.2H11"></path><path d="M11 8.5L9 20"></path></svg></a></div></div>
+    </div>
+    <div class="wb-foot-bottom"><span>© 2026 Wassem Moarsi · Baked with love in NYC</span><a href="/privacy/">Privacy</a></div>
   </div>
 </footer>
 
 <script>
 (function () {
-  document.querySelectorAll('.reveal').forEach(function (section) {
-    section.querySelectorAll('.stagger-item').forEach(function (el, i) {
-      el.style.transitionDelay = (i * 0.15) + 's';
-    });
+  var nav = document.getElementById('wbNav'), btn = document.getElementById('wbBurger');
+  btn.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
-  const observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
-  document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
+  document.querySelectorAll('#wbMenu a').forEach(function (a) {
+    a.addEventListener('click', function () { nav.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); });
+  });
 })();
 (function () {
   const APPSCRIPT_URL = "https://us-central1-wassembakes-app.cloudfunctions.net/subscribe";
@@ -1383,45 +599,6 @@
     }).catch(function () {
       msg.textContent = "Something went wrong. Try again.";
       msg.style.color = "#c0392b";
-    });
-  });
-})();
-(function () {
-  var CONTACT_URL = "https://us-central1-wassembakes-app.cloudfunctions.net/contact";
-  var form = document.getElementById('contactForm');
-  if (!form) return;
-  var msg = document.getElementById('contactMsg');
-  var btn = document.getElementById('cfSubmit');
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var name = document.getElementById('cfName').value.trim();
-    var email = document.getElementById('cfEmail').value.trim();
-    var message = document.getElementById('cfMessage').value.trim();
-    var subject = document.getElementById('cfSubject').value.trim();
-    if (!name || !email || email.indexOf('@') < 1 || !message) {
-      msg.className = 'contact-form-msg error';
-      msg.textContent = 'Please add your name, a valid email, and a message.';
-      return;
-    }
-    btn.disabled = true; btn.textContent = 'Sending…';
-    fetch(CONTACT_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name: name, email: email, subject: subject, message: message, source: 'wassembakes.com', _gotcha: form.querySelector('.cf-hp').value })
-    }).then(function (r) { return r.json(); }).then(function (d) {
-      btn.disabled = false; btn.textContent = 'Send message';
-      if (d && d.ok) {
-        form.reset();
-        msg.className = 'contact-form-msg';
-        msg.textContent = "Thanks — your message is on its way. I'll be in touch soon.";
-      } else {
-        msg.className = 'contact-form-msg error';
-        msg.textContent = (d && d.error) || 'Something went wrong. Please try again.';
-      }
-    }).catch(function () {
-      btn.disabled = false; btn.textContent = 'Send message';
-      msg.className = 'contact-form-msg error';
-      msg.textContent = 'Something went wrong — please email hello@wassembakes.com directly.';
     });
   });
 })();
@@ -1472,144 +649,6 @@
   });
 
   setTimeout(openPopup, 1200);
-})();
-(function () {
-  var featureEl = document.querySelector('[data-blog-feature]');
-  var previewEl = document.querySelector('[data-blog-previews]');
-  if (!featureEl && !previewEl) return;
-  function imgVariants(image, title, sizes) {
-    var dot = image.lastIndexOf('.');
-    // Tolerate an image given as an already-sized variant ("x-1200w.jpg").
-    var base = image.substring(0, dot).replace(/-(480|800|1200)w$/, '');
-    var ext = image.substring(dot);
-    var srcset = [480, 800, 1200].map(function (w) {
-      return 'blog/images/' + base + '-' + w + 'w' + ext + ' ' + w + 'w';
-    }).join(', ');
-    return 'src="blog/images/' + base + '-800w' + ext + '" srcset="' + srcset + '" sizes="' + sizes + '" alt="' + title + '"';
-  }
-  fetch('blog/posts.json', { cache: 'no-cache' })
-    .then(function (r) { return r.ok ? r.json() : []; })
-    .then(function (posts) {
-      var sorted = posts.slice().sort(function (a, b) { return b.date.localeCompare(a.date); });
-      var recipes = sorted.filter(function (p) { return (p.tags || []).indexOf('Recipes') !== -1; });
-
-      // Only feature a recipe once its photo actually exists (otherwise the card
-      // would show a broken image). Test-load the -800w variant.
-      function hasImage(p, cb) {
-        if (!p.image) { cb(false); return; }
-        var dot = p.image.lastIndexOf('.');
-        var url = 'blog/images/' + p.image.substring(0, dot).replace(/-(480|800|1200)w$/, '') + '-800w' + p.image.substring(dot);
-        var im = new Image();
-        im.onload = function () { cb(true); };
-        im.onerror = function () { cb(false); };
-        im.src = url;
-      }
-
-      function renderAll(featured) {
-        var remaining = featured ? sorted.filter(function (p) { return p.slug !== featured.slug; }) : sorted;
-        // Hand-picked fall favorites first, then newest posts fill any gaps.
-        var picks = PINNED_PREVIEWS.map(bySlug).filter(function (p) { return p && p !== featured; });
-        var recent = picks.concat(remaining.filter(function (p) { return picks.indexOf(p) === -1; })).slice(0, 3);
-        if (featureEl && featured) {
-          var fImg = featured.image ? '<img ' + imgVariants(featured.image, featured.title, '(max-width: 768px) 100vw, 600px') + ' loading="lazy" decoding="async" onerror="this.style.display=\'none\'">' : '';
-          featureEl.innerHTML = '<a class="blog-feature-card" href="blog/' + featured.slug + '.html">'
-            + '<div class="blog-feature-image">' + fImg + '</div>'
-            + '<div class="blog-feature-content">'
-            + '<h3 class="blog-feature-heading">Featured</h3>'
-            + '<div class="blog-feature-date">' + featured.dateDisplay + '</div>'
-            + '<h3 class="blog-feature-title">' + featured.title + '</h3>'
-            + '<p class="blog-feature-excerpt">' + featured.excerpt + '</p>'
-            + '</div></a>';
-        }
-        if (previewEl) {
-          previewEl.innerHTML = recent.map(function (p) {
-            var img = p.image ? '<div class="blog-preview-image"><img ' + imgVariants(p.image, p.title, '(max-width: 600px) 100vw, 400px') + ' loading="lazy" decoding="async" onerror="this.closest(\'.blog-preview-image\').remove()"></div>' : '';
-            return '<a class="blog-preview-card" href="blog/' + p.slug + '.html">'
-              + img
-              + '<div class="blog-preview-content">'
-              + '<div class="blog-preview-date">' + p.dateDisplay + '</div>'
-              + '<h3 class="blog-preview-title">' + p.title + '</h3>'
-              + '<p class="blog-preview-excerpt">' + p.excerpt + '</p>'
-              + '</div></a>';
-          }).join('');
-        }
-      }
-
-      // Hand-picked features. Clear PINNED_FEATURE to go back to the weekly rotation.
-      var PINNED_FEATURE = 'canned-apple-pie-trick';
-      var PINNED_PREVIEWS = ['pie-crust-tricks', 'par-bake-vs-blind-bake', 'gluten-free-crumb-topping'];
-      function bySlug(slug) { return sorted.filter(function (p) { return p.slug === slug; })[0]; }
-      if (PINNED_FEATURE && bySlug(PINNED_FEATURE)) { renderAll(bySlug(PINNED_FEATURE)); return; }
-
-      // Which week of the year — rotates the featured recipe once a week.
-      function weekIndex() {
-        var d = new Date(), s = new Date(d.getFullYear(), 0, 1);
-        return Math.floor((d - s) / (7 * 24 * 60 * 60 * 1000));
-      }
-      // Collect every recipe that has a real image, then pick one by week so the
-      // Featured Recipe cycles through them instead of sticking on the newest.
-      var withImg = [];
-      (function pick(i) {
-        if (i >= recipes.length) {
-          var chosen = withImg.length ? withImg[weekIndex() % withImg.length] : (recipes[0] || sorted[0]);
-          renderAll(chosen);
-          return;
-        }
-        hasImage(recipes[i], function (ok) { if (ok) withImg.push(recipes[i]); pick(i + 1); });
-      })(0);
-    })
-    .catch(function () {});
-})();
-</script>
-<script>
-/* Live Instagram: real follower count + top-performing reels, from the Studio's
-   public feed endpoint. Falls back silently to the static values if it can't load. */
-(function () {
-  var FEED = "https://us-central1-wassembakes-app.cloudfunctions.net/publicFeed?limit=4";
-  var IG_PATH = "M12 2.163c3.204 0 3.584.012 4.849.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.849.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z";
-  function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
-  fetch(FEED).then(function (r) { return r.json(); }).then(function (d) {
-    if (!d || !d.ok) return;
-    // Only the live follower count is pulled in. The reel tiles keep their
-    // curated local covers (below in the HTML) which always load — Instagram's
-    // own thumbnail URLs expire and were rendering as broken/blank tiles.
-    if (d.followersDisplay) { var f = document.getElementById("igFollowers"); if (f) f.textContent = d.followersDisplay; }
-    if (d.followers) { var t = document.getElementById("hwTotal"); if (t) t.textContent = Math.floor((d.followers + 82000 + 64700 + 29600) / 1000) + "K+"; }
-  }).catch(function () {});
-})();
-</script>
-<script>
-/* Homepage blog search — live results from posts.json, links straight to the post. */
-(function () {
-  var POSTS = [];
-  fetch('blog/posts.json').then(function (r) { return r.json(); })
-    .then(function (d) { POSTS = Array.isArray(d) ? d : (d.posts || []); }).catch(function () {});
-  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
-  window.homeSearch = function (q) {
-    var box = document.getElementById('homeSearchResults'); if (!box) return;
-    q = (q || '').trim().toLowerCase();
-    if (!q) { box.hidden = true; box.innerHTML = ''; return; }
-    var terms = q.split(/\s+/).filter(Boolean);
-    var res = POSTS.filter(function (p) {
-      var hay = ((p.title||'') + ' ' + (p.excerpt||'') + ' ' + ((p.tags||[]).join(' '))).toLowerCase();
-      return terms.every(function (t) { return hay.indexOf(t) !== -1; });
-    }).slice(0, 6);
-    box.innerHTML = res.length
-      ? res.map(function (p) { return '<a href="blog/' + esc(p.slug) + '.html">' + esc(p.title) + '</a>'; }).join('')
-      : '<div class="hsr-empty">No posts match &ldquo;' + esc(q) + '&rdquo;.</div>';
-    box.hidden = false;
-  };
-  window.homeSearchGo = function (e) {
-    e.preventDefault();
-    var q = (document.getElementById('homeSearchInput').value || '').trim();
-    if (!q) return false;
-    window.location.href = 'blog/?q=' + encodeURIComponent(q);
-    return false;
-  };
-  document.addEventListener('click', function (e) {
-    var f = document.querySelector('.home-search'), box = document.getElementById('homeSearchResults');
-    if (f && box && !f.contains(e.target)) box.hidden = true;
-  });
 })();
 </script>
 </body>
