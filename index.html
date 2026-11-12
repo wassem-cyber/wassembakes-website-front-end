@@ -123,7 +123,7 @@
   .wb-app .wb-h { font-size: 42px; margin-bottom: 14px; }
   .wb-app p { font-size: 16px; margin-bottom: 24px; }
   .wb-app-img { order: 0; margin-bottom: 24px; }
-  .wb-app-img img { width: 100%; border-radius: 4px; }
+  .wb-app-img img { width: 100%; height: auto; border-radius: 4px; }
   .wb-app-text { display: contents; }
   .wb-app-get { order: 1; display: flex; flex-direction: column; gap: 16px; }
   .wb-badges { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -150,8 +150,8 @@
   .wb-shop .wb-label { opacity: .7; }
   .wb-shop .wb-h { font-size: 42px; margin-bottom: 24px; }
   .wb-shop .wb-scroll { padding: 0 20px 4px; }
-  .wb-product { flex: 0 0 150px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; }
-  .wb-product img { width: 150px; height: 150px; object-fit: cover; border-radius: 4px; }
+  .wb-product { flex: 0 0 230px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; }
+  .wb-product img { width: 230px; height: 300px; object-fit: cover; border-radius: 4px; }
   .wb-product .wb-price { font-size: 13px; opacity: .7; }
   .wb-product:hover span:first-of-type { color: var(--orange); }
   .wb-shop-btn { align-self: flex-start; margin: 28px 20px 0; }
@@ -201,6 +201,50 @@
   .wb-foot-bottom a:hover { color: var(--paper); }
 
   /* Desktop */
+  /* Work with me (small) */
+  .wb-work { background: var(--ink); color: var(--paper); padding: 48px 20px; }
+  .wb-work .wb-label { opacity: .7; }
+  .wb-work .wb-h { font-size: 42px; margin-bottom: 14px; }
+  .wb-work p { font-size: 16px; margin-bottom: 24px; max-width: 32rem; opacity: .9; }
+  .wb-work .wb-btn { background: var(--yellow); color: var(--ink); }
+  .wb-work .wb-btn:hover { background: var(--orange); }
+
+  /* Connect */
+  .wb-contact { padding: 48px 20px 8px; scroll-margin-top: 72px; }
+  .wb-contact-box { background: var(--yellow); border-radius: 4px; padding: 36px 22px; max-width: 1100px; margin: 0 auto; }
+  .wb-contact .wb-h { font-size: 42px; margin-bottom: 24px; }
+  .wb-contact form { max-width: 640px; }
+  .cf-row { display: grid; grid-template-columns: 1fr; gap: 0 16px; }
+  .cf-field { margin-bottom: 16px; }
+  .cf-field label { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .25em; opacity: .6; margin-bottom: 8px; }
+  .cf-field label em { text-transform: none; letter-spacing: 0; font-style: normal; }
+  .cf-field input, .cf-field textarea { width: 100%; background: var(--paper); border: 1px solid transparent; border-radius: 4px; padding: 14px 16px; font: inherit; font-size: 16px; color: var(--ink); }
+  .cf-field textarea { resize: vertical; line-height: 1.5; min-height: 120px; }
+  .cf-field input:focus, .cf-field textarea:focus { outline: none; border-color: var(--ink); }
+  .cf-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+  .cf-submit { height: 52px; padding: 0 32px; border: 0; border-radius: 6px; background: var(--ink); color: var(--paper); font: inherit; font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: .15em; cursor: pointer; }
+  .cf-submit:hover { background: var(--orange); color: var(--ink); }
+  .cf-submit:disabled { opacity: .55; cursor: default; }
+  .contact-form-msg { margin-top: 12px; font-size: .95rem; min-height: 1.2em; }
+  .contact-form-msg.error { color: #7a1f14; }
+  .wb-contact-cards { display: flex; flex-direction: column; gap: 12px; margin-top: 28px; }
+  .wb-contact-card { background: var(--paper); border-radius: 4px; padding: 16px 20px; }
+  .wb-contact-card span { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .25em; opacity: .5; margin-bottom: 6px; }
+  .wb-contact-card a { font-family: 'Fraunces', serif; font-size: 16px; word-break: break-word; }
+  .wb-contact-card a:hover { text-decoration: underline; }
+
+  @media (min-width: 900px) {
+    .wb-work { padding: 88px 32px; }
+    .wb-work-inner { max-width: 1200px; margin: 0 auto; }
+    .wb-work .wb-h { font-size: clamp(40px, 6vw, 80px); margin-bottom: 18px; }
+    .wb-work p { font-size: 18px; margin-bottom: 28px; }
+    .wb-contact { padding: 80px 32px 16px; }
+    .wb-contact-box { padding: 64px 48px; }
+    .wb-contact .wb-h { font-size: clamp(40px, 6vw, 80px); margin-bottom: 32px; }
+    .cf-row { grid-template-columns: 1fr 1fr; }
+    .wb-contact-cards { flex-direction: row; }
+    .wb-contact-card { flex: 1; }
+  }
   @media (min-width: 900px) {
     .wb-nav-bar { padding: 22px 32px; }
     .wb-nav-logo img { height: 36px; }
@@ -497,11 +541,11 @@
       <a href="https://sensiblebakery.com/collections/all" target="_blank" rel="noopener" class="wb-btn wb-btn-paper wb-shop-btn-top">Shop my bakery</a>
     </div>
     <div class="wb-scroll">
-      <a class="wb-product" href="https://sensiblebakery.com/products/sourdough-cinnamon-rolls" target="_blank" rel="noopener"><picture><source type="image/avif" srcset="shop/cinnamon%20roll-480w.avif 480w, shop/cinnamon%20roll-800w.avif 800w, shop/cinnamon%20roll-1200w.avif 1200w" sizes="(min-width: 900px) 240px, 150px"><source type="image/webp" srcset="shop/cinnamon%20roll-480w.webp 480w, shop/cinnamon%20roll-800w.webp 800w, shop/cinnamon%20roll-1200w.webp 1200w" sizes="(min-width: 900px) 240px, 150px"><img src="shop/cinnamon%20roll-800w.jpg" srcset="shop/cinnamon%20roll-480w.jpg 480w, shop/cinnamon%20roll-800w.jpg 800w, shop/cinnamon%20roll-1200w.jpg 1200w" sizes="(min-width: 900px) 240px, 150px" alt="Sourdough Cinnamon Rolls" loading="lazy" decoding="async"></picture><span>Sourdough Cinnamon Rolls</span><span class="wb-price">$60.00</span></a>
-      <a class="wb-product" href="https://sensiblebakery.com/products/cookies-and-cream-cake" target="_blank" rel="noopener"><picture><source type="image/avif" srcset="shop/cookies%20n%20cream-480w.avif 480w, shop/cookies%20n%20cream-800w.avif 800w, shop/cookies%20n%20cream-1200w.avif 1200w" sizes="(min-width: 900px) 240px, 150px"><source type="image/webp" srcset="shop/cookies%20n%20cream-480w.webp 480w, shop/cookies%20n%20cream-800w.webp 800w, shop/cookies%20n%20cream-1200w.webp 1200w" sizes="(min-width: 900px) 240px, 150px"><img src="shop/cookies%20n%20cream-800w.jpg" srcset="shop/cookies%20n%20cream-480w.jpg 480w, shop/cookies%20n%20cream-800w.jpg 800w, shop/cookies%20n%20cream-1200w.jpg 1200w" sizes="(min-width: 900px) 240px, 150px" alt="Cookies and Cream Cake" loading="lazy" decoding="async"></picture><span>Cookies and Cream Cake</span><span class="wb-price">$89.00</span></a>
-      <a class="wb-product" href="https://sensiblebakery.com/products/chocolate-chunk-brownie" target="_blank" rel="noopener"><picture><source type="image/avif" srcset="shop/brownie-480w.avif 480w, shop/brownie-800w.avif 800w, shop/brownie-1200w.avif 1200w" sizes="(min-width: 900px) 240px, 150px"><source type="image/webp" srcset="shop/brownie-480w.webp 480w, shop/brownie-800w.webp 800w, shop/brownie-1200w.webp 1200w" sizes="(min-width: 900px) 240px, 150px"><img src="shop/brownie-800w.jpg" srcset="shop/brownie-480w.jpg 480w, shop/brownie-800w.jpg 800w, shop/brownie-1200w.jpg 1200w" sizes="(min-width: 900px) 240px, 150px" alt="Chocolate Chunk Brownie" loading="lazy" decoding="async"></picture><span>Chocolate Chunk Brownie</span><span class="wb-price">$5.35</span></a>
-      <a class="wb-product" href="https://sensiblebakery.com/products/lemon-matcha-loaf" target="_blank" rel="noopener"><picture><source type="image/avif" srcset="shop/matcha-480w.avif 480w, shop/matcha-800w.avif 800w, shop/matcha-1200w.avif 1200w" sizes="(min-width: 900px) 240px, 150px"><source type="image/webp" srcset="shop/matcha-480w.webp 480w, shop/matcha-800w.webp 800w, shop/matcha-1200w.webp 1200w" sizes="(min-width: 900px) 240px, 150px"><img src="shop/matcha-800w.jpg" srcset="shop/matcha-480w.jpg 480w, shop/matcha-800w.jpg 800w, shop/matcha-1200w.jpg 1200w" sizes="(min-width: 900px) 240px, 150px" alt="Lemon Matcha Loaf" loading="lazy" decoding="async"></picture><span>Lemon Matcha Loaf</span><span class="wb-price">$49.00</span></a>
-      <a class="wb-product" href="https://sensiblebakery.com/products/chocolate-chia" target="_blank" rel="noopener"><picture><source type="image/avif" srcset="shop/chocolate%20chia-480w.avif 480w, shop/chocolate%20chia-800w.avif 800w, shop/chocolate%20chia-1200w.avif 1200w" sizes="(min-width: 900px) 240px, 150px"><source type="image/webp" srcset="shop/chocolate%20chia-480w.webp 480w, shop/chocolate%20chia-800w.webp 800w, shop/chocolate%20chia-1200w.webp 1200w" sizes="(min-width: 900px) 240px, 150px"><img src="shop/chocolate%20chia-800w.jpg" srcset="shop/chocolate%20chia-480w.jpg 480w, shop/chocolate%20chia-800w.jpg 800w, shop/chocolate%20chia-1200w.jpg 1200w" sizes="(min-width: 900px) 240px, 150px" alt="Chocolate Chia Cookie" loading="lazy" decoding="async"></picture><span>Chocolate Chia Cookie</span><span class="wb-price">$5.25</span></a>
+      <a class="wb-product" href="https://sensiblebakery.com/products/sourdough-cinnamon-rolls" target="_blank" rel="noopener"><picture><source type="image/avif" srcset="shop/cinnamon%20roll-480w.avif 480w, shop/cinnamon%20roll-800w.avif 800w, shop/cinnamon%20roll-1200w.avif 1200w" sizes="(min-width: 900px) 240px, 230px"><source type="image/webp" srcset="shop/cinnamon%20roll-480w.webp 480w, shop/cinnamon%20roll-800w.webp 800w, shop/cinnamon%20roll-1200w.webp 1200w" sizes="(min-width: 900px) 240px, 230px"><img src="shop/cinnamon%20roll-800w.jpg" srcset="shop/cinnamon%20roll-480w.jpg 480w, shop/cinnamon%20roll-800w.jpg 800w, shop/cinnamon%20roll-1200w.jpg 1200w" sizes="(min-width: 900px) 240px, 230px" alt="Sourdough Cinnamon Rolls" loading="lazy" decoding="async"></picture><span>Sourdough Cinnamon Rolls</span><span class="wb-price">$60.00</span></a>
+      <a class="wb-product" href="https://sensiblebakery.com/products/cookies-and-cream-cake" target="_blank" rel="noopener"><picture><source type="image/avif" srcset="shop/cookies%20n%20cream-480w.avif 480w, shop/cookies%20n%20cream-800w.avif 800w, shop/cookies%20n%20cream-1200w.avif 1200w" sizes="(min-width: 900px) 240px, 230px"><source type="image/webp" srcset="shop/cookies%20n%20cream-480w.webp 480w, shop/cookies%20n%20cream-800w.webp 800w, shop/cookies%20n%20cream-1200w.webp 1200w" sizes="(min-width: 900px) 240px, 230px"><img src="shop/cookies%20n%20cream-800w.jpg" srcset="shop/cookies%20n%20cream-480w.jpg 480w, shop/cookies%20n%20cream-800w.jpg 800w, shop/cookies%20n%20cream-1200w.jpg 1200w" sizes="(min-width: 900px) 240px, 230px" alt="Cookies and Cream Cake" loading="lazy" decoding="async"></picture><span>Cookies and Cream Cake</span><span class="wb-price">$89.00</span></a>
+      <a class="wb-product" href="https://sensiblebakery.com/products/chocolate-chunk-brownie" target="_blank" rel="noopener"><picture><source type="image/avif" srcset="shop/brownie-480w.avif 480w, shop/brownie-800w.avif 800w, shop/brownie-1200w.avif 1200w" sizes="(min-width: 900px) 240px, 230px"><source type="image/webp" srcset="shop/brownie-480w.webp 480w, shop/brownie-800w.webp 800w, shop/brownie-1200w.webp 1200w" sizes="(min-width: 900px) 240px, 230px"><img src="shop/brownie-800w.jpg" srcset="shop/brownie-480w.jpg 480w, shop/brownie-800w.jpg 800w, shop/brownie-1200w.jpg 1200w" sizes="(min-width: 900px) 240px, 230px" alt="Chocolate Chunk Brownie" loading="lazy" decoding="async"></picture><span>Chocolate Chunk Brownie</span><span class="wb-price">$5.35</span></a>
+      <a class="wb-product" href="https://sensiblebakery.com/products/lemon-matcha-loaf" target="_blank" rel="noopener"><picture><source type="image/avif" srcset="shop/matcha-480w.avif 480w, shop/matcha-800w.avif 800w, shop/matcha-1200w.avif 1200w" sizes="(min-width: 900px) 240px, 230px"><source type="image/webp" srcset="shop/matcha-480w.webp 480w, shop/matcha-800w.webp 800w, shop/matcha-1200w.webp 1200w" sizes="(min-width: 900px) 240px, 230px"><img src="shop/matcha-800w.jpg" srcset="shop/matcha-480w.jpg 480w, shop/matcha-800w.jpg 800w, shop/matcha-1200w.jpg 1200w" sizes="(min-width: 900px) 240px, 230px" alt="Lemon Matcha Loaf" loading="lazy" decoding="async"></picture><span>Lemon Matcha Loaf</span><span class="wb-price">$49.00</span></a>
+      <a class="wb-product" href="https://sensiblebakery.com/products/chocolate-chia" target="_blank" rel="noopener"><picture><source type="image/avif" srcset="shop/chocolate%20chia-480w.avif 480w, shop/chocolate%20chia-800w.avif 800w, shop/chocolate%20chia-1200w.avif 1200w" sizes="(min-width: 900px) 240px, 230px"><source type="image/webp" srcset="shop/chocolate%20chia-480w.webp 480w, shop/chocolate%20chia-800w.webp 800w, shop/chocolate%20chia-1200w.webp 1200w" sizes="(min-width: 900px) 240px, 230px"><img src="shop/chocolate%20chia-800w.jpg" srcset="shop/chocolate%20chia-480w.jpg 480w, shop/chocolate%20chia-800w.jpg 800w, shop/chocolate%20chia-1200w.jpg 1200w" sizes="(min-width: 900px) 240px, 230px" alt="Chocolate Chia Cookie" loading="lazy" decoding="async"></picture><span>Chocolate Chia Cookie</span><span class="wb-price">$5.25</span></a>
     </div>
   </div>
   <a href="https://sensiblebakery.com/collections/all" target="_blank" rel="noopener" class="wb-btn wb-btn-paper wb-shop-btn">Shop my bakery</a>
@@ -521,6 +565,37 @@
     <a href="https://www.instagram.com/p/DVJz2vnj9uN/" target="_blank" rel="noopener" aria-label="Watch on Instagram: gluten-free chocolate chip cookies"><picture><source type="image/avif" srcset="blog/images/choc%20chip%20cookie-Cover-480w.avif 480w, blog/images/choc%20chip%20cookie-Cover-800w.avif 800w, blog/images/choc%20chip%20cookie-Cover-1200w.avif 1200w" sizes="(min-width: 900px) 290px, 50vw"><source type="image/webp" srcset="blog/images/choc%20chip%20cookie-Cover-480w.webp 480w, blog/images/choc%20chip%20cookie-Cover-800w.webp 800w, blog/images/choc%20chip%20cookie-Cover-1200w.webp 1200w" sizes="(min-width: 900px) 290px, 50vw"><img src="blog/images/choc%20chip%20cookie-Cover-800w.jpg" srcset="blog/images/choc%20chip%20cookie-Cover-480w.jpg 480w, blog/images/choc%20chip%20cookie-Cover-800w.jpg 800w, blog/images/choc%20chip%20cookie-Cover-1200w.jpg 1200w" sizes="(min-width: 900px) 290px, 50vw" alt="Gluten-free chocolate chip cookies" loading="lazy" decoding="async"></picture></a>
     </div>
     <div class="wb-social-text wb-social-bottom"><a href="https://www.instagram.com/wassembakes/" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@wassembakes" target="_blank" rel="noopener">TikTok</a><a href="https://www.youtube.com/@wassembakes" target="_blank" rel="noopener">YouTube</a></div>
+  </div>
+</section>
+
+<section class="wb-work" id="work">
+  <div class="wb-work-inner">
+    <div class="wb-label">Press &amp; Partnerships</div>
+    <h2 class="wb-h"><em>Work</em> with me.</h2>
+    <p>I partner with brands on recipes, content, consulting and press.</p>
+    <a class="wb-btn" href="/work-with-me/">Work with me</a>
+  </div>
+</section>
+
+<section class="wb-contact" id="contact">
+  <div class="wb-contact-box">
+    <div class="wb-label">Contact</div>
+    <h2 class="wb-h">Let's <em style="color:var(--ink)">connect.</em></h2>
+    <form id="contactForm" novalidate>
+      <div class="cf-row">
+        <div class="cf-field"><label for="cfName">Name</label><input id="cfName" name="name" type="text" required autocomplete="name" placeholder="Your name"></div>
+        <div class="cf-field"><label for="cfEmail">Email</label><input id="cfEmail" name="email" type="email" required autocomplete="email" placeholder="you@email.com"></div>
+      </div>
+      <div class="cf-field"><label for="cfSubject">Subject <em>(optional)</em></label><input id="cfSubject" name="subject" type="text" placeholder="Partnership, press, collab…"></div>
+      <div class="cf-field"><label for="cfMessage">Message</label><textarea id="cfMessage" name="message" rows="5" required placeholder="Tell me about your brand and what you have in mind."></textarea></div>
+      <input type="text" name="_gotcha" class="cf-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button type="submit" class="cf-submit" id="cfSubmit">Send message</button>
+      <div class="contact-form-msg" id="contactMsg" role="status" aria-live="polite"></div>
+    </form>
+    <div class="wb-contact-cards">
+      <div class="wb-contact-card"><span>Sponsorships &amp; Press</span><a href="mailto:hello@wassembakes.com">hello@wassembakes.com</a></div>
+      <div class="wb-contact-card"><span>Instagram</span><a href="https://instagram.com/wassembakes" target="_blank" rel="noopener">@wassembakes</a></div>
+    </div>
   </div>
 </section>
 
@@ -570,6 +645,47 @@
   </div>
 </footer>
 
+<script>
+(function () {
+  var CONTACT_URL = "https://us-central1-wassembakes-app.cloudfunctions.net/contact";
+  var form = document.getElementById('contactForm');
+  if (!form) return;
+  var msg = document.getElementById('contactMsg');
+  var btn = document.getElementById('cfSubmit');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('cfName').value.trim();
+    var email = document.getElementById('cfEmail').value.trim();
+    var message = document.getElementById('cfMessage').value.trim();
+    var subject = document.getElementById('cfSubject').value.trim();
+    if (!name || !email || email.indexOf('@') < 1 || !message) {
+      msg.className = 'contact-form-msg error';
+      msg.textContent = 'Please add your name, a valid email, and a message.';
+      return;
+    }
+    btn.disabled = true; btn.textContent = 'Sending…';
+    fetch(CONTACT_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: name, email: email, subject: subject, message: message, source: 'wassembakes.com', _gotcha: form.querySelector('.cf-hp').value })
+    }).then(function (r) { return r.json(); }).then(function (d) {
+      btn.disabled = false; btn.textContent = 'Send message';
+      if (d && d.ok) {
+        form.reset();
+        msg.className = 'contact-form-msg';
+        msg.textContent = "Thanks — your message is on its way. I'll be in touch soon.";
+      } else {
+        msg.className = 'contact-form-msg error';
+        msg.textContent = (d && d.error) || 'Something went wrong. Please try again.';
+      }
+    }).catch(function () {
+      btn.disabled = false; btn.textContent = 'Send message';
+      msg.className = 'contact-form-msg error';
+      msg.textContent = 'Something went wrong — please email hello@wassembakes.com directly.';
+    });
+  });
+})();
+</script>
 <script>
 (function () {
   var nav = document.getElementById('wbNav'), btn = document.getElementById('wbBurger');
