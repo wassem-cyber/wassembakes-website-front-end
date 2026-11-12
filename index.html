@@ -63,6 +63,7 @@
   .wb-scroll { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
   .wb-scroll::-webkit-scrollbar { display: none; }
   .wb-scroll > a { scroll-snap-align: start; }
+  .wb-tiles .wb-scroll, .wb-shop .wb-scroll { scroll-padding-inline: 20px; }
 
   /* Nav */
   .wb-nav { position: sticky; top: 0; z-index: 100; background: var(--yellow); }
@@ -77,7 +78,8 @@
   .wb-menu > a, .wb-dd-btn { padding: 14px 0; border-bottom: 1px solid rgba(26,23,20,.15); font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: .15em; }
   .wb-dd-btn { display: block; border: 0; background: none; font: inherit; font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: .15em; color: var(--ink); text-align: left; padding: 14px 0 6px; cursor: default; }
   .wb-dd-btn svg { display: none; }
-  .wb-dd-menu { display: flex; flex-direction: column; }
+  .wb-dd-menu, .wb-dd-list { display: flex; flex-direction: column; }
+  main section[id] { scroll-margin-top: 72px; }
   .wb-dd-menu a { padding: 10px 0 10px 16px; font-size: 15px; }
   .wb-menu a:hover { color: var(--orange); }
 
