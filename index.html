@@ -201,6 +201,20 @@
   .wb-foot-bottom a:hover { color: var(--paper); }
 
   /* Desktop */
+  /* Search */
+  .wb-search { position: relative; margin: 0; }
+  .wb-search-icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); opacity: .55; pointer-events: none; color: var(--ink); }
+  .wb-search-input { width: 100%; height: 44px; padding: 0 14px 0 40px; border: 1px solid rgba(26,23,20,.22); border-radius: 6px; background: var(--paper); font: inherit; font-size: 16px; color: var(--ink); -webkit-appearance: none; appearance: none; }
+  .wb-search-input:focus { outline: none; border-color: var(--ink); }
+  .wb-search-input::placeholder { color: #6B6258; }
+  .wb-search-results { position: absolute; left: 0; right: 0; top: calc(100% + 6px); background: var(--paper); border: 1px solid rgba(26,23,20,.15); border-radius: 6px; box-shadow: 0 14px 34px -14px rgba(26,23,20,.35); overflow: hidden; z-index: 150; }
+  .wb-search-results a { display: block; padding: 12px 16px; font-size: 15px; border-bottom: 1px solid rgba(26,23,20,.08); }
+  .wb-search-results a:last-child { border-bottom: 0; }
+  .wb-search-results a:hover { background: var(--cream); }
+  .wb-search-empty { padding: 12px 16px; font-size: 14px; opacity: .6; }
+  .wb-search-row { background: var(--yellow); padding: 0 20px 14px; position: relative; z-index: 90; }
+  .wb-search-desk { display: none; }
+
   /* Work with me (small) */
   .wb-work { background: var(--ink); color: var(--paper); padding: 48px 20px; }
   .wb-work .wb-label { opacity: .7; }
@@ -249,6 +263,9 @@
     .wb-nav-bar { padding: 22px 32px; }
     .wb-nav-logo img { height: 36px; }
     .wb-burger { display: none; }
+    .wb-search-row { display: none; }
+    .wb-search-desk { display: block; margin-left: auto; margin-right: 32px; }
+    .wb-search-desk .wb-search-input { width: 240px; height: 40px; font-size: 14px; }
     .wb-menu { display: flex; position: static; flex-direction: row; align-items: center; gap: 32px; padding: 0; background: none; box-shadow: none; }
     .wb-menu > a, .wb-dd-btn { border: 0; padding: 10px 0; font-size: 13.5px; }
     .wb-dd { position: relative; }
@@ -446,6 +463,7 @@
 <header class="wb-nav" id="wbNav">
   <div class="wb-nav-bar">
     <a href="/" class="wb-nav-logo" aria-label="Wassem Bakes home"><img src="/assets/logo-horizontal.svg" alt="Wassem Bakes"></a>
+    <div class="wb-search-desk"><form class="wb-search" role="search" autocomplete="off" action="/blog/" method="get"><svg class="wb-search-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input type="search" name="q" class="wb-search-input" placeholder="Search recipes, tips…" aria-label="Search recipes"><div class="wb-search-results" hidden></div></form></div>
     <button type="button" class="wb-burger" id="wbBurger" aria-label="Menu" aria-expanded="false" aria-controls="wbMenu"><svg class="wb-lines" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><svg class="wb-x" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
     <nav class="wb-menu" id="wbMenu" aria-label="Main">
       <a href="/blog/">Recipes</a>
@@ -462,6 +480,7 @@
     </nav>
   </div>
 </header>
+<div class="wb-search-row"><form class="wb-search" role="search" autocomplete="off" action="/blog/" method="get"><svg class="wb-search-icon" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input type="search" name="q" class="wb-search-input" placeholder="Search recipes, tips…" aria-label="Search recipes"><div class="wb-search-results" hidden></div></form></div>
 
 <main>
 <section class="wb-hero" id="top">
@@ -645,6 +664,31 @@
   </div>
 </footer>
 
+<script>
+/* Homepage search: live results from blog/posts.json, Enter goes to the blog search */
+(function () {
+  var POSTS = null;
+  function load(cb) { if (POSTS) return cb(); fetch('/blog/posts.json').then(function (r) { return r.json(); }).then(function (d) { POSTS = Array.isArray(d) ? d : (d.posts || []); cb(); }).catch(function () { POSTS = []; cb(); }); }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  document.querySelectorAll('.wb-search').forEach(function (f) {
+    var input = f.querySelector('input'), box = f.querySelector('.wb-search-results');
+    function run() {
+      var q = input.value.trim().toLowerCase();
+      if (!q) { box.hidden = true; box.innerHTML = ''; return; }
+      load(function () {
+        var terms = q.split(/\s+/);
+        var res = POSTS.filter(function (p) { var h = ((p.title || '') + ' ' + (p.excerpt || '') + ' ' + (p.tags || []).join(' ')).toLowerCase(); return terms.every(function (t) { return h.indexOf(t) !== -1; }); }).slice(0, 6);
+        box.innerHTML = res.length ? res.map(function (p) { return '<a href="/blog/' + esc(p.slug) + '">' + esc(p.title) + '</a>'; }).join('') : '<div class="wb-search-empty">No posts match \u201c' + esc(input.value.trim()) + '\u201d.</div>';
+        box.hidden = false;
+      });
+    }
+    input.addEventListener('input', run);
+    input.addEventListener('focus', function () { load(function () {}); if (input.value.trim()) run(); });
+    f.addEventListener('submit', function (e) { if (!input.value.trim()) e.preventDefault(); });
+    document.addEventListener('click', function (e) { if (!f.contains(e.target)) box.hidden = true; });
+  });
+})();
+</script>
 <script>
 (function () {
   var CONTACT_URL = "https://us-central1-wassembakes-app.cloudfunctions.net/contact";
