@@ -69,6 +69,7 @@
     let video = null;
     const ovrId = feed && feed.overrides && CURRENT_SLUG ? feed.overrides[CURRENT_SLUG] : "";
     const pin = document.querySelector('meta[name="youtube-id"]')?.content?.trim();
+    if (pin === "none") return; // page opted out of any video
     if (ovrId) video = mk(ovrId);
     else if (pin) video = mk(pin);
     else if (feed && feed.ok && Array.isArray(feed.videos)) video = ytBestMatch(title, feed.videos);
