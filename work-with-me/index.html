@@ -226,18 +226,19 @@
   .contact-body { padding-top: 5rem; }
   .wwm-h2 { font-family: "dejanire-headline", 'Fraunces', serif; font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 700; line-height: 1; letter-spacing: -0.02em; margin: 0 0 2.5rem; }
   .wwm-h2 em, .wwm-cta h2 em { font-style: italic; font-weight: 300; color: var(--orange); }
-  .wwm-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-  .wwm-card { background: var(--cream); border-radius: 10px; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease; }
-  .wwm-card:hover { transform: translateY(-5px); box-shadow: 0 16px 30px -18px rgba(26,23,20,.45); }
-  .wwm-card-img { position: relative; aspect-ratio: 3/2; overflow: hidden; }
+  .wwm-collab { background: var(--cream); padding-top: 5.5rem; padding-bottom: 6rem; }
+  .wwm-collab .wwm-h2 { margin-bottom: 3.25rem; }
+  .wwm-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3.25rem 2.25rem; }
+  .wwm-card { display: flex; flex-direction: column; }
+  .wwm-card-img { position: relative; aspect-ratio: 4/3; border-radius: 10px; overflow: hidden; box-shadow: 10px 10px 0 var(--orange); transition: transform .3s ease; }
+  .wwm-c2 .wwm-card-img { box-shadow: 10px 10px 0 var(--yellow); }
+  .wwm-c3 .wwm-card-img { box-shadow: 10px 10px 0 var(--blue); }
   .wwm-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
-  .wwm-card:hover .wwm-card-img img { transform: scale(1.05); }
-  .wwm-c1 { border-top: 4px solid var(--orange); }
-  .wwm-c2 { border-top: 4px solid var(--yellow); }
-  .wwm-c3 { border-top: 4px solid var(--blue); }
-  .wwm-card-body { padding: 1.4rem 1.5rem 1.7rem; }
-  .wwm-card h3 { font-family: "dejanire-headline", 'Fraunces', serif; font-size: 1.35rem; line-height: 1.15; margin-bottom: 0.6rem; }
-  .wwm-card p { font-size: 0.97rem; line-height: 1.6; opacity: 0.85; }
+  .wwm-card:hover .wwm-card-img { transform: translate(-3px, -3px); }
+  .wwm-card:hover .wwm-card-img img { transform: scale(1.04); }
+  .wwm-card-body { padding: 1.9rem 0.25rem 0; }
+  .wwm-card h3 { font-family: "dejanire-headline", 'Fraunces', serif; font-size: 1.5rem; font-weight: 700; line-height: 1.12; letter-spacing: -0.01em; margin-bottom: 0.65rem; }
+  .wwm-card p { font-size: 1rem; line-height: 1.65; opacity: 0.78; max-width: 34ch; }
 
   .wwm-strip { padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); }
   .wwm-strip img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
@@ -260,7 +261,11 @@
   @media (max-width: 600px) {
     .wwm-hero-photo img { box-shadow: 10px 10px 0 var(--yellow); }
     .wwm-platforms { grid-template-columns: 1fr 1fr; }
-    .wwm-grid { grid-template-columns: 1fr; }
+    .wwm-grid { grid-template-columns: 1fr; gap: 2.75rem; }
+    .wwm-card-img { box-shadow: 8px 8px 0 var(--orange); }
+    .wwm-c2 .wwm-card-img { box-shadow: 8px 8px 0 var(--yellow); }
+    .wwm-c3 .wwm-card-img { box-shadow: 8px 8px 0 var(--blue); }
+    .wwm-collab { padding: 4rem 1.5rem 4.5rem; }
     .wwm-strip { grid-template-columns: 1fr 1fr; }
     .wwm-reach { padding: 3.5rem 1.25rem; }
   }
@@ -335,7 +340,7 @@
   </div>
 </section>
 
-<section class="contact-body">
+<section class="contact-body wwm-collab">
   <div class="contact-inner wwm-wide">
     <div class="section-label">What we can make together</div>
     <h2 class="wwm-h2">Ways to <em>collaborate.</em></h2>
