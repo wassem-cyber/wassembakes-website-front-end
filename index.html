@@ -99,9 +99,17 @@
 
   /* Tiles */
   .wb-tiles { padding: 28px 0 8px; }
-  .wb-tiles .wb-scroll { padding: 0 20px 4px; }
-  .wb-tile { flex: 0 0 150px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; }
-  .wb-tile img { width: 150px; height: 150px; object-fit: cover; border-radius: 4px; }
+  .wb-tiles .wb-scroll { padding: 0 20px 10px; }
+  .wb-tile { flex: 0 0 150px; display: flex; flex-direction: column; gap: 12px; }
+  .wb-tile picture { display: block; border-radius: 8px; overflow: hidden; box-shadow: 5px 5px 0 var(--orange); }
+  .wb-tile:nth-child(2) picture { box-shadow: 5px 5px 0 var(--yellow); }
+  .wb-tile:nth-child(3) picture { box-shadow: 5px 5px 0 var(--blue); }
+  .wb-tile img { width: 150px; height: 150px; object-fit: cover; transition: transform .5s ease; }
+  .wb-tile span { display: flex; align-items: center; gap: 6px; font-family: 'dejanire-headline', 'Fraunces', serif; font-size: 20px; font-weight: 700; line-height: 1.05; letter-spacing: -.01em; }
+  .wb-tile span::after { content: "\2192"; font-family: 'Inter Tight', sans-serif; font-weight: 500; color: var(--orange); transition: transform .25s ease; }
+  .wb-tile:hover img { transform: scale(1.04); }
+  .wb-tile:hover span::after { transform: translateX(5px); }
+  @media (prefers-reduced-motion: reduce) { .wb-tile img, .wb-tile span::after { transition: none; } }
 
   /* Posts */
   .wb-posts { padding: 40px 20px 16px; }
@@ -291,8 +299,12 @@
 
     .wb-tiles { padding: 56px 32px 24px; }
     .wb-tiles .wb-scroll { max-width: 1200px; margin: 0 auto; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; overflow: visible; }
-    .wb-tile { gap: 14px; font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: .2em; }
+    .wb-tile { gap: 22px; }
+    .wb-tile picture { border-radius: 10px; box-shadow: 10px 10px 0 var(--orange); }
+    .wb-tile:nth-child(2) picture { box-shadow: 10px 10px 0 var(--yellow); }
+    .wb-tile:nth-child(3) picture { box-shadow: 10px 10px 0 var(--blue); }
     .wb-tile img { width: 100%; height: auto; aspect-ratio: 4 / 3; }
+    .wb-tile span { font-size: 34px; gap: 10px; letter-spacing: -.02em; }
 
     .wb-posts { padding: 64px 32px 24px; }
     .wb-posts-head { flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 40px; }
