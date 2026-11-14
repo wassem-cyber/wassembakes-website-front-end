@@ -24,13 +24,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Recipe Builder — Wassem Bakes</title>
-<meta name="description" content="The Recipe Builder from Wassem Bakes: build gluten-free and vegan recipes, check your ratios, compare recipes, get the cost per serving and a nutrition label. On Google Play now, iPhone coming soon.">
+<meta name="description" content="The Recipe Builder from Wassem Bakes: build gluten-free and vegan recipes, check your ratios, compare recipes, get the cost per serving and a nutrition label. On the App Store and Google Play.">
 <link rel="canonical" href="https://wassembakes.com/recipe-builder/">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="The Recipe Builder — Wassem Bakes">
-<meta property="og:description" content="The Recipe Builder from Wassem Bakes: build gluten-free and vegan recipes, check your ratios, compare recipes, get the cost per serving and a nutrition label. On Google Play now, iPhone coming soon.">
+<meta property="og:description" content="The Recipe Builder from Wassem Bakes: build gluten-free and vegan recipes, check your ratios, compare recipes, get the cost per serving and a nutrition label. On the App Store and Google Play.">
 <meta property="og:url" content="https://wassembakes.com/recipe-builder/">
 <meta property="og:image" content="https://wassembakes.com/recipe-builder/build-any-recipe-1080w.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -167,7 +167,7 @@
     .rb-row + .rb-row { margin-top: 4rem; }
   }
   @media (max-width: 700px) {
-    .rb-hero { padding-top: 8.5rem; }
+    .rb-hero { padding-top: calc(var(--nav-h, 150px) + 2rem); }
   }
 </style>
 <style>
@@ -201,10 +201,10 @@
       <h1 class="rb-h1">The tool behind <em>my bakery.</em></h1>
       <p class="rb-lead">The same tool I use at my bakery. Put in your ingredients and it checks your ratios, works out the cost, and writes the nutrition label for you.</p>
       <div class="rb-btns">
+        <a class="rb-btn rb-btn-dark" href="https://apps.apple.com/app/recipe-builder-for-bakers/id6817920070" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>Download on the App Store</a>
         <a class="rb-btn rb-btn-dark" href="https://play.google.com/store/apps/details?id=com.wassembakes.recipebuilder" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 1.8 13.4 12l-9.8 10.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1Zm11 11.4 2.6 2.6-11.4 6.5 8.8-9.1Zm3.9-3.9 2.9 1.7c.8.5.8 1.6 0 2.1l-2.9 1.7-2.8-2.8 2.8-2.7ZM5.8 1.7l11.4 6.5-2.6 2.6-8.8-9.1Z"/></svg>Get it on Google Play</a>
         <a class="rb-btn rb-btn-line" href="https://kitchen.wassembakes.com" target="_blank" rel="noopener">Use it in your browser</a>
       </div>
-      <p class="rb-note">iPhone app coming soon.</p>
     </div>
     <picture>
       <source type="image/webp" srcset="build-any-recipe-600w.webp 600w, build-any-recipe-1080w.webp 1080w" sizes="(max-width: 900px) 100vw, 560px">
@@ -311,9 +311,10 @@
         <div class="rb-btns"><a class="rb-btn rb-btn-dark" href="https://play.google.com/store/apps/details?id=com.wassembakes.recipebuilder" target="_blank" rel="noopener">Google Play</a></div>
       </div>
       <div class="rb-step">
-        <span class="rb-tag soon">Coming soon</span>
+        <span class="rb-tag">Available now</span>
         <h3>iPhone</h3>
-        <p>The iPhone app is waiting on Apple's review. Until it's out, open the web version in Safari, tap Share, then "Add to Home Screen" and it works just like an app.</p>
+        <p>Open the App Store on your iPhone, search "Recipe Builder for Bakers" and tap Get. Then create a free account and start building.</p>
+        <div class="rb-btns"><a class="rb-btn rb-btn-dark" href="https://apps.apple.com/app/recipe-builder-for-bakers/id6817920070" target="_blank" rel="noopener">App Store</a></div>
       </div>
       <div class="rb-step">
         <span class="rb-tag">Available now</span>
@@ -332,5 +333,17 @@
   </div>
 </footer>
 
+<script>
+/* Keep the hero clear of the fixed yellow header on phones. */
+(function () {
+  var nav = document.querySelector('nav');
+  if (!nav) return;
+  function set() { document.documentElement.style.setProperty('--nav-h', nav.offsetHeight + 'px'); }
+  set();
+  window.addEventListener('resize', set);
+  window.addEventListener('load', set);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(set);
+})();
+</script>
 </body>
 </html>
