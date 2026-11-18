@@ -1750,6 +1750,15 @@ footer.site-footer {
   border-radius: 10px;
   display: block;
 }
+/* Vertical Shorts: 9:16 frame, centered, capped width */
+.yt-vertical .yt-facade,
+.yt-vertical .yt-frame {
+  aspect-ratio: 9 / 16;
+  max-width: 360px;
+  margin: 0 auto;
+}
+.yt-vertical .yt-cap { text-align: center; }
+.post-body .yt-embed .yt-thumb { height: 100%; max-height: none; aspect-ratio: auto; margin: 0; border-radius: 0; }
 
 /* --- Keep reading (related posts at the end of a post) --------------------- */
 .keep-reading {

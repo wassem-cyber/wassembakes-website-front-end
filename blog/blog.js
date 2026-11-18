@@ -78,12 +78,16 @@
     const id = video.id;
     const thumb = "https://i.ytimg.com/vi/" + id + "/hqdefault.jpg";
     const thumbHd = "https://i.ytimg.com/vi/" + id + "/maxresdefault.jpg";
+    // Optional per-page overrides: a local poster image (sharp cover, no YouTube
+    // placeholder) and a vertical 9:16 frame for Shorts.
+    const poster = document.querySelector('meta[name="youtube-poster"]')?.content?.trim();
+    const vertical = document.querySelector('meta[name="youtube-shape"]')?.content?.trim() === "vertical";
     const wrap = document.createElement("div");
-    wrap.className = "yt-embed";
+    wrap.className = "yt-embed" + (vertical ? " yt-vertical" : "");
     // Use the HD thumbnail, falling back to hqdefault if the video has none.
     wrap.innerHTML =
       '<div class="yt-cap">Watch me make it</div>' +
-      '<button type="button" class="yt-facade" aria-label="Play video"><img class="yt-thumb" src="' + thumbHd + '" onerror="this.onerror=null;this.src=\'' + thumb + '\'" alt="" decoding="async"><span class="yt-play" aria-hidden="true"></span></button>';
+      '<button type="button" class="yt-facade" aria-label="Play video"><img class="yt-thumb" src="' + (poster || thumbHd) + '"' + (poster ? '' : ' onerror="this.onerror=null;this.src=\'' + thumb + '\'"') + ' alt="" decoding="async"><span class="yt-play" aria-hidden="true"></span></button>';
     wrap.querySelector(".yt-facade").addEventListener("click", function () {
       const f = document.createElement("iframe");
       f.className = "yt-frame";
