@@ -1,5 +1,23 @@
 [
   {
+    "slug": "bakery-style-chocolate-chip-cookies",
+    "title": "Bakery-Style Chocolate Chip Cookies (Vegan & Gluten-Free)",
+    "shortTitle": "Chocolate Chip Cookies",
+    "excerpt": "My professional chocolate chip cookie recipe, vegan and gluten-free: crisp edges, gooey centers, and a flax gel that holds it all together. Chill, scoop, freeze, bake from frozen.",
+    "date": "2026-11-20",
+    "dateDisplay": "November 20, 2026",
+    "tags": [
+      "Recipes",
+      "Vegan",
+      "Gluten-Free"
+    ],
+    "recipeTags": [
+      "Vegan",
+      "Gluten-Free"
+    ],
+    "image": "ccc-hero-1200w.jpg"
+  },
+  {
     "slug": "bake-straight-from-frozen",
     "title": "Bake Straight From Frozen: Why I Never Thaw Cookie Dough",
     "shortTitle": "Bake From Frozen",

@@ -1353,7 +1353,7 @@
   // Blog recipes the recipe builder app can open (?recipe=<slug>). Must match
   // the slugs in recipe-builder-app public/blog-recipes-data.js.
   const APP_RECIPES = [
-    "canned-apple-pie-trick", "oatmeal-brookies", "make-your-own-oat-milk", "frozen-chocolate-crunch-bars", "apple-spice-pie", "cheesy-rolls", "chocolate-chip-lava-cookies", "no-refined-sugar-oatmeal-raisin-cookies", "blueberry-cheesecake-buns", "square-banana-maple-cake", "3-ingredient-pie-crust-and-crumble", "blueberry-rosemary-muffins", "bakery-style-muffins-with-the-creaming-method", "vegan-sweetened-condensed-milk", "sugar-free-protein-brownies", "diy-yogurt-substitute", "whippable-vegan-heavy-cream", "pumpkin-pie-muffin", "lemon-zucchini-protein-muffins", "protein-packed-rice-krispie-treats", "gut-healthy-postbiotics-with-fermented-beets", "scoby-secrets-making-kombucha-at-home", "the-perfect-cold-brew"
+    "bakery-style-chocolate-chip-cookies", "canned-apple-pie-trick", "oatmeal-brookies", "make-your-own-oat-milk", "frozen-chocolate-crunch-bars", "apple-spice-pie", "cheesy-rolls", "chocolate-chip-lava-cookies", "no-refined-sugar-oatmeal-raisin-cookies", "blueberry-cheesecake-buns", "square-banana-maple-cake", "3-ingredient-pie-crust-and-crumble", "blueberry-rosemary-muffins", "bakery-style-muffins-with-the-creaming-method", "vegan-sweetened-condensed-milk", "sugar-free-protein-brownies", "diy-yogurt-substitute", "whippable-vegan-heavy-cream", "pumpkin-pie-muffin", "lemon-zucchini-protein-muffins", "protein-packed-rice-krispie-treats", "gut-healthy-postbiotics-with-fermented-beets", "scoby-secrets-making-kombucha-at-home", "the-perfect-cold-brew"
   ];
 
   function wireRecipeSave() {
