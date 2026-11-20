@@ -96,6 +96,10 @@
   .wb-hero-btns a { flex: 1 1 0; padding: 15px 10px; font-size: 13px; letter-spacing: .2em; }
   .wb-hero-btns .wb-ghost { border: 1px solid var(--paper); color: var(--paper); padding: 14px 10px; }
   .wb-hero-btns .wb-ghost:hover { background: var(--paper); color: var(--ink); }
+  .wb-creds { list-style: none; margin: 22px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; color: var(--cream); }
+  .wb-creds li { display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; }
+  .wb-creds svg { flex: none; }
+  .wb-creds em { font-style: normal; color: rgba(245,239,228,.6); }
 
   /* Tiles */
   .wb-tiles { padding: 28px 0 8px; }
@@ -291,6 +295,9 @@
     .wb-hero-btns { padding-top: 32px; gap: 14px; }
     .wb-hero-btns a { flex: 0 0 auto; padding: 16px 32px; font-size: 13.5px; }
     .wb-hero-btns .wb-ghost { padding: 15px 32px; }
+    .wb-creds { flex-direction: row; flex-wrap: nowrap; gap: 0; margin-top: 30px; }
+    .wb-creds li { white-space: nowrap; padding: 0 16px; border-left: 1px solid rgba(245,239,228,.25); font-size: 12px; letter-spacing: .1em; }
+    .wb-creds li:first-child { padding-left: 0; border-left: 0; }
 
     .wb-tiles { padding: 56px 32px 24px; }
     .wb-tiles .wb-scroll { max-width: 1440px; margin: 0 auto; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; overflow: visible; }
@@ -491,12 +498,17 @@
   <div class="wb-hero-photo"><picture><source type="image/avif" srcset="hero-480w.avif 480w, hero-800w.avif 800w, hero-1200w.avif 1200w" sizes="(max-width: 900px) 100vw, 62vw"><source type="image/webp" srcset="hero-480w.webp 480w, hero-800w.webp 800w, hero-1200w.webp 1200w" sizes="(max-width: 900px) 100vw, 62vw"><img src="hero-800w.jpg" srcset="hero-480w.jpg 480w, hero-800w.jpg 800w, hero-1200w.jpg 1200w" sizes="(max-width: 900px) 100vw, 62vw" alt="Wassem Moarsi in his gluten-free and vegan bakery" fetchpriority="high" loading="eager" decoding="async"></picture></div>
   <div class="wb-hero-shade" aria-hidden="true"></div>
   <div class="wb-hero-text">
-    <div class="wb-hero-label">20+ Years · New York</div>
+    <div class="wb-hero-label">New York</div>
     <h1>Gluten-free. <span class="wb-br"></span>Vegan. <span class="wb-br"></span><em>Obsessed.</em></h1>
     <div class="wb-hero-btns">
       <a href="/blog/" class="wb-btn wb-btn-paper">Recipes</a>
       <a href="#app" class="wb-btn wb-ghost">Get the app</a>
     </div>
+    <ul class="wb-creds" aria-label="Credentials">
+      <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6L5 18a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9V3"/><path d="M7.5 14h9"/></svg><span>Bachelor's + Master's <em>in Biology</em></span></li>
+      <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17L17 3"/><rect x="6" y="6" width="12" height="5" rx="2.5" transform="rotate(-45 12 8.5)"/><path d="M4.5 18.5l1 1M18.5 4.5l1 1"/></svg><span>20+ Years <em>Baking</em></span></li>
+      <li><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l1.5-5h13L20 9"/><path d="M4 9h16v1.5a2.6 2.6 0 0 1-5.2 0 2.6 2.6 0 0 1-5.6 0A2.6 2.6 0 0 1 4 10.5z"/><path d="M5.5 12.5V20h13v-7.5M10 20v-4.5h4V20"/></svg><span>CEO, <em>Sensible Bakery</em></span></li>
+    </ul>
   </div>
 </section>
 
