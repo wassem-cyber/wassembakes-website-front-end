@@ -27,4 +27,18 @@
   to = "/blog/gluten-free-flour-blend"
   status = 301
 
+# Short app link used in captions, Pinterest pins and the newsletter
+# (Recipe Builder app carousel, 2026-11-22). Sends people to the app page.
+[[redirects]]
+  from = "/kitchen"
+  to = "/recipe-builder/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/kitchen/*"
+  to = "/recipe-builder/"
+  status = 301
+  force = true
+
 # Redeploy nudge 2026-10-01T18:39Z — force a fresh full git deploy of the repo root (images in blog/images were 404ing on a stale production deploy).
