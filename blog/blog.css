@@ -947,6 +947,15 @@ article.post {
   border-radius: 6px;
   transition: background 0.2s, color 0.2s, transform 0.2s ease;
 }
+.skip-to-recipe.is-arrival {
+  background: var(--orange);
+  color: var(--paper);
+  animation: skipPulse 1.6s ease-in-out 3;
+}
+@keyframes skipPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 143, 28, 0.45); }
+  50% { box-shadow: 0 0 0 10px rgba(255, 143, 28, 0); }
+}
 .skip-to-recipe:hover {
   background: var(--orange);
   color: var(--paper);
@@ -1848,4 +1857,30 @@ footer.site-footer {
   .post-layout { padding-top: max(6rem, calc(var(--nav-h, 0px) + 1.25rem)); }
   .recipe-filters { gap: 0.5rem; padding: 0 1.25rem; }
   .recipe-filter { font-size: 0.7rem; padding: 0.55rem 1rem; letter-spacing: 0.1em; }
+}
+
+/* Floating "Jump to recipe" pill, shown only when a reader arrives via #recipe */
+.jump-recipe-float {
+  position: fixed;
+  left: 50%;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  transform: translateX(-50%);
+  z-index: 60;
+  padding: 0.8rem 1.6rem;
+  background: var(--orange);
+  color: var(--paper);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border-radius: 999px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.25s, transform 0.25s;
+}
+.jump-recipe-float.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 20px);
 }

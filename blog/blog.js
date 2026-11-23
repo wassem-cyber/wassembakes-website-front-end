@@ -1,4 +1,33 @@
 (function () {
+  // Links from Instagram/BabyChat DMs end in #recipe. Land readers at the top
+  // of the post instead (more of the post, and its ads, gets seen) and make
+  // the "Skip to recipe" button stand out so the recipe is still one tap away.
+  // In-page taps on that button still jump, since this only runs on arrival.
+  if (location.hash === "#recipe" && document.querySelector(".skip-to-recipe")) {
+    try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {}
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    const toTop = () => window.scrollTo(0, 0);
+    toTop();
+    window.addEventListener("load", toTop, { once: true });
+    document.querySelector(".skip-to-recipe").classList.add("is-arrival");
+    // On phones the header button sits below the fold, so also float a
+    // "Jump to recipe" pill at the bottom until the recipe card is reached.
+    const pill = document.createElement("a");
+    pill.className = "jump-recipe-float";
+    pill.href = "#recipe";
+    pill.innerHTML = "Jump to recipe &darr;";
+    document.body.appendChild(pill);
+    const card = document.getElementById("recipe");
+    if (card && "IntersectionObserver" in window) {
+      new IntersectionObserver((es) => {
+        es.forEach((e) => {
+          if (e.isIntersecting || e.boundingClientRect.top < 0) pill.classList.add("is-hidden");
+          else pill.classList.remove("is-hidden");
+        });
+      }).observe(card);
+    }
+  }
+
   const APPSCRIPT_URL = "https://us-central1-wassembakes-app.cloudfunctions.net/subscribe";
 
   // Comments backend — a Firebase HTTP Cloud Function (see

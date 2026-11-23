@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- wb-theme-loader -->
+<script>
+(function(){try{
+  fetch("https://us-central1-wassembakes-app.cloudfunctions.net/theme").then(function(r){return r.json();}).then(function(d){
+    if(!d||!d.ok||!d.theme||!d.theme.colors)return;
+    var c=d.theme.colors, s=document.documentElement.style;
+    for(var k in c){ if(c[k]) s.setProperty("--"+k, c[k]); }
+  }).catch(function(){});
+}catch(e){}})();
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H2M0LMEW4Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-H2M0LMEW4Z");
+</script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3998394853014991"
+     crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Oatmeal Brookies — Wassem Bakes</title>
