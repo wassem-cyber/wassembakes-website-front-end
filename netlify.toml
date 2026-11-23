@@ -42,3 +42,10 @@
   force = true
 
 # Redeploy nudge 2026-10-01T18:39Z — force a fresh full git deploy of the repo root (images in blog/images were 404ing on a stale production deploy).
+
+# Lemon Zucchini Protein Muffins was taken down 2026-11-23 (recipe wasn't vegan).
+[[redirects]]
+  from = "/blog/lemon-zucchini-protein-muffins*"
+  to = "/blog/recipes"
+  status = 301
+  force = true
