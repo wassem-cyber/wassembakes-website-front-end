@@ -111,7 +111,7 @@ Copy exactly. Replace `{{placeholders}}`. Keep every class, attribute, and wrapp
 
 <footer class="site-footer">
   <div class="footer-wrap">
-    <div>&copy; 2026 Wassem Moarsi &middot; All rights reserved</div>
+    <div>&copy; 2026 Wassem Bakes Inc. All rights reserved.</div>
     <div><a href="https://sensiblebakery.com">Sensible Bakery &rarr;</a></div>
   </div>
 </footer>
