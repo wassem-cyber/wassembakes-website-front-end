@@ -1404,8 +1404,7 @@
           PINTEREST_ICON + "</button>" +
       "</div>";
 
-    // "Open in my app" is a bonus at the END of the recipe card (after the
-    // ingredients and steps), so readers get the full recipe on the page first.
+    // "Open in my app" box sits right under the Save This Recipe row.
     // Posts without their own app box get it too when the recipe is in the app
     // (APP_RECIPES); the link opens that recipe directly.
     const appBox = card.querySelector(".app-open");
@@ -1417,8 +1416,9 @@
         ? "https://kitchen.wassembakes.com/?recipe=" + encodeURIComponent(pageSlug)
         : "";
     if (appBox) appBox.remove();
+    let cta = null;
     if (appHref) {
-      const cta = document.createElement("div");
+      cta = document.createElement("div");
       cta.className = "recipe-app-cta";
       cta.innerHTML =
         '<p class="recipe-app-cta-text">Scale it, see ratios, and bake with timers.</p>';
@@ -1434,12 +1434,11 @@
           window.gtag("event", "app_open_click", {
             recipe_slug: pageSlug,
             link_url: appHref,
-            placement: "recipe_card_end"
+            placement: "recipe_card_top"
           });
         }
       });
       cta.appendChild(a);
-      card.appendChild(cta);
     }
 
     // Place directly below the recipe card image (falls back to meta, then top).
@@ -1453,6 +1452,8 @@
     } else {
       card.insertBefore(save, card.firstChild);
     }
+
+    if (cta) save.insertAdjacentElement("afterend", cta);
 
     const title = (
       card.querySelector(".recipe-card-title")?.textContent || document.title

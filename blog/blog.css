@@ -1199,16 +1199,17 @@ article.post {
 }
 @media (max-width: 700px) {
   .recipe-save { margin-bottom: 1.5rem; }
+  .recipe-card .recipe-app-cta { margin: -0.5rem 0 1.5rem; }
 }
 
 /* "Open in my app" bonus at the end of the recipe card */
-.recipe-card > .recipe-app-cta {
+.recipe-card .recipe-app-cta {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 0.9rem 1.25rem;
-  margin: 2rem 0 0;
+  margin: -1rem 0 2rem;
   padding: 1rem 1.25rem;
   background: var(--paper);
   border: 1px solid rgba(26, 23, 20, 0.12);
