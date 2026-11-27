@@ -1421,16 +1421,14 @@
       const cta = document.createElement("div");
       cta.className = "recipe-app-cta";
       cta.innerHTML =
-        '<p class="recipe-app-cta-text"><span class="recipe-app-cta-kicker">Bonus</span>' +
-        "Scale it, see ratios, and bake with timers in the recipe builder.</p>";
+        '<p class="recipe-app-cta-text">Scale it, see ratios, and bake with timers.</p>';
       const a = document.createElement("a");
       a.className = "recipe-app-btn";
       a.href = appHref;
       a.target = "_blank";
       a.rel = "noopener";
       a.innerHTML =
-        '<span class="recipe-app-btn-main">Open in my app &rarr;</span>' +
-        '<span class="recipe-app-btn-sub">Professional recipe builder</span>';
+        '<span class="recipe-app-btn-main">Open in my app</span>';
       a.addEventListener("click", function () {
         if (typeof window.gtag === "function") {
           window.gtag("event", "app_open_click", {
