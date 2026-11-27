@@ -1201,6 +1201,37 @@ article.post {
   .recipe-save { margin-bottom: 1.5rem; }
 }
 
+/* "Open in my app" bonus at the end of the recipe card */
+.recipe-card > .recipe-app-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.25rem;
+  margin: 2rem 0 0;
+  padding: 1rem 1.25rem;
+  background: var(--paper);
+  border: 1px solid rgba(26, 23, 20, 0.12);
+  border-left: 3px solid var(--orange);
+  border-radius: 6px;
+}
+.recipe-app-cta-text {
+  flex: 1 1 240px;
+  margin: 0 !important;
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+.recipe-app-cta-kicker {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 0.15rem;
+}
+.recipe-app-cta .recipe-app-btn { padding: 0.55rem 1.1rem; }
+
 /* Email-this-recipe modal */
 .recipe-modal-overlay {
   position: fixed;

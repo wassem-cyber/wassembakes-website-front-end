@@ -1404,7 +1404,8 @@
           PINTEREST_ICON + "</button>" +
       "</div>";
 
-    // "Open in my app" joins the Save row (replaces the separate app box).
+    // "Open in my app" is a bonus at the END of the recipe card (after the
+    // ingredients and steps), so readers get the full recipe on the page first.
     // Posts without their own app box get it too when the recipe is in the app
     // (APP_RECIPES); the link opens that recipe directly.
     const appBox = card.querySelector(".app-open");
@@ -1415,17 +1416,32 @@
       : APP_RECIPES.indexOf(pageSlug) !== -1
         ? "https://kitchen.wassembakes.com/?recipe=" + encodeURIComponent(pageSlug)
         : "";
+    if (appBox) appBox.remove();
     if (appHref) {
+      const cta = document.createElement("div");
+      cta.className = "recipe-app-cta";
+      cta.innerHTML =
+        '<p class="recipe-app-cta-text"><span class="recipe-app-cta-kicker">Bonus</span>' +
+        "Scale it, see ratios, and bake with timers in the recipe builder.</p>";
       const a = document.createElement("a");
       a.className = "recipe-app-btn";
       a.href = appHref;
       a.target = "_blank";
       a.rel = "noopener";
       a.innerHTML =
-        '<span class="recipe-app-btn-main">Open in my app</span>' +
+        '<span class="recipe-app-btn-main">Open in my app &rarr;</span>' +
         '<span class="recipe-app-btn-sub">Professional recipe builder</span>';
-      save.querySelector(".recipe-save-actions").appendChild(a);
-      if (appBox) appBox.remove();
+      a.addEventListener("click", function () {
+        if (typeof window.gtag === "function") {
+          window.gtag("event", "app_open_click", {
+            recipe_slug: pageSlug,
+            link_url: appHref,
+            placement: "recipe_card_end"
+          });
+        }
+      });
+      cta.appendChild(a);
+      card.appendChild(cta);
     }
 
     // Place directly below the recipe card image (falls back to meta, then top).
